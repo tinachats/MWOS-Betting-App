@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Developer -->
+    <meta name="developer" content="Tinashe. M. Chaterera">
+    <title>MWOS Betting App</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/app/logo.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <!-- iziToast -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css">
+    <!-- App Core CSS -->
+    <link rel="stylesheet" href="assets/css/mwos.css">
+</head>
+
+<body>
+    <!-- Top Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top top-nav main-nav border-bottom shadow-sm py-0">
+        <div class="container">
+            <ul class="top-nav-list d-flex align-items-center m-0 p-0 w-100">
+                <!-- User Account -->
+                <li class="nav-item w-10">
+                    <a class="nav-link ps-0" role="button" data-bs-toggle="offcanvas" href="#account-info" role="button" aria-controls="account-info">
+                        <div class="avatar mt-2">
+                            <div class="avatar-initials">tc</div>
+                            <span class="avatar-status avatar-sm-status avatar-status-success"></span>
+                        </div>
+                    </a>
+                </li>
+                <!-- /.User Account -->
+
+                <!-- Search Form -->
+                <li class="nav-item ms-3 w-80">
+                    <form class="form-wrapper position-relative">
+                        <i class="bi bi-search form-icon position-absolute"></i>
+                        <div class="dropdown">
+                            <input class="form-control rounded-pill me-2" type="search" placeholder="Search MWOS" aria-label="Search" id="searchDropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                            <!-- Search Results and Suggestions -->
+                            <div class="dropdown-menu dropdown-menu-form-search border animated slideInUp" aria-labelledby="searchDropdownMenu">
+                                <!-- Body -->
+                                <div class="card-body-height">
+                                    <div class="d-lg-none">
+                                        <div class="input-group input-group-merge navbar-input-group mb-5">
+                                            <div class="input-group-prepend input-group-text">
+                                                <i class="bi-search"></i>
+                                            </div>
+
+                                            <input type="search" class="form-control" placeholder="Search in front" aria-label="Search in front">
+                                            <a class="input-group-append input-group-text" href="javascript:;">
+                                                <i class="bi-x-lg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <span class="dropdown-header">Recent searches</span>
+
+                                    <div class="dropdown-item dropdown-item-borderless bg-transparent text-wrap">
+                                        <a class="btn btn-soft-dark btn-xs rounded-pill" href="#">
+                                        Gulp <i class="bi-search ms-1"></i>
+                                    </a>
+                                        <a class="btn btn-soft-dark btn-xs rounded-pill" href="#">
+                                        Notification panel <i class="bi-search ms-1"></i>
+                                    </a>
+                                    </div>
+
+                                    <div class="dropdown-divider"></div>
+
+                                    <span class="dropdown-header">Tutorials</span>
+
+                                    <a class="dropdown-item" href="#">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <span class="icon icon-soft-dark icon-xs icon-circle">
+                                                <i class="bi-sliders"></i>
+                                            </span>
+                                            </div>
+
+                                            <div class="flex-grow-1 text-truncate ms-2">
+                                                <span>How to set up Gulp?</span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="dropdown-item" href="#">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <span class="icon icon-soft-dark icon-xs icon-circle">
+                                <i class="bi-paint-bucket"></i>
+                                </span>
+                                            </div>
+
+                                            <div class="flex-grow-1 text-truncate ms-2">
+                                                <span>How to change theme color?</span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <div class="dropdown-divider"></div>
+
+                                    <span class="dropdown-header">Members</span>
+
+                                    <a class="dropdown-item" href="#">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img class="avatar avatar-xs avatar-circle" src="assets/images/users/user-1.jpg" alt="User Image">
+                                            </div>
+                                            <div class="flex-grow-1 text-truncate ms-2">
+                                                <span>Amanda Harvey <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="dropdown-item" href="#">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <div class="avatar avatar-xs avatar-soft-info avatar-circle">
+                                                    <span class="avatar-initials">AR</span>
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 text-truncate ms-2">
+                                                <span>Anne Richard</span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="dropdown-item" href="#">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img class="avatar avatar-xs avatar-circle" src="assets/images/users/user-3.jpg" alt="User Image">
+                                            </div>
+                                            <div class="flex-grow-1 text-truncate ms-2">
+                                                <span>David Harrison</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- End Body -->
+
+                                <!-- Footer -->
+                                <a class="card-footer text-center d-flex align-items-center justify-content-center py-3 w-100" href="#">
+                                See all results <i class="bi-chevron-right small ms-2"></i>
+                            </a>
+                                <!-- End Footer -->
+                            </div>
+                            <!-- /.Search Results and Suggestions -->
+                        </div>
+                    </form>
+                </li>
+                <!-- /.Search Form -->
+
+                <!-- Notifications -->
+                <li class="nav-item w-10">
+                    <button type="button" class="nav-link btn btn-outline-default position-relative">
+                        <i class="bi bi-bell"></i>
+                        <span class="position-absolute top-15 start-75 translate-middle badge rounded-pill bg-warning">
+                            9
+                            <span class="visually-hidden">unread notifications</span>
+                        </span>
+                    </button>
+                </li>
+                <!-- /.Notifications -->
+            </ul>
+        </div>
+    </nav>
+    <!-- /.Top Navigation -->
+
+    <!-- Bottom Navigation -->
+    <nav class="main-nav fixed-bottom border-top shadow-sm">
+        <div class="container-fluid">
+            <ul class="nav-list d-flex justify-content-around m-0 px-0 py-1 w-100">
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">
+                        <i class="bi bi-house"></i>
+                        <p class="small-xs my-0 py-0">Home</p class>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">
+                        <i class="bi bi-search"></i>
+                        <p class="small-xs my-0 py-0">Search</p class>
+                    </a>
+                </li>
+                <li class="nav-item" id="main-nav-item">
+                    <a class="nav-link text-center active" href="#">
+                        <i class="bi bi-coin"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">
+                        <i class="bi bi-calendar-week"></i>
+                        <p class="small-xs my-0 py-0">Events</p class>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">
+                        <i class="bi bi-bell"></i>
+                        <p class="small-xs my-0 py-0">Notifications</p class>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- ./ Bottom Navigation -->
+
+    <!-- Account Info -->
+    <div class="offcanvas offcanvas-start bg-app-color" tabindex="-1" id="account-info" aria-labelledby="account-infoLabel">
+        <div class="offcanvas-header border-bottom">
+            <a class="d-flex align-items-center" href="#">
+                <div class="avatar">
+                    <img src="assets/images/users/user-2.jpg" alt="User" class="avatar-img">
+                </div>
+                <div class="d-block ms-2 mt-3">
+                    <h5 class="text-light mb-0 fw-bold">Mark Williams</h5>
+                    <p class="text-muted small-xs fw-bold">Newbie</p>
+                </div>
+            </a>
+        </div>
+        <div class="offcanvas-body p-0 m-0">
+            <ul class="list-group list-group-flush m-0 p-0">
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-person bi-3x me-2"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-clock bi-3x me-2"></i>
+                        <span>Recent</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /. Account Info -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- OwlCarousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- iziToast -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.all.min.js"></script>
+</body>
+
+</html>
