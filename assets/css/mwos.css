@@ -197,7 +197,7 @@ body {
 .update-alert {
     right: -.25rem;
     top: -.25rem;
-    color: var(--soft-grey);
+    color: var(--bs-white);
     background-color: var(--soft-grey);
 }
 
@@ -923,6 +923,9 @@ a:hover {
     .top-nav,
     .offcanvas-header {
         height: 45px;
+    }
+    .content .g-col-4 {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
