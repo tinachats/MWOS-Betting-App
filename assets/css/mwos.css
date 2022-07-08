@@ -175,7 +175,6 @@ body {
     white-space: nowrap;
     text-align: center;
     vertical-align: baseline;
-    border: 0.125rem solid var(--app-color);
     width: .82031rem;
     height: .82031rem;
     font-size: .4375rem;
@@ -185,6 +184,7 @@ body {
 
 .top-nav .avatar-status {
     bottom: -3px;
+    border: 0.125rem solid var(--app-color);
 }
 
 .avatar-sm.avatar-circle .avatar-status {
@@ -374,8 +374,12 @@ header.header .nav-scroller .nav>a.active {
     border-bottom-color: var(--bs-warning);
 }
 
-.nav-scroller.cirlcled-items .nav>a {
+.nav-scroller.cirlcled-items .nav>a,
+.nav-scroller.carousel .nav>a {
     margin-right: .5rem;
+}
+
+.nav-scroller.cirlcled-items .nav>a {
     padding: 5px;
     border-radius: 50%;
 }
@@ -530,8 +534,16 @@ header.header .nav-scroller .nav>a.active {
     border-radius: .3125rem;
 }
 
+.card .badge {
+    border: none !important;
+    border-radius: 10px !important;
+    width: 40px !important;
+    font-size: .6em !important;
+}
+
 nav .badge {
     border: 2px solid var(--app-color);
+    z-index: 1000;
 }
 
 
@@ -581,7 +593,7 @@ nav .badge {
 
 .card-body {
     flex: 1 1 auto;
-    padding: 1.3125rem 1.3125rem;
+    padding: 1rem;
 }
 
 .card-title:not(:last-child) {
@@ -625,8 +637,12 @@ nav .badge {
 }
 
 .score-card {
+    border: none !important;
     width: 120px;
-    padding: 5px;
+}
+
+.score-card .card-body {
+    padding: 1.5rem !important;
 }
 
 
