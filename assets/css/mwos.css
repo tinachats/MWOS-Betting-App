@@ -624,6 +624,11 @@ nav .badge {
     color: var(--bs-warning);
 }
 
+.score-card {
+    width: 120px;
+    padding: 5px;
+}
+
 
 /* /.Cards */
 
