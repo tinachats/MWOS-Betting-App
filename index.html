@@ -20,6 +20,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
     <!-- iziToast -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css">
     <!-- App Core CSS -->
@@ -64,28 +69,46 @@
     </header>
     <!-- /.Top Navigation -->
 
-    <!-- Nav Scroller -->
-    <div class="nav-scroller position-sticky py-1 mb-2" style="top: 0;">
-        <nav class="nav d-flex justify-content-between">
-            <a class="p-2 link-secondary active" href="#popular">Popular</a>
-            <a class="p-2 link-secondary" href="#football">Football</a>
-            <a class="p-2 link-secondary" href="#basketball">Basketball</a>
-            <a class="p-2 link-secondary" href="#tennis">Tennis</a>
-            <a class="p-2 link-secondary" href="#hockey">Hockey</a>
-            <a class="p-2 link-secondary" href="#rugby">Rugby</a>
-            <a class="p-2 link-secondary" href="#a-football">A. Football</a>
-            <a class="p-2 link-secondary" href="#basketball">Baseball</a>
-            <a class="p-2 link-secondary" href="#">Cricket</a>
-            <a class="p-2 link-secondary" href="#">Handball</a>
-            <a class="p-2 link-secondary" href="#">Volleyball</a>
-            <a class="p-2 link-secondary" href="#">Formula 1</a>
-        </nav>
-    </div>
-    <!-- /. Nav Scroller -->
-
     <!-- Page Content -->
-    <div class="content mb-5 pb-5">
-        <div class="container-fluid">
+    <div class="content mb-5 pb-5 w-100">
+        <div class="m-1">
+            <!-- Categories -->
+            <div class="shadow-sm bg-app-color rounded-4 p-3">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h6 class="text-light my-0">Live Matches</h6>
+                    <a href="#" class="card-subtitle">view all</a>
+                </div>
+                <!-- Nav Scroller -->
+                <div class="nav-scroller cirlcled-items py-1 mt-2">
+                    <nav class="nav d-flex justify-content-between">
+                        <a class="link-secondary img-wrapper bg-black" href="#">
+                            <img src="https://cdn.cdnlogo.com/logos/u/35/uefa-europa-league.png">
+                        </a>
+                        <a class="link-secondary img-wrapper bg-white" href="#">
+                            <img src="assets/images/soccer/leagues/laliga.jpg">
+                        </a>
+                        <a class="link-secondary img-wrapper bg-dark-red" href="#">
+                            <img src="assets/images/soccer/leagues/bundesliga.png">
+                        </a>
+                        <a class="link-secondary img-wrapper bg-purple" href="#">
+                            <img src="https://cdn.cdnlogo.com/logos/p/72/premier-league.svg">
+                        </a>
+                        <a class="link-secondary img-wrapper bg-black" href="#">
+                            <img src="https://cdn.cdnlogo.com/logos/u/35/uefa-europa-league.png">
+                        </a>
+                        <a class="link-secondary img-wrapper bg-white" href="#">
+                            <img src="assets/images/soccer/leagues/laliga.jpg">
+                        </a>
+                        <a class="link-secondary img-wrapper bg-dark-red" href="#">
+                            <img src="assets/images/soccer/leagues/bundesliga.png">
+                        </a>
+                        <a class="link-secondary img-wrapper bg-purple" href="#">
+                            <img src="https://cdn.cdnlogo.com/logos/p/72/premier-league.svg">
+                        </a>
+                    </nav>
+                </div>
+                <!-- /.Categories -->
+            </div>
         </div>
     </div>
     <!-- /. Page Content -->
@@ -229,7 +252,7 @@
                 <li class="list-group-item">
                     <a href="#" class="d-flex align-items-center">
                         <i class="bi bi-question-circle bi-3x me-2"></i>
-                        <span class="text-capitalize small">faq</span>
+                        <span class="text-capitalize small">FAQ</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
@@ -249,7 +272,7 @@
                 </li>
                 <li class="list-group-item">
                     <a href="#" class="d-flex align-items-center">
-                        <i class="bi bi-star-fill bi-3x me-2"></i>
+                        <i class="bi bi-star bi-3x me-2"></i>
                         <span class="text-capitalize small">rate us</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
@@ -267,6 +290,8 @@
     </div>
     <!-- /. Side Menu -->
 
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- OwlCarousel -->
@@ -277,6 +302,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
     <!-- Sweet Alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.all.min.js"></script>
+    <!-- MWOS JS -->
+    <script src="assets/js/mwos.js"></script>
 </body>
 
 </html>

@@ -61,27 +61,27 @@
                 </ul>
             </div>
         </nav>
+
+        <!-- Nav Scroller -->
+        <div class="nav-scroller position-sticky py-1 mb-2" style="top: 0;">
+            <nav class="nav d-flex justify-content-between">
+                <a class="p-2 link-secondary active" href="#popular">Popular</a>
+                <a class="p-2 link-secondary" href="#football">Football</a>
+                <a class="p-2 link-secondary" href="#basketball">Basketball</a>
+                <a class="p-2 link-secondary" href="#tennis">Tennis</a>
+                <a class="p-2 link-secondary" href="#hockey">Hockey</a>
+                <a class="p-2 link-secondary" href="#rugby">Rugby</a>
+                <a class="p-2 link-secondary" href="#a-football">A. Football</a>
+                <a class="p-2 link-secondary" href="#basketball">Baseball</a>
+                <a class="p-2 link-secondary" href="#">Cricket</a>
+                <a class="p-2 link-secondary" href="#">Handball</a>
+                <a class="p-2 link-secondary" href="#">Volleyball</a>
+                <a class="p-2 link-secondary" href="#">Formula 1</a>
+            </nav>
+        </div>
+        <!-- /. Nav Scroller -->
     </header>
     <!-- /.Top Navigation -->
-
-    <!-- Nav Scroller -->
-    <div class="nav-scroller position-sticky py-1 mb-2" style="top: 0;">
-        <nav class="nav d-flex justify-content-between">
-            <a class="p-2 link-secondary active" href="#popular">Popular</a>
-            <a class="p-2 link-secondary" href="#football">Football</a>
-            <a class="p-2 link-secondary" href="#basketball">Basketball</a>
-            <a class="p-2 link-secondary" href="#tennis">Tennis</a>
-            <a class="p-2 link-secondary" href="#hockey">Hockey</a>
-            <a class="p-2 link-secondary" href="#rugby">Rugby</a>
-            <a class="p-2 link-secondary" href="#a-football">A. Football</a>
-            <a class="p-2 link-secondary" href="#basketball">Baseball</a>
-            <a class="p-2 link-secondary" href="#">Cricket</a>
-            <a class="p-2 link-secondary" href="#">Handball</a>
-            <a class="p-2 link-secondary" href="#">Volleyball</a>
-            <a class="p-2 link-secondary" href="#">Formula 1</a>
-        </nav>
-    </div>
-    <!-- /. Nav Scroller -->
 
     <!-- Page Content -->
     <div class="content mb-5 pb-5">
@@ -271,8 +271,8 @@
     </nav>
     <!-- ./ Bottom Navigation -->
 
-    <!-- Account Info -->
-    <div class="offcanvas offcanvas-start bg-app-color" tabindex="-1" id="account-info" aria-labelledby="account-infoLabel">
+    <!-- Side Menu -->
+    <div class="offcanvas offcanvas-start bg-app-color mb-5" tabindex="-1" id="account-info" aria-labelledby="account-infoLabel">
         <div class="offcanvas-header border-bottom">
             <a class="d-flex align-items-center" href="#">
                 <div class="avatar">
@@ -284,24 +284,130 @@
                 </div>
             </a>
         </div>
-        <div class="offcanvas-body p-0 m-0">
+        <div class="offcanvas-body p-0 mx-0 mt-0 mb-5">
             <ul class="list-group list-group-flush m-0 p-0">
+                <!-- Account -->
                 <li class="list-group-item">
                     <a href="#" class="d-flex align-items-center">
                         <i class="bi bi-person bi-3x me-2"></i>
-                        <span>Profile</span>
+                        <span class="text-capitalize small">Account</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <!-- /. Account -->
+
+                <!-- Content Index -->
+                <li class="list-group-item">
+                    <h6 class="text-uppercase small-xs mt-1 mb-0">Content Index</h6>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-trophy bi-3x me-2"></i>
+                        <span class="text-capitalize small">All Competitions</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
                     <a href="#" class="d-flex align-items-center">
-                        <i class="bi bi-clock bi-3x me-2"></i>
-                        <span>Recent</span>
+                        <i class="bi bi-newspaper bi-3x me-2"></i>
+                        <span class="text-capitalize small">All news</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
+                <!-- /. Content Index -->
+
+                <!-- Settings -->
+                <li class="list-group-item">
+                    <h6 class="text-uppercase small-xs mt-1 mb-0">settings</h6>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-bell bi-3x me-2"></i>
+                        <span class="text-capitalize small">notifications</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-laptop bi-3x me-2"></i>
+                        <span class="text-capitalize small">export selections to web</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-alarm bi-3x me-2"></i>
+                        <span class="text-capitalize small">my scores</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-translate bi-3x me-2"></i>
+                        <span class="text-capitalize small">languages</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-currency-exchange bi-3x me-2"></i>
+                        <span class="text-capitalize small">currency</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-translate bi-3x me-2"></i>
+                        <span class="text-capitalize small">languages</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <!-- /. Settings -->
+
+                <!-- General -->
+                <li class="list-group-item">
+                    <h6 class="text-uppercase small-xs mt-1 mb-0">general</h6>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-question-circle bi-3x me-2"></i>
+                        <span class="text-capitalize small">FAQ</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-shield-lock bi-3x me-2"></i>
+                        <span class="text-capitalize small">privacy policy</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-list-ol bi-3x me-2"></i>
+                        <span class="text-capitalize small">terms & conditions</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-star bi-3x me-2"></i>
+                        <span class="text-capitalize small">rate us</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-envelope bi-3x me-2"></i>
+                        <span class="text-capitalize small">send us feedback</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <!-- /. General -->
             </ul>
         </div>
     </div>
-    <!-- /. Account Info -->
+    <!-- /. Side Menu -->
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
