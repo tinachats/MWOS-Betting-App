@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Developer -->
+    <meta name="developer" content="Tinashe. M. Chaterera">
+    <title>MWOS Betting App</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/app/logo.png" class="lazy" loader="lazy" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+    <!-- iziToast -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css">
+    <!-- App Core CSS -->
+    <link rel="stylesheet" href="assets/css/mwos.css">
+</head>
+
+<body>
+    <!-- Top Navigation -->
+    <header class="header mb-1">
+        <nav class="navbar navbar-expand-lg top-nav main-nav border-bottom shadow-sm py-0">
+            <div class="container">
+                <ul class="top-nav-list d-flex align-items-center m-0 p-0 w-100">
+                    <!-- User Account -->
+                    <li class="nav-item w-10">
+                        <a class="nav-link ps-0" role="button" data-bs-toggle="offcanvas" href="#account-info" role="button" aria-controls="account-info">
+                            <div class="avatar mt-2">
+                                <div class="avatar-initials">tc</div>
+                                <span class="avatar-status avatar-sm-status avatar-status-success"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- /.User Account -->
+
+                    <!-- App Logo -->
+                    <li class="nav-item ms-3 w-80">
+                        <div class="text-center">
+                            <img src="assets/images/app/logo.png" class="rounded-3" alt="Logo" height="35" width="35">
+                        </div>
+                    </li>
+                    <!-- /.App Logo -->
+
+                    <!-- Notifications -->
+                    <li class="nav-item w-10">
+                        <button type="button" class="nav-link btn btn-outline-default">
+                            <i class="bi bi-stars"></i>
+                        </button>
+                    </li>
+                    <!-- /.Notifications -->
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- /.Top Navigation -->
+
+    <!-- Page Content -->
+    <div class="content container-md mb-5 pb-5 px-1">
+        <!-- Put your content here -->
+    </div>
+    <!-- /. Page Content -->
+
+    <!-- Bottom Navigation -->
+    <nav class="main-nav fixed-bottom border-top shadow-sm">
+        <div class="container-fluid">
+            <ul class="nav-list d-flex justify-content-around m-0 px-0 py-1 w-100">
+                <li class="nav-item pt-2">
+                    <a class="nav-link text-center position-relative" href="#">
+                        <i class="bi bi-house"></i>
+                        <span class="avatar-status avatar-sm-status update-alert blink"></span>
+                    </a>
+                </li>
+                <li class="nav-item pt-2">
+                    <a class="nav-link text-center" href="#">
+                        <i class="bi bi-search"></i>
+                    </a>
+                </li>
+                <li class="nav-item" id="main-nav-item">
+                    <a class="nav-link text-center active" href="#">
+                        <i class="bi bi-coin"></i>
+                    </a>
+                </li>
+                <li class="nav-item pt-2">
+                    <a class="nav-link text-center" href="#">
+                        <i class="bi bi-calendar-week"></i>
+                    </a>
+                </li>
+                <li class="nav-item pt-2">
+                    <a class="nav-link text-center position-relative" href="#">
+                        <i class="bi bi-bell"></i>
+                        <span class="position-absolute top-15 start-75 translate-middle badge rounded-pill bg-warning">
+                            9
+                            <span class="visually-hidden">unread notifications</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- ./ Bottom Navigation -->
+
+    <!-- Side Menu -->
+    <div class="offcanvas offcanvas-start bg-app-color mb-5" data-bs-scroll="false" tabindex="-1" id="account-info" aria-labelledby="account-infoLabel">
+        <div class="offcanvas-header border-bottom">
+            <a class="d-flex align-items-center" href="#">
+                <div class="avatar">
+                    <img src="assets/images/users/user-2.jpg" alt="User" class="avatar-img">
+                </div>
+                <div class="d-block ms-2 mt-3">
+                    <h5 class="text-light mb-0 fw-bold">Mark Williams</h5>
+                    <p class="text-muted small-xs fw-bold">Newbie</p>
+                </div>
+            </a>
+        </div>
+        <div class="offcanvas-body p-0 mx-0 mt-0 mb-5">
+            <ul class="list-group list-group-flush m-0 p-0">
+                <!-- Account -->
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-person bi-3x me-2"></i>
+                        <span class="text-capitalize small">Account</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <!-- /. Account -->
+
+                <!-- Content Index -->
+                <li class="list-group-item">
+                    <h6 class="text-uppercase small-xs mt-1 mb-0">Content Index</h6>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-trophy bi-3x me-2"></i>
+                        <span class="text-capitalize small">All Competitions</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-newspaper bi-3x me-2"></i>
+                        <span class="text-capitalize small">All news</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <!-- /. Content Index -->
+
+                <!-- Settings -->
+                <li class="list-group-item">
+                    <h6 class="text-uppercase small-xs mt-1 mb-0">settings</h6>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-bell bi-3x me-2"></i>
+                        <span class="text-capitalize small">notifications</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-laptop bi-3x me-2"></i>
+                        <span class="text-capitalize small">export selections to web</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-alarm bi-3x me-2"></i>
+                        <span class="text-capitalize small">my scores</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-translate bi-3x me-2"></i>
+                        <span class="text-capitalize small">languages</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-currency-exchange bi-3x me-2"></i>
+                        <span class="text-capitalize small">currency</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-translate bi-3x me-2"></i>
+                        <span class="text-capitalize small">languages</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <!-- /. Settings -->
+
+                <!-- General -->
+                <li class="list-group-item">
+                    <h6 class="text-uppercase small-xs mt-1 mb-0">general</h6>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-question-circle bi-3x me-2"></i>
+                        <span class="text-capitalize small">FAQ</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-shield-lock bi-3x me-2"></i>
+                        <span class="text-capitalize small">privacy policy</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-list-ol bi-3x me-2"></i>
+                        <span class="text-capitalize small">terms & conditions</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-star bi-3x me-2"></i>
+                        <span class="text-capitalize small">rate us</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-envelope bi-3x me-2"></i>
+                        <span class="text-capitalize small">send us feedback</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <!-- /. General -->
+            </ul>
+        </div>
+    </div>
+    <!-- /. Side Menu -->
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- OwlCarousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- iziToast -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.all.min.js"></script>
+    <!-- MWOS JS -->
+    <script src="assets/js/mwos.js"></script>
+</body>
+
+</html>
