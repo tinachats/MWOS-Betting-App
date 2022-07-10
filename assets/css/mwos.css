@@ -1011,7 +1011,7 @@ nav .badge {
     border-bottom-right-radius: 1rem;
 }
 
-.pitch-wrapper {
+.soccer-pitch .pitch-wrapper {
     width: 100%;
     max-width: 100%;
     height: 670px;
@@ -1019,33 +1019,76 @@ nav .badge {
     background: url('../images/fields/vertical-soccer-field-striped.jpg') no-repeat center center/cover;
 }
 
-.team-formation {
-    background-color: red;
+.soccer-pitch .team-formation {
+    background-color: transparent;
+    z-index: 1;
 }
 
-.team-player,
-.team-player .jersey {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.team-player {
-    font-size: var(--small);
+.soccer-pitch .team-formation .team-player {
+    position: absolute;
+    display: block;
+    text-align: center;
+    font-size: var(--small-xs);
     font-weight: 600;
+    z-index: 2;
 }
 
-.team-player .jersey {
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    align-items: center;
+.soccer-pitch .team-formation .team-keeper {
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.team-player .jersey>.jersey-number {
-    color: #fff;
+
+/* Top-side Team */
+
+.soccer-pitch .team-formation.top-team-formation,
+.soccer-pitch .team-formation.top-team-formation .team-keeper {
+    top: 0;
+}
+
+.soccer-pitch .team-formation.top-team-formation .team-defense>.team-player {
+    margin-top: 20%;
+}
+
+.soccer-pitch .team-formation.top-team-formation .team-defense .team-player:not(:first-child) {
+    margin-left: 30%;
+}
+
+.soccer-pitch .team-formation.top-team-formation .team-defense .team-player:nth-child(3) {
+    margin-left: 55%;
+}
+
+.soccer-pitch .team-formation.top-team-formation .team-defense .team-player:last-child {
+    right: 0;
+}
+
+
+/* /. Top-side Team */
+
+
+/* Bottom-side Team */
+
+.soccer-pitch .team-formation.bottom-team-formation,
+.soccer-pitch .team-formation.bottom-team-formation .team-keeper {
+    top: 90%;
+}
+
+
+/* /. Bottom-side Team */
+
+.soccer-pitch .team-player .player-info {
+    padding: 2px 5px;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+
+.soccer-pitch .team-player .player-info>small:first-child {
+    margin-right: 3px;
+}
+
+.soccer-pitch .team-player .player-info>small:first-child,
+.soccer-pitch .team-player .player-info>small:last-child {
+    color: #000;
 }
 
 
@@ -1491,8 +1534,8 @@ li {
     .content {
         margin-top: 3.25rem
     }
-    .pitch-wrapper {
-        height: 456px;
+    .soccer-pitch .pitch-wrapper {
+        height: 540px;
     }
 }
 
@@ -1523,7 +1566,7 @@ li {
     .content {
         margin-top: 5.9rem;
     }
-    .pitch-wrapper {
+    .soccer-pitch .pitch-wrapper {
         height: 684px;
     }
 }
@@ -1543,7 +1586,7 @@ li {
 /* X-Large devices (large desktops, 1200px and up) */
 
 @media (min-width: 1200px) {
-    .pitch-wrapper {
+    .soccer-pitch .pitch-wrapper {
         height: 670px;
     }
 }
