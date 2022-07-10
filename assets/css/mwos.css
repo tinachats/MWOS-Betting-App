@@ -399,6 +399,36 @@ body {
 /* /. Navbars */
 
 
+/* Nav Tabs */
+
+.nav-tabs {
+    width: 100%;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 50%;
+}
+
+.nav-tabs .nav-link.active {
+    border-bottom: 4px solid var(--bs-warning);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show>.nav-link,
+.nav-tabs .nav-link.active * {
+    color: var(--bs-warning);
+}
+
+
+/* /.Nav Tabs */
+
+
 /* Nav Scroller */
 
 .nav-scroller {
@@ -440,9 +470,9 @@ header.header .nav-scroller .nav>a {
 
 header.header .nav-scroller .nav>a.active {
     color: var(--bs-warning);
-    border-bottom: 4px solid var(--bs-warning);
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    border-bottom-color: var(--bs-warning);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .nav-scroller.cirlcled-items .nav>a:not(:last-child),
@@ -485,6 +515,11 @@ header.header .nav-scroller .nav>a.active {
     box-shadow: var(--shadow-lg);
 }
 
+.dropdown-menu.navbar-dropdown-menu {
+    margin-top: -.5rem !important;
+    width: 25rem;
+}
+
 .dropdown:not(.dropup) .dropdown-menu {
     margin-top: .5rem;
 }
@@ -498,9 +533,10 @@ header.header .nav-scroller .nav>a.active {
 }
 
 .dropdown-item:focus,
-.dropdown-item:hover {
-    color: #fff;
-    background-color: var(--bs-dark);
+.dropdown-item:hover,
+.dropdown-menu.navbar-dropdown-menu .list-group-item:hover {
+    color: var(--text-white);
+    background-color: var(--soft-grey);
 }
 
 .dropdown-divider {
@@ -645,7 +681,6 @@ nav .badge {
 }
 
 .card-header {
-    padding: 1.3125rem 1.3125rem;
     margin-bottom: 0;
     background-color: transparent;
     border-bottom: var(--border-width) solid var(--border-color);
@@ -673,6 +708,7 @@ nav .badge {
 }
 
 .card-title:not(:last-child) {
+    font-size: .85rem;
     margin-bottom: 0.5rem;
 }
 
@@ -697,7 +733,10 @@ nav .badge {
 }
 
 .card-footer {
-    color: var(--app-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--bs-dark);
     font-weight: bold;
     padding: 1.3125rem 1.3125rem;
     background-color: transparent;
@@ -756,6 +795,48 @@ nav .badge {
 /* /. Bootstrap Carousel */
 
 
+/* Checkboxes and Radio Buttons */
+
+.form-check {
+    display: block;
+    min-height: 1.3125rem;
+    padding-left: 1.5rem;
+    margin-bottom: 0.125rem;
+}
+
+.form-check-select .form-check-input:checked[type=checkbox] {
+    background-image: none;
+}
+
+.form-check-select .form-check-input:checked[type=checkbox]:hover {
+    background-color: var(--bs-warning);
+}
+
+.form-check-select .form-check-input {
+    position: relative;
+    z-index: 2;
+    width: 12px;
+    height: 12px;
+    background-color: var(--soft-grey);
+    border-width: 0;
+    border-radius: 50%;
+}
+
+.form-check-input:checked {
+    background-color: var(--bs-warning);
+    border-color: var(--bs-warning);
+}
+
+.form-check-input:focus {
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+
+/* /.Checkboxes and Radio Buttons */
+
+
 /* CSS Grid */
 
 .d-grid,
@@ -789,9 +870,23 @@ nav .badge {
     border-radius: 0;
 }
 
-.list-group,
+.dropdown-menu.navbar-dropdown-menu .list-group {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu.navbar-dropdown-menu .list-group>.list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.dropdown-menu.navbar-dropdown-menu .list-group>.list-group-item:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
 .list-group>.list-group-item {
-    background-color: var(--app-body-color);
+    background-color: var(--app-color);
 }
 
 .list-group>.list-group-item {
@@ -868,9 +963,8 @@ nav .badge {
     height: 1.53125rem;
 }
 
-.icon-soft-dark {
-    color: var(--app-color);
-    background: var(--hover-bg);
+.icon.bg-dark {
+    color: #fff;
 }
 
 .icon-circle {
@@ -1310,7 +1404,10 @@ li {
 @media (max-width: 576px) {
     .top-nav,
     .offcanvas-header {
-        height: 66.5px;
+        height: 45px;
+    }
+    .top-nav .navbar-brand {
+        padding: 0 !important;
     }
     .dropdown-menu[aria-labelledby='searchDropdownMenu'] {
         top: 3rem !important;
@@ -1321,6 +1418,13 @@ li {
         width: 80%;
     }
     /* Off-canvas */
+    .btn-xs {
+        height: 30px;
+        width: 30px;
+    }
+    .content {
+        margin-top: 3.25rem
+    }
 }
 
 

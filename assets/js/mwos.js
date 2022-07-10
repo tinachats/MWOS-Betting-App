@@ -56,4 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('orientationChange', lazyLoading);
     }
     /*** /.Lazy load images ***/
+
+    // Stop the dropdown menu from closing on click
+    const menus = document.querySelectorAll('.dropdown-menu');
+    menus.forEach(menu => {
+        menu.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    });
 });
