@@ -28,39 +28,236 @@
 
 <body>
     <!-- Top Navigation -->
-    <header class="header mb-1">
-        <nav class="navbar navbar-expand-lg top-nav main-nav border-bottom shadow-sm py-0">
+    <header class="header fixed-top border-bottom mb-1">
+        <!-- Main Nav -->
+        <nav class="navbar navbar-expand-lg top-nav main-nav shadow-sm py-0">
             <div class="container">
-                <ul class="top-nav-list d-flex align-items-center m-0 p-0 w-100">
-                    <!-- User Account -->
-                    <li class="nav-item w-10">
-                        <a class="nav-link ps-0" role="button" data-bs-toggle="offcanvas" href="#account-info" role="button" aria-controls="account-info">
+                <a class="navbar-brand d-md-none" role="button" data-bs-toggle="offcanvas" href="#account-info" role="button" aria-controls="account-info">
+                    <div class="avatar mt-2">
+                        <div class="avatar-initials">tc</div>
+                        <span class="avatar-status avatar-sm-status avatar-status-success"></span>
+                    </div>
+                </a>
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/app/logo.png" class="rounded-3" alt="Logo" height="35" width="35">
+                </a>
+                <form class="form-wrapper position-relative d-none d-md-inline-flex">
+                    <i class="bi bi-search form-icon position-absolute"></i>
+                    <div class="dropdown">
+                        <input class="form-control rounded-pill small me-2" type="search" placeholder="Search league or team" aria-label="Search" id="searchDropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                        <!-- Search Results and Suggestions -->
+                        <div class="dropdown-menu dropdown-menu-form-search border animated slideInUp" aria-labelledby="searchDropdownMenu">
+                            <!-- Body -->
+                            <div class="card-body-height">
+                                <div class="d-lg-none">
+                                    <div class="input-group input-group-merge navbar-input-group mb-5">
+                                        <div class="input-group-prepend input-group-text">
+                                            <i class="bi-search"></i>
+                                        </div>
+
+                                        <input type="search" class="form-control" placeholder="Search in front" aria-label="Search in front">
+                                        <a class="input-group-append input-group-text" href="javascript:;">
+                                            <i class="bi-x-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <span class="dropdown-header">Recent searches</span>
+
+                                <div class="dropdown-item dropdown-item-borderless bg-transparent text-wrap">
+                                    <a class="btn btn-soft-dark btn-xs rounded-pill" href="#">
+                                        Gulp <i class="bi-search ms-1"></i>
+                                    </a>
+                                    <a class="btn btn-soft-dark btn-xs rounded-pill" href="#">
+                                        Notification panel <i class="bi-search ms-1"></i>
+                                    </a>
+                                </div>
+
+                                <div class="dropdown-divider"></div>
+
+                                <span class="dropdown-header">Tutorials</span>
+
+                                <a class="dropdown-item" href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <span class="icon icon-soft-dark icon-xs icon-circle">
+                                        <i class="bi-sliders"></i>
+                                    </span>
+                                        </div>
+
+                                        <div class="flex-grow-1 text-truncate ms-2">
+                                            <span>How to set up Gulp?</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="dropdown-item" href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <span class="icon icon-soft-dark icon-xs icon-circle">
+                                                <i class="bi-paint-bucket"></i>
+                                            </span>
+                                        </div>
+
+                                        <div class="flex-grow-1 text-truncate ms-2">
+                                            <span>How to change theme color?</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <span class="dropdown-header">Members</span>
+
+                                <a class="dropdown-item" href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <img class="avatar avatar-xs avatar-circle" src="assets/images/users/user-1.jpg" alt="User Image">
+                                        </div>
+                                        <div class="flex-grow-1 text-truncate ms-2">
+                                            <span>Amanda Harvey <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="dropdown-item" href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <div class="avatar avatar-xs avatar-soft-info avatar-circle">
+                                                <span class="avatar-initials">AR</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 text-truncate ms-2">
+                                            <span>Anne Richard</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="dropdown-item" href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <img class="avatar avatar-xs avatar-circle" src="assets/images/users/user-3.jpg" alt="User Image">
+                                        </div>
+                                        <div class="flex-grow-1 text-truncate ms-2">
+                                            <span>David Harrison</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- End Body -->
+
+                            <!-- Footer -->
+                            <a class="card-footer text-center d-flex align-items-center justify-content-center py-3 w-100" href="#">
+                        See all results <i class="bi-chevron-right small ms-2"></i>
+                    </a>
+                            <!-- End Footer -->
+                        </div>
+                        <!-- /.Search Results and Suggestions -->
+                    </div>
+                </form>
+                <ul class="navbar-nav ms-md-auto">
+                    <li class="nav-item d-none d-md-inline-flex">
+                        <button type="button" class="nav-link btn btn-outline-default position-relative">
+                            <i class="bi bi-bell"></i>
+                            <span class="position-absolute badge rounded-pill bg-warning">
+                                9
+                                <span class="visually-hidden">unread notifications</span>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="nav-item d-none d-md-inline-flex">
+                        <button type="button" class="nav-link btn btn-outline-default position-relative">
+                            <i class="bi bi-heart"></i>
+                            <span class="position-absolute badge rounded-pill bg-warning">
+                                28
+                                <span class="visually-hidden">my scores</span>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="nav-link btn btn-outline-default position-relative">
+                            <i class="bi bi-stars"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item dropdown mt-0 d-none d-md-inline-flex">
+                        <a class="nav-link" role="button" data-bs-toggle="dropdown" href="#" id="accountNavbarDropdown" role="button" aria-expanded="false">
                             <div class="avatar mt-2">
                                 <div class="avatar-initials">tc</div>
                                 <span class="avatar-status avatar-sm-status avatar-status-success"></span>
                             </div>
                         </a>
-                    </li>
-                    <!-- /.User Account -->
+                        <div class="dropdown-menu dropdown-menu-end navbar-dropdown-menu navbar-dropdown-menu-borderless navbar-dropdown-account" aria-labelledby="accountNavbarDropdown">
+                            <div class="dropdown-item-text">
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar">
+                                        <img class="avatar-img lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="assets/images/users/user-1.jpg" alt="Tinashe Chaterera">
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h5 class="small text-capitalize mb-0">Mark Williams</h5>
+                                        <p class="small text-capitalize text-muted my-0">newbie</p>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <!-- App Logo -->
-                    <li class="nav-item ms-3 w-80">
-                        <div class="text-center">
-                            <img src="assets/images/app/logo.png" class="rounded-3" alt="Logo" height="35" width="35">
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="#">Profile &amp; account</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <!-- Dropdown -->
+                            <div class="dropdown">
+                                <a class="navbar-dropdown-submenu-item dropdown-item dropdown-toggle" href="javascript:;" id="navSubmenuPagesAccountDropdown2" data-bs-toggle="dropdown" aria-expanded="false">Customization</a>
+
+                                <div class="dropdown-menu dropdown-menu-end navbar-dropdown-menu navbar-dropdown-menu-borderless navbar-dropdown-sub-menu" aria-labelledby="navSubmenuPagesAccountDropdown2">
+                                    <a class="dropdown-item" href="#">
+                                  Invite people
+                                </a>
+                                    <a class="dropdown-item" href="#">
+                                  Analytics
+                                  <i class="bi-box-arrow-in-up-right"></i>
+                                </a>
+                                    <a class="dropdown-item" href="#">
+                                  Customize Front
+                                  <i class="bi-box-arrow-in-up-right"></i>
+                                </a>
+                                </div>
+                            </div>
+                            <!-- End Dropdown -->
+
+                            <a class="dropdown-item" href="#">Manage team</a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="#">Sign out</a>
                         </div>
                     </li>
-                    <!-- /.App Logo -->
-
-                    <!-- Notifications -->
-                    <li class="nav-item w-10">
-                        <button type="button" class="nav-link btn btn-outline-default">
-                            <i class="bi bi-stars"></i>
-                        </button>
-                    </li>
-                    <!-- /.Notifications -->
                 </ul>
             </div>
         </nav>
+        <!-- /.Main Nav -->
+
+        <!-- Sub Nav -->
+        <div class="nav-scroller bg-white border-top d-none d-md-block">
+            <div class="container">
+                <nav class="nav d-flex justify-content-between">
+                    <a class="link-secondary active" href="#popular">Popular</a>
+                    <a class="link-secondary" href="#football">Football</a>
+                    <a class="link-secondary" href="#basketball">Basketball</a>
+                    <a class="link-secondary" href="#tennis">Tennis</a>
+                    <a class="link-secondary" href="#hockey">Hockey</a>
+                    <a class="link-secondary" href="#rugby">Rugby</a>
+                    <a class="link-secondary" href="#a-football">A. Football</a>
+                    <a class="link-secondary" href="#basketball">Baseball</a>
+                    <a class="link-secondary" href="#">Cricket</a>
+                    <a class="link-secondary" href="#">Handball</a>
+                    <a class="link-secondary" href="#">Volleyball</a>
+                    <a class="link-secondary" href="#">Formula 1</a>
+                </nav>
+            </div>
+        </div>
+        <!-- /. Sub Nav -->
     </header>
     <!-- /.Top Navigation -->
 
@@ -154,7 +351,7 @@
                             <h6 class="small-xs text-capitalize text-muted">predictions</h6>
 
                             <!-- Prediction Carousel -->
-                            <div class="app-card border shadow-sm rounded-4 p-2">
+                            <div class="card border shadow-sm rounded-4 p-2">
                                 <div id="carouselExampleIndicators" class="carousel slide px-2 pb-5" data-bs-interval="false">
                                     <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -421,7 +618,7 @@
                         </div>
                         <div class="mt-3">
                             <h6 class="small-xs text-capitalize text-muted">match info</h6>
-                            <div class="app-card border shadow-sm rounded-4 p-2">
+                            <div class="card border shadow-sm rounded-4 p-2">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div class="d-flex align-items-center">
                                         <span class="small-xs text-muted">Stadium:</span>
@@ -548,9 +745,9 @@
     <!-- ./ Bottom Navigation -->
 
     <!-- Side Menu -->
-    <div class="offcanvas offcanvas-start bg-app-color mb-5" data-bs-scroll="false" tabindex="-1" id="account-info" aria-labelledby="account-infoLabel">
+    <div class="offcanvas offcanvas-start side-menu bg-app-color mb-5" data-bs-scroll="false" tabindex="-1" id="account-info" aria-labelledby="account-infoLabel">
         <div class="offcanvas-header border-bottom">
-            <a class="d-flex align-items-center" href="#">
+            <a class="d-flex align-items-center" href="account.html">
                 <div class="avatar">
                     <img src="assets/images/users/user-2.jpg" alt="User" class="avatar-img">
                 </div>
@@ -564,7 +761,7 @@
             <ul class="list-group list-group-flush m-0 p-0">
                 <!-- Account -->
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="account.html" class="d-flex align-items-center">
                         <i class="bi bi-person bi-3x me-2"></i>
                         <span class="text-capitalize small">Account</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
@@ -577,14 +774,14 @@
                     <h6 class="text-uppercase small-xs mt-1 mb-0">Content Index</h6>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="sports.html" class="d-flex align-items-center">
                         <i class="bi bi-trophy bi-3x me-2"></i>
                         <span class="text-capitalize small">All Competitions</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="news.html" class="d-flex align-items-center">
                         <i class="bi bi-newspaper bi-3x me-2"></i>
                         <span class="text-capitalize small">All news</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
@@ -597,44 +794,44 @@
                     <h6 class="text-uppercase small-xs mt-1 mb-0">settings</h6>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="notifications.html" class="d-flex align-items-center">
                         <i class="bi bi-bell bi-3x me-2"></i>
                         <span class="text-capitalize small">notifications</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="export.html" class="d-flex align-items-center">
                         <i class="bi bi-laptop bi-3x me-2"></i>
                         <span class="text-capitalize small">export selections to web</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="my-scores.html" class="d-flex align-items-center">
                         <i class="bi bi-alarm bi-3x me-2"></i>
                         <span class="text-capitalize small">my scores</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="settings.html" class="d-flex align-items-center">
                         <i class="bi bi-translate bi-3x me-2"></i>
                         <span class="text-capitalize small">languages</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="settings.html" class="d-flex align-items-center">
                         <i class="bi bi-currency-exchange bi-3x me-2"></i>
                         <span class="text-capitalize small">currency</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
-                        <i class="bi bi-translate bi-3x me-2"></i>
-                        <span class="text-capitalize small">languages</span>
+                    <a href="settings.html" class="d-flex align-items-center">
+                        <i class="bi bi-brightness-high bi-3x me-2"></i>
+                        <span class="text-capitalize small">Theme</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
@@ -645,35 +842,35 @@
                     <h6 class="text-uppercase small-xs mt-1 mb-0">general</h6>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="faq.html" class="d-flex align-items-center">
                         <i class="bi bi-question-circle bi-3x me-2"></i>
                         <span class="text-capitalize small">FAQ</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="policy.html" class="d-flex align-items-center">
                         <i class="bi bi-shield-lock bi-3x me-2"></i>
                         <span class="text-capitalize small">privacy policy</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="terms.html" class="d-flex align-items-center">
                         <i class="bi bi-list-ol bi-3x me-2"></i>
                         <span class="text-capitalize small">terms & conditions</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="javascript:void(0)" class="d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#rate-app">
                         <i class="bi bi-star bi-3x me-2"></i>
                         <span class="text-capitalize small">rate us</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="javascript:void(0)" role="button" class="d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#send-feedback">
                         <i class="bi bi-envelope bi-3x me-2"></i>
                         <span class="text-capitalize small">send us feedback</span>
                         <i class="bi bi-chevron-right ms-auto"></i>

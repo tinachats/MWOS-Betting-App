@@ -347,6 +347,18 @@ body {
     background-color: var(--bs-warning);
 }
 
+.top-nav.main-nav .btn.btn-outline-default {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.top-nav.main-nav .btn.btn-outline-default.active,
+.top-nav.main-nav .btn.btn-outline-default:hover {
+    background-color: var(--soft-grey);
+}
+
 
 /* /. Navbars */
 
@@ -423,12 +435,14 @@ header.header .nav-scroller .nav>a {
     padding-top: .75rem;
     padding-bottom: .75rem;
     font-size: .875rem;
-    border-bottom: 2px solid transparent;
+    border-bottom: 4px solid transparent;
 }
 
 header.header .nav-scroller .nav>a.active {
     color: var(--bs-warning);
-    border-bottom-color: var(--bs-warning);
+    border-bottom: 4px solid var(--bs-warning);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
 .nav-scroller.cirlcled-items .nav>a:not(:last-child),
@@ -472,7 +486,11 @@ header.header .nav-scroller .nav>a.active {
 }
 
 .dropdown:not(.dropup) .dropdown-menu {
-    margin-top: .5rem !important;
+    margin-top: .5rem;
+}
+
+.dropdown:not(.dropup) .dropdown-menu[aria-labelledby="accountNavbarDropdown"] {
+    margin-top: -.5rem;
 }
 
 .dropdown.dropup .dropdown-menu {
@@ -481,8 +499,8 @@ header.header .nav-scroller .nav>a.active {
 
 .dropdown-item:focus,
 .dropdown-item:hover {
-    color: var(--soft-grey);
-    background-color: var(--soft-black);
+    color: #fff;
+    background-color: var(--bs-dark);
 }
 
 .dropdown-divider {
@@ -927,6 +945,16 @@ nav .badge {
 /*** /.Popovers ***/
 
 
+/* Off-canvas */
+
+.offcanvas.side-menu {
+    height: 100%;
+}
+
+
+/* /. Off-canvas */
+
+
 /* Scroll Bar */
 
 ::-webkit-scrollbar {
@@ -965,7 +993,7 @@ nav .badge {
 
 .navbar .form-wrapper .form-icon,
 .navbar .form-wrapper .form-control {
-    font-size: 1rem;
+    font-size: .75rem;
     z-index: 1;
 }
 
@@ -1015,7 +1043,7 @@ nav .badge {
     z-index: 2;
     padding: 0 20px;
     background-color: var(--app-body-color);
-    width: fit-content;
+    min-width: fit-content;
 }
 
 
@@ -1234,6 +1262,10 @@ a:hover {
     background-color: var(--bs-warning) !important;
 }
 
+.bg-white {
+    background-color: var(--bs-white) !important;
+}
+
 li {
     list-style: none;
 }
@@ -1301,6 +1333,22 @@ li {
     }
     .content .g-col-4 {
         grid-template-columns: repeat(4, 1fr);
+    }
+    .top-nav.main-nav .btn.btn-outline-default {
+        margin-top: .9rem;
+        margin-left: .5rem;
+        color: var(--bs-dark);
+    }
+    header.header .nav-scroller .nav>a {
+        padding-bottom: 0.65rem;
+        font-size: .75rem;
+    }
+    .top-nav.main-nav .position-absolute.badge {
+        right: -3px;
+        top: 0;
+    }
+    .content {
+        margin-top: 5.9rem;
     }
 }
 
