@@ -7,24 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Developer -->
     <meta name="developer" content="Tinashe. M. Chaterera">
-    <title>MWOS Betting App</title>
+    <title>BetApp</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/app/logo.png" class="lazy" loader="lazy" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <!-- Material Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
-    <!-- Owl Carousel -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous"
-        referrerpolicy="no-referrer" />
     <!-- iziToast -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css">
     <!-- App Core CSS -->
@@ -33,50 +26,674 @@
 
 <body>
     <!-- Top Navigation -->
-    <header class="header mb-1">
-        <nav class="navbar navbar-expand-lg top-nav main-nav border-bottom shadow-sm py-0">
+    <header class="header fixed-top border-bottom mb-1">
+        <!-- Main Nav -->
+        <nav class="navbar navbar-expand-lg top-nav main-nav shadow-sm py-0">
             <div class="container">
-                <ul class="top-nav-list d-flex align-items-center m-0 p-0 w-100">
-                    <!-- User Account -->
-                    <li class="nav-item w-10">
-                        <a class="nav-link ps-0" role="button" data-bs-toggle="offcanvas" href="#account-info" role="button" aria-controls="account-info">
+                <a class="navbar-brand d-md-none" role="button" data-bs-toggle="offcanvas" href="#account-info" role="button" aria-controls="account-info">
+                    <div class="avatar avatar-sm mt-1">
+                        <div class="avatar-initials">tc</div>
+                        <span class="avatar-status avatar-sm-status avatar-status-success"></span>
+                    </div>
+                </a>
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/app/logo.png" class="rounded-3" alt="Logo" height="30" width="30">
+                </a>
+                <form class="form-wrapper position-relative d-none d-md-inline-flex">
+                    <i class="bi bi-search form-icon position-absolute"></i>
+                    <div class="dropdown">
+                        <input class="form-control rounded-pill small me-2" type="search" placeholder="Search league or team" aria-label="Search" id="searchDropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                        <!-- Search Results and Suggestions -->
+                        <div class="dropdown-menu dropdown-menu-form-search border animated slideInUp" aria-labelledby="searchDropdownMenu">
+                            <!-- Body -->
+                            <div class="card-body-height">
+                                <div class="d-lg-none">
+                                    <div class="input-group input-group-merge navbar-input-group mb-5">
+                                        <div class="input-group-prepend input-group-text">
+                                            <i class="bi-search"></i>
+                                        </div>
+
+                                        <input type="search" class="form-control" placeholder="Search in front" aria-label="Search in front">
+                                        <a class="input-group-append input-group-text" href="javascript:;">
+                                            <i class="bi-x-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <span class="dropdown-header">Recent searches</span>
+
+                                <div class="dropdown-item dropdown-item-borderless bg-transparent text-wrap">
+                                    <a class="btn btn-light btn-xs rounded-pill" href="search-results.html">
+                                        Real Madrid <i class="bi-search ms-1"></i>
+                                    </a>
+                                    <a class="btn btn-light btn-xs rounded-pill" href="search-results.html">
+                                        Lionel Messi <i class="bi-search ms-1"></i>
+                                    </a>
+                                </div>
+
+                                <div class="dropdown-divider"></div>
+
+                                <span class="dropdown-header">Frequently asked</span>
+
+                                <a class="dropdown-item" href="faq.html">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <span class="icon bg-dark icon-xs icon-circle">
+                                                <i class="bi-currency-exchange"></i>
+                                            </span>
+                                        </div>
+
+                                        <div class="flex-grow-1 text-truncate ms-2">
+                                            <span>How to change my currency?</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="dropdown-item" href="faq.html">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <span class="icon bg-dark icon-xs icon-circle">
+                                                <i class="bi-plus-slash-minus"></i>
+                                            </span>
+                                        </div>
+
+                                        <div class="flex-grow-1 text-truncate ms-2">
+                                            <span>How to change my betting odds?</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <span class="dropdown-header">Trending Players</span>
+
+                                <a class="dropdown-item" href="player.html">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <div class="avatar avatar-sm">
+                                                <img class="avatar-img lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.resfu.com/img_data/players/medium/28185.jpg?size=120x&lossy=1" alt="Player Picture" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 text-truncate text-capitalize ms-2">
+                                            <span>cristiano ronaldo <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="dropdown-item" href="player.html">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <div class="avatar avatar-sm">
+                                                <img class="avatar-img lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.resfu.com/img_data/players/medium/23569.jpg?size=120x&lossy=1" alt="Player Picture" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 text-truncate text-capitalize ms-2">
+                                            <span>lionel messi</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a class="dropdown-item" href="player.html">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <div class="avatar avatar-sm">
+                                                <img class="avatar-img lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.resfu.com/img_data/players/medium/284437.jpg?size=120x&lossy=1" alt="Player Picture" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 text-truncate text-capitalize ms-2">
+                                            <span>marcus rashford</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- End Body -->
+
+                            <!-- Footer -->
+                            <a class="card-footer text-center d-flex align-items-center justify-content-center py-3 w-100" href="search-results.html">
+                                See all results <i class="bi-chevron-right small ms-2"></i>
+                            </a>
+                            <!-- End Footer -->
+                        </div>
+                        <!-- /.Search Results and Suggestions -->
+                    </div>
+                </form>
+                <ul class="navbar-nav ms-md-auto">
+                    <li class="nav-item dropdown d-none d-md-inline-flex">
+                        <button type="button" class="nav-link btn btn-outline-default position-relative" id="navbarNotificationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-bell"></i>
+                            <span class="position-absolute badge rounded-pill bg-warning">
+                                9
+                                <span class="visually-hidden">unread notifications</span>
+                            </span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-card navbar-dropdown-menu navbar-dropdown-menu-borderless" aria-labelledby="navbarNotificationsDropdown">
+                            <!-- Header -->
+                            <div class="card-header card-header-content-between">
+                                <h4 class="card-title mb-0">Notifications</h4>
+
+                                <!-- Unfold -->
+                                <div class="dropdown">
+                                    <button type="button" class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle" id="navbarNotificationsDropdownSettings" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi-three-dots-vertical"></i>
+                                    </button>
+
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarNotificationsDropdownSettings">
+                                        <span class="dropdown-header">Settings</span>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="bi-archive dropdown-item-icon"></i> Archive all
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="bi-check2-all dropdown-item-icon"></i> Mark all as read
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="bi-toggle-off dropdown-item-icon"></i> Disable notifications
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="bi-gift dropdown-item-icon"></i> What's new?
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <span class="dropdown-header">Feedback</span>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="bi-chat-left-dots dropdown-item-icon"></i> Report
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- End Unfold -->
+                            </div>
+                            <!-- End Header -->
+
+                            <!-- Nav -->
+                            <ul class="nav nav-tabs nav-justified mt-2" id="notificationTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#notificationNavOne" id="notificationNavOne-tab" data-bs-toggle="tab" data-bs-target="#notificationNavOne" role="tab" aria-controls="notificationNavOne" aria-selected="true">Messages (3)</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#notificationNavTwo" id="notificationNavTwo-tab" data-bs-toggle="tab" data-bs-target="#notificationNavTwo" role="tab" aria-controls="notificationNavTwo" aria-selected="false">Archived</a>
+                                </li>
+                            </ul>
+                            <!-- End Nav -->
+
+                            <!-- Body -->
+                            <div class="card-body-height">
+                                <!-- Tab Content -->
+                                <div class="tab-content" id="notificationTabContent">
+                                    <div class="tab-pane fade show active" id="notificationNavOne" role="tabpanel" aria-labelledby="notificationNavOne-tab">
+                                        <!-- List Group -->
+                                        <ul class="list-group list-group-flush navbar-card-list-group">
+                                            <!-- Item -->
+                                            <li class="list-group-item form-check-select">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="" id="notificationCheck1" checked="">
+                                                                <label class="form-check-label" for="notificationCheck1"></label>
+                                                                <span class="form-check-stretched-bg"></span>
+                                                            </div>
+                                                            <img class="avatar avatar-sm avatar-circle lazy" src="assets/images/app/logo-placeholder.png" data-src="assets/images/users/user-1.jpg" alt="User Image" loading="lazy">
+                                                        </div>
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col ms-n2">
+                                                        <h5 class="small text-capitalize mb-1">tinashe chaterera</h5>
+                                                        <p class="small text-body">changed an issue from "In Progress" to <span class="badge bg-success">Review</span></p>
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <small class="col-auto text-muted text-cap">2h</small>
+                                                    <!-- End Col -->
+                                                </div>
+                                                <!-- End Row -->
+
+                                                <a class="stretched-link" href="#"></a>
+                                            </li>
+                                            <!-- End Item -->
+
+                                            <!-- Item -->
+                                            <li class="list-group-item form-check-select">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="" id="notificationCheck2" checked="">
+                                                                <label class="form-check-label" for="notificationCheck2"></label>
+                                                                <span class="form-check-stretched-bg"></span>
+                                                            </div>
+                                                            <div class="avatar avatar-sm avatar-soft-dark avatar-circle">
+                                                                <span class="avatar-initials">K</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col ms-n2">
+                                                        <h5 class="text-capitalize small mb-1">Klara Hampton</h5>
+                                                        <p class="small text-body">mentioned you in a comment</p>
+                                                        <blockquote class="small">
+                                                            Nice work, love! You really nailed it. Keep it up!
+                                                        </blockquote>
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <small class="col-auto text-muted text-cap">10h</small>
+                                                    <!-- End Col -->
+                                                </div>
+                                                <!-- End Row -->
+
+                                                <a class="stretched-link" href="#"></a>
+                                            </li>
+                                            <!-- End Item -->
+
+                                            <!-- Item -->
+                                            <li class="list-group-item form-check-select">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="" id="notificationCheck3" checked="">
+                                                                <label class="form-check-label" for="notificationCheck3"></label>
+                                                                <span class="form-check-stretched-bg"></span>
+                                                            </div>
+                                                            <div class="avatar avatar-sm avatar-circle">
+                                                                <img class="avatar-img lazy" src="assets/images/app/logo-placeholder.png" data-src="assets/images/users/user-2.jpg" alt="Image" loading="lazy">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col ms-n2">
+                                                        <h5 class="text-capitalize small mb-1">Ruby Walter</h5>
+                                                        <p class="text-body small">joined the Slack group HS Team</p>
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <small class="col-auto text-muted text-cap">3d</small>
+                                                    <!-- End Col -->
+                                                </div>
+                                                <!-- End Row -->
+
+                                                <a class="stretched-link" href="#"></a>
+                                            </li>
+                                            <!-- End Item -->
+
+                                            <!-- Item -->
+                                            <li class="list-group-item form-check-select">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="" id="notificationCheck4">
+                                                                <label class="form-check-label" for="notificationCheck4"></label>
+                                                                <span class="form-check-stretched-bg"></span>
+                                                            </div>
+                                                            <div class="avatar avatar-sm avatar-circle">
+                                                                <img class="avatar-img lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="assets/images/users/user-3.jpg" alt="Image">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col ms-n2">
+                                                        <h5 class="text-capitalize small mb-1">from Google</h5>
+                                                        <p class="text-body small">Start using forms to capture the information of prospects visiting your Google website</p>
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <small class="col-auto text-muted text-cap">17d</small>
+                                                    <!-- End Col -->
+                                                </div>
+                                                <!-- End Row -->
+
+                                                <a class="stretched-link" href="#"></a>
+                                            </li>
+                                            <!-- End Item -->
+
+                                            <!-- Item -->
+                                            <li class="list-group-item form-check-select">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="" id="notificationCheck5">
+                                                                <label class="form-check-label" for="notificationCheck5"></label>
+                                                                <span class="form-check-stretched-bg"></span>
+                                                            </div>
+                                                            <div class="avatar avatar-sm avatar-circle">
+                                                                <img class="avatar-img lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="assets/images/users/user-1.jpg" alt="Image">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col ms-n2">
+                                                        <h5 class="text-capitalize small mb-1">Sara Villar</h5>
+                                                        <p class="text-body small">completed <i class="bi-journal-bookmark-fill text-primary"></i> FD-7 task</p>
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <small class="col-auto text-muted text-cap">2mn</small>
+                                                    <!-- End Col -->
+                                                </div>
+                                                <!-- End Row -->
+
+                                                <a class="stretched-link" href="#"></a>
+                                            </li>
+                                            <!-- End Item -->
+                                        </ul>
+                                        <!-- End List Group -->
+                                    </div>
+
+                                    <div class="tab-pane fade" id="notificationNavTwo" role="tabpanel" aria-labelledby="notificationNavTwo-tab">
+                                        <!-- List Group -->
+                                        <ul class="list-group list-group-flush navbar-card-list-group">
+                                            <!-- Item -->
+                                            <li class="list-group-item form-check-select">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="" id="notificationCheck6">
+                                                                <label class="form-check-label" for="notificationCheck6"></label>
+                                                                <span class="form-check-stretched-bg"></span>
+                                                            </div>
+                                                            <div class="avatar avatar-sm avatar-soft-dark avatar-circle">
+                                                                <span class="avatar-initials">A</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col ms-n2">
+                                                        <h5 class="text-capitalize small mb-1">Anne Richard</h5>
+                                                        <p class="text-body small">accepted your invitation to join Notion</p>
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <small class="col-auto text-muted text-cap">1d</small>
+                                                    <!-- End Col -->
+                                                </div>
+                                                <!-- End Row -->
+
+                                                <a class="stretched-link" href="#"></a>
+                                            </li>
+                                            <!-- End Item -->
+
+                                            <!-- Item -->
+                                            <li class="list-group-item form-check-select">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="" id="notificationCheck7">
+                                                                <label class="form-check-label" for="notificationCheck7"></label>
+                                                                <span class="form-check-stretched-bg"></span>
+                                                            </div>
+                                                            <div class="avatar avatar-sm avatar-circle">
+                                                                <img class="avatar-img lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="assets/images/users/user-2.jpg" alt="Image">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col ms-n2">
+                                                        <h5 class="text-capitalize small mb-1">Finch Hoot</h5>
+                                                        <p class="text-body small">left Slack group HS projects</p>
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <small class="col-auto text-muted text-cap">1d</small>
+                                                    <!-- End Col -->
+                                                </div>
+                                                <!-- End Row -->
+
+                                                <a class="stretched-link" href="#"></a>
+                                            </li>
+                                            <!-- End Item -->
+
+                                            <!-- Item -->
+                                            <li class="list-group-item form-check-select">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="" id="notificationCheck8">
+                                                                <label class="form-check-label" for="notificationCheck8"></label>
+                                                                <span class="form-check-stretched-bg"></span>
+                                                            </div>
+                                                            <div class="avatar avatar-sm avatar-dark avatar-circle">
+                                                                <span class="avatar-initials">HS</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col ms-n2">
+                                                        <h5 class="text-capitalize small mb-1">Htmlstream</h5>
+                                                        <p class="text-body small">you earned a "Top endorsed" <i class="bi-patch-check-fill text-primary"></i> badge</p>
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <small class="col-auto text-muted text-cap">6d</small>
+                                                    <!-- End Col -->
+                                                </div>
+                                                <!-- End Row -->
+
+                                                <a class="stretched-link" href="#"></a>
+                                            </li>
+                                            <!-- End Item -->
+
+                                            <!-- Item -->
+                                            <li class="list-group-item form-check-select">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="" id="notificationCheck9">
+                                                                <label class="form-check-label" for="notificationCheck9"></label>
+                                                                <span class="form-check-stretched-bg"></span>
+                                                            </div>
+                                                            <div class="avatar avatar-sm avatar-circle">
+                                                                <img class="avatar-img lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="assets/images/users/user-3.jpg" alt="Image">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col ms-n2">
+                                                        <h5 class="text-capitalize small mb-1">Linda Bates</h5>
+                                                        <p class="text-body small">Accepted your connection</p>
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <small class="col-auto text-muted text-cap">17d</small>
+                                                    <!-- End Col -->
+                                                </div>
+                                                <!-- End Row -->
+
+                                                <a class="stretched-link" href="#"></a>
+                                            </li>
+                                            <!-- End Item -->
+
+                                            <!-- Item -->
+                                            <li class="list-group-item form-check-select">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="" id="notificationCheck10">
+                                                                <label class="form-check-label" for="notificationCheck10"></label>
+                                                                <span class="form-check-stretched-bg"></span>
+                                                            </div>
+                                                            <div class="avatar avatar-sm avatar-soft-dark avatar-circle">
+                                                                <span class="avatar-initials">L</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <div class="col ms-n2">
+                                                        <h5 class="text-capitalize small mb-1">Lewis Clarke</h5>
+                                                        <p class="text-body small">completed <i class="bi-journal-bookmark-fill text-primary"></i> FD-134 task</p>
+                                                    </div>
+                                                    <!-- End Col -->
+
+                                                    <small class="col-auto text-muted text-cap">2mts</small>
+                                                    <!-- End Col -->
+                                                </div>
+                                                <!-- End Row -->
+
+                                                <a class="stretched-link" href="#"></a>
+                                            </li>
+                                            <!-- End Item -->
+                                        </ul>
+                                        <!-- End List Group -->
+                                    </div>
+                                </div>
+                                <!-- End Tab Content -->
+                            </div>
+                            <!-- End Body -->
+
+                            <!-- Card Footer -->
+                            <a class="card-footer text-center py-3" href="notifications.html">
+                                View all notifications <i class="bi-chevron-right"></i>
+                            </a>
+                            <!-- End Card Footer -->
+                        </div>
+                    </li>
+                    <li class="nav-item d-none d-md-inline-flex">
+                        <button type="button" class="nav-link btn btn-outline-default position-relative">
+                            <i class="bi bi-heart"></i>
+                            <span class="position-absolute badge rounded-pill bg-warning">
+                                28
+                                <span class="visually-hidden">my scores</span>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="nav-link btn btn-xs btn-outline-default position-relative" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Trending">
+                            <i class="bi bi-stars bi-2x"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item dropdown mt-0 d-none d-md-inline-flex">
+                        <a class="nav-link" role="button" data-bs-toggle="dropdown" href="#" id="accountNavbarDropdown" role="button" aria-expanded="false">
                             <div class="avatar mt-2">
                                 <div class="avatar-initials">tc</div>
                                 <span class="avatar-status avatar-sm-status avatar-status-success"></span>
                             </div>
                         </a>
-                    </li>
-                    <!-- /.User Account -->
+                        <div class="dropdown-menu dropdown-menu-end navbar-dropdown-menu navbar-dropdown-menu-borderless navbar-dropdown-account" aria-labelledby="accountNavbarDropdown">
+                            <div class="dropdown-item-text">
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar">
+                                        <img class="avatar-img lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="assets/images/users/user-1.jpg" alt="Tinashe Chaterera">
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h5 class="small text-capitalize mb-0">Mark Williams</h5>
+                                        <p class="d-flex align-items-center small text-capitalize text-muted my-0">
+                                            <i class="bi bi-bootstrap me-2"></i> newbie
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <!-- App Logo -->
-                    <li class="nav-item ms-3 w-80">
-                        <div class="text-center">
-                            <img src="assets/images/app/logo.png" class="rounded-3" alt="Logo" height="35" width="35">
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="account.html">
+                                <div class="d-flex align-items-center text-capitalize">
+                                    <i class="bi bi-person bi-2x"></i>
+                                    <span class="ms-2">Account</span>
+                                </div>
+                            </a>
+                            <a class="dropdown-item" href="settings.html">
+                                <div class="d-flex align-items-center text-capitalize">
+                                    <i class="bi bi-gear bi-2x"></i>
+                                    <span class="ms-2">settings &amp; privacy</span>
+                                    <i class="bi bi-chevron-right ms-auto"></i>
+                                </div>
+                            </a>
+                            <a class="dropdown-item" href="support.html">
+                                <div class="d-flex align-items-center text-capitalize">
+                                    <i class="bi bi-question-circle bi-2x"></i>
+                                    <span class="ms-2">help &amp; support</span>
+                                    <i class="bi bi-chevron-right ms-auto"></i>
+                                </div>
+                            </a>
+                            <a class="dropdown-item" href="settings.html">
+                                <div class="d-flex align-items-center text-capitalize">
+                                    <i class="bi bi-brightness-high bi-2x"></i>
+                                    <span class="ms-2">display &amp; accessibility</span>
+                                    <i class="bi bi-chevron-right ms-auto"></i>
+                                </div>
+                            </a>
+                            <a class="dropdown-item" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#send-feedback">
+                                <div class="d-flex align-items-center text-capitalize">
+                                    <i class="bi bi-envelope-exclamation bi-2x"></i>
+                                    <span class="ms-2">give feedback</span>
+                                </div>
+                            </a>
+                            <a class="dropdown-item" href="javascript:void(0)">
+                                <div class="d-flex align-items-center text-capitalize">
+                                    <i class="bi bi-power bi-2x"></i>
+                                    <span class="ms-2">sign out</span>
+                                </div>
+                            </a>
                         </div>
                     </li>
-                    <!-- /.App Logo -->
-
-                    <!-- Notifications -->
-                    <li class="nav-item w-10">
-                        <button type="button" class="nav-link btn btn-outline-default">
-                            <i class="bi bi-stars"></i>
-                        </button>
-                    </li>
-                    <!-- /.Notifications -->
                 </ul>
             </div>
         </nav>
+        <!-- /.Main Nav -->
+
+        <!-- Sub Nav -->
+        <div class="nav-scroller bg-white border-top d-none d-md-block">
+            <div class="container">
+                <nav class="nav d-flex justify-content-between">
+                    <a class="link-secondary active" href="#popular">Popular</a>
+                    <a class="link-secondary" href="#football">Football</a>
+                    <a class="link-secondary" href="#basketball">Basketball</a>
+                    <a class="link-secondary" href="#tennis">Tennis</a>
+                    <a class="link-secondary" href="#hockey">Hockey</a>
+                    <a class="link-secondary" href="#rugby">Rugby</a>
+                    <a class="link-secondary" href="#a-football">A. Football</a>
+                    <a class="link-secondary" href="#basketball">Baseball</a>
+                    <a class="link-secondary" href="#">Cricket</a>
+                    <a class="link-secondary" href="#">Handball</a>
+                    <a class="link-secondary" href="#">Volleyball</a>
+                    <a class="link-secondary" href="#">Formula 1</a>
+                </nav>
+            </div>
+        </div>
+        <!-- /. Sub Nav -->
     </header>
     <!-- /.Top Navigation -->
 
     <!-- Page Content -->
     <div class="content container-md mb-5 pb-5 px-1">
-        <!-- Put your content here -->
+        <div class="row">
+            <!-- Left Column -->
+            <div class="col-12 col-md-6 col-xl-3 d-none d-md-block">
+                <!-- Section Content -->
+            </div>
+            <!-- /. Left Column -->
+
+            <!-- Main Content -->
+            <div class="col-12 col-md-6 col-xl-5">
+                <!-- Section Content -->
+            </div>
+            <!-- /. Main Content -->
+
+            <!-- Right Column -->
+            <div class="col-12 col-md-6 col-xl-4 d-none d-xl-block">
+                <!-- Section Content -->
+            </div>
+            <!-- /. Right Column -->
+        </div>
     </div>
     <!-- /. Page Content -->
 
     <!-- Bottom Navigation -->
-    <nav class="main-nav fixed-bottom border-top shadow-sm">
+    <nav class="main-nav fixed-bottom border-top shadow-sm d-md-none">
         <div class="container-fluid">
             <ul class="nav-list d-flex justify-content-around m-0 px-0 py-1 w-100">
                 <li class="nav-item pt-2">
@@ -115,23 +732,23 @@
     <!-- ./ Bottom Navigation -->
 
     <!-- Side Menu -->
-    <div class="offcanvas offcanvas-start bg-app-color mb-5" data-bs-scroll="false" tabindex="-1" id="account-info" aria-labelledby="account-infoLabel">
+    <div class="offcanvas offcanvas-start side-menu bg-app-color mb-2" data-bs-scroll="false" tabindex="-1" id="account-info" aria-labelledby="account-infoLabel">
         <div class="offcanvas-header border-bottom">
-            <a class="d-flex align-items-center" href="#">
+            <a class="d-flex align-items-center" href="account.html">
                 <div class="avatar">
                     <img src="assets/images/users/user-2.jpg" alt="User" class="avatar-img">
                 </div>
                 <div class="d-block ms-2 mt-3">
-                    <h5 class="text-light mb-0 fw-bold">Mark Williams</h5>
+                    <h5 class="mb-0 fw-bold">Mark Williams</h5>
                     <p class="text-muted small-xs fw-bold">Newbie</p>
                 </div>
             </a>
         </div>
-        <div class="offcanvas-body p-0 mx-0 mt-0 mb-5">
+        <div class="offcanvas-body p-0 mx-0 mt-0">
             <ul class="list-group list-group-flush m-0 p-0">
                 <!-- Account -->
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="account.html" class="d-flex align-items-center">
                         <i class="bi bi-person bi-3x me-2"></i>
                         <span class="text-capitalize small">Account</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
@@ -144,14 +761,14 @@
                     <h6 class="text-uppercase small-xs mt-1 mb-0">Content Index</h6>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="sports.html" class="d-flex align-items-center">
                         <i class="bi bi-trophy bi-3x me-2"></i>
                         <span class="text-capitalize small">All Competitions</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="news.html" class="d-flex align-items-center">
                         <i class="bi bi-newspaper bi-3x me-2"></i>
                         <span class="text-capitalize small">All news</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
@@ -164,44 +781,44 @@
                     <h6 class="text-uppercase small-xs mt-1 mb-0">settings</h6>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="notifications.html" class="d-flex align-items-center">
                         <i class="bi bi-bell bi-3x me-2"></i>
                         <span class="text-capitalize small">notifications</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="export.html" class="d-flex align-items-center">
                         <i class="bi bi-laptop bi-3x me-2"></i>
                         <span class="text-capitalize small">export selections to web</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="my-scores.html" class="d-flex align-items-center">
                         <i class="bi bi-alarm bi-3x me-2"></i>
                         <span class="text-capitalize small">my scores</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="settings.html" class="d-flex align-items-center">
                         <i class="bi bi-translate bi-3x me-2"></i>
                         <span class="text-capitalize small">languages</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="settings.html" class="d-flex align-items-center">
                         <i class="bi bi-currency-exchange bi-3x me-2"></i>
                         <span class="text-capitalize small">currency</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
-                        <i class="bi bi-translate bi-3x me-2"></i>
-                        <span class="text-capitalize small">languages</span>
+                    <a href="settings.html" class="d-flex align-items-center">
+                        <i class="bi bi-brightness-high bi-3x me-2"></i>
+                        <span class="text-capitalize small">Display &amp; Accessibility</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
@@ -212,36 +829,36 @@
                     <h6 class="text-uppercase small-xs mt-1 mb-0">general</h6>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="faq.html" class="d-flex align-items-center">
                         <i class="bi bi-question-circle bi-3x me-2"></i>
                         <span class="text-capitalize small">FAQ</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="policy.html" class="d-flex align-items-center">
                         <i class="bi bi-shield-lock bi-3x me-2"></i>
                         <span class="text-capitalize small">privacy policy</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="terms.html" class="d-flex align-items-center">
                         <i class="bi bi-list-ol bi-3x me-2"></i>
                         <span class="text-capitalize small">terms & conditions</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
+                    <a href="javascript:void(0)" class="d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#rate-app">
                         <i class="bi bi-star bi-3x me-2"></i>
                         <span class="text-capitalize small">rate us</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="d-flex align-items-center">
-                        <i class="bi bi-envelope bi-3x me-2"></i>
+                    <a href="javascript:void(0)" role="button" class="d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#send-feedback">
+                        <i class="bi bi-envelope-exclamation bi-3x me-2"></i>
                         <span class="text-capitalize small">send us feedback</span>
                         <i class="bi bi-chevron-right ms-auto"></i>
                     </a>
@@ -249,15 +866,16 @@
                 <!-- /. General -->
             </ul>
         </div>
+        <div class="offcanvas-footer">
+            <a href="https://twitter.com/tinaking92" class="d-flex align-items-center justify-content-center small-xs text-muted mb-3">
+                Visionaries-Business &copy; 2022 
+            </a>
+        </div>
     </div>
     <!-- /. Side Menu -->
 
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <!-- OwlCarousel -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- iziToast -->

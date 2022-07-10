@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Developer -->
     <meta name="developer" content="Tinashe. M. Chaterera">
-    <title>MWOS Betting App</title>
+    <title>BetApp</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/app/logo.png" class="lazy" loader="lazy" type="image/x-icon">
     <!-- Bootstrap CSS -->
@@ -672,7 +672,7 @@
     <div class="content container-md mb-5 pb-5 px-1">
         <div class="row">
             <!-- League Options -->
-            <div class="col-12 col-md-6 col-xl-3 d-none d-md-block">
+            <div class="col-12 col-md-4 col-xl-3 d-none d-md-block">
                 <ul class="list-group">
                     <li class="list-group-item">
                         <h6 class="small-xs">Popular Leagues</h6>
@@ -682,7 +682,7 @@
             <!-- /. League Options -->
 
             <!-- Match Info -->
-            <div class="col-12 col-md-6 col-xl-5">
+            <div class="col-12 col-md-8 col-xl-5">
                 <!-- Match Results -->
                 <div class="card rounded-4 shadow-sm">
                     <div class="card-body">
@@ -745,12 +745,12 @@
                 <!-- /. Match Results -->
 
                 <!-- Nav Pills -->
-                <ul class="nav nav-pills mt-2" id="pills-tab" role="tablist">
+                <ul class="nav nav-pills shadow-sm mt-2 " id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-match-tab" data-bs-toggle="pill" data-bs-target="#pills-match" type="button" role="tab" aria-controls="pills-match" aria-selected="true">Match</button>
+                        <button class="nav-link" id="pills-match-tab" data-bs-toggle="pill" data-bs-target="#pills-match" type="button" role="tab" aria-controls="pills-match" aria-selected="true">Match</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-lineups-tab" data-bs-toggle="pill" data-bs-target="#pills-lineups" type="button" role="tab" aria-controls="pills-lineups" aria-selected="false">Lineups</button>
+                        <button class="nav-link active" id="pills-lineups-tab" data-bs-toggle="pill" data-bs-target="#pills-lineups" type="button" role="tab" aria-controls="pills-lineups" aria-selected="false">Lineups</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="pills-stats-tab" data-bs-toggle="pill" data-bs-target="#pills-stats" type="button" role="tab" aria-controls="pills-stats" aria-selected="false">Stats</button>
@@ -763,7 +763,8 @@
 
                 <!-- Tab Content -->
                 <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-match" role="tabpanel" aria-labelledby="pills-match-tab">
+                    <!-- Match Info -->
+                    <div class="tab-pane fade" id="pills-match" role="tabpanel" aria-labelledby="pills-match-tab">
                         <div class="mt-3">
                             <!-- Match Info -->
                             <h6 class="small-xs text-capitalize text-muted">predictions</h6>
@@ -1080,7 +1081,7 @@
                                                     <td>
                                                         <a href="team.html" class="d-flex align-items-center">
                                                             <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
-                                                            <span class="text-capitalize ms-2">tottenham hotspur</span>
+                                                            <span class="text-capitalize ms-2">tottenham</span>
                                                         </a>
                                                     </td>
                                                     <td>6</td>
@@ -1112,7 +1113,56 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="pills-lineups" role="tabpanel" aria-labelledby="pills-lineups-tab">...</div>
+                    <!-- /. Match Info -->
+
+                    <!-- Lineups -->
+                    <div class="tab-pane fade show active" id="pills-lineups" role="tabpanel" aria-labelledby="pills-lineups-tab">
+                        <div class="mt-3">
+                            <!-- Soccer Pitch -->
+                            <div class="d-flex flex-column soccer-pitch">
+                                <!-- Pitch Header -->
+                                <div class="d-flex align-items-center pitch-header pitch-header-top">
+                                    <div class="d-flex align-items-center">
+                                        <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" loading="lazy" alt="Team Logo" height="25" width="25" class="lazy">
+                                        <h6 class="small-xs text-capitalize text-white my-0">tottenham</h6>
+                                    </div>
+                                    <h6 class="small-xs text-capitalize text-white ms-auto my-0 me-2">4-3-3</h6>
+                                </div>
+                                <!-- /. Pitch Header -->
+
+                                <!-- Top Team Formation -->
+                                <div class="team-formation top-team-formation position-relative d-none">
+                                    <!-- Player Position -->
+                                    <div class="team-player text-white">
+                                        <div class="jersey bg-dark">
+                                            <span class="jersey-number">1</span>
+                                        </div>
+                                        <small class="text-capitalize mt-1">h. lloris</small>
+                                    </div>
+                                    <!-- /. Player Position -->
+                                </div>
+                                <!-- /. Top Team Formation -->
+
+                                <!-- Pitch Wrapper -->
+                                <div class="pitch-wrapper position-relative w-100">
+
+                                </div>
+                                <!-- /.Pitch Wrapper -->
+
+                                <!-- Pitch Header -->
+                                <div class="d-flex align-items-center pitch-header pitch-header-bottom">
+                                    <div class="d-flex align-items-center">
+                                        <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" loading="lazy" alt="Team Logo" height="25" width="25" class="lazy">
+                                        <h6 class="small-xs text-capitalize text-white my-0">man united</h6>
+                                    </div>
+                                    <h6 class="small-xs text-capitalize text-white ms-auto my-0 me-2">4-2-3-1</h6>
+                                </div>
+                                <!-- /. Pitch Header -->
+                            </div>
+                            <!-- /. Soccer Pitch -->
+                        </div>
+                    </div>
+                    <!-- /. Lineups -->
                     <div class="tab-pane fade" id="pills-stats" role="tabpanel" aria-labelledby="pills-stats-tab">...</div>
                     <div class="tab-pane fade" id="pills-head-to-head" role="tabpanel" aria-labelledby="pills-head-to-head-tab">...</div>
                 </div>
