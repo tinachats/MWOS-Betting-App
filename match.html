@@ -33,7 +33,6 @@
                 <a class="navbar-brand d-md-none" role="button" data-bs-toggle="offcanvas" href="#account-info" role="button" aria-controls="account-info">
                     <div class="avatar avatar-sm mt-1">
                         <div class="avatar-initials">tc</div>
-                        <span class="avatar-status avatar-sm-status avatar-status-success"></span>
                     </div>
                 </a>
                 <a class="navbar-brand" href="index.html">
@@ -64,10 +63,10 @@
 
                                 <div class="dropdown-item dropdown-item-borderless bg-transparent text-wrap">
                                     <a class="btn btn-light btn-xs rounded-pill" href="search-results.html">
-                                        Real Madrid <i class="bi-search ms-1"></i>
+                                        <i class="bi-search me-1"></i> Real Madrid
                                     </a>
                                     <a class="btn btn-light btn-xs rounded-pill" href="search-results.html">
-                                        Lionel Messi <i class="bi-search ms-1"></i>
+                                        <i class="bi-search me-1"></i> Lionel Messi
                                     </a>
                                 </div>
 
@@ -686,26 +685,31 @@
                 <!-- Match Results -->
                 <div class="card rounded-4 shadow-sm">
                     <div class="card-body">
-                        <!-- League Title -->
-                        <a href="league.html" class="d-flex align-items-center justify-content-center mb-3">
-                            <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/soccer/leagues/epl-default.png" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
-                            <h6 class="small-xs fw-bold text-capitalize my-0 ms-2">
-                                english premier league
-                            </h6>
-                        </a>
+                        <div class="d-block text-center">
+                            <!-- League Title -->
+                            <a href="league.html" class="d-flex align-items-center justify-content-center">
+                                <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/soccer/leagues/epl-default.png" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
+                                <h6 class="small-xs fw-bold text-capitalize my-0 ms-2">
+                                    english premier league
+                                </h6>
+                            </a>
+
+                            <small class="text-muted small-xs text-capitalize">
+                                Sat 12 Mar 2022
+                            </small>
+                        </div>
                         <!-- /. League Title -->
 
                         <!-- Match Score -->
-                        <div class="d-flex align-items-center justify-content-around">
+                        <div class="d-flex align-items-center justify-content-around mt-2">
                             <!-- Team Results -->
                             <div class="d-block text-center">
                                 <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" height="50" width="50">
                                 <h6 class="text-capitalize small mb-0 mt-2">tottenham</h6>
                                 <div class="d-flex align-items-center small-xs text-muted text-capitalize pt-0">
-                                    <span>harry kane</span>
+                                    <span class="goal-scorer">h. son</span>
                                     <div class="d-flex align-items-center ms-1">
-                                        <span class="scored-time">'52</span>
-                                        <span class="scored-time">'68</span>
+                                        <span class="scored-time">'40</span>
                                     </div>
                                 </div>
                             </div>
@@ -713,15 +717,14 @@
 
                             <!-- Match Results -->
                             <div class="d-block text-center">
-                                <h1 class="d-flex align-items-center">
-                                    <span>2</span>
-                                    <span class="mx-3">:</span>
+                                <h1 class="d-flex align-items-center justify-content-center">
                                     <span>1</span>
+                                    <span class="mx-3">:</span>
+                                    <span>2</span>
                                 </h1>
-                                <h6 class="d-flex align-items-center justify-content-center text-muted small-xs">
-                                    <span>(2</span>
-                                    <span class="mx-1">:</span>
-                                    <span>1)</span>
+                                <h6 class="small-xs">
+                                    <span class="text-muted">Referee:</span>
+                                    <span class="text-capitalize mx-1">Chris Kavanagh</span>
                                 </h6>
                             </div>
                             <!-- /. Match Results -->
@@ -731,9 +734,15 @@
                                 <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" height="50" width="50">
                                 <h6 class="text-capitalize small mb-0 mt-2">man united</h6>
                                 <div class="d-flex align-items-center small-xs text-muted text-capitalize pt-0">
-                                    <span>marcus rashford</span>
+                                    <span class="goal-scorer">fred</span>
                                     <div class="d-flex align-items-center ms-1">
-                                        <span class="scored-time">'84</span>
+                                        <span class="scored-time">'52</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center small-xs text-muted text-capitalize pt-0">
+                                    <span class="goal-scorer">edinson cavani</span>
+                                    <div class="d-flex align-items-center ms-1">
+                                        <span class="scored-time">'79</span>
                                     </div>
                                 </div>
                             </div>
@@ -1124,34 +1133,36 @@
                                 <div class="d-flex align-items-center pitch-header pitch-header-top">
                                     <div class="d-flex align-items-center">
                                         <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" loading="lazy" alt="Team Logo" height="25" width="25" class="lazy">
-                                        <h6 class="small-xs text-capitalize text-white my-0">tottenham</h6>
+                                        <h6 class="small-xs text-capitalize text-white my-0" id="ts-club">tottenham</h6>
                                     </div>
-                                    <h6 class="small-xs text-capitalize text-white ms-auto my-0 me-2">4-3-3</h6>
+                                    <h6 class="small-xs text-capitalize text-white ms-auto my-0 me-2" id="ts-formation">4-3-3</h6>
                                 </div>
                                 <!-- /. Pitch Header -->
 
                                 <!-- Pitch Wrapper -->
                                 <div class="pitch-wrapper position-relative w-100">
                                     <!-- Top Team Formation -->
-                                    <div class="team-formation top-team-formation position-relative">
+                                    <div class="container team-formation top-team-formation position-relative three-rows">
                                         <!-- Keeper Position -->
-                                        <a href="player.html" class="team-player team-keeper text-white">
-                                            <div class="img-wrapper">
-                                                <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p37915.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
-                                            </div>
-                                            <div class="d-flex align-items-center justify-content-center text-light player-info">
-                                                <small class="jersey">1</small>
-                                                <small class="text-capitalize player-name text-nowrap">h. lloris</small>
-                                            </div>
-                                        </a>
+                                        <div class="d-grid grid-col-1 single-player">
+                                            <a href="player.html" class="team-player team-keeper text-white">
+                                                <div class="img-wrapper">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p37915.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-center text-light player-info">
+                                                    <small class="jersey">1</small>
+                                                    <small class="text-capitalize player-name text-nowrap">h. lloris</small>
+                                                </div>
+                                            </a>
+                                        </div>
                                         <!-- /. Keeper Position -->
 
                                         <!-- Defense -->
-                                        <div class="team-defense">
+                                        <div class="d-grid grid-col-4 team-defense">
                                             <!-- Defender -->
                                             <a href="player.html" class="team-player text-white defender">
                                                 <div class="img-wrapper">
-                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p132015.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p132015.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center text-light player-info">
                                                     <small class="jersey">24</small>
@@ -1163,7 +1174,7 @@
                                             <!-- Defender -->
                                             <a href="player.html" class="team-player text-white defender">
                                                 <div class="img-wrapper">
-                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p93264.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p93264.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center text-light player-info">
                                                     <small class="jersey">15</small>
@@ -1175,7 +1186,7 @@
                                             <!-- Defender -->
                                             <a href="player.html" class="team-player text-white defender">
                                                 <div class="img-wrapper">
-                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p214225.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p214225.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center text-light player-info">
                                                     <small class="jersey">14</small>
@@ -1187,7 +1198,7 @@
                                             <!-- Defender -->
                                             <a href="player.html" class="team-player text-white defender">
                                                 <div class="img-wrapper">
-                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p199249.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p199249.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center text-light player-info">
                                                     <small class="jersey">3</small>
@@ -1199,11 +1210,11 @@
                                         <!-- /. Defense -->
 
                                         <!-- Defensive Mid-Field -->
-                                        <div class="team-defensive-mid">
+                                        <div class="d-grid grid-col-3 team-defensive-mid">
                                             <!-- Mid-Player -->
                                             <a href="player.html" class="team-player text-white mid-player">
                                                 <div class="img-wrapper">
-                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://cdne-totv8-prod.azureedge.net/media/40822/firstteam_giovanilocelso_2021_22.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://cdne-totv8-prod.azureedge.net/media/40822/firstteam_giovanilocelso_2021_22.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
                                                     <img src="assets/images/app/substitution-out.svg" height="16" width="16" class="status substitution-sign" alt="Substituted">
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center text-light player-info">
@@ -1216,7 +1227,7 @@
                                             <!-- Mid-Player -->
                                             <a href="player.html" class="team-player text-white mid-player">
                                                 <div class="img-wrapper">
-                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p132015.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p132015.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center text-light player-info">
                                                     <small class="jersey">5</small>
@@ -1228,7 +1239,7 @@
                                             <!-- Mid-Player -->
                                             <a href="player.html" class="team-player text-white mid-player">
                                                 <div class="img-wrapper">
-                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p231372.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p231372.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
                                                     <img src="assets/images/app/substitution-out.svg" height="16" width="16" class="status substitution-sign" alt="Substituted">
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center text-light player-info">
@@ -1241,11 +1252,11 @@
                                         <!-- /. Defensive Mid-Field -->
 
                                         <!-- Attacking Mid-Field -->
-                                        <div class="team-attacking-mid">
+                                        <div class="d-grid grid-col-3 team-attacking-mid">
                                             <!-- Mid-Player -->
                                             <a href="player.html" class="team-player text-white mid-player">
                                                 <div class="img-wrapper">
-                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p95715.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p95715.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
                                                     <img src="assets/images/app/substitution-out.svg" height="16" width="16" class="status substitution-sign" alt="Substituted">
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center text-light player-info">
@@ -1258,7 +1269,7 @@
                                             <!-- Mid-Player -->
                                             <a href="player.html" class="team-player text-white mid-player">
                                                 <div class="img-wrapper">
-                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p78830.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p78830.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center text-light player-info">
                                                     <small class="jersey">10</small>
@@ -1270,7 +1281,7 @@
                                             <!-- Mid-Player -->
                                             <a href="player.html" class="team-player text-white mid-player">
                                                 <div class="img-wrapper">
-                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p85971.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p85971.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
                                                     <img src="assets/images/app/soccer-ball.svg" class="status goal-scorer" alt="Goal Scorer">
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center text-light player-info">
@@ -1285,79 +1296,71 @@
                                     <!-- /. Top Team Formation -->
 
                                     <!-- Bottom Team Formation -->
-                                    <div class="team-formation bottom-team-formation position-relative">
-                                        <!-- Keeper Position -->
-                                        <a href="player.html" class="team-player team-keeper text-white">
-                                            <div class="img-wrapper">
-                                                <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p172649.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
-                                            </div>
-                                            <div class="d-flex align-items-center justify-content-center text-light player-info">
-                                                <small class="jersey">1</small>
-                                                <small class="text-capitalize player-name text-nowrap">D. Henderson</small>
-                                            </div>
-                                        </a>
-                                        <!-- /. Keeper Position -->
-
-                                        <!-- Defense -->
-                                        <div class="team-defense">
-                                            <!-- Defender -->
-                                            <a href="player.html" class="team-player text-white defender">
+                                    <div class="container team-formation bottom-team-formation position-relative four-rows">
+                                        <!-- Single Player -->
+                                        <div class="d-grid grid-col-1 single-player">
+                                            <a href="player.html" class="team-player gunman text-white">
                                                 <div class="img-wrapper">
-                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p106760.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p40720.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
                                                     <img src="assets/images/app/yellow-card.svg" class="status yellow-card" alt="Yellow Card">
+                                                    <img src="assets/images/app/soccer-ball.svg" class="status goal-scorer" alt="Goal Scorer">
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center text-light player-info">
-                                                    <small class="jersey">23</small>
-                                                    <small class="text-capitalize player-name text-nowrap">l. shaw</small>
+                                                    <small class="jersey">7</small>
+                                                    <small class="text-capitalize player-name text-nowrap">E. Cavani</small>
                                                 </div>
                                             </a>
-                                            <!-- /. Defender -->
-
-                                            <!-- Defender -->
-                                            <a href="player.html" class="team-player text-white defender">
-                                                <div class="img-wrapper">
-                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p95658.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
-                                                    <img src="assets/images/app/yellow-card.svg" class="status yellow-card" alt="Yellow Card">
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-center text-light player-info">
-                                                    <small class="jersey">5</small>
-                                                    <small class="text-capitalize player-name text-nowrap">m. maguire</small>
-                                                </div>
-                                            </a>
-                                            <!-- /. Defender -->
-
-                                            <!-- Defender -->
-                                            <a href="player.html" class="team-player text-white defender">
-                                                <div class="img-wrapper">
-                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p184667.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-center text-light player-info">
-                                                    <small class="jersey">2</small>
-                                                    <small class="text-capitalize player-name text-nowrap">Lindelöf</small>
-                                                </div>
-                                            </a>
-                                            <!-- /. Defender -->
-
-                                            <!-- Defender -->
-                                            <a href="player.html" class="team-player text-white defender">
-                                                <div class="img-wrapper">
-                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p214590.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-center text-light player-info">
-                                                    <small class="jersey">3</small>
-                                                    <small class="text-capitalize player-name text-nowrap">Wan-Bissaka</small>
-                                                </div>
-                                            </a>
-                                            <!-- /. Defender -->
                                         </div>
-                                        <!-- /. Defense -->
+                                        <!-- /. Single Player -->
 
-                                        <!-- Defensive Mid-Field -->
-                                        <div class="team-defensive-mid">
+                                        <!-- Attacking Mid-Field -->
+                                        <div class="d-grid grid-col-3 team-attacking-mid">
                                             <!-- Mid-Player -->
                                             <a href="player.html" class="team-player text-white mid-player">
                                                 <div class="img-wrapper">
-                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p101582.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p74208.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-center text-light player-info">
+                                                    <small class="jersey">6</small>
+                                                    <small class="text-capitalize player-name text-nowrap">p. pogba</small>
+                                                </div>
+                                            </a>
+                                            <!-- /. Mid-Player -->
+
+                                            <!-- Mid-Player -->
+                                            <a href="player.html" class="team-player text-white mid-player">
+                                                <div class="img-wrapper">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p141746.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
+                                                    <img src="assets/images/app/substitution-out.svg" height="16" width="16" class="status substitution-sign" alt="Substituted">
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-center text-light player-info">
+                                                    <small class="jersey">18</small>
+                                                    <small class="text-capitalize player-name text-nowrap">b. fernandes</small>
+                                                </div>
+                                            </a>
+                                            <!-- /. Mid-Player -->
+
+                                            <!-- Mid-Player -->
+                                            <a href="player.html" class="team-player text-white mid-player">
+                                                <div class="img-wrapper">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p176297.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
+                                                    <img src="assets/images/app/substitution-out.svg" height="16" width="16" class="status substitution-sign" alt="Substituted">
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-center text-light player-info">
+                                                    <small class="jersey">10</small>
+                                                    <small class="text-capitalize player-name text-nowrap">m. rashford</small>
+                                                </div>
+                                            </a>
+                                            <!-- /. Mid-Player -->
+                                        </div>
+                                        <!-- /. Attacking Mid-Field -->
+
+                                        <!-- Defensive Mid-Field -->
+                                        <div class="d-grid grid-col-2 team-defensive-mid">
+                                            <!-- Mid-Player -->
+                                            <a href="player.html" class="team-player text-white mid-player">
+                                                <div class="img-wrapper">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p101582.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
                                                     <img src="assets/images/app/yellow-card.svg" class="status yellow-card" alt="Yellow Card">
                                                     <img src="assets/images/app/soccer-ball.svg" class="status goal-scorer" alt="Goal Scorer">
                                                 </div>
@@ -1371,7 +1374,8 @@
                                             <!-- Mid-Player -->
                                             <a href="player.html" class="team-player text-white mid-player">
                                                 <div class="img-wrapper">
-                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p195851.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p195851.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
+                                                    <img src="assets/images/app/yellow-card.svg" class="status yellow-card" alt="Yellow Card">
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center text-light player-info">
                                                     <small class="jersey">39</small>
@@ -1382,65 +1386,73 @@
                                         </div>
                                         <!-- /. Defensive Mid-Field -->
 
-                                        <!-- Attacking Mid-Field -->
-                                        <div class="team-attacking-mid">
-                                            <!-- Mid-Player -->
-                                            <a href="player.html" class="team-player text-white mid-player">
+                                        <!-- Defense -->
+                                        <div class="d-grid grid-col-4 team-defense">
+                                            <!-- Defender -->
+                                            <a href="player.html" class="team-player text-white defender">
                                                 <div class="img-wrapper">
-                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p74208.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-center text-light player-info">
-                                                    <small class="jersey">6</small>
-                                                    <small class="text-capitalize player-name text-nowrap">p. pogba</small>
-                                                </div>
-                                            </a>
-                                            <!-- /. Mid-Player -->
-
-                                            <!-- Mid-Player -->
-                                            <a href="player.html" class="team-player text-white mid-player">
-                                                <div class="img-wrapper">
-                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p141746.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
-                                                    <img src="assets/images/app/substitution-out.svg" height="16" width="16" class="status substitution-sign" alt="Substituted">
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-center text-light player-info">
-                                                    <small class="jersey">18</small>
-                                                    <small class="text-capitalize player-name text-nowrap">b. fernandes</small>
-                                                </div>
-                                            </a>
-                                            <!-- /. Mid-Player -->
-
-                                            <!-- Mid-Player -->
-                                            <a href="player.html" class="team-player text-white mid-player">
-                                                <div class="img-wrapper">
-                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p176297.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
-                                                    <img src="assets/images/app/substitution-out.svg" height="16" width="16" class="status substitution-sign" alt="Substituted">
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-center text-light player-info">
-                                                    <small class="jersey">10</small>
-                                                    <small class="text-capitalize player-name text-nowrap">m. rashford</small>
-                                                </div>
-                                            </a>
-                                            <!-- /. Mid-Player -->
-                                        </div>
-                                        <!-- /. Attacking Mid-Field -->
-
-                                        <!-- Number 9 -->
-                                        <div class="team-gunman">
-                                            <!-- Mid-Player -->
-                                            <a href="player.html" class="team-player text-white mid-player">
-                                                <div class="img-wrapper">
-                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p40720.png" loading="lazy" alt="Team Logo" height="40" width="40" class="lazy">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p106760.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
                                                     <img src="assets/images/app/yellow-card.svg" class="status yellow-card" alt="Yellow Card">
-                                                    <img src="assets/images/app/soccer-ball.svg" class="status goal-scorer" alt="Goal Scorer">
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center text-light player-info">
-                                                    <small class="jersey">7</small>
-                                                    <small class="text-capitalize player-name text-nowrap">E. Cavani</small>
+                                                    <small class="jersey">23</small>
+                                                    <small class="text-capitalize player-name text-nowrap">l. shaw</small>
                                                 </div>
                                             </a>
-                                            <!-- /. Mid-Player -->
+                                            <!-- /. Defender -->
+
+                                            <!-- Defender -->
+                                            <a href="player.html" class="team-player text-white defender">
+                                                <div class="img-wrapper">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p95658.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
+                                                    <img src="assets/images/app/yellow-card.svg" class="status yellow-card" alt="Yellow Card">
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-center text-light player-info">
+                                                    <small class="jersey">5</small>
+                                                    <small class="text-capitalize player-name text-nowrap">m. maguire</small>
+                                                </div>
+                                            </a>
+                                            <!-- /. Defender -->
+
+                                            <!-- Defender -->
+                                            <a href="player.html" class="team-player text-white defender">
+                                                <div class="img-wrapper">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p184667.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-center text-light player-info">
+                                                    <small class="jersey">2</small>
+                                                    <small class="text-capitalize player-name text-nowrap">Lindelöf</small>
+                                                </div>
+                                            </a>
+                                            <!-- /. Defender -->
+
+                                            <!-- Defender -->
+                                            <a href="player.html" class="team-player text-white defender">
+                                                <div class="img-wrapper">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p214590.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-center text-light player-info">
+                                                    <small class="jersey">3</small>
+                                                    <small class="text-capitalize player-name text-nowrap">Wan-Bissaka</small>
+                                                </div>
+                                            </a>
+                                            <!-- /. Defender -->
                                         </div>
-                                        <!-- /. Number 9 -->
+                                        <!-- /. Defense -->
+
+                                        <!-- Keeper Position -->
+                                        <div class="d-grid grid-col-1 single-player">
+                                            <a href="player.html" class="team-player team-keeper text-white">
+                                                <div class="img-wrapper">
+                                                    <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/250x250/p172649.png" loading="lazy" alt="Player Image" height="40" width="40" class="player-img lazy">
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-center text-light player-info">
+                                                    <small class="jersey">1</small>
+                                                    <small class="text-capitalize player-name text-nowrap">D. Henderson</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- /. Keeper Position -->
                                     </div>
                                     <!-- /. Bottom Team Formation -->
                                 </div>
@@ -1450,9 +1462,9 @@
                                 <div class="d-flex align-items-center pitch-header pitch-header-bottom">
                                     <div class="d-flex align-items-center">
                                         <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" loading="lazy" alt="Team Logo" height="25" width="25" class="lazy">
-                                        <h6 class="small-xs text-capitalize text-white my-0">man united</h6>
+                                        <h6 class="small-xs text-capitalize text-white my-0" id="bs-club">man united</h6>
                                     </div>
-                                    <h6 class="small-xs text-capitalize text-white ms-auto my-0 me-2">4-2-3-1</h6>
+                                    <h6 class="small-xs text-capitalize text-white ms-auto my-0 me-2" id="bs-formation">4-2-3-1</h6>
                                 </div>
                                 <!-- /. Pitch Header -->
                             </div>
@@ -1460,13 +1472,13 @@
                         </div>
                     </div>
                     <!-- /. Lineups -->
+
                     <div class="tab-pane fade" id="pills-stats" role="tabpanel" aria-labelledby="pills-stats-tab">...</div>
                     <div class="tab-pane fade" id="pills-head-to-head" role="tabpanel" aria-labelledby="pills-head-to-head-tab">...</div>
                 </div>
                 <!-- /. Tab Content -->
-                <!-- /. Match Info -->
             </div>
-            <!-- /. Match Info -->
+            <!-- / Match Info -->
 
             <!-- Match News -->
             <div class="col-12 col-md-6 col-xl-4 d-none d-xl-block">
@@ -1476,203 +1488,202 @@
                     </li>
                 </ul>
             </div>
-            <!-- /. League Options -->
+            <!-- /. Match News -->
         </div>
-    </div>
-    <!-- /. Page Content -->
+        <!-- /. Page Content -->
 
-    <!-- Bottom Navigation -->
-    <nav class="main-nav fixed-bottom border-top shadow-sm d-md-none">
-        <div class="container-fluid">
-            <ul class="nav-list d-flex justify-content-around m-0 px-0 py-1 w-100">
-                <li class="nav-item pt-2">
-                    <a class="nav-link text-center position-relative" href="#">
-                        <i class="bi bi-house"></i>
-                        <span class="avatar-status avatar-sm-status update-alert blink"></span>
-                    </a>
-                </li>
-                <li class="nav-item pt-2">
-                    <a class="nav-link text-center" href="#">
-                        <i class="bi bi-search"></i>
-                    </a>
-                </li>
-                <li class="nav-item" id="main-nav-item">
-                    <a class="nav-link text-center active" href="#">
-                        <i class="bi bi-coin"></i>
-                    </a>
-                </li>
-                <li class="nav-item pt-2">
-                    <a class="nav-link text-center" href="#">
-                        <i class="bi bi-calendar-week"></i>
-                    </a>
-                </li>
-                <li class="nav-item pt-2">
-                    <a class="nav-link text-center position-relative" href="#">
-                        <i class="bi bi-bell"></i>
-                        <span class="position-absolute top-15 start-75 translate-middle badge rounded-pill bg-warning">
+        <!-- Bottom Navigation -->
+        <nav class="main-nav fixed-bottom border-top shadow-sm d-md-none">
+            <div class="container-fluid">
+                <ul class="nav-list d-flex justify-content-around m-0 px-0 py-1 w-100">
+                    <li class="nav-item pt-2">
+                        <a class="nav-link text-center position-relative" href="#">
+                            <i class="bi bi-house"></i>
+                            <span class="avatar-status avatar-sm-status update-alert blink"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item pt-2">
+                        <a class="nav-link text-center" href="#">
+                            <i class="bi bi-search"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item" id="main-nav-item">
+                        <a class="nav-link text-center active" href="#">
+                            <i class="bi bi-coin"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item pt-2">
+                        <a class="nav-link text-center" href="#">
+                            <i class="bi bi-calendar-week"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item pt-2">
+                        <a class="nav-link text-center position-relative" href="#">
+                            <i class="bi bi-bell"></i>
+                            <span class="position-absolute top-15 start-75 translate-middle badge rounded-pill bg-warning">
                             9
                             <span class="visually-hidden">unread notifications</span>
-                        </span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- ./ Bottom Navigation -->
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- ./ Bottom Navigation -->
 
-    <!-- Side Menu -->
-    <div class="offcanvas offcanvas-start side-menu bg-app-color mb-2" data-bs-scroll="false" tabindex="-1" id="account-info" aria-labelledby="account-infoLabel">
-        <div class="offcanvas-header border-bottom">
-            <a class="d-flex align-items-center" href="account.html">
-                <div class="avatar">
-                    <img src="assets/images/users/user-2.jpg" alt="User" class="avatar-img">
-                </div>
-                <div class="d-block ms-2 mt-3">
-                    <h5 class="mb-0 fw-bold">Mark Williams</h5>
-                    <p class="text-muted small-xs fw-bold">Newbie</p>
-                </div>
-            </a>
-        </div>
-        <div class="offcanvas-body p-0 mx-0 mt-0">
-            <ul class="list-group list-group-flush m-0 p-0">
-                <!-- Account -->
-                <li class="list-group-item">
-                    <a href="account.html" class="d-flex align-items-center">
-                        <i class="bi bi-person bi-3x me-2"></i>
-                        <span class="text-capitalize small">Account</span>
-                        <i class="bi bi-chevron-right ms-auto"></i>
-                    </a>
-                </li>
-                <!-- /. Account -->
+        <!-- Side Menu -->
+        <div class="offcanvas offcanvas-start side-menu bg-app-color mb-2" data-bs-scroll="false" tabindex="-1" id="account-info" aria-labelledby="account-infoLabel">
+            <div class="offcanvas-header border-bottom">
+                <a class="d-flex align-items-center" href="account.html">
+                    <div class="avatar">
+                        <img src="assets/images/users/user-2.jpg" alt="User" class="avatar-img">
+                    </div>
+                    <div class="d-block ms-2 mt-3">
+                        <h5 class="mb-0 fw-bold">Mark Williams</h5>
+                        <p class="text-muted small-xs fw-bold">Newbie</p>
+                    </div>
+                </a>
+            </div>
+            <div class="offcanvas-body p-0 mx-0 mt-0">
+                <ul class="list-group list-group-flush m-0 p-0">
+                    <!-- Account -->
+                    <li class="list-group-item">
+                        <a href="account.html" class="d-flex align-items-center">
+                            <i class="bi bi-person bi-3x me-2"></i>
+                            <span class="text-capitalize small">Account</span>
+                            <i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li>
+                    <!-- /. Account -->
 
-                <!-- Content Index -->
-                <li class="list-group-item">
-                    <h6 class="text-uppercase small-xs mt-1 mb-0">Content Index</h6>
-                </li>
-                <li class="list-group-item">
-                    <a href="sports.html" class="d-flex align-items-center">
-                        <i class="bi bi-trophy bi-3x me-2"></i>
-                        <span class="text-capitalize small">All Competitions</span>
-                        <i class="bi bi-chevron-right ms-auto"></i>
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="news.html" class="d-flex align-items-center">
-                        <i class="bi bi-newspaper bi-3x me-2"></i>
-                        <span class="text-capitalize small">All news</span>
-                        <i class="bi bi-chevron-right ms-auto"></i>
-                    </a>
-                </li>
-                <!-- /. Content Index -->
+                    <!-- Content Index -->
+                    <li class="list-group-item">
+                        <h6 class="text-uppercase small-xs mt-1 mb-0">Content Index</h6>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="sports.html" class="d-flex align-items-center">
+                            <i class="bi bi-trophy bi-3x me-2"></i>
+                            <span class="text-capitalize small">All Competitions</span>
+                            <i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="news.html" class="d-flex align-items-center">
+                            <i class="bi bi-newspaper bi-3x me-2"></i>
+                            <span class="text-capitalize small">All news</span>
+                            <i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li>
+                    <!-- /. Content Index -->
 
-                <!-- Settings -->
-                <li class="list-group-item">
-                    <h6 class="text-uppercase small-xs mt-1 mb-0">settings</h6>
-                </li>
-                <li class="list-group-item">
-                    <a href="notifications.html" class="d-flex align-items-center">
-                        <i class="bi bi-bell bi-3x me-2"></i>
-                        <span class="text-capitalize small">notifications</span>
-                        <i class="bi bi-chevron-right ms-auto"></i>
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="export.html" class="d-flex align-items-center">
-                        <i class="bi bi-laptop bi-3x me-2"></i>
-                        <span class="text-capitalize small">export selections to web</span>
-                        <i class="bi bi-chevron-right ms-auto"></i>
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="my-scores.html" class="d-flex align-items-center">
-                        <i class="bi bi-alarm bi-3x me-2"></i>
-                        <span class="text-capitalize small">my scores</span>
-                        <i class="bi bi-chevron-right ms-auto"></i>
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="settings.html" class="d-flex align-items-center">
-                        <i class="bi bi-translate bi-3x me-2"></i>
-                        <span class="text-capitalize small">languages</span>
-                        <i class="bi bi-chevron-right ms-auto"></i>
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="settings.html" class="d-flex align-items-center">
-                        <i class="bi bi-currency-exchange bi-3x me-2"></i>
-                        <span class="text-capitalize small">currency</span>
-                        <i class="bi bi-chevron-right ms-auto"></i>
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="settings.html" class="d-flex align-items-center">
-                        <i class="bi bi-brightness-high bi-3x me-2"></i>
-                        <span class="text-capitalize small">Display &amp; Accessibility</span>
-                        <i class="bi bi-chevron-right ms-auto"></i>
-                    </a>
-                </li>
-                <!-- /. Settings -->
+                    <!-- Settings -->
+                    <li class="list-group-item">
+                        <h6 class="text-uppercase small-xs mt-1 mb-0">settings</h6>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="notifications.html" class="d-flex align-items-center">
+                            <i class="bi bi-bell bi-3x me-2"></i>
+                            <span class="text-capitalize small">notifications</span>
+                            <i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="export.html" class="d-flex align-items-center">
+                            <i class="bi bi-laptop bi-3x me-2"></i>
+                            <span class="text-capitalize small">export selections to web</span>
+                            <i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="my-scores.html" class="d-flex align-items-center">
+                            <i class="bi bi-alarm bi-3x me-2"></i>
+                            <span class="text-capitalize small">my scores</span>
+                            <i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="settings.html" class="d-flex align-items-center">
+                            <i class="bi bi-translate bi-3x me-2"></i>
+                            <span class="text-capitalize small">languages</span>
+                            <i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="settings.html" class="d-flex align-items-center">
+                            <i class="bi bi-currency-exchange bi-3x me-2"></i>
+                            <span class="text-capitalize small">currency</span>
+                            <i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="settings.html" class="d-flex align-items-center">
+                            <i class="bi bi-brightness-high bi-3x me-2"></i>
+                            <span class="text-capitalize small">Display &amp; Accessibility</span>
+                            <i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li>
+                    <!-- /. Settings -->
 
-                <!-- General -->
-                <li class="list-group-item">
-                    <h6 class="text-uppercase small-xs mt-1 mb-0">general</h6>
-                </li>
-                <li class="list-group-item">
-                    <a href="faq.html" class="d-flex align-items-center">
-                        <i class="bi bi-question-circle bi-3x me-2"></i>
-                        <span class="text-capitalize small">FAQ</span>
-                        <i class="bi bi-chevron-right ms-auto"></i>
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="policy.html" class="d-flex align-items-center">
-                        <i class="bi bi-shield-lock bi-3x me-2"></i>
-                        <span class="text-capitalize small">privacy policy</span>
-                        <i class="bi bi-chevron-right ms-auto"></i>
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="terms.html" class="d-flex align-items-center">
-                        <i class="bi bi-list-ol bi-3x me-2"></i>
-                        <span class="text-capitalize small">terms & conditions</span>
-                        <i class="bi bi-chevron-right ms-auto"></i>
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="javascript:void(0)" class="d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#rate-app">
-                        <i class="bi bi-star bi-3x me-2"></i>
-                        <span class="text-capitalize small">rate us</span>
-                        <i class="bi bi-chevron-right ms-auto"></i>
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a href="javascript:void(0)" role="button" class="d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#send-feedback">
-                        <i class="bi bi-envelope-exclamation bi-3x me-2"></i>
-                        <span class="text-capitalize small">send us feedback</span>
-                        <i class="bi bi-chevron-right ms-auto"></i>
-                    </a>
-                </li>
-                <!-- /. General -->
-            </ul>
-        </div>
-        <div class="offcanvas-footer">
-            <a href="https://twitter.com/tinaking92" class="d-flex align-items-center justify-content-center small-xs text-muted mb-3">
+                    <!-- General -->
+                    <li class="list-group-item">
+                        <h6 class="text-uppercase small-xs mt-1 mb-0">general</h6>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="faq.html" class="d-flex align-items-center">
+                            <i class="bi bi-question-circle bi-3x me-2"></i>
+                            <span class="text-capitalize small">FAQ</span>
+                            <i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="policy.html" class="d-flex align-items-center">
+                            <i class="bi bi-shield-lock bi-3x me-2"></i>
+                            <span class="text-capitalize small">privacy policy</span>
+                            <i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="terms.html" class="d-flex align-items-center">
+                            <i class="bi bi-list-ol bi-3x me-2"></i>
+                            <span class="text-capitalize small">terms & conditions</span>
+                            <i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="javascript:void(0)" class="d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#rate-app">
+                            <i class="bi bi-star bi-3x me-2"></i>
+                            <span class="text-capitalize small">rate us</span>
+                            <i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="javascript:void(0)" role="button" class="d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#send-feedback">
+                            <i class="bi bi-envelope-exclamation bi-3x me-2"></i>
+                            <span class="text-capitalize small">send us feedback</span>
+                            <i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li>
+                    <!-- /. General -->
+                </ul>
+            </div>
+            <div class="offcanvas-footer">
+                <a href="https://twitter.com/tinaking92" class="d-flex align-items-center justify-content-center small-xs text-muted mb-3">
                 Visionaries-Business &copy; 2022 
             </a>
+            </div>
         </div>
-    </div>
-    <!-- /. Side Menu -->
+        <!-- /. Side Menu -->
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <!-- AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- iziToast -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
-    <!-- Sweet Alert -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.all.min.js"></script>
-    <!-- MWOS JS -->
-    <script src="assets/js/mwos.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- AOS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- iziToast -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+        <!-- Sweet Alert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.all.min.js"></script>
+        <!-- MWOS JS -->
+        <script src="assets/js/mwos.js"></script>
 </body>
 
 </html>
