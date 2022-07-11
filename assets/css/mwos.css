@@ -1024,6 +1024,11 @@ nav .badge {
     z-index: 1;
 }
 
+.soccer-pitch .team-formation.bottom-team-formation,
+.soccer-pitch .team-formation.top-team-formation {
+    height: 50%;
+}
+
 .soccer-pitch .team-formation .team-player,
 .soccer-pitch .team-formation .team-player .status {
     position: absolute;
@@ -1041,8 +1046,15 @@ nav .badge {
     position: relative;
 }
 
-.soccer-pitch .team-formation .team-player .status {
+.soccer-pitch .team-formation .team-player .status:not(.yellow-card) {
     top: 50%;
+}
+
+.soccer-pitch .team-formation .team-player .status.yellow-card {
+    top: 0;
+    right: 0;
+    height: 24px;
+    width: 24px;
 }
 
 .soccer-pitch .team-formation .team-player .status.substitution-sign {
@@ -1073,41 +1085,49 @@ nav .badge {
 }
 
 .soccer-pitch .team-formation.top-team-formation .team-defense>.team-player {
-    margin-top: 20%;
+    top: 20%;
 }
 
+.soccer-pitch .team-formation.bottom-team-formation .team-defense .team-player:first-child,
 .soccer-pitch .team-formation.top-team-formation .team-defense .team-player:first-child {
-    margin-left: 5%;
+    left: 5%;
 }
 
+.soccer-pitch .team-formation.bottom-team-formation .team-defense .team-player:not(:first-child),
 .soccer-pitch .team-formation.top-team-formation .team-defense .team-player:not(:first-child) {
     margin-left: 30%;
 }
 
+.soccer-pitch .team-formation.bottom-team-formation .team-defense .team-player:nth-child(3),
 .soccer-pitch .team-formation.top-team-formation .team-defense .team-player:nth-child(3) {
     margin-left: 55%;
 }
 
+.soccer-pitch .team-formation.bottom-team-formation .team-defense .team-player:last-child,
 .soccer-pitch .team-formation.top-team-formation .team-defense .team-player:last-child {
     right: 5%;
 }
 
 .soccer-pitch .team-formation.top-team-formation .team-defensive-mid>.team-player {
-    margin: 37% 15% 0 15%
+    top: 50%;
+    margin: 0 15%;
 }
 
+.soccer-pitch .team-formation.bottom-team-formation .team-attacking-mid>.team-player:nth-child(2),
 .soccer-pitch .team-formation.top-team-formation .team-attacking-mid>.team-player:nth-child(2),
 .soccer-pitch .team-formation.top-team-formation .team-defensive-mid>.team-player:nth-child(2) {
     margin-left: 43%
 }
 
+.soccer-pitch .team-formation.bottom-team-formation .team-attacking-mid>.team-player:nth-child(3),
 .soccer-pitch .team-formation.top-team-formation .team-attacking-mid>.team-player:nth-child(3),
 .soccer-pitch .team-formation.top-team-formation .team-defensive-mid>.team-player:nth-child(3) {
     margin-left: 68%
 }
 
 .soccer-pitch .team-formation.top-team-formation .team-attacking-mid>.team-player {
-    margin: 57% 15% 0 15%
+    top: 75%;
+    margin: 0 15%;
 }
 
 
@@ -1118,7 +1138,31 @@ nav .badge {
 
 .soccer-pitch .team-formation.bottom-team-formation,
 .soccer-pitch .team-formation.bottom-team-formation .team-keeper {
-    top: 90%;
+    bottom: 0;
+}
+
+.soccer-pitch .team-formation.bottom-team-formation .team-defense>.team-player {
+    bottom: 20%;
+}
+
+.soccer-pitch .team-formation.bottom-team-formation .team-defensive-mid>.team-player {
+    bottom: 40%;
+    margin: 0 20%;
+}
+
+.soccer-pitch .team-formation.bottom-team-formation .team-defensive-mid>.team-player:last-child {
+    right: 0%;
+}
+
+.soccer-pitch .team-formation.bottom-team-formation .team-attacking-mid>.team-player {
+    bottom: 60%;
+    margin: 0 15%;
+}
+
+.soccer-pitch .team-formation.bottom-team-formation .team-gunman>.team-player {
+    bottom: 80%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
