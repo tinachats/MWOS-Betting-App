@@ -1404,7 +1404,7 @@ header.header .nav-scroller .nav>a.active {
     border-top: 0.125rem solid var(--border-color);
 }
 
-.table>tbody>tr:not(:first-child) {
+.table.row-bordered>tbody>tr:not(:first-child) {
     border-top: var(--border-width) solid var(--border-color);
 }
 
@@ -1422,7 +1422,8 @@ header.header .nav-scroller .nav>a.active {
 }
 
 .table-nowrap td,
-.table-nowrap th {
+.table-nowrap th,
+.table.team-comparisons a {
     white-space: nowrap;
 }
 
@@ -1453,8 +1454,12 @@ header.header .nav-scroller .nav>a.active {
 
 /* Typography */
 
+.small {
+    font-size: var(--small) !important;
+}
+
 .small-xs {
-    font-size: .65em;
+    font-size: var(--small-xs) !important;
 }
 
 h1,
