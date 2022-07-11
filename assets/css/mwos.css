@@ -1152,13 +1152,11 @@ header.header .nav-scroller .nav>a.active {
 
 .soccer-pitch .team-formation .team-player .status.yellow-card {
     top: 0;
-    right: 0;
     height: 24px;
     width: 24px;
 }
 
 .soccer-pitch .team-formation .team-player .status.substitution-sign {
-    right: 0;
     height: 16px;
     width: 16px;
     border-radius: 50%;
@@ -1166,7 +1164,6 @@ header.header .nav-scroller .nav>a.active {
 }
 
 .soccer-pitch .team-formation .team-player .status.goal-scorer {
-    left: 0;
     height: 24px;
     width: 24px;
 }
@@ -1617,6 +1614,33 @@ li {
     .soccer-pitch .team-formation.four-rows .d-grid:not(.grid-col-1) {
         margin-top: 0;
     }
+    .soccer-pitch .team-formation .team-player .status.substitution-sign {
+        right: .75rem;
+    }
+    .soccer-pitch .team-formation .d-grid.grid-col-4 .team-player .status.status.yellow-card {
+        right: .5rem;
+    }
+    .soccer-pitch .team-formation .d-grid.grid-col-3 .team-player .status.status.yellow-card {
+        right: 1.5rem;
+    }
+    .soccer-pitch .team-formation .d-grid.grid-col-2 .team-player .status.status.yellow-card {
+        right: 1.1rem;
+    }
+    .soccer-pitch .team-formation .d-grid.grid-col-1 .team-player .status.status.yellow-card {
+        right: .75rem;
+    }
+    .soccer-pitch .team-formation .d-grid.grid-col-4 .team-player .status.goal-scorer {
+        left: .25rem;
+    }
+    .soccer-pitch .team-formation .d-grid.grid-col-3 .team-player .status.goal-scorer {
+        left: 1rem;
+    }
+    .soccer-pitch .team-formation .d-grid.grid-col-2 .team-player .status.goal-scorer {
+        left: .75rem;
+    }
+    .soccer-pitch .team-formation .d-grid.grid-col-1 .team-player .status.goal-scorer {
+        left: .4rem;
+    }
 }
 
 
@@ -1654,6 +1678,33 @@ li {
     }
     .soccer-pitch .team-formation.four-rows .d-grid:not(.grid-col-1) {
         margin-top: .75rem;
+    }
+    .soccer-pitch .team-formation .team-player .status.substitution-sign {
+        right: 1.8rem;
+    }
+    .soccer-pitch .team-formation .d-grid.grid-col-4 .team-player .status.status.yellow-card {
+        right: 1.4rem;
+    }
+    .soccer-pitch .team-formation .d-grid.grid-col-3 .team-player .status.status.yellow-card {
+        right: 2.5rem;
+    }
+    .soccer-pitch .team-formation .d-grid.grid-col-2 .team-player .status.status.yellow-card {
+        right: 2rem;
+    }
+    .soccer-pitch .team-formation .d-grid.grid-col-1 .team-player .status.status.yellow-card {
+        right: 1.5rem;
+    }
+    .soccer-pitch .team-formation .d-grid.grid-col-4 .team-player .status.goal-scorer {
+        left: 1rem;
+    }
+    .soccer-pitch .team-formation .d-grid.grid-col-3 .team-player .status.goal-scorer {
+        left: 2rem;
+    }
+    .soccer-pitch .team-formation .d-grid.grid-col-2 .team-player .status.goal-scorer {
+        left: 1.5rem;
+    }
+    .soccer-pitch .team-formation .d-grid.grid-col-1 .team-player .status.goal-scorer {
+        left: 1rem;
     }
 }
 
