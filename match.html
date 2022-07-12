@@ -669,7 +669,7 @@
 
     <!-- Page Content -->
     <div class="content container-md mb-5 pb-5 px-1">
-        <div class="row">
+        <div class="row gx-2">
             <!-- League Standings -->
             <div class="col-12 col-md-4 col-xl-4 position-sticky d-none d-md-block">
                 <div class="card rounded-4 shadow-sm">
@@ -904,6 +904,11 @@
                                 Sat 12 Mar 2022
                             </small>
                         </div>
+                        <div class="d-flex justify-content-center">
+                            <span class="badge bg-secondary rounded-pill px-2 py-1">
+                                Ended
+                            </span>
+                        </div>
                         <!-- /. League Title -->
 
                         <!-- Match Score -->
@@ -962,10 +967,10 @@
                 <!-- Nav Pills -->
                 <ul class="nav nav-pills shadow-sm mt-2 " id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-match-tab" data-bs-toggle="pill" data-bs-target="#pills-match" type="button" role="tab" aria-controls="pills-match" aria-selected="true">Match</button>
+                        <button class="nav-link active" id="pills-match-tab" data-bs-toggle="pill" data-bs-target="#pills-match" type="button" role="tab" aria-controls="pills-match" aria-selected="true">Match</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-lineups-tab" data-bs-toggle="pill" data-bs-target="#pills-lineups" type="button" role="tab" aria-controls="pills-lineups" aria-selected="false">Lineups</button>
+                        <button class="nav-link" id="pills-lineups-tab" data-bs-toggle="pill" data-bs-target="#pills-lineups" type="button" role="tab" aria-controls="pills-lineups" aria-selected="false">Lineups</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="pills-stats-tab" data-bs-toggle="pill" data-bs-target="#pills-stats" type="button" role="tab" aria-controls="pills-stats" aria-selected="false">Stats</button>
@@ -979,7 +984,7 @@
                 <!-- Tab Content -->
                 <div class="tab-content" id="pills-tabContent">
                     <!-- Match Info -->
-                    <div class="tab-pane fade" id="pills-match" role="tabpanel" aria-labelledby="pills-match-tab">
+                    <div class="tab-pane fade show active" id="pills-match" role="tabpanel" aria-labelledby="pills-match-tab">
                         <div class="mt-2">
                             <!-- Match Info -->
                             <h6 class="small-xs text-capitalize text-muted">predictions</h6>
@@ -1331,7 +1336,7 @@
                     <!-- /. Match Info -->
 
                     <!-- Lineups -->
-                    <div class="tab-pane fade show active" id="pills-lineups" role="tabpanel" aria-labelledby="pills-lineups-tab">
+                    <div class="tab-pane fade" id="pills-lineups" role="tabpanel" aria-labelledby="pills-lineups-tab">
                         <!-- Player Positions -->
                         <div class="mt-2">
                             <!-- Soccer Pitch -->
@@ -2134,7 +2139,198 @@
                         </div>
                     </div>
                     <!-- /. Match Stats -->
-                    <div class="tab-pane fade" id="pills-head-to-head" role="tabpanel" aria-labelledby="pills-head-to-head-tab">...</div>
+
+                    <!-- Head-to-Head Stats -->
+                    <div class="tab-pane fade" id="pills-head-to-head" role="tabpanel" aria-labelledby="pills-head-to-head-tab">
+                        <div class="mt-2">
+                            <!-- Overall Results -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6 class="small text-capitalize text-center mt-2">
+                                        Head-to-Head (H2H)
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <!-- Match Score -->
+                                    <div class="d-flex align-items-center justify-content-around mt-2">
+                                        <!-- Team Results -->
+                                        <div class="d-block text-center">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" height="50" width="50">
+                                            <h6 class="text-capitalize small mb-0 mt-2">tottenham</h6>
+                                        </div>
+                                        <!-- /. Team Results -->
+
+                                        <!-- Match Results -->
+                                        <div class="d-block text-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <div class="d-block text-center prev-results">
+                                                    <h2 class="my-0">6</h2>
+                                                    <small class="text-muted text-capitalize small-xs">wins</small>
+                                                </div>
+                                                <div class="d-block text-center prev-results">
+                                                    <h2 class="my-0">4</h2>
+                                                    <small class="text-muted text-capitalize small-xs">draws</small>
+                                                </div>
+                                                <div class="d-block text-center prev-results">
+                                                    <h2 class="my-0">3</h2>
+                                                    <small class="text-muted text-capitalize small-xs">wins</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /. Match Results -->
+
+                                        <!-- Team Results -->
+                                        <div class="d-block text-center">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" height="50" width="50">
+                                            <h6 class="text-capitalize small mb-0 mt-2">man united</h6>
+                                        </div>
+                                        <!-- /. Team Results -->
+                                    </div>
+                                    <!-- /. Match Score -->
+                                </div>
+                            </div>
+                            <!-- /. Overall Results -->
+
+                            <!-- Last Games -->
+                            <ul class="list-group mt-2">
+                                <li class="list-group-item">
+                                    <h6 class="small text-capitalize text-center mt-2">
+                                        Last Games
+                                    </h6>
+                                </li>
+
+                                <!-- Match Result -->
+                                <li class="list-group-item">
+                                    <!-- Teams -->
+                                    <div class="row align-items-center">
+                                        <div class="col-4 text-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" height="25" width="25">
+                                                <h6 class="text-capitalize small ms-1 my-0">tottenham</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 text-center">
+                                            <div class="d-block text-center">
+                                                <p class="small-xs text-capitalize text-muted my-0">old trafford</p>
+                                                <div class="d-flex align-items-center justify-content-center my-1">
+                                                    <span class="lead fw-bold">1</span>
+                                                    <span class="lead fw-bold mx-2">:</span>
+                                                    <span class="lead fw-bold">1</span>
+                                                </div>
+                                                <p class="small-xs text-capitalize text-muted my-0">14/10/2021</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 text-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" height="25" width="25">
+                                                <h6 class="text-capitalize small ms-1 my-0">man united</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /. Teams -->
+                                </li>
+                                <!-- /. Match Result -->
+
+                                <!-- Match Result -->
+                                <li class="list-group-item">
+                                    <!-- Teams -->
+                                    <div class="row align-items-center">
+                                        <div class="col-4 text-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" height="25" width="25">
+                                                <h6 class="text-capitalize small ms-1 my-0">tottenham</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 text-center">
+                                            <div class="d-block text-center">
+                                                <p class="small-xs text-capitalize text-muted my-0">tottenham hotspur stadium</p>
+                                                <div class="d-flex align-items-center justify-content-center my-1">
+                                                    <span class="lead fw-bold">4</span>
+                                                    <span class="lead fw-bold mx-2">:</span>
+                                                    <span class="lead fw-bold">2</span>
+                                                </div>
+                                                <p class="small-xs text-capitalize text-muted my-0">17/10/2021</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 text-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" height="25" width="25">
+                                                <h6 class="text-capitalize small ms-1 my-0">man united</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /. Teams -->
+                                </li>
+                                <!-- /. Match Result -->
+
+                                <!-- Match Result -->
+                                <li class="list-group-item">
+                                    <!-- Teams -->
+                                    <div class="row align-items-center">
+                                        <div class="col-4 text-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" height="25" width="25">
+                                                <h6 class="text-capitalize small ms-1 my-0">tottenham</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 text-center">
+                                            <div class="d-block text-center">
+                                                <p class="small-xs text-capitalize text-muted my-0">old trafford</p>
+                                                <div class="d-flex align-items-center justify-content-center my-1">
+                                                    <span class="lead fw-bold">1</span>
+                                                    <span class="lead fw-bold mx-2">:</span>
+                                                    <span class="lead fw-bold">1</span>
+                                                </div>
+                                                <p class="small-xs text-capitalize text-muted my-0">14/10/2021</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 text-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" height="25" width="25">
+                                                <h6 class="text-capitalize small ms-1 my-0">man united</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /. Teams -->
+                                </li>
+                                <!-- /. Match Result -->
+
+                                <!-- Match Result -->
+                                <li class="list-group-item">
+                                    <!-- Teams -->
+                                    <div class="row align-items-center">
+                                        <div class="col-4 text-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" height="25" width="25">
+                                                <h6 class="text-capitalize small ms-1 my-0">tottenham</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 text-center">
+                                            <div class="d-block text-center">
+                                                <p class="small-xs text-capitalize text-muted my-0">tottenham hotspur stadium</p>
+                                                <div class="d-flex align-items-center justify-content-center my-1">
+                                                    <span class="lead fw-bold">4</span>
+                                                    <span class="lead fw-bold mx-2">:</span>
+                                                    <span class="lead fw-bold">2</span>
+                                                </div>
+                                                <p class="small-xs text-capitalize text-muted my-0">17/10/2021</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 text-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" height="25" width="25">
+                                                <h6 class="text-capitalize small ms-1 my-0">man united</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /. Teams -->
+                                </li>
+                                <!-- /. Match Result -->
+                            </ul>
+                            <!-- /. Last Games -->
+                        </div>
+                    </div>
+                    <!-- /. Head-to-Head Stats -->
                 </div>
                 <!-- /. Tab Content -->
             </div>
@@ -2158,13 +2354,13 @@
         <div class="container-fluid">
             <ul class="nav-list d-flex justify-content-around m-0 px-0 py-1 w-100">
                 <li class="nav-item pt-2">
-                    <a class="nav-link text-center position-relative" href="#">
+                    <a class="nav-link text-center position-relative" href="index.html">
                         <i class="bi bi-house"></i>
                         <span class="avatar-status avatar-sm-status update-alert blink"></span>
                     </a>
                 </li>
                 <li class="nav-item pt-2">
-                    <a class="nav-link text-center" href="#">
+                    <a class="nav-link text-center" href="search.html">
                         <i class="bi bi-search"></i>
                     </a>
                 </li>
@@ -2174,12 +2370,12 @@
                     </a>
                 </li>
                 <li class="nav-item pt-2">
-                    <a class="nav-link text-center" href="#">
+                    <a class="nav-link text-center" href="events.html">
                         <i class="bi bi-calendar-week"></i>
                     </a>
                 </li>
                 <li class="nav-item pt-2">
-                    <a class="nav-link text-center position-relative" href="#">
+                    <a class="nav-link text-center position-relative" href="notifications.html">
                         <i class="bi bi-bell"></i>
                         <span class="position-absolute top-15 start-75 translate-middle badge rounded-pill bg-warning">
                             9
