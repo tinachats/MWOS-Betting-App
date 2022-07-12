@@ -682,11 +682,13 @@ nav .badge {
 
 /* Element Styling */
 
+a span,
 a {
     text-decoration: none;
     color: var(--bs-dark);
 }
 
+a span:hover,
 a:hover {
     color: var(--bs-warning);
 }
@@ -1196,6 +1198,16 @@ header.header .nav-scroller .nav>a.active {
 /* /. Pitch Styles */
 
 
+/* Off-canvas */
+
+.offcanvas.side-menu {
+    height: 100%;
+}
+
+
+/* /. Off-canvas */
+
+
 /*** Popovers ***/
 
 .popover {
@@ -1249,14 +1261,15 @@ header.header .nav-scroller .nav>a.active {
 /*** /.Popovers ***/
 
 
-/* Off-canvas */
+/* Progress Bars */
 
-.offcanvas.side-menu {
-    height: 100%;
+.progress-bar {
+    border-radius: .25rem;
+    transition: 1s linear;
 }
 
 
-/* /. Off-canvas */
+/* /. Progress Bars */
 
 
 /* Search Form */

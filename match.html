@@ -965,10 +965,10 @@
                         <button class="nav-link" id="pills-match-tab" data-bs-toggle="pill" data-bs-target="#pills-match" type="button" role="tab" aria-controls="pills-match" aria-selected="true">Match</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-lineups-tab" data-bs-toggle="pill" data-bs-target="#pills-lineups" type="button" role="tab" aria-controls="pills-lineups" aria-selected="false">Lineups</button>
+                        <button class="nav-link active" id="pills-lineups-tab" data-bs-toggle="pill" data-bs-target="#pills-lineups" type="button" role="tab" aria-controls="pills-lineups" aria-selected="false">Lineups</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-stats-tab" data-bs-toggle="pill" data-bs-target="#pills-stats" type="button" role="tab" aria-controls="pills-stats" aria-selected="false">Stats</button>
+                        <button class="nav-link" id="pills-stats-tab" data-bs-toggle="pill" data-bs-target="#pills-stats" type="button" role="tab" aria-controls="pills-stats" aria-selected="false">Stats</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="pills-head-to-head-tab" data-bs-toggle="pill" data-bs-target="#pills-head-to-head" type="button" role="tab" aria-controls="pills-head-to-head" aria-selected="false">Head-to-Head</button>
@@ -1331,7 +1331,7 @@
                     <!-- /. Match Info -->
 
                     <!-- Lineups -->
-                    <div class="tab-pane fade" id="pills-lineups" role="tabpanel" aria-labelledby="pills-lineups-tab">
+                    <div class="tab-pane fade show active" id="pills-lineups" role="tabpanel" aria-labelledby="pills-lineups-tab">
                         <!-- Player Positions -->
                         <div class="mt-2">
                             <!-- Soccer Pitch -->
@@ -1683,233 +1683,213 @@
 
                         <!-- Match Details -->
                         <div class="mt-2">
-                            <div class="card rounded-4 shadow-sm">
-                                <div class="card-header">
-                                    <h6 class="small text-capitalize text-center mt-2">match details</h6>
-                                </div>
-                                <div class="card-body m-0 p-0">
-                                    <!-- Table -->
-                                    <div class="table-responsive">
-                                        <table class="table team-comparisons">
-                                            <tbody>
-                                                <tr class="comparison-heading">
-                                                    <td class="text-start">
-                                                        <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" alt="League Logo" class="lazy" loading="lazy" height="35" width="35">
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <h6 class="card-subtitle mt-2">substitutes</h6>
-                                                    </td>
-                                                    <td class="text-end">
-                                                        <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" alt="League Logo" class="lazy" loading="lazy" height="35" width="35">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start">
-                                                        <a href="player.html" class="d-flex align-items-center">
-                                                            <div class="d-flex align-items-center">
-                                                                <span class="text-muted me-3">4</span>
-                                                                <span class="text-capitalize">toby alderweireld</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td class="text-center"></td>
-                                                    <td class="text-end">
-                                                        <a href="player.html" class="d-flex align-items-center justify-content-end">
-                                                            <div class="d-flex align-items-center">
-                                                                <span class="text-capitalize">david de gea</span>
-                                                                <span class="text-muted ms-3">1</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start">
-                                                        <a href="player.html" class="d-flex align-items-center">
-                                                            <div class="d-flex align-items-center">
-                                                                <span class="text-muted me-3">8</span>
-                                                                <span class="text-capitalize">harry winks</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td class="text-center"></td>
-                                                    <td class="text-end">
-                                                        <a href="player.html" class="d-flex align-items-center justify-content-end">
-                                                            <div class="d-flex align-items-center">
-                                                                <span class="text-capitalize">juan mata</span>
-                                                                <span class="text-muted ms-3">8</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start">
-                                                        <a href="player.html" class="d-flex align-items-center">
-                                                            <div class="d-flex align-items-center">
-                                                                <span class="text-muted me-3">9</span>
-                                                                <span class="text-capitalize">gareth bale</span>
-                                                            </div>
-                                                            <img src="assets/images/app/substitution-in.svg" alt="Substituded in">
-                                                        </a>
-                                                    </td>
-                                                    <td class="text-center"></td>
-                                                    <td class="text-end">
-                                                        <a href="player.html" class="d-flex align-items-center justify-content-end">
-                                                            <img src="assets/images/app/substitution-in.svg" alt="Substituded in">
-                                                            <div class="d-flex align-items-center">
-                                                                <span class="text-capitalize">mason greenwood</span>
-                                                                <span class="text-muted ms-3">1</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start">
-                                                        <a href="player.html" class="d-flex align-items-center">
-                                                            <div class="d-flex align-items-center">
-                                                                <span class="text-muted me-3">11</span>
-                                                                <span class="text-capitalize">Érik Lamela</span>
-                                                            </div>
-                                                            <img src="assets/images/app/substitution-in.svg" alt="Substituded in">
-                                                        </a>
-                                                    </td>
-                                                    <td class="text-center"></td>
-                                                    <td class="text-end">
-                                                        <a href="player.html" class="d-flex align-items-center justify-content-end">
-                                                            <div class="d-flex align-items-center">
-                                                                <span class="text-capitalize">amad diallo</span>
-                                                                <span class="text-muted ms-3">19</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start">
-                                                        <a href="player.html" class="d-flex align-items-center">
-                                                            <div class="d-flex align-items-center">
-                                                                <span class="text-muted me-3">12</span>
-                                                                <span class="text-capitalize">joe hart</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td class="text-center"></td>
-                                                    <td class="text-end">
-                                                        <a href="player.html" class="d-flex align-items-center justify-content-end">
-                                                            <div class="d-flex align-items-center">
-                                                                <span class="text-capitalize">allex telles</span>
-                                                                <span class="text-muted ms-3">27</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start">
-                                                        <a href="player.html" class="d-flex align-items-center">
-                                                            <div class="d-flex align-items-center">
-                                                                <span class="text-muted me-3">17</span>
-                                                                <span class="text-capitalize">moussa sissoko</span>
-                                                            </div>
-                                                            <img src="assets/images/app/yellow-card.svg" alt="Yellow card">
-                                                            <img src="assets/images/app/substitution-in.svg" alt="Substituded in">
-                                                        </a>
-                                                    </td>
-                                                    <td class="text-center"></td>
-                                                    <td class="text-end">
-                                                        <a href="player.html" class="d-flex align-items-center justify-content-end">
-                                                            <img src="assets/images/app/substitution-in.svg" alt="Substituded in">
-                                                            <div class="d-flex align-items-center ms-2">
-                                                                <span class="text-capitalize">Nemanja Matić</span>
-                                                                <span class="text-muted ms-3">31</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start">
-                                                        <a href="player.html" class="d-flex align-items-center">
-                                                            <div class="d-flex align-items-center">
-                                                                <span class="text-muted me-3">20</span>
-                                                                <span class="text-capitalize">dele alli</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td class="text-center"></td>
-                                                    <td class="text-end">
-                                                        <a href="player.html" class="d-flex align-items-center justify-content-end">
-                                                            <div class="d-flex align-items-center ms-2">
-                                                                <span class="text-capitalize">brandon williams</span>
-                                                                <span class="text-muted ms-3">33</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start">
-                                                        <a href="player.html" class="d-flex align-items-center">
-                                                            <div class="d-flex align-items-center">
-                                                                <span class="text-muted me-3">25</span>
-                                                                <span class="text-capitalize">japhet tanganga</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td class="text-center"></td>
-                                                    <td class="text-end">
-                                                        <a href="player.html" class="d-flex align-items-center justify-content-end">
-                                                            <div class="d-flex align-items-center">
-                                                                <span class="text-capitalize">donny van de beek</span>
-                                                                <span class="text-muted ms-3">34</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start">
-                                                        <a href="player.html" class="d-flex align-items-center">
-                                                            <div class="d-flex align-items-center">
-                                                                <span class="text-muted me-3">45</span>
-                                                                <span class="text-capitalize">Carlos Vinícius</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td class="text-center"></td>
-                                                    <td class="text-end">
-                                                        <a href="player.html" class="d-flex align-items-center justify-content-end">
-                                                            <div class="d-flex align-items-center">
-                                                                <span class="text-capitalize">axele tuanzebe</span>
-                                                                <span class="text-muted ms-3">38</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr class="comparison-heading">
-                                                    <td class="text-start">
-                                                        <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" alt="League Logo" class="lazy" loading="lazy" height="35" width="35">
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <h6 class="card-subtitle mt-2">manager</h6>
-                                                    </td>
-                                                    <td class="text-end">
-                                                        <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" alt="League Logo" class="lazy" loading="lazy" height="35" width="35">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start">
-                                                        <a href="player.html" class="d-flex align-items-center">
-                                                            <div class="d-flex align-items-center">
-                                                                <span class="text-capitalize">j. mourinho</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td class="text-center"></td>
-                                                    <td class="text-end">
-                                                        <a href="player.html" class="d-flex align-items-center justify-content-end">
-                                                            <div class="d-flex align-items-center">
-                                                                <span class="text-capitalize">O. Solskjær</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                            <div class="card pb-4">
+                                <div class="card-body py-1">
+                                    <div class="row justify-content-between align-items-center my-3">
+                                        <div class="col text-start">
+                                            <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" alt="League Logo" class="lazy" loading="lazy" height="35" width="35">
+                                        </div>
+                                        <div class="col text-center">
+                                            <h6 class="small-xs text-uppercase my-0">substitutes</h6>
+                                        </div>
+                                        <div class="col text-end">
+                                            <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" alt="League Logo" class="lazy" loading="lazy" height="35" width="35">
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-between align-items-center mt-2">
+                                        <div class="col text-start ms-2">
+                                            <a href="player.html" class="d-flex align-items-center small">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-muted me-2">4</span>
+                                                    <span class="text-capitalize text-nowrap">toby alderweireld</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col text-end me-2">
+                                            <a href="player.html" class="d-flex align-items-center justify-content-end small">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-capitalize text-nowrap">david de gea</span>
+                                                    <span class="text-muted ms-2">1</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-between align-items-center mt-2">
+                                        <div class="col text-start ms-2">
+                                            <a href="player.html" class="d-flex align-items-center small">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-muted me-2">8</span>
+                                                    <span class="text-capitalize text-nowrap">harry winks</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col text-end me-2">
+                                            <a href="player.html" class="d-flex align-items-center justify-content-end small">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-capitalize">juan mata</span>
+                                                    <span class="text-muted text-nowrap ms-2">8</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-between align-items-center mt-2">
+                                        <div class="col text-start ms-2">
+                                            <a href="player.html" class="d-flex align-items-center small">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-muted me-2">9</span>
+                                                    <span class="text-capitalize text-nowrap">gareth bale</span>
+                                                </div>
+                                                <img src="assets/images/app/substitution-in.svg" alt="Substituded in">
+                                            </a>
+                                        </div>
+                                        <div class="col text-end me-2">
+                                            <a href="player.html" class="d-flex align-items-center justify-content-end small">
+                                                <img src="assets/images/app/substitution-in.svg" alt="Substituded in">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-capitalize text-nowrap">mason greenwood</span>
+                                                    <span class="text-muted ms-2">1</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-between align-items-center mt-2">
+                                        <div class="col text-start ms-2">
+                                            <a href="player.html" class="d-flex align-items-center small">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-muted me-2">11</span>
+                                                    <span class="text-capitalize text-nowrap">Érik Lamela</span>
+                                                </div>
+                                                <img src="assets/images/app/substitution-in.svg" alt="Substituded in">
+                                            </a>
+                                        </div>
+                                        <div class="col text-end me-2">
+                                            <a href="player.html" class="d-flex align-items-center justify-content-end small">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-capitalize text-nowrap">amad diallo</span>
+                                                    <span class="text-muted ms-2">19</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-between align-items-center mt-2">
+                                        <div class="col text-start ms-2">
+                                            <a href="player.html" class="d-flex align-items-center small">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-muted me-2">12</span>
+                                                    <span class="text-capitalize text-nowrap">joe hart</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col text-end me-2">
+                                            <a href="player.html" class="d-flex align-items-center justify-content-end small">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-capitalize text-nowrap">allex telles</span>
+                                                    <span class="text-muted ms-2">27</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-between align-items-center mt-2">
+                                        <div class="col text-start ms-2">
+                                            <a href="player.html" class="d-flex align-items-center small">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-muted me-2">17</span>
+                                                    <span class="text-capitalize text-nowrap">moussa sissoko</span>
+                                                </div>
+                                                <img src="assets/images/app/yellow-card.svg" alt="Yellow card">
+                                                <img src="assets/images/app/substitution-in.svg" alt="Substituded in">
+                                            </a>
+                                        </div>
+                                        <div class="col text-end me-2">
+                                            <a href="player.html" class="d-flex align-items-center justify-content-end small">
+                                                <img src="assets/images/app/substitution-in.svg" alt="Substituded in">
+                                                <div class="d-flex align-items-center ms-2">
+                                                    <span class="text-capitalize text-nowrap">Nemanja Matić</span>
+                                                    <span class="text-muted ms-2">31</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-between align-items-center mt-2">
+                                        <div class="col text-start ms-2">
+                                            <a href="player.html" class="d-flex align-items-center small">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-muted me-2">20</span>
+                                                    <span class="text-capitalize text-nowrap">dele alli</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col text-end me-2">
+                                            <a href="player.html" class="d-flex align-items-center justify-content-end small">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-capitalize text-nowrap">brandon williams</span>
+                                                    <span class="text-muted ms-2">33</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-between align-items-center mt-2">
+                                        <div class="col text-start ms-2">
+                                            <a href="player.html" class="d-flex align-items-center small">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-muted me-2">25</span>
+                                                    <span class="text-capitalize text-nowrap">japhet tanganga</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col text-end me-2">
+                                            <a href="player.html" class="d-flex align-items-center justify-content-end small">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-capitalize text-nowrap">donny van de beek</span>
+                                                    <span class="text-muted ms-2">34</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-between align-items-center mt-2">
+                                        <div class="col text-start ms-2">
+                                            <a href="player.html" class="d-flex align-items-center small">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-muted me-2">45</span>
+                                                    <span class="text-capitalize text-nowrap">Carlos Vinícius</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col text-end me-2">
+                                            <a href="player.html" class="d-flex align-items-center justify-content-end small">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-capitalize text-nowrap">axele tuanzebe</span>
+                                                    <span class="text-muted ms-2">38</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-between align-items-center my-3">
+                                        <div class="col text-start">
+                                            <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" alt="League Logo" class="lazy" loading="lazy" height="35" width="35">
+                                        </div>
+                                        <div class="col text-center">
+                                            <h6 class="small-xs text-uppercase my-0">managers</h6>
+                                        </div>
+                                        <div class="col text-end">
+                                            <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" alt="League Logo" class="lazy" loading="lazy" height="35" width="35">
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-between align-items-center mt-2">
+                                        <div class="col text-start ms-2">
+                                            <a href="coach.html" class="d-flex align-items-center small">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-capitalize text-nowrap">j. mourinho</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col text-end me-2">
+                                            <a href="coach.html" class="d-flex align-items-center justify-content-end small">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-capitalize text-nowrap">O. Solskjær</span>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1919,7 +1899,7 @@
                     <!-- /. Lineups -->
 
                     <!-- Match Stats -->
-                    <div class="tab-pane fade show active" id="pills-stats" role="tabpanel" aria-labelledby="pills-stats-tab">
+                    <div class="tab-pane fade" id="pills-stats" role="tabpanel" aria-labelledby="pills-stats-tab">
                         <div class="mt-2">
                             <div class="card pb-4">
                                 <div class="card-header">

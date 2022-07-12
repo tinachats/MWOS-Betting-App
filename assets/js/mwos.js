@@ -1,3 +1,15 @@
+// ProgressBar Animations
+progressBarAnimation();
+
+function progressBarAnimation() {
+    const progress_bars = document.querySelectorAll('progress-bar');
+    progress_bars.forEach(progress_bar => {
+        var progress_width = progress_bar.getAttribute('aria-valuenow');
+        var percentage = Math.floor(progress_width) + '%';
+        console.log(percentage);
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Enable Popovers
     var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
