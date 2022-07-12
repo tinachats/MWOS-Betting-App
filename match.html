@@ -631,7 +631,7 @@
                                     <span class="ms-2">give feedback</span>
                                 </div>
                             </a>
-                            <a class="dropdown-item" href="javascript:void(0)">
+                            <a class="dropdown-item" href="login.html">
                                 <div class="d-flex align-items-center text-capitalize">
                                     <i class="bi bi-power bi-2x"></i>
                                     <span class="ms-2">sign out</span>
@@ -671,7 +671,7 @@
     <div class="content container-md mb-5 pb-5 px-1">
         <div class="row gx-2">
             <!-- League Standings -->
-            <div class="col-12 col-md-4 col-xl-4 position-sticky d-none d-md-block">
+            <div class="col-12 col-md-4 col-xl-3 mb-2 position-sticky d-none d-md-block">
                 <div class="card rounded-4 shadow-sm">
                     <div class="card-header">
                         <a href="league.html" class="d-flex align-items-center justify-content-start">
@@ -887,7 +887,7 @@
             <!-- /. League Standings -->
 
             <!-- Match Info -->
-            <div class="col-12 col-md-8 col-xl-5">
+            <div class="col-12 col-md-8 col-xl-5 mb-2">
                 <!-- Match Results -->
                 <div class="card rounded-4 shadow-sm">
                     <div class="card-body">
@@ -904,7 +904,7 @@
                                 Sat 12 Mar 2022
                             </small>
                         </div>
-                        <div class="d-flex justify-content-center">
+                        <div class="d-flex justify-content-center mt-2">
                             <span class="badge bg-secondary rounded-pill px-2 py-1">
                                 Ended
                             </span>
@@ -912,7 +912,7 @@
                         <!-- /. League Title -->
 
                         <!-- Match Score -->
-                        <div class="d-flex align-items-center justify-content-around mt-2">
+                        <div class="d-flex align-items-center justify-content-around">
                             <!-- Team Results -->
                             <div class="d-block text-center">
                                 <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" height="50" width="50">
@@ -2336,15 +2336,496 @@
             </div>
             <!-- / Match Info -->
 
-            <!-- Match News -->
-            <div class="col-12 col-md-4 col-xl-3 d-none d-xl-block">
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <h6 class="small-xs">News feeds</h6>
+            <!-- Match Transcripts (Commentaries) -->
+            <div class="col-12 col-md-4 col-xl-4 mb-2">
+                <div class="card card-body mb-2">
+                    <h6 class="d-flex align-items-center justify-content-center small my-0">
+                        <i class="bi bi-headset bi-2x me-2"></i>
+                        <span>Commentaries</span>
+                    </h6>
+                </div>
+                <ul class="match-timeline step step-icon-sm step-avatar-sm">
+                    <!-- Step Item -->
+                    <li class="step-item">
+                        <div class="step-content-wrapper">
+                            <span class="step-icon">90'</span>
+                            <div class="step-content">
+                                <div class="timeline-title mb-1">
+                                    <i class="bi bi-alarm"></i>
+                                    <span class="ms-1">full time</span>
+                                </div>
+                                <!-- Match Score -->
+                                <div class="timeline-body card card-body">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <!-- Team Results -->
+                                        <div class="d-flex align-items-center">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" height="25" width="25">
+                                            <h6 class="text-capitalize small-xs my-0 ms-1">tottenham</h6>
+                                        </div>
+                                        <!-- /. Team Results -->
+
+                                        <!-- Match Results -->
+                                        <h6 class="d-flex align-items-center justify-content-center small-xs my-0">
+                                            <span>1</span>
+                                            <span class="mx-1">:</span>
+                                            <span>2</span>
+                                        </h6>
+                                        <!-- /. Match Results -->
+
+                                        <!-- Team Results -->
+                                        <div class="d-flex align-items-center">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" height="25" width="25">
+                                            <h6 class="text-capitalize small-xs my-0 ms-1">man united</h6>
+                                        </div>
+                                        <!-- /. Team Results -->
+                                    </div>
+                                </div>
+                                <!-- /. Match Score -->
+                            </div>
+                        </div>
                     </li>
+                    <!-- End Step Item -->
+
+                    <!-- Step Item -->
+                    <li class="step-item">
+                        <div class="step-content-wrapper">
+                            <span class="step-icon">88'</span>
+                            <div class="step-content">
+                                <div class="timeline-title mb-1">
+                                    <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/soccer-ball.svg" alt="Goal" height="24" width="24" class="lazy me-1">
+                                    <span class="me-1">goal</span>
+                                </div>
+
+                                <div class="card card-body timeline-body">
+                                    <!-- Match Score -->
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <!-- Team Results -->
+                                        <div class="d-flex align-items-center">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" height="25" width="25">
+                                            <h6 class="text-capitalize small-xs my-0 ms-1">tottenham</h6>
+                                        </div>
+                                        <!-- /. Team Results -->
+
+                                        <!-- Match Results -->
+                                        <h6 class="d-flex align-items-center justify-content-center small-xs my-0">
+                                            <span>1</span>
+                                            <span class="mx-1">:</span>
+                                            <span>2</span>
+                                        </h6>
+                                        <!-- /. Match Results -->
+
+                                        <!-- Team Results -->
+                                        <div class="d-flex align-items-center">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" height="25" width="25">
+                                            <h6 class="text-capitalize small-xs my-0 ms-1">man united</h6>
+                                        </div>
+                                        <!-- /. Team Results -->
+                                    </div>
+                                    <!-- /. Match Score -->
+
+                                    <!-- Goal Scorer -->
+                                    <div class="d-flex align-items-center justify-content-start my-2">
+                                        <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/110x140/p14937.png" alt="Player" loading="lazy" height="40" width="40" class="lazy me-2">
+                                        <div class="d-block">
+                                            <a href="player.html" class="d-flex align-items-center small-xs text-capitalize">
+                                                <span class="me-1 jersey-number">7</span>
+                                                <span class="player-name">cristiano ronaldo</span>
+                                            </a>
+                                            <div class="d-flex align-items-center small-xs text-capitalize text-muted">
+                                                <span class="me-1">ast.</span>
+                                                <span class="player-name">alex telles</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /. Goal Scorer -->
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- End Step Item -->
+
+                    <!-- Step Item -->
+                    <li class="step-item">
+                        <div class="step-content-wrapper">
+                            <span class="step-icon">87'</span>
+                            <div class="step-content">
+                                <div class="timeline-title mb-1">
+                                    <i class="bi bi-arrow-down-up"></i>
+                                    <span class="ms-1">substitution</span>
+                                </div>
+
+                                <div class="card card-body timeline-body">
+                                    <!-- Match Score -->
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <!-- Team Results -->
+                                        <div class="d-flex align-items-center">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" height="25" width="25">
+                                            <h6 class="text-capitalize small-xs my-0 ms-1">tottenham</h6>
+                                        </div>
+                                        <!-- /. Team Results -->
+
+                                        <!-- Match Results -->
+                                        <h6 class="d-flex align-items-center justify-content-center small-xs my-0">
+                                            <span>1</span>
+                                            <span class="mx-1">:</span>
+                                            <span>2</span>
+                                        </h6>
+                                        <!-- /. Match Results -->
+
+                                        <!-- Team Results -->
+                                        <div class="d-flex align-items-center">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" height="25" width="25">
+                                            <h6 class="text-capitalize small-xs my-0 ms-1">man united</h6>
+                                        </div>
+                                        <!-- /. Team Results -->
+                                    </div>
+                                    <!-- /. Match Score -->
+
+                                    <!-- Substitution -->
+                                    <div class="d-flex align-items-start justify-content-start my-2">
+                                        <!-- Substituted Out -->
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-block text-center">
+                                                <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/110x140/p202993.png" alt="Player" loading="lazy" height="40" width="40" class="lazy me-2">
+                                                <div class="d-block">
+                                                    <a href="player.html" class="d-flex align-items-center small-xs text-capitalize">
+                                                        <span class="me-1 jersey-number">30</span>
+                                                        <span class="player-name">rodrigo bentancur</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/substitution-out.svg" alt="Substituted out" loading="lazy" class="lazy ms-2">
+                                        </div>
+                                        <!-- /. Substituted Out -->
+
+                                        <!-- Substituted In -->
+                                        <div class="d-flex align-items-center ms-3">
+                                            <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/substitution-in.svg" alt="Substituted in" loading="lazy" class="lazy me-2">
+                                            <div class="d-block text-center">
+                                                <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/110x140/p157668.png" alt="Player" loading="lazy" height="40" width="40" class="lazy me-2">
+                                                <div class="d-block">
+                                                    <a href="player.html" class="d-flex align-items-center small-xs text-capitalize">
+                                                        <span class="me-1 jersey-number">8</span>
+                                                        <span class="player-name">Harry winks</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /. Substituted In -->
+                                    </div>
+                                    <!-- /. Substitution -->
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- End Step Item -->
+
+                    <!-- Step Item -->
+                    <li class="step-item">
+                        <div class="step-content-wrapper">
+                            <span class="step-icon">85'</span>
+                            <div class="step-content">
+                                <div class="timeline-title mb-1">
+                                    <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/yellow-card.svg" alt="Goal" height="24" width="24" class="lazy me-1">
+                                    <span class="me-1">yellow card</span>
+                                </div>
+
+                                <div class="card card-body timeline-body">
+                                    <!-- Match Score -->
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <!-- Team Results -->
+                                        <div class="d-flex align-items-center">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" height="25" width="25">
+                                            <h6 class="text-capitalize small-xs my-0 ms-1">tottenham</h6>
+                                        </div>
+                                        <!-- /. Team Results -->
+
+                                        <!-- Match Results -->
+                                        <h6 class="d-flex align-items-center justify-content-center small-xs my-0">
+                                            <span>1</span>
+                                            <span class="mx-1">:</span>
+                                            <span>2</span>
+                                        </h6>
+                                        <!-- /. Match Results -->
+
+                                        <!-- Team Results -->
+                                        <div class="d-flex align-items-center">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" height="25" width="25">
+                                            <h6 class="text-capitalize small-xs my-0 ms-1">man united</h6>
+                                        </div>
+                                        <!-- /. Team Results -->
+                                    </div>
+                                    <!-- /. Match Score -->
+
+                                    <!-- Goal Scorer -->
+                                    <div class="d-flex align-items-center justify-content-start my-2">
+                                        <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/110x140/p74208.png" alt="Player" loading="lazy" height="40" width="40" class="lazy me-2">
+                                        <div class="d-block">
+                                            <a href="player.html" class="d-flex align-items-center small-xs text-capitalize">
+                                                <span class="me-1 jersey-number">6</span>
+                                                <span class="player-name">paul pogba</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- /. Goal Scorer -->
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- End Step Item -->
+
+                    <!-- Step Item -->
+                    <li class="step-item">
+                        <div class="step-content-wrapper">
+                            <span class="step-icon">83'</span>
+                            <div class="step-content">
+                                <div class="timeline-title mb-1">
+                                    <i class="bi bi-arrow-down-up"></i>
+                                    <span class="ms-1">substitution</span>
+                                </div>
+
+                                <div class="card card-body timeline-body">
+                                    <!-- Match Score -->
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <!-- Team Results -->
+                                        <div class="d-flex align-items-center">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" height="25" width="25">
+                                            <h6 class="text-capitalize small-xs my-0 ms-1">tottenham</h6>
+                                        </div>
+                                        <!-- /. Team Results -->
+
+                                        <!-- Match Results -->
+                                        <h6 class="d-flex align-items-center justify-content-center small-xs my-0">
+                                            <span>1</span>
+                                            <span class="mx-1">:</span>
+                                            <span>2</span>
+                                        </h6>
+                                        <!-- /. Match Results -->
+
+                                        <!-- Team Results -->
+                                        <div class="d-flex align-items-center">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" height="25" width="25">
+                                            <h6 class="text-capitalize small-xs my-0 ms-1">man united</h6>
+                                        </div>
+                                        <!-- /. Team Results -->
+                                    </div>
+                                    <!-- /. Match Score -->
+
+                                    <!-- Substitution -->
+                                    <div class="d-flex align-items-start justify-content-start my-2">
+                                        <!-- Substituted Out -->
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-block text-center">
+                                                <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/110x140/p62398.png" alt="Player" loading="lazy" height="40" width="40" class="lazy me-2">
+                                                <div class="d-block">
+                                                    <a href="player.html" class="d-flex align-items-center small-xs text-capitalize">
+                                                        <span class="me-1 jersey-number">31</span>
+                                                        <span class="player-name">nemanja matic</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/substitution-out.svg" alt="Substituted out" loading="lazy" class="lazy ms-2">
+                                        </div>
+                                        <!-- /. Substituted Out -->
+
+                                        <!-- Substituted In -->
+                                        <div class="d-flex align-items-center ms-3">
+                                            <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/substitution-in.svg" alt="Substituted in" loading="lazy" class="lazy me-2">
+                                            <div class="d-block text-center">
+                                                <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/110x140/p40720.png" alt="Player" loading="lazy" height="40" width="40" class="lazy me-2">
+                                                <div class="d-block">
+                                                    <a href="player.html" class="d-flex align-items-center small-xs text-capitalize">
+                                                        <span class="me-1 jersey-number">21</span>
+                                                        <span class="player-name">edinson cavani</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /. Substituted In -->
+                                    </div>
+                                    <!-- /. Substitution -->
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- End Step Item -->
+
+                    <!-- Step Item -->
+                    <li class="step-item">
+                        <div class="step-content-wrapper">
+                            <span class="step-icon">81'</span>
+                            <div class="step-content">
+                                <div class="timeline-title mb-1">
+                                    <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/own-goal.svg" alt="Goal" height="24" width="24" class="lazy me-1">
+                                    <span class="me-1">own goal</span>
+                                </div>
+
+                                <div class="card card-body timeline-body">
+                                    <!-- Match Score -->
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <!-- Team Results -->
+                                        <div class="d-flex align-items-center">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" height="25" width="25">
+                                            <h6 class="text-capitalize small-xs my-0 ms-1">tottenham</h6>
+                                        </div>
+                                        <!-- /. Team Results -->
+
+                                        <!-- Match Results -->
+                                        <h6 class="d-flex align-items-center justify-content-center small-xs my-0">
+                                            <span>1</span>
+                                            <span class="mx-1">:</span>
+                                            <span>2</span>
+                                        </h6>
+                                        <!-- /. Match Results -->
+
+                                        <!-- Team Results -->
+                                        <div class="d-flex align-items-center">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" height="25" width="25">
+                                            <h6 class="text-capitalize small-xs my-0 ms-1">man united</h6>
+                                        </div>
+                                        <!-- /. Team Results -->
+                                    </div>
+                                    <!-- /. Match Score -->
+
+                                    <!-- Goal Scorer -->
+                                    <div class="d-flex align-items-center justify-content-start my-2">
+                                        <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/110x140/p95658.png" alt="Player" loading="lazy" height="40" width="40" class="lazy me-2">
+                                        <div class="d-block">
+                                            <a href="player.html" class="d-flex align-items-center small-xs text-capitalize">
+                                                <span class="me-1 jersey-number">5</span>
+                                                <span class="player-name">harry maguire</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- /. Goal Scorer -->
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- End Step Item -->
+
+                    <!-- Step Item -->
+                    <li class="step-item">
+                        <div class="step-content-wrapper">
+                            <span class="step-icon">45'</span>
+                            <div class="step-content">
+                                <div class="timeline-title mb-1">
+                                    <i class="bi bi-alarm"></i>
+                                    <span class="ms-1">half time</span>
+                                </div>
+                                <!-- Match Score -->
+                                <div class="timeline-body card card-body">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <!-- Team Results -->
+                                        <div class="d-flex align-items-center">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" height="25" width="25">
+                                            <h6 class="text-capitalize small-xs my-0 ms-1">tottenham</h6>
+                                        </div>
+                                        <!-- /. Team Results -->
+
+                                        <!-- Match Results -->
+                                        <h6 class="d-flex align-items-center justify-content-center small-xs my-0">
+                                            <span>1</span>
+                                            <span class="mx-1">:</span>
+                                            <span>1</span>
+                                        </h6>
+                                        <!-- /. Match Results -->
+
+                                        <!-- Team Results -->
+                                        <div class="d-flex align-items-center">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" height="25" width="25">
+                                            <h6 class="text-capitalize small-xs my-0 ms-1">man united</h6>
+                                        </div>
+                                        <!-- /. Team Results -->
+                                    </div>
+                                </div>
+                                <!-- /. Match Score -->
+                            </div>
+                        </div>
+                    </li>
+                    <!-- End Step Item -->
+
+                    <!-- Step Item -->
+                    <li class="step-item">
+                        <div class="step-content-wrapper">
+                            <span class="step-icon">12'</span>
+                            <div class="step-content">
+                                <div class="timeline-title mb-1">
+                                    <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/soccer-ball.svg" alt="Goal" height="24" width="24" class="lazy me-1">
+                                    <span class="me-1">goal</span>
+                                </div>
+
+                                <div class="card card-body timeline-body">
+                                    <!-- Match Score -->
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <!-- Team Results -->
+                                        <div class="d-flex align-items-center">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" height="25" width="25">
+                                            <h6 class="text-capitalize small-xs my-0 ms-1">tottenham</h6>
+                                        </div>
+                                        <!-- /. Team Results -->
+
+                                        <!-- Match Results -->
+                                        <h6 class="d-flex align-items-center justify-content-center small-xs my-0">
+                                            <span>1</span>
+                                            <span class="mx-1">:</span>
+                                            <span>1</span>
+                                        </h6>
+                                        <!-- /. Match Results -->
+
+                                        <!-- Team Results -->
+                                        <div class="d-flex align-items-center">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" height="25" width="25">
+                                            <h6 class="text-capitalize small-xs my-0 ms-1">man united</h6>
+                                        </div>
+                                        <!-- /. Team Results -->
+                                    </div>
+                                    <!-- /. Match Score -->
+
+                                    <!-- Goal Scorer -->
+                                    <div class="d-flex align-items-center justify-content-start my-2">
+                                        <img src="assets/images/app/player-placeholder.png" data-src="https://resources.premierleague.com/premierleague/photos/players/110x140/p14937.png" alt="Player" loading="lazy" height="40" width="40" class="lazy me-2">
+                                        <div class="d-block">
+                                            <a href="player.html" class="d-flex align-items-center small-xs text-capitalize">
+                                                <span class="me-1 jersey-number">7</span>
+                                                <span class="player-name">cristiano ronaldo</span>
+                                            </a>
+                                            <div class="d-flex align-items-center small-xs text-capitalize text-muted">
+                                                <span class="me-1">ast.</span>
+                                                <span class="player-name">alex telles</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /. Goal Scorer -->
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- End Step Item -->
+
+                    <!-- Step Item -->
+                    <li class="step-item">
+                        <div class="step-content-wrapper">
+                            <span class="step-icon">0'</span>
+                            <div class="step-content">
+                                <div class="timeline-title mb-1">
+                                    <i class="bi bi-alarm"></i>
+                                    <span class="ms-1">Kick Off</span>
+                                </div>
+                                <!-- Match Score -->
+                                <div class="timeline-body card card-body">
+                                    <p class="small-xs text-muted">
+                                        First half begins
+                                    </p>
+                                </div>
+                                <!-- /. Match Score -->
+                            </div>
+                        </div>
+                    </li>
+                    <!-- End Step Item -->
                 </ul>
             </div>
-            <!-- /. Match News -->
+            <!-- /. Match Transcripts (Commentaries) -->
         </div>
     </div>
     <!-- /. Page Content -->

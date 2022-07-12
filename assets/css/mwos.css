@@ -1491,6 +1491,121 @@ header.header .nav-scroller .nav>a.active {
 /* /.Tables */
 
 
+/* Timeline */
+
+.step {
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+
+.step .step-item {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: .75rem;
+    padding-left: .75rem;
+}
+
+.match-timeline.step .step-item {
+    margin-bottom: 0;
+    padding-bottom: 1.75rem;
+}
+
+.step .step-content-wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.match-timeline.step-avatar-sm .step-avatar,
+.step-avatar-sm.step-avatar,
+.step .step-avatar {
+    font-size: var(--small-xs);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.step .step-avatar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1.3125rem;
+    height: 100%;
+    border-left: .125rem solid var(--hover-bg);
+}
+
+.step-icon-sm .step-icon::after,
+.step-icon-sm.step-icon::after,
+.step-avatar-sm .step-avatar::after,
+.step-avatar-sm.step-avatar::after {
+    left: 12px;
+    top: 24px;
+    width: 2rem;
+    height: 100%;
+}
+
+.step-icon-sm.step-icon,
+.step .step-icon {
+    font-size: var(--small-xs);
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.step-icon-sm.step-icon,
+.step .step-icon,
+.step-icon-soft-dark {
+    color: var(--hover-bg);
+    border: 1px solid var(--hover-bg);
+}
+
+.step .step-icon::after {
+    content: "";
+    position: absolute;
+    border-left: .15rem solid var(--hover-bg);
+}
+
+.step .step-content {
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.match-timeline.step h5,
+.match-timeline.step p {
+    font-size: var(--small-xs);
+}
+
+.timeline-title {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.match-timeline .timeline-title {
+    font-size: .7rem;
+    font-weight: 600;
+}
+
+.match-timeline .timeline-title i.bi {
+    font-size: 1.2rem;
+}
+
+
+/* /. Timeline */
+
+
 /* Typography */
 
 .small {
