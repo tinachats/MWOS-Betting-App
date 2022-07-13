@@ -50,7 +50,7 @@ function animateProgressBar() {
                     counter.innerText = `${Math.ceil(c + i)}`;
 
                     // Update the counter
-                    setTimeout(updateCounter, 1);
+                    setTimeout(updateCounter, 100);
                 } else {
                     counter.innerText = val;
                 }
