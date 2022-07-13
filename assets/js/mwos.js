@@ -30,6 +30,9 @@ function animateProgressBar() {
 window.addEventListener('scroll', animateProgressBar);
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize AOS
+    AOS.init();
+
     // Enable Popovers
     var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
     var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
