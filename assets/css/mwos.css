@@ -33,6 +33,7 @@
     --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, .175);
     --shadow-sm: 0 0.375rem 0.75rem rgb(140 152 164 / 8%);
     --small: .85em;
+    --small-sm: .85em;
     --small-xs: .65em;
     --soft-success: rgba(0, 201, 167, .1);
     --soft-danger: rgba(237, 76, 120, .1);
@@ -599,6 +600,7 @@ nav .badge {
 .dropdown-menu.navbar-dropdown-menu .list-group-item:hover {
     color: var(--bs-warning);
     background-color: var(--soft-grey);
+    box-shadow: var(--shadow-sm);
 }
 
 .dropdown-divider {
@@ -1157,12 +1159,12 @@ header.header .nav-scroller .nav>a.active::after {
 
 .soccer-pitch .team-formation .d-grid.grid-col-1.single-player .team-player {
     width: 25%;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .soccer-pitch .team-formation .d-grid.grid-col-2 .team-player {
     width: 60%;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .soccer-pitch .team-formation .d-grid:not(.grid-col-1) {
@@ -1634,6 +1636,10 @@ header.header .nav-scroller .nav>a.active::after {
     font-size: var(--small) !important;
 }
 
+.small-sm {
+    font-size: var(--small-sm) !important;
+}
+
 .small-xs {
     font-size: var(--small-xs) !important;
 }
@@ -1920,7 +1926,7 @@ li {
 
 @media (min-width: 1200px) {
     .soccer-pitch .pitch-wrapper {
-        height: 670px;
+        height: 680px;
     }
 }
 
