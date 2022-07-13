@@ -26,7 +26,7 @@
     --soft-black: rgba(255, 255, 255, .075);
     --hover-bg: #181f42;
     --grey-1: #677788;
-    --light-black: #6d747b;
+    --light-black: #060607;
     --light-grey: #f5f7fa;
     --placeholder-color: #6c757d;
     --purple: #3b2050;
@@ -1309,7 +1309,7 @@ header.header .nav-scroller .nav>a.active::after {
 
 .progress-bar {
     border-radius: .25rem;
-    transition: 1s linear;
+    transition: 5s linear;
 }
 
 

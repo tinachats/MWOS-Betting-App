@@ -13,18 +13,66 @@ function animateProgressBar() {
 
     // Animate progress bars mid viewport
     if (scrollDistance <= 150) {
-        var id = setInterval(frame, 1);
+        var id = setInterval(frame, 10);
 
+        // Show the progress bar animation
         function frame() {
             // Loop through all the progress bars to get their values
-            progressBars.forEach(progressBar => {
+            progressBars.forEach((progressBar) => {
                 var progressWidth = progressBar.getAttribute('aria-valuenow');
                 var percentage = Math.floor(progressWidth) + '%';
                 progressBar.style.width = percentage;
             });
         }
+
+        // Get all statistics counters
+        const counters = document.querySelectorAll('.statistic');
+
+        // Loop through all counter
+        counters.forEach(counter => {
+            // Set counter text to 0
+            counter.innerText = 0;
+
+            // Update the counter
+            var updateCounter = () => {
+                // Get counter values as numbers (+)
+                const val = +counter.getAttribute('data-statistic');
+
+                // Get counter inner text value
+                const c = +counter.innerText;
+
+                // Set a step increment value for the counters
+                var i = val / 100;
+
+                // Check if the counter value is above the actual stat value
+                if (c < val) {
+                    // Increment the counter value by the increment
+                    counter.innerText = `${Math.ceil(c + i)}`;
+
+                    // Update the counter
+                    setTimeout(updateCounter, 1);
+                } else {
+                    counter.innerText = val;
+                }
+            };
+
+            updateCounter();
+        });
     }
 }
+
+// Check if an object is within the viewport
+// isVisible ();
+// function isVisible () {
+//     ele = document.querySelector('.performance-stats');
+//     const { top, bottom } = ele.getBoundingClientRect();
+//     const vHeight = (window.innerHeight || document.documentElement.clientHeight);
+
+//     return (
+//       (top > 0 || bottom > 0) &&
+//       top < vHeight
+//     );
+//   }
 
 // Run animations on scroll
 window.addEventListener('scroll', animateProgressBar);
@@ -93,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Stop the dropdown menu from closing on click
     const menus = document.querySelectorAll('.dropdown-menu');
-    menus.forEach(menu => {
+    menus.forEach((menu) => {
         menu.addEventListener('click', (e) => {
             e.stopPropagation();
         });
