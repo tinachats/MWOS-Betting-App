@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Developer -->
+    <meta name="developer" content="Tinashe. M. Chaterera">
+    <title>MWOS Betting App</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/app/logo.png" class="lazy" loader="lazy" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+    <!-- iziToast -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css">
+    <!-- App Core CSS -->
+    <link rel="stylesheet" href="assets/css/mwos.css">
+</head>
+
+<body>
+    <!-- Top Navigation -->
+    <header class="header mb-1">
+        <nav class="navbar navbar-expand-lg top-nav main-nav border-bottom shadow-sm py-0">
+            <div class="container">
+                <ul class="top-nav-list d-flex align-items-center m-0 p-0 w-100">
+                    <!-- User Account -->
+                    <li class="nav-item w-10">
+                        <a class="nav-link ps-0" role="button" data-bs-toggle="offcanvas" href="#account-info" role="button" aria-controls="account-info">
+                            <div class="avatar mt-2">
+                                <div class="avatar-initials">tc</div>
+                                <span class="avatar-status avatar-sm-status avatar-status-success"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- /.User Account -->
+
+                    <!-- App Logo -->
+                    <li class="nav-item ms-3 w-80">
+                        <div class="text-center">
+                            <img src="assets/images/app/logo.png" class="rounded-3" alt="Logo" height="35" width="35">
+                        </div>
+                    </li>
+                    <!-- /.App Logo -->
+
+                    <!-- Notifications -->
+                    <li class="nav-item w-10">
+                        <button type="button" class="nav-link btn btn-outline-default">
+                            <i class="bi bi-stars"></i>
+                        </button>
+                    </li>
+                    <!-- /.Notifications -->
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- /.Top Navigation -->
+
+    <!-- Page Content -->
+    <div class="content container-md mb-5 pb-5 px-1">
+        <div class="row">
+            <div class="col-12 col-md-6 col-xl-5">
+                <!-- Categories -->
+                <div class="shadow-sm bg-app-color border rounded-4 py-3 px-2">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h6 class="text-light my-0">Football Leagues</h6>
+                    </div>
+                    <!-- Nav Scroller -->
+                    <div class="nav-scroller cirlcled-items py-1 mt-2">
+                        <nav class="nav d-flex justify-content-between">
+                            <a class="link-secondary img-wrapper bg-black" href="#">
+                                <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" class="lazy" loader="lazy" data-src="https://cdn.cdnlogo.com/logos/u/35/uefa-europa-league.png" class="lazy" loader="lazy">
+                            </a>
+                            <a class="link-secondary img-wrapper bg-white" href="#">
+                                <img src="assets/images/app/logo-placeholder.png" class="lazy" loader="lazy" data-src="assets/images/soccer/leagues/laliga.png">
+                            </a>
+                            <a class="link-secondary img-wrapper bg-dark-red" href="#">
+                                <img src="assets/images/app/logo-placeholder.png" class="lazy" loader="lazy" data-src="assets/images/soccer/leagues/bundesliga.png" class="lazy" loader="lazy">
+                            </a>
+                            <a class="link-secondary img-wrapper bg-purple" href="#">
+                                <img src="assets/images/app/logo-placeholder.png" class="lazy" loader="lazy" data-src="assets/images/soccer/leagues/epl.png">
+                            </a>
+                            <a class="link-secondary img-wrapper bg-black" href="#">
+                                <img src="assets/images/app/logo-placeholder.png" class="lazy" loader="lazy" data-src="assets/images/soccer/leagues/ligue1.png" class="lazy" loader="lazy">
+                            </a>
+                            <a class="link-secondary img-wrapper bg-black" href="#">
+                                <img src="assets/images/app/logo-placeholder.png" class="lazy" loader="lazy" data-src="assets/images/soccer/leagues/super-cup.png">
+                            </a>
+                            <a class="link-secondary img-wrapper bg-black" href="#">
+                                <img src="assets/images/app/logo-placeholder.png" class="lazy" loader="lazy" data-src="assets/images/soccer/leagues/uefa.png" class="lazy" loader="lazy">
+                            </a>
+                            <a class="link-secondary img-wrapper bg-success" href="#">
+                                <img src="assets/images/app/logo-placeholder.png" class="lazy" loader="lazy" data-src="assets/images/soccer/leagues/efl.png">
+                            </a>
+                            <a class="link-secondary img-wrapper bg-white" href="#">
+                                <img src="assets/images/app/logo-placeholder.png" class="lazy" loader="lazy" data-src="assets/images/soccer/leagues/europa.png">
+                            </a>
+                            <a class="link-secondary img-wrapper bg-white" href="#">
+                                <img src="assets/images/app/logo-placeholder.png" class="lazy" loader="lazy" data-src="assets/images/soccer/leagues/fa-cup.png">
+                            </a>
+                        </nav>
+                    </div>
+                    <!-- /. Nav Scroller -->
+                </div>
+                <!-- Categories -->
+
+                <!-- Live Matches -->
+                <div class="d-block py-3 px-2">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h6 class="text-light my-0">Live Matches</h6>
+                        <a href="#" class="card-subtitle">view all</a>
+                    </div>
+                    <!-- Nav Scroller -->
+                    <div class="nav-scroller carousel py-1 mt-2">
+                        <nav class="nav d-flex justify-content-between">
+                            <!-- Score Card -->
+                            <a class="link-secondary" href="#">
+                                <div class="card score-card shadow-sm bg-purple py-3">
+                                    <div class="container-fluid px-2">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="badge bg-light text-dark text-capitalize p-1">
+                                                live
+                                            </span>
+                                            <span class="avatar-status bg-success me-2"></span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center my-3">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/r/38/real-madrid-club-de-futbol.svg" height="35" width="35">
+                                            <small class="text-light mx-2">vs</small>
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/f/14/fc-barcelona.svg" height="35" width="35">
+                                        </div>
+                                        <div class="d-block">
+                                            <div class="d-flex align-items-center justify-content-between text-light text-capitalize small-xs">
+                                                <span>real madrid</span>
+                                                <span>1</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between text-light text-capitalize small-xs">
+                                                <span>barcelona</span>
+                                                <span>3</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- /. Score Card -->
+
+                            <!-- Score Card -->
+                            <a class="link-secondary" href="#">
+                                <div class="card score-card shadow-sm bg-white py-3">
+                                    <div class="container-fluid px-2">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="badge bg-dark text-light text-capitalize p-1">
+                                                live
+                                            </span>
+                                            <span class="avatar-status bg-warning me-2"></span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center my-3">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" height="35" width="35">
+                                            <small class="mx-3">vs</small>
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/p/96/psg.svg" height="35" width="35">
+                                        </div>
+                                        <div class="d-block">
+                                            <div class="d-flex align-items-center justify-content-between text-capitalize small-xs">
+                                                <span>tottenham</span>
+                                                <span>0</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between text-capitalize small-xs">
+                                                <span>psg</span>
+                                                <span>2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- /. Score Card -->
+
+                            <!-- Score Card -->
+                            <a class="link-secondary" href="#">
+                                <div class="card score-card shadow-sm bg-danger py-3">
+                                    <div class="container-fluid px-2">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="badge bg-light text-dark text-capitalize p-1">
+                                                live
+                                            </span>
+                                            <span class="avatar-status bg-success me-2"></span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center my-3">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/l/92/liverpool-fc.svg" height="35" width="35">
+                                            <small class="text-light mx-2">vs</small>
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/41/manchester-city-fc.png" height="35" width="35">
+                                        </div>
+                                        <div class="d-block">
+                                            <div class="d-flex align-items-center justify-content-between text-light text-capitalize small-xs">
+                                                <span>liverpool</span>
+                                                <span>2</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between text-light text-capitalize small-xs">
+                                                <span>m. city</span>
+                                                <span>2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- /. Score Card -->
+
+                            <!-- Score Card -->
+                            <a class="link-secondary" href="#">
+                                <div class="card score-card shadow-sm bg-dark py-3">
+                                    <div class="container-fluid px-2">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="badge bg-light text-dark text-capitalize p-1">
+                                                live
+                                            </span>
+                                            <span class="avatar-status bg-warning me-2"></span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center my-3">
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/b/9/bayern-munchen.svg" height="35" width="35">
+                                            <small class="text-light mx-2">vs</small>
+                                            <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/b/29/borussia-dortmund.svg" height="35" width="35">
+                                        </div>
+                                        <div class="d-block">
+                                            <div class="d-flex align-items-center justify-content-between text-light text-capitalize small-xs">
+                                                <span>b. munich</span>
+                                                <span>3</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between text-light text-capitalize small-xs">
+                                                <span>dortmund</span>
+                                                <span>4</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- /. Score Card -->
+                        </nav>
+                    </div>
+                    <!-- /. Nav Scroller -->
+                </div>
+                <!-- /. Live Matches -->
+
+                <!-- All Matches -->
+                <div class="d-block my-2">
+                    <!-- Section Heading -->
+                    <div class="section-heading pb-5">
+                        <div class="section-title">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-calendar-date"></i>
+                                <h6 class="text-capitalize my-0 ms-2">today</h6>
+                            </div>
+                            <p class="text-light text-center small-xs my-0 py-0">3 matches</p>
+                        </div>
+                    </div>
+                    <!-- /. Section Heading -->
+
+                    <!-- League Table -->
+                    <ul class="list-group matches-group shadow-sm mt-3">
+                        <!-- Match Header -->
+                        <li class="list-group-item">
+                            <a href="league.html" class="d-flex align-items-center">
+                                <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/soccer/leagues/epl.png" alt="League Logo" class="lazy" loading="lazy" height="25" width="25">
+                                <h6 class="small ms-2 my-0 text-light text-capitalize">premier league</h6>
+                            </a>
+                        </li>
+                        <!-- /. Match Header -->
+
+                        <!-- Match -->
+                        <li class="list-group-item">
+                            <!-- Match Details -->
+                            <div class="row align-items-center mb-2">
+                                <div class="col-10 border-end">
+                                    <div class="row">
+                                        <!-- Timestamps -->
+                                        <div class="col-3 text-center">
+                                            <p class="small-xs text-muted m-0 p-0">
+                                                08:40
+                                            </p>
+                                            <div class="d-flex align-items-center text-danger fw-bold">
+                                                <i class="bi bi-dot"></i>
+                                                <small class="small-xs text-capitalize">live</small>
+                                            </div>
+                                        </div>
+                                        <!-- /. Timestamp -->
+
+                                        <!-- Teams -->
+                                        <div class="col-9">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <a href="team.html" class="d-flex align-items-center">
+                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
+                                                    <small class="small-xs text-capitalize ms-2">tottenham hotspur</small>
+                                                </a>
+                                                <small class="small-xs">3</small>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <a href="team.html" class="d-flex align-items-center mt-2">
+                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/41/manchester-city-fc.png" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
+                                                    <small class="small-xs text-capitalize ms-2">manchester city</small>
+                                                </a>
+                                                <small class="small-xs">2</small>
+                                            </div>
+                                        </div>
+                                        <!-- /. Teams -->
+                                    </div>
+                                </div>
+                                <div class="col-2 text-center">
+                                    <a href="match.html" role="button" class="btn btn-sm btn-info rounded-circle">
+                                        <i class="bi bi-bar-chart-fill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /. Match Details -->
+
+                            <hr class="my-0">
+
+                            <!-- Betting Options -->
+                            <div class="d-flex justify-content-center justify-content-around mt-2">
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>1 -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                        <span class="ms-1">1.48</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>X -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-up-fill text-success"></i>
+                                        <span class="ms-1">1.73</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>2 -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                        <span class="ms-1">2.84</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                            </div>
+                            <!-- /. Betting Options -->
+                        </li>
+                        <!-- /. Match -->
+
+                        <!-- Match -->
+                        <li class="list-group-item">
+                            <!-- Match Details -->
+                            <div class="row align-items-center mb-2">
+                                <div class="col-10 border-end">
+                                    <div class="row">
+                                        <!-- Timestamps -->
+                                        <div class="col-3 text-center">
+                                            <p class="small-xs text-muted m-0 p-0">
+                                                11:30
+                                            </p>
+                                            <div class="d-flex align-items-center text-danger fw-bold">
+                                                <i class="bi bi-dot"></i>
+                                                <small class="small-xs text-capitalize">live</small>
+                                            </div>
+                                        </div>
+                                        <!-- /. Timestamp -->
+
+                                        <!-- Teams -->
+                                        <div class="col-9">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <a href="team.html" class="d-flex align-items-center">
+                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/l/92/liverpool-fc.svg" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
+                                                    <small class="small-xs text-capitalize ms-2">manchester united</small>
+                                                </a>
+                                                <small class="small-xs">0</small>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <a href="team.html" class="d-flex align-items-center mt-2">
+                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/a/9/arsenal.svg" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
+                                                    <small class="small-xs text-capitalize ms-2">arsenal</small>
+                                                </a>
+                                                <small class="small-xs">1</small>
+                                            </div>
+                                        </div>
+                                        <!-- /. Teams -->
+                                    </div>
+                                </div>
+                                <div class="col-2 text-center">
+                                    <a href="match.html" role="button" class="btn btn-sm btn-info rounded-circle">
+                                        <i class="bi bi-bar-chart-fill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /. Match Details -->
+
+                            <hr class="my-0">
+
+                            <!-- Betting Options -->
+                            <div class="d-flex justify-content-center justify-content-around mt-2">
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>1 -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                        <span class="ms-1">1.48</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>X -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-up-fill text-success"></i>
+                                        <span class="ms-1">1.73</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>2 -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                        <span class="ms-1">2.84</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                            </div>
+                            <!-- /. Betting Options -->
+                        </li>
+                        <!-- /. Match -->
+                    </ul>
+                    <!-- /. League Table -->
+
+                    <!-- League Table -->
+                    <ul class="list-group matches-group shadow-sm mt-3">
+                        <!-- Match Header -->
+                        <li class="list-group-item">
+                            <a href="league.html" class="d-flex align-items-center">
+                                <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/soccer/leagues/laliga.png" alt="League Logo" class="lazy" loading="lazy" height="25" width="25">
+                                <h6 class="small ms-2 my-0 text-light text-capitalize">Laliga</h6>
+                            </a>
+                        </li>
+                        <!-- /. Match Header -->
+
+                        <!-- Match -->
+                        <li class="list-group-item">
+                            <!-- Match Details -->
+                            <div class="row align-items-center mb-2">
+                                <div class="col-10 border-end">
+                                    <div class="row">
+                                        <!-- Timestamps -->
+                                        <div class="col-3 text-center">
+                                            <p class="small-xs text-muted m-0 p-0">
+                                                10:00
+                                            </p>
+                                            <div class="d-flex align-items-center text-danger fw-bold">
+                                                <i class="bi bi-dot"></i>
+                                                <small class="small-xs text-capitalize">live</small>
+                                            </div>
+                                        </div>
+                                        <!-- /. Timestamp -->
+
+                                        <!-- Teams -->
+                                        <div class="col-9">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <a href="team.html" class="d-flex align-items-center">
+                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/a/55/athletic-bilbao.svg" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
+                                                    <small class="small-xs text-capitalize ms-2">Athletic Bilbao</small>
+                                                </a>
+                                                <small class="small-xs">0</small>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <a href="team.html" class="d-flex align-items-center mt-2">
+                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/v/27/villarreal.svg" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
+                                                    <small class="small-xs text-capitalize ms-2">Villarreal</small>
+                                                </a>
+                                                <small class="small-xs">2</small>
+                                            </div>
+                                        </div>
+                                        <!-- /. Teams -->
+                                    </div>
+                                </div>
+                                <div class="col-2 text-center">
+                                    <a href="match.html" role="button" class="btn btn-sm btn-info rounded-circle">
+                                        <i class="bi bi-bar-chart-fill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /. Match Details -->
+
+                            <hr class="my-0">
+
+                            <!-- Betting Options -->
+                            <div class="d-flex justify-content-center justify-content-around mt-2">
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>1 -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                        <span class="ms-1">1.48</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>X -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-up-fill text-success"></i>
+                                        <span class="ms-1">1.73</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>2 -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                        <span class="ms-1">2.84</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                            </div>
+                            <!-- /. Betting Options -->
+                        </li>
+                        <!-- /. Match -->
+
+                        <!-- Match -->
+                        <li class="list-group-item">
+                            <!-- Match Details -->
+                            <div class="row align-items-center mb-2">
+                                <div class="col-10 border-end">
+                                    <div class="row">
+                                        <!-- Timestamps -->
+                                        <div class="col-3 text-center">
+                                            <p class="small-xs text-muted m-0 p-0">
+                                                13:30
+                                            </p>
+                                            <div class="d-flex align-items-center text-danger fw-bold">
+                                                <i class="bi bi-dot"></i>
+                                                <small class="small-xs text-capitalize">live</small>
+                                            </div>
+                                        </div>
+                                        <!-- /. Timestamp -->
+
+                                        <!-- Teams -->
+                                        <div class="col-9">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <a href="team.html" class="d-flex align-items-center">
+                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/f/14/fc-barcelona.svg" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
+                                                    <small class="small-xs text-capitalize ms-2">barcelona</small>
+                                                </a>
+                                                <small class="small-xs">1</small>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <a href="team.html" class="d-flex align-items-center mt-2">
+                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/r/38/real-madrid-club-de-futbol.svg" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
+                                                    <small class="small-xs text-capitalize ms-2">real madrid</small>
+                                                </a>
+                                                <small class="small-xs">1</small>
+                                            </div>
+                                        </div>
+                                        <!-- /. Teams -->
+                                    </div>
+                                </div>
+                                <div class="col-2 text-center">
+                                    <a href="match.html" role="button" class="btn btn-sm btn-info rounded-circle">
+                                        <i class="bi bi-bar-chart-fill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /. Match Details -->
+
+                            <hr class="my-0">
+
+                            <!-- Betting Options -->
+                            <div class="d-flex justify-content-center justify-content-around mt-2">
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>1 -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                        <span class="ms-1">1.48</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>X -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-up-fill text-success"></i>
+                                        <span class="ms-1">1.73</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>2 -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                        <span class="ms-1">2.84</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                            </div>
+                            <!-- /. Betting Options -->
+                        </li>
+                        <!-- /. Match -->
+                    </ul>
+                    <!-- /. League Table -->
+                </div>
+                <!-- /. All Matches -->
+
+                <!-- All Matches -->
+                <div class="d-block my-2">
+                    <!-- Section Heading -->
+                    <div class="section-heading pb-5">
+                        <div class="section-title">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-calendar-date"></i>
+                                <h6 class="text-capitalize my-0 ms-2">tomorrow</h6>
+                            </div>
+                            <p class="text-light text-center small-xs my-0 py-0">8 matches</p>
+                        </div>
+                    </div>
+                    <!-- /. Section Heading -->
+
+                    <!-- League Table -->
+                    <ul class="list-group matches-group shadow-sm mt-3">
+                        <!-- Match Header -->
+                        <li class="list-group-item">
+                            <a href="league.html" class="d-flex align-items-center">
+                                <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/soccer/leagues/epl.png" alt="League Logo" class="lazy" loading="lazy" height="25" width="25">
+                                <h6 class="small ms-2 my-0 text-light text-capitalize">premier league</h6>
+                            </a>
+                        </li>
+                        <!-- /. Match Header -->
+
+                        <!-- Match -->
+                        <li class="list-group-item">
+                            <!-- Match Details -->
+                            <div class="row align-items-center mb-2">
+                                <div class="col-10 border-end">
+                                    <div class="row">
+                                        <!-- Timestamps -->
+                                        <div class="col-3 text-center">
+                                            <p class="small-xs text-muted m-0 p-0">
+                                                08:40
+                                            </p>
+                                            <div class="d-flex align-items-center text-danger fw-bold">
+                                                <i class="bi bi-dot"></i>
+                                                <small class="small-xs text-capitalize">live</small>
+                                            </div>
+                                        </div>
+                                        <!-- /. Timestamp -->
+
+                                        <!-- Teams -->
+                                        <div class="col-9">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <a href="team.html" class="d-flex align-items-center">
+                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
+                                                    <small class="small-xs text-capitalize ms-2">tottenham hotspur</small>
+                                                </a>
+                                                <small class="small-xs">3</small>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <a href="team.html" class="d-flex align-items-center mt-2">
+                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/41/manchester-city-fc.png" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
+                                                    <small class="small-xs text-capitalize ms-2">manchester city</small>
+                                                </a>
+                                                <small class="small-xs">2</small>
+                                            </div>
+                                        </div>
+                                        <!-- /. Teams -->
+                                    </div>
+                                </div>
+                                <div class="col-2 text-center">
+                                    <a href="match.html" role="button" class="btn btn-sm btn-info rounded-circle">
+                                        <i class="bi bi-bar-chart-fill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /. Match Details -->
+
+                            <hr class="my-0">
+
+                            <!-- Betting Options -->
+                            <div class="d-flex justify-content-center justify-content-around mt-2">
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>1 -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                        <span class="ms-1">1.48</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>X -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-up-fill text-success"></i>
+                                        <span class="ms-1">1.73</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>2 -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                        <span class="ms-1">2.84</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                            </div>
+                            <!-- /. Betting Options -->
+                        </li>
+                        <!-- /. Match -->
+
+                        <!-- Match -->
+                        <li class="list-group-item">
+                            <!-- Match Details -->
+                            <div class="row align-items-center mb-2">
+                                <div class="col-10 border-end">
+                                    <div class="row">
+                                        <!-- Timestamps -->
+                                        <div class="col-3 text-center">
+                                            <p class="small-xs text-muted m-0 p-0">
+                                                11:30
+                                            </p>
+                                            <div class="d-flex align-items-center text-danger fw-bold">
+                                                <i class="bi bi-dot"></i>
+                                                <small class="small-xs text-capitalize">live</small>
+                                            </div>
+                                        </div>
+                                        <!-- /. Timestamp -->
+
+                                        <!-- Teams -->
+                                        <div class="col-9">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <a href="team.html" class="d-flex align-items-center">
+                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/l/92/liverpool-fc.svg" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
+                                                    <small class="small-xs text-capitalize ms-2">manchester united</small>
+                                                </a>
+                                                <small class="small-xs">0</small>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <a href="team.html" class="d-flex align-items-center mt-2">
+                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/a/9/arsenal.svg" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
+                                                    <small class="small-xs text-capitalize ms-2">arsenal</small>
+                                                </a>
+                                                <small class="small-xs">1</small>
+                                            </div>
+                                        </div>
+                                        <!-- /. Teams -->
+                                    </div>
+                                </div>
+                                <div class="col-2 text-center">
+                                    <a href="match.html" role="button" class="btn btn-sm btn-info rounded-circle">
+                                        <i class="bi bi-bar-chart-fill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /. Match Details -->
+
+                            <hr class="my-0">
+
+                            <!-- Betting Options -->
+                            <div class="d-flex justify-content-center justify-content-around mt-2">
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>1 -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                        <span class="ms-1">1.48</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>X -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-up-fill text-success"></i>
+                                        <span class="ms-1">1.73</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>2 -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                        <span class="ms-1">2.84</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                            </div>
+                            <!-- /. Betting Options -->
+                        </li>
+                        <!-- /. Match -->
+                    </ul>
+                    <!-- /. League Table -->
+
+                    <!-- League Table -->
+                    <ul class="list-group matches-group shadow-sm mt-3">
+                        <!-- Match Header -->
+                        <li class="list-group-item">
+                            <a href="league.html" class="d-flex align-items-center">
+                                <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/soccer/leagues/laliga.png" alt="League Logo" class="lazy" loading="lazy" height="25" width="25">
+                                <h6 class="small ms-2 my-0 text-light text-capitalize">Laliga</h6>
+                            </a>
+                        </li>
+                        <!-- /. Match Header -->
+
+                        <!-- Match -->
+                        <li class="list-group-item">
+                            <!-- Match Details -->
+                            <div class="row align-items-center mb-2">
+                                <div class="col-10 border-end">
+                                    <div class="row">
+                                        <!-- Timestamps -->
+                                        <div class="col-3 text-center">
+                                            <p class="small-xs text-muted m-0 p-0">
+                                                10:00
+                                            </p>
+                                            <div class="d-flex align-items-center text-danger fw-bold">
+                                                <i class="bi bi-dot"></i>
+                                                <small class="small-xs text-capitalize">live</small>
+                                            </div>
+                                        </div>
+                                        <!-- /. Timestamp -->
+
+                                        <!-- Teams -->
+                                        <div class="col-9">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <a href="team.html" class="d-flex align-items-center">
+                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/a/55/athletic-bilbao.svg" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
+                                                    <small class="small-xs text-capitalize ms-2">Athletic Bilbao</small>
+                                                </a>
+                                                <small class="small-xs">0</small>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <a href="team.html" class="d-flex align-items-center mt-2">
+                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/v/27/villarreal.svg" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
+                                                    <small class="small-xs text-capitalize ms-2">Villarreal</small>
+                                                </a>
+                                                <small class="small-xs">2</small>
+                                            </div>
+                                        </div>
+                                        <!-- /. Teams -->
+                                    </div>
+                                </div>
+                                <div class="col-2 text-center">
+                                    <a href="match.html" role="button" class="btn btn-sm btn-info rounded-circle">
+                                        <i class="bi bi-bar-chart-fill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /. Match Details -->
+
+                            <hr class="my-0">
+
+                            <!-- Betting Options -->
+                            <div class="d-flex justify-content-center justify-content-around mt-2">
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>1 -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                        <span class="ms-1">1.48</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>X -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-up-fill text-success"></i>
+                                        <span class="ms-1">1.73</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>2 -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                        <span class="ms-1">2.84</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                            </div>
+                            <!-- /. Betting Options -->
+                        </li>
+                        <!-- /. Match -->
+
+                        <!-- Match -->
+                        <li class="list-group-item">
+                            <!-- Match Details -->
+                            <div class="row align-items-center mb-2">
+                                <div class="col-10 border-end">
+                                    <div class="row">
+                                        <!-- Timestamps -->
+                                        <div class="col-3 text-center">
+                                            <p class="small-xs text-muted m-0 p-0">
+                                                13:30
+                                            </p>
+                                            <div class="d-flex align-items-center text-danger fw-bold">
+                                                <i class="bi bi-dot"></i>
+                                                <small class="small-xs text-capitalize">live</small>
+                                            </div>
+                                        </div>
+                                        <!-- /. Timestamp -->
+
+                                        <!-- Teams -->
+                                        <div class="col-9">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <a href="team.html" class="d-flex align-items-center">
+                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/f/14/fc-barcelona.svg" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
+                                                    <small class="small-xs text-capitalize ms-2">barcelona</small>
+                                                </a>
+                                                <small class="small-xs">1</small>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <a href="team.html" class="d-flex align-items-center mt-2">
+                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/r/38/real-madrid-club-de-futbol.svg" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
+                                                    <small class="small-xs text-capitalize ms-2">real madrid</small>
+                                                </a>
+                                                <small class="small-xs">1</small>
+                                            </div>
+                                        </div>
+                                        <!-- /. Teams -->
+                                    </div>
+                                </div>
+                                <div class="col-2 text-center">
+                                    <a href="match.html" role="button" class="btn btn-sm btn-info rounded-circle">
+                                        <i class="bi bi-bar-chart-fill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /. Match Details -->
+
+                            <hr class="my-0">
+
+                            <!-- Betting Options -->
+                            <div class="d-flex justify-content-center justify-content-around mt-2">
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>1 -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                        <span class="ms-1">1.48</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>X -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-up-fill text-success"></i>
+                                        <span class="ms-1">1.73</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                                <!-- Bet-->
+                                <button class="btn btn-outline-light btn-sm rounded-pill small-xs px-3" type="button">
+                                    <div class="d-flex align-items-center">
+                                        <span>2 -</span>
+                                        <div class="d-flex align-items-center ms-1">
+                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                        <span class="ms-1">2.84</span>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- /. Bet -->
+                            </div>
+                            <!-- /. Betting Options -->
+                        </li>
+                        <!-- /. Match -->
+                    </ul>
+                    <!-- /. League Table -->
+                </div>
+                <!-- /. All Matches -->
+            </div>
+        </div>
+    </div>
+    <!-- /. Page Content -->
+
+    <!-- Bottom Navigation -->
+    <nav class="main-nav fixed-bottom border-top shadow-sm">
+        <div class="container-fluid">
+            <ul class="nav-list d-flex justify-content-around m-0 px-0 py-1 w-100">
+                <li class="nav-item pt-2">
+                    <a class="nav-link text-center position-relative" href="#">
+                        <i class="bi bi-house"></i>
+                        <span class="avatar-status avatar-sm-status update-alert blink"></span>
+                    </a>
+                </li>
+                <li class="nav-item pt-2">
+                    <a class="nav-link text-center" href="#">
+                        <i class="bi bi-search"></i>
+                    </a>
+                </li>
+                <li class="nav-item" id="main-nav-item">
+                    <a class="nav-link text-center active" href="#">
+                        <i class="bi bi-coin"></i>
+                    </a>
+                </li>
+                <li class="nav-item pt-2">
+                    <a class="nav-link text-center" href="#">
+                        <i class="bi bi-calendar-week"></i>
+                    </a>
+                </li>
+                <li class="nav-item pt-2">
+                    <a class="nav-link text-center position-relative" href="#">
+                        <i class="bi bi-bell"></i>
+                        <span class="position-absolute top-15 start-75 translate-middle badge rounded-pill bg-warning">
+                            9
+                            <span class="visually-hidden">unread notifications</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- ./ Bottom Navigation -->
+
+    <!-- Side Menu -->
+    <div class="offcanvas offcanvas-start bg-app-color mb-5" data-bs-scroll="false" tabindex="-1" id="account-info" aria-labelledby="account-infoLabel">
+        <div class="offcanvas-header border-bottom">
+            <a class="d-flex align-items-center" href="#">
+                <div class="avatar">
+                    <img src="assets/images/users/user-2.jpg" alt="User" class="avatar-img">
+                </div>
+                <div class="d-block ms-2 mt-3">
+                    <h5 class="text-light mb-0 fw-bold">Mark Williams</h5>
+                    <p class="text-muted small-xs fw-bold">Newbie</p>
+                </div>
+            </a>
+        </div>
+        <div class="offcanvas-body p-0 mx-0 mt-0 mb-5">
+            <ul class="list-group list-group-flush m-0 p-0">
+                <!-- Account -->
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-person bi-3x me-2"></i>
+                        <span class="text-capitalize small">Account</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <!-- /. Account -->
+
+                <!-- Content Index -->
+                <li class="list-group-item">
+                    <h6 class="text-uppercase small-xs mt-1 mb-0">Content Index</h6>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-trophy bi-3x me-2"></i>
+                        <span class="text-capitalize small">All Competitions</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-newspaper bi-3x me-2"></i>
+                        <span class="text-capitalize small">All news</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <!-- /. Content Index -->
+
+                <!-- Settings -->
+                <li class="list-group-item">
+                    <h6 class="text-uppercase small-xs mt-1 mb-0">settings</h6>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-bell bi-3x me-2"></i>
+                        <span class="text-capitalize small">notifications</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-laptop bi-3x me-2"></i>
+                        <span class="text-capitalize small">export selections to web</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-alarm bi-3x me-2"></i>
+                        <span class="text-capitalize small">my scores</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-translate bi-3x me-2"></i>
+                        <span class="text-capitalize small">languages</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-currency-exchange bi-3x me-2"></i>
+                        <span class="text-capitalize small">currency</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-translate bi-3x me-2"></i>
+                        <span class="text-capitalize small">languages</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <!-- /. Settings -->
+
+                <!-- General -->
+                <li class="list-group-item">
+                    <h6 class="text-uppercase small-xs mt-1 mb-0">general</h6>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-question-circle bi-3x me-2"></i>
+                        <span class="text-capitalize small">FAQ</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-shield-lock bi-3x me-2"></i>
+                        <span class="text-capitalize small">privacy policy</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-list-ol bi-3x me-2"></i>
+                        <span class="text-capitalize small">terms & conditions</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-star bi-3x me-2"></i>
+                        <span class="text-capitalize small">rate us</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-envelope bi-3x me-2"></i>
+                        <span class="text-capitalize small">send us feedback</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <!-- /. General -->
+            </ul>
+        </div>
+    </div>
+    <!-- /. Side Menu -->
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- OwlCarousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- iziToast -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.all.min.js"></script>
+    <!-- MWOS JS -->
+    <script src="assets/js/mwos.js"></script>
+</body>
+
+</html>

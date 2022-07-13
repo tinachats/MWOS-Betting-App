@@ -573,6 +573,10 @@ nav .badge {
     box-shadow: var(--shadow-lg);
 }
 
+.dark-mode .dropdown-menu {
+    border: var(--border-width) solid var(--border-color);
+}
+
 .dropdown-menu.navbar-dropdown-menu {
     margin-top: -.5rem !important;
     width: 25rem;
@@ -991,6 +995,7 @@ a:hover {
 /* Nav Tabs */
 
 .nav-tabs {
+    background-color: var(--app-color);
     width: 100%;
 }
 
@@ -999,13 +1004,16 @@ a:hover {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     width: 50%;
+    color: var(--soft-grey);
 }
 
 .nav-tabs .nav-link.active {
+    background-color: var(--app-color);
     border-bottom: 4px solid var(--bs-warning);
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     font-weight: bold;
+    color: var(--bs-dark);
 }
 
 .navbar-light .navbar-nav .nav-link.active,
@@ -1483,6 +1491,16 @@ header.header .nav-scroller .nav>a.active {
     background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity))!important;
 }
 
+.table.league-standings tr:last-child.active,
+.table.league-standings tr:last-child.active td:first-child {
+    border-bottom-left-radius: 1rem;
+}
+
+.table.league-standings tr:last-child.active,
+.table.league-standings tr:last-child.active td:last-child {
+    border-bottom-right-radius: 1rem;
+}
+
 .table.league-standings tr.active * {
     color: #fff;
 }
@@ -1585,6 +1603,7 @@ header.header .nav-scroller .nav>a.active {
 
 .match-timeline .timeline-title i.bi {
     font-size: 1.2rem;
+    color: var(--bs-dark);
 }
 
 
@@ -1645,7 +1664,8 @@ h5 {
 
 span,
 .text-white,
-.text-light {
+.text-light,
+p {
     color: var(--text-white);
 }
 
