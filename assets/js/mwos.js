@@ -2,9 +2,6 @@ animateProgressBar();
 
 // Animate progress bars
 function animateProgressBar() {
-    // Let the width of the progress bars start at 0
-    var i = 0;
-
     // Get all progress bars
     const progressBars = document.querySelectorAll('.progress-bar');
 
@@ -14,27 +11,17 @@ function animateProgressBar() {
     // Get the top value of the section
     const scrollDistance = Math.floor(section.getBoundingClientRect().top);
 
-    // Animate progress bars when the top is reached
-    // 90 is the height of navbars
-    if (scrollDistance <= 90) {
-        if (i == 0) {
-            i = 1;
-            var width = 1;
-            var id = setInterval(frame, 10);
+    // Animate progress bars mid viewport
+    if (scrollDistance <= 150) {
+        var id = setInterval(frame, 1);
 
-            function frame() {
-                if (width >= 100) {
-                    clearInterval(id);
-                    i = 0;
-                } else {
-                    // Loop through all the progress bars to get their values
-                    progressBars.forEach(progressBar => {
-                        var progressWidth = progressBar.getAttribute('aria-valuenow');
-                        var percentage = Math.floor(progressWidth) + '%';
-                        progressBar.style.width = percentage;
-                    });
-                }
-            }
+        function frame() {
+            // Loop through all the progress bars to get their values
+            progressBars.forEach(progressBar => {
+                var progressWidth = progressBar.getAttribute('aria-valuenow');
+                var percentage = Math.floor(progressWidth) + '%';
+                progressBar.style.width = percentage;
+            });
         }
     }
 }
