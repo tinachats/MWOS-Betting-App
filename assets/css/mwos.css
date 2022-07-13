@@ -981,7 +981,7 @@ a:hover {
 }
 
 .nav.nav-pills>.nav-item>button {
-    font-size: .7em;
+    font-size: .65em;
 }
 
 
@@ -1499,9 +1499,11 @@ header.header .nav-scroller .nav>a.active {
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
+    overflow: hidden;
 }
 
 .step .step-item {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex: 0 0 100%;
@@ -1511,16 +1513,27 @@ header.header .nav-scroller .nav>a.active {
 }
 
 .match-timeline.step .step-item {
-    margin-bottom: 0;
-    padding-bottom: 1.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0;
+}
+
+.match-timeline.step .step-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    height: 100%;
+    width: .15rem;
+    background-color: var(--hover-bg);
 }
 
 .step .step-content-wrapper {
-    position: relative;
     display: flex;
     width: 100%;
+    overflow: hidden;
 }
 
+.match-timeline.step .step-icon,
 .match-timeline.step-avatar-sm .step-avatar,
 .step-avatar-sm.step-avatar,
 .step .step-avatar {
@@ -1531,30 +1544,9 @@ header.header .nav-scroller .nav>a.active {
     margin-right: 1rem;
 }
 
-.step .step-avatar::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 1.3125rem;
-    height: 100%;
-    border-left: .125rem solid var(--hover-bg);
-}
-
-.step-icon-sm .step-icon::after,
-.step-icon-sm.step-icon::after,
-.step-avatar-sm .step-avatar::after,
-.step-avatar-sm.step-avatar::after {
-    left: 12px;
-    top: 24px;
-    width: 2rem;
-    height: 100%;
-}
-
 .step-icon-sm.step-icon,
-.step .step-icon {
+.match-timeline.step .step-icon {
     font-size: var(--small-xs);
-    width: 24px;
-    height: 24px;
     display: inline-flex;
     flex-shrink: 0;
     justify-content: center;
@@ -1564,17 +1556,10 @@ header.header .nav-scroller .nav>a.active {
     margin-right: 1rem;
 }
 
-.step-icon-sm.step-icon,
-.step .step-icon,
-.step-icon-soft-dark {
+.match-timeline.step .step-icon {
     color: var(--hover-bg);
     border: 1px solid var(--hover-bg);
-}
-
-.step .step-icon::after {
-    content: "";
-    position: absolute;
-    border-left: .15rem solid var(--hover-bg);
+    background-color: var(--app-body-color);
 }
 
 .step .step-content {
@@ -1808,6 +1793,9 @@ li {
     .soccer-pitch .team-formation .d-grid.grid-col-1 .team-player .status.goal-scorer {
         left: .4rem;
     }
+    ul.prev-matches li:not(:first-child) {
+        font-size: .725rem;
+    }
 }
 
 
@@ -1833,6 +1821,9 @@ li {
     .top-nav.main-nav .position-absolute.badge {
         right: -3px;
         top: 0;
+    }
+    .nav.nav-pills>.nav-item>button {
+        font-size: .7em;
     }
     .content {
         margin-top: 5.9rem;
