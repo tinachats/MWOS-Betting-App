@@ -597,7 +597,7 @@ nav .badge {
 .dropdown-item:focus,
 .dropdown-item:hover,
 .dropdown-menu.navbar-dropdown-menu .list-group-item:hover {
-    color: var(--text-white);
+    color: var(--bs-warning);
     background-color: var(--soft-grey);
 }
 
@@ -1000,20 +1000,19 @@ a:hover {
 }
 
 .nav-tabs .nav-link {
+    position: relative;
     border: none;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     width: 50%;
     color: var(--soft-grey);
+    margin-bottom: .75rem;
 }
 
 .nav-tabs .nav-link.active {
     background-color: var(--app-color);
-    border-bottom: 4px solid var(--bs-warning);
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
     font-weight: bold;
-    color: var(--bs-dark);
+    color: var(--bs-warning);
 }
 
 .navbar-light .navbar-nav .nav-link.active,
@@ -1059,17 +1058,36 @@ header.header .nav-scroller .nav {
 }
 
 header.header .nav-scroller .nav>a {
+    position: relative;
     padding-top: .75rem;
     padding-bottom: .75rem;
     font-size: .875rem;
     border-bottom: 4px solid transparent;
 }
 
+header.header .nav-scroller .nav>a:hover,
 header.header .nav-scroller .nav>a.active {
     color: var(--bs-warning);
-    border-bottom-color: var(--bs-warning);
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+}
+
+.nav-tabs .nav-link.active::after,
+header.header .nav-scroller .nav>a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--bs-warning);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.nav-tabs .nav-link.active::after {
+    bottom: -.75rem;
+}
+
+header.header .nav-scroller .nav>a.active::after {
+    bottom: -.25rem;
 }
 
 .nav-scroller.cirlcled-items .nav>a:not(:last-child),
