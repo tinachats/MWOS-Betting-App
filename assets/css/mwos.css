@@ -606,6 +606,7 @@ a.btn-outline-dark:hover span {
     border: none;
     border-radius: 0.75rem;
     box-shadow: var(--shadow-lg);
+    z-index: 10000;
 }
 
 .dark-mode .dropdown-menu {
