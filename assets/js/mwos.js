@@ -1,5 +1,3 @@
-animateProgressBar();
-
 // Animate progress bars
 function animateProgressBar() {
     // Get all progress bars
@@ -11,71 +9,56 @@ function animateProgressBar() {
     // Get the top value of the section
     const scrollDistance = Math.floor(section.getBoundingClientRect().top);
 
-    // Animate progress bars mid viewport
-    if (scrollDistance <= 150) {
-        var id = setInterval(frame, 10);
+    var id = setInterval(frame, 10);
 
-        // Show the progress bar animation
-        function frame() {
-            // Loop through all the progress bars to get their values
-            progressBars.forEach((progressBar) => {
-                var progressWidth = progressBar.getAttribute('aria-valuenow');
-                var percentage = Math.floor(progressWidth) + '%';
-                progressBar.style.width = percentage;
-            });
-        }
-
-        // Get all statistics counters
-        const counters = document.querySelectorAll('.statistic');
-
-        // Loop through all counter
-        counters.forEach(counter => {
-            // Set counter text to 0
-            counter.innerText = 0;
-
-            // Update the counter
-            var updateCounter = () => {
-                // Get counter values as numbers (+)
-                const val = +counter.getAttribute('data-statistic');
-
-                // Get counter inner text value
-                const c = +counter.innerText;
-
-                // Set a step increment value for the counters
-                var i = val / 100;
-
-                // Check if the counter value is above the actual stat value
-                if (c < val) {
-                    // Increment the counter value by the increment
-                    counter.innerText = `${Math.ceil(c + i)}`;
-
-                    // Update the counter
-                    setTimeout(updateCounter, 100);
-                } else {
-                    counter.innerText = val;
-                }
-            };
-
-            updateCounter();
+    // Show the progress bar animation
+    function frame() {
+        // Loop through all the progress bars to get their values
+        progressBars.forEach((progressBar) => {
+            var progressWidth = progressBar.getAttribute('aria-valuenow');
+            var percentage = Math.floor(progressWidth) + '%';
+            progressBar.style.width = percentage;
         });
     }
 }
 
-// Check if an object is within the viewport
-// isVisible ();
-// function isVisible () {
-//     ele = document.querySelector('.performance-stats');
-//     const { top, bottom } = ele.getBoundingClientRect();
-//     const vHeight = (window.innerHeight || document.documentElement.clientHeight);
+// Animate numbers
+function animatedCounter() {
+    // Get all statistics counters
+    const statistics = document.querySelectorAll('.statistic');
 
-//     return (
-//       (top > 0 || bottom > 0) &&
-//       top < vHeight
-//     );
-//   }
+    // Loop through all counter
+    statistics.forEach(statistic => {
+        // Set statistic text to 0
+        statistic.innerText = 0;
 
-// Run animations on scroll
-window.addEventListener('scroll', animateProgressBar);
+        // Update the statistic
+        let updatestatistic = () => {
+            // Get statistic values as numbers (+)
+            const statisticActual = +statistic.getAttribute('data-statistic');
+
+            // Get statistic inner text value
+            const statisticVal = +statistic.innerText;
+
+            // Set a step increment value for the statistics
+            let stepIncrement = statisticActual / 100;
+
+            // Check if the statistic value is above the actual stat value
+            if (statisticVal < statisticActual) {
+                // Increment the statistic value by the increment
+                statistic.innerText = `${Math.ceil(statisticVal + stepIncrement)}`;
+
+                // Update the statistic
+                setTimeout(updatestatistic, 500);
+            } else {
+                statistic.innerText = statisticActual;
+            }
+        };
+
+        updatestatistic();
+    });
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize AOS
@@ -104,6 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     image.src = image.dataset.src;
                     image.classList.remove('lazy');
                     imageObserver.unobserve(image);
+
+                    animatedCounter();
+                    animateProgressBar();
                 }
             });
         });

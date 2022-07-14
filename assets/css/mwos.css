@@ -5,10 +5,10 @@
     --border-color: rgba(231, 234, 243, .7);
     --border-width: 0.0625rem;
     --bs-bg-opacity: 1;
+    --bs-dark-rgb: 19, 33, 68;
     --bs-danger: #ed4c78;
     --bs-danger-rgb: 237, 76, 120;
-    --bs-dark: #212529;
-    --bs-dark-rgb: 19, 33, 68;
+    --bs-dark: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
     --bs-info-rgb: 9, 165, 190;
     --bs-light: #f5f8fa;
     --bs-light-rgb: 249, 250, 252;
@@ -70,7 +70,6 @@ html {
 html,
 body {
     position: relative;
-    overflow-x: hidden;
 }
 
 body {
@@ -350,6 +349,41 @@ nav .badge {
     background-color: var(--btn-light);
     border-color: var(--btn-light);
     color: var(--bs-dark);
+}
+
+.top-nav.main-nav .btn.btn-outline-default,
+.back-btn {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.back-btn {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.back-btn>i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    padding: 0;
+    margin: 0;
+}
+
+a.btn-outline-dark:hover,
+.btn-outline-dark:hover {
+    background-color: var(--bg-black);
+    color: var(--bs-white) !important;
+}
+
+a.btn-outline-dark:hover span {
+    color: var(--bs-white) !important;
 }
 
 
@@ -943,9 +977,6 @@ a:hover {
 }
 
 .top-nav.main-nav .btn.btn-outline-default {
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
     background-color: transparent;
 }
 
@@ -1728,10 +1759,6 @@ p {
     background-color: var(--bs-white) !important;
 }
 
-.bg-dark-purple {
-    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity))!important;
-}
-
 li {
     list-style: none;
 }
@@ -1784,6 +1811,18 @@ li {
     }
     .top-nav .navbar-brand {
         padding: 0 !important;
+    }
+    .sticky-navbar {
+        position: sticky;
+        top: 0;
+        width: 100%;
+    }
+    .sticky-navbar .nav-title h1 {
+        font-size: .85rem;
+    }
+    .sticky-navbar .follow-btn {
+        font-size: .75rem;
+        padding: 0.25rem .5rem;
     }
     .dropdown-menu[aria-labelledby='searchDropdownMenu'] {
         top: 3rem !important;
@@ -1868,9 +1907,6 @@ li {
     }
     .nav.nav-pills>.nav-item>button {
         font-size: .7em;
-    }
-    .content {
-        margin-top: 5.9rem;
     }
     .soccer-pitch .pitch-wrapper {
         height: 684px;
