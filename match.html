@@ -28,8 +28,16 @@
     <link rel="stylesheet" href="assets/css/mwos.css">
 
     <style>
-        .content {
-            margin-top: 0.25rem;
+        @media(max-width: 576px) {
+            .content {
+                margin-top: 3rem;
+            }
+        }
+        
+        @media(min-width: 768px) {
+            .content {
+                margin-top: 0.25rem;
+            }
         }
     </style>
 </head>
@@ -38,7 +46,7 @@
     <!-- Top Navigation -->
     <header class="header border-bottom bg-white">
         <!-- Main Nav -->
-        <nav class="navbar navbar-expand-lg top-nav main-nav shadow-sm py-0">
+        <nav class="navbar navbar-expand-lg top-nav main-nav shadow-sm d-none d-md-flex py-0">
             <div class="container">
                 <a class="navbar-brand d-md-none" role="button" data-bs-toggle="offcanvas" href="#account-info" role="button" aria-controls="account-info">
                     <div class="avatar avatar-sm mt-1">
@@ -678,15 +686,15 @@
     <!-- /.Top Navigation -->
 
     <!-- Page Header -->
-    <nav class="navbar bg-white shadow-sm sticky-navbar sticky-top border-bottom">
+    <nav class="navbar bg-white sticky-navbar sticky-top border-bottom pt-1">
         <div class="container">
             <a href="index.html" role="button" class="btn btn-light back-btn me-1 me-md-2 rounded-circle">
                 <i class="bi bi-chevron-left"></i>
             </a>
             <a class="navbar-brand m-0 p-0" href="league.html">
                 <div class="d-flex align-items-center nav-title">
-                    <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/soccer/leagues/epl-default.png" alt="Logo" width="60" height="60" class="d-none d-md-inline-block align-text-middle rounded-circle lazy" loading="lazy">
-                    <div class="d-block ms-2">
+                    <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/soccer/leagues/epl-default.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-middle rounded-circle lazy" loading="lazy">
+                    <div class="d-block ms-2 pt-md-3">
                         <h1 class="my-0 text-capitalize">English Premier League</h1>
                         <p class="d-none d-md-block small-xs text-muted text-capitalize">2022 - 2023 season</p>
                     </div>
@@ -694,7 +702,7 @@
             </a>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a href="javascript:void(0)" class="nav-link btn btn-outline-dark rounded-pill follow-btn px-md-4">
+                    <a href="javascript:void(0)" class="nav-link btn btn-outline-darkapp btn-sm rounded-pill follow-btn px-md-4">
                         <span>Follow</span>
                     </a>
                 </li>
@@ -902,7 +910,7 @@
                     <div class="card-body">
                         <div class="d-block text-center">
                             <!-- League Title -->
-                            <p class="small text-capitalize my-0 py-0">
+                            <p class="small text-capitalize fw-bold my-0 py-0">
                                 old trafford
                             </p>
 
@@ -971,7 +979,7 @@
                 <!-- /. Match Results -->
 
                 <!-- Nav Pills -->
-                <ul class="nav nav-pills shadow-sm mt-2 " id="pills-tab" role="tablist">
+                <ul class="nav sticky-navpill nav-pills shadow-sm mt-md-2" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="pills-match-tab" data-bs-toggle="pill" data-bs-target="#pills-match" type="button" role="tab" aria-controls="pills-match" aria-selected="true">Match</button>
                     </li>

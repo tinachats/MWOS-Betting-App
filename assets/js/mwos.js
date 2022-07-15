@@ -59,6 +59,16 @@ function animatedCounter() {
     });
 }
 
+// Make an element sticky top
+window.onscroll = () => {
+    const stickyNavPill = document.querySelector('.sticky-navpill');
+    if (window.pageYOffset >= stickyNavPill.offsetTop) {
+        stickyNavPill.classList.add('fix-top');
+    } else {
+        stickyNavPill.classList.remove('fix-top');
+    }
+};
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize AOS

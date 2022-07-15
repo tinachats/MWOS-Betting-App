@@ -376,14 +376,22 @@ nav .badge {
     margin: 0;
 }
 
-a.btn-outline-dark:hover,
-.btn-outline-dark:hover {
-    background-color: var(--bg-black);
-    color: var(--bs-white) !important;
+.btn-outline-darkapp {
+    border-color: #181f42;
 }
 
-a.btn-outline-dark:hover span {
-    color: var(--bs-white) !important;
+.btn-outline-darkapp,
+.btn-outline-darkapp span {
+    color: #181f42;
+}
+
+.btn-outline-darkapp:hover {
+    background-color: #181f42;
+}
+
+.btn-outline-darkapp:hover,
+.btn-outline-darkapp:hover span {
+    color: #fff;
 }
 
 
@@ -999,7 +1007,6 @@ a:hover {
     border: var(--border-width) solid var(--border-color);
 }
 
-.nav.nav-pills,
 .nav.nav-pills>.nav-item>button {
     border-radius: 2rem;
 }
@@ -1803,11 +1810,26 @@ li {
 /* Media Queries */
 
 
+/* Very Small devices (iPhone 5s and others) */
+
+@media(max-width: 360px) {
+    .sticky-navbar .nav-title img {
+        height: 25px !important;
+        width: 25px !important;
+    }
+    .sticky-navbar .nav-title h1 {
+        font-size: .75rem !important;
+    }
+}
+
+
 /* Small devices (landscape phones, 576px and down) */
 
 @media (max-width: 576px) {
     .top-nav,
-    .offcanvas-header {
+    .offcanvas-header,
+    .sticky-navbar,
+    .sticky-navpill {
         height: 45px;
     }
     .top-nav .navbar-brand {
@@ -1815,15 +1837,31 @@ li {
     }
     .sticky-navbar {
         position: sticky;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         top: 0;
         width: 100%;
+    }
+    .sticky-navbar .nav-title img {
+        height: 30px;
+        width: 30px;
     }
     .sticky-navbar .nav-title h1 {
         font-size: .85rem;
     }
     .sticky-navbar .follow-btn {
         font-size: .75rem;
-        padding: 0.25rem .5rem;
+        padding: 0.25rem .75rem;
+    }
+    .sticky-navpill {
+        position: fixed;
+        top: 44px;
+        left: 0;
+        width: 100%;
+        z-index: 10000;
+        padding-top: .35rem !important;
+        border-radius: 0;
     }
     .dropdown-menu[aria-labelledby='searchDropdownMenu'] {
         top: 3rem !important;
@@ -1906,6 +1944,9 @@ li {
         right: -3px;
         top: 0;
     }
+    .nav.nav-pills {
+        border-radius: 2rem;
+    }
     .nav.nav-pills>.nav-item>button {
         font-size: .7em;
     }
@@ -1962,6 +2003,14 @@ li {
 /* X-Large devices (large desktops, 1200px and up) */
 
 @media (min-width: 1200px) {
+    .nav-pills.sticky-navpill.fix-top {
+        position: fixed;
+        top: 14.5px;
+        right: 17.5%;
+        z-index: 10000;
+        box-shadow: none !important;
+        border: none !important;
+    }
     .soccer-pitch .pitch-wrapper {
         height: 680px;
     }
