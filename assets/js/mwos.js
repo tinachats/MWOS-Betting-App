@@ -1,3 +1,33 @@
+// Theme settings
+function themeSettings(obj) {
+    // Get the body element
+    let body = document.getElementsByTagName('body')[0];
+
+    // Check to see if the user is in automatic or toggle mode
+    let themeMode = obj.value;
+
+    // Get saved theme mode 
+    let savedThemeMode = localStorage.getItem('theme');
+
+    // If the user has already saved theme settings
+    if (savedThemeMode != '') {
+        // Do something
+    }
+
+    // If the user has toggled the theme
+    if (themeMode == 'toggle-theme') {
+        let darkTheme = obj.checked;
+        if (darkTheme) {
+            body.classList.add('dark-mode');
+        } else {
+            body.classList.remove('dark-mode');
+        }
+    } else {
+        // User is in automatic mode
+        console.log('Automatic mode');
+    }
+}
+
 // Animate progress bars
 function animateProgressBar() {
     // Get all progress bars

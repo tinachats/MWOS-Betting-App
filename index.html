@@ -18,17 +18,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- AnimateCSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- iziToast -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css">
     <!-- App Core CSS -->
     <link rel="stylesheet" href="assets/css/mwos.css">
+
+    <style>
+        @media(max-width: 576px) {
+            .content {
+                margin-top: 3rem;
+            }
+        }
+        
+        @media(min-width: 768px) {
+            .content {
+                margin-top: 0.25rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <!-- Top Navigation -->
-    <header class="header fixed-top border-bottom mb-1">
+    <header class="header border-bottom bg-white">
         <!-- Main Nav -->
-        <nav class="navbar navbar-expand-lg top-nav main-nav shadow-sm py-0">
+        <nav class="navbar navbar-expand-lg top-nav main-nav shadow-sm d-none d-md-flex py-0">
             <div class="container">
                 <a class="navbar-brand d-md-none" role="button" data-bs-toggle="offcanvas" href="#account-info" role="button" aria-controls="account-info">
                     <div class="avatar avatar-sm mt-1">
@@ -574,6 +592,11 @@
                             <i class="bi bi-stars bi-2x"></i>
                         </button>
                     </li>
+                    <li class="nav-item">
+                        <button type="button" class="nav-link btn btn-xs btn-outline-default position-relative" data-bs-toggle="offcanvas" data-bs-target="#settings-sidebar" aria-controls="settings-sidebar">
+                            <i class="bi bi-gear bi-2x"></i>
+                        </button>
+                    </li>
                     <li class="nav-item dropdown mt-0 d-none d-md-inline-flex">
                         <a class="nav-link" role="button" data-bs-toggle="dropdown" href="#" id="accountNavbarDropdown" role="button" aria-expanded="false">
                             <div class="avatar mt-2">
@@ -604,7 +627,7 @@
                                     <span class="ms-2">Account</span>
                                 </div>
                             </a>
-                            <a class="dropdown-item" href="settings.html">
+                            <a class="dropdown-item" href="javascript:void(0)" data-bs-toggle="offcanvas" data-bs-target="#settings-sidebar" aria-controls="settings-sidebar">
                                 <div class="d-flex align-items-center text-capitalize">
                                     <i class="bi bi-gear bi-2x"></i>
                                     <span class="ms-2">settings &amp; privacy</span>
@@ -618,7 +641,7 @@
                                     <i class="bi bi-chevron-right ms-auto"></i>
                                 </div>
                             </a>
-                            <a class="dropdown-item" href="settings.html">
+                            <a class="dropdown-item" href="javascript:void(0)" data-bs-toggle="offcanvas" data-bs-target="#settings-sidebar" aria-controls="settings-sidebar">
                                 <div class="d-flex align-items-center text-capitalize">
                                     <i class="bi bi-brightness-high bi-2x"></i>
                                     <span class="ms-2">display &amp; accessibility</span>
@@ -669,7 +692,10 @@
 
     <!-- Page Content -->
     <div class="content container-md mb-5 pb-5 px-1">
-        <!-- /. Your content here -->
+        <div class="row gx-2">
+            <div class="col-12 col-xl-4"></div>
+            <div class="col-12 col-xl-4"></div>
+        </div>
     </div>
     <!-- /. Page Content -->
 
@@ -711,6 +737,77 @@
         </div>
     </nav>
     <!-- ./ Bottom Navigation -->
+
+    <!-- Settings Side Menu -->
+    <div class="offcanvas offcanvas-end bg-app-color mb-2" tabindex="-1" id="settings-sidebar" aria-labelledby="settings-sidebarLabel">
+        <div class="offcanvas-header border-bottom">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-gear text-dark me-2"></i>
+                <h4 id="settings-sidebarLabel" class="m-0">Settings</h4>
+            </div>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-group list-group-flush">
+                <h6 class="small">Appearance Settings</h6>
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex">
+                            <i class="bi-brightness-high bi-3x me-3"></i>
+                            <div class="d-block">
+                                <h6 class="small my-0">Theme mode</h6>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <small class="small-sm text-muted">
+                                        Set <span data-mode="theme-mode-type" class="text-muted theme-mode">Dark theme</span>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input theme-mode" type="checkbox" role="switch" id="theme-mode-toggle" value="toggle-theme" onchange="themeSettings(this)">
+                            <label class="form-check-label" for="theme-mode-toggle"></label>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex">
+                            <i class="bi-moon bi-3x me-3"></i>
+                            <div class="d-block">
+                                <h6 class="small my-0">Automatic at sunset</h6>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <small class="small-sm text-muted">
+                                        Off until <span data-mode="theme-mode-type" class="text-muted theme-mode">18:00</span>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input theme-mode" type="checkbox" role="switch" id="theme-mode-automatic" value="automatic-theme" onchange="themeSettings(this)">
+                            <label class="form-check-label" for="theme-mode-automatic"></label>
+                        </div>
+                    </div>
+                </li>
+                <h6 class="small mt-3">Odds Settings</h6>
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="betting-odds" id="american" value="american">
+                            <label class="form-check-label" for="american">American</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="betting-odds" id="decimal" value="decimal" checked>
+                            <label class="form-check-label" for="decimal">Decimal</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="betting-odds" id="percentage" value="percentage">
+                            <label class="form-check-label" for="percentage">Percentages</label>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /. Settings Side Menu -->
 
 
     <!-- Side Menu -->

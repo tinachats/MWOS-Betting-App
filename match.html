@@ -42,11 +42,11 @@
     </style>
 </head>
 
-<body>
+<body class="dark-mode">
     <!-- Top Navigation -->
     <header class="header border-bottom bg-white">
         <!-- Main Nav -->
-        <nav class="navbar navbar-expand-lg top-nav main-nav shadow-sm d-none d-md-flex py-0">
+        <nav class="navbar navbar-expand-lg top-nav main-nav shadow-sm py-0">
             <div class="container">
                 <a class="navbar-brand d-md-none" role="button" data-bs-toggle="offcanvas" href="#account-info" role="button" aria-controls="account-info">
                     <div class="avatar avatar-sm mt-1">
@@ -663,7 +663,7 @@
         <!-- /.Main Nav -->
 
         <!-- Sub Nav -->
-        <div class="nav-scroller bg-white border-top d-none d-md-block">
+        <div class="nav-scroller bg-white border-top sticky-top">
             <div class="container">
                 <nav class="nav d-flex justify-content-between">
                     <a class="link-secondary active" href="#popular">Popular</a>
@@ -996,7 +996,7 @@
                 <!-- /. Nav Pills -->
 
                 <!-- Tab Content -->
-                <div class="tab-content" id="pills-tabContent">
+                <div class="tab-content" id="pills-tabContent" data-bs-spy="scroll" data-bs-target="#pills-tab" data-bs-offset="0" class="scrollspy-example" tabindex="0">
                     <!-- Match Info -->
                     <div class="tab-pane fade show active" id="pills-match" role="tabpanel" aria-labelledby="pills-match-tab">
                         <div class="mt-2">
