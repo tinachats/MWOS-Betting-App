@@ -1,30 +1,128 @@
-// Theme settings
-function themeSettings(obj) {
+var now = new Date();
+
+// Get saved theme
+(function getTheme() {
+    // Get saved theme
+    let theme = localStorage.getItem('theme');
+
     // Get the body element
     let body = document.getElementsByTagName('body')[0];
+
+    // Get theme mode icon
+    let themeIcon = document.querySelector('.theme-mode-icon');
+
+    // Toggle theme mode switch button
+    let themeSwitch = document.getElementById('theme-mode-toggle');
+
+    switch (theme) {
+        case 'dark-mode':
+            if (!body.classList.contains('dark-mode')) {
+                body.classList.remove('light-mode');
+                themeIcon.classList.remove('bi-brightness-high');
+
+                body.classList.add('dark-mode');
+                themeIcon.classList.add('bi-moon-fill');
+
+                themeSwitch.checked = true;
+            }
+            break;
+        case 'light-mode':
+            if (!body.classList.contains('light-mode')) {
+                body.classList.add('light-mode');
+                themeIcon.classList.add('bi-brightness-high');
+
+                body.classList.remove('dark-mode');
+                themeIcon.classList.remove('bi-moon-fill');
+
+                themeSwitch.checked = false;
+            }
+            break;
+        case 'automatic':
+        default:
+    }
+}());
+
+function automaticMode() {
+    var millisTill18 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 18, 0, 0, 0) - now;
+    if (millisTill18 < 0) {
+        millisTill18 += 86400000; // it's after 10am, try 10am tomorrow.
+    }
+    setTimeout(function() { alert("It's 18pm!") }, millisTill18);
+
+    const msInSecond = 1000;
+    const msInMinute = 60 * msInSecond;
+    const msInHour = 60 * msInMinute;
+    const msInDay = 24 * msInHour;
+
+    const desiredTimeInHoursInUTC = 18; // fill out your desired hour in UTC!
+    const desiredTimeInMinutesInUTC = 0; // fill out your desired minutes in UTC!
+    const desiredTimeInSecondsInUTC = 0; // fill out your desired seconds in UTC!
+
+    const currentDate = now;
+
+    const controlDate = new Date(currentDate.getUTCFullYear(), currentDate.getUTCMonth(), currentDate.getUTCDate(), desiredTimeInHoursInUTC, desiredTimeInMinutesInUTC, desiredTimeInSecondsInUTC);
+    let desiredDate;
+
+    if (currentDate.getTime() <= controlDate.getTime()) {
+        desiredDate = controlDate;
+    } else {
+        desiredDate = new Date(controlDate.getTime() + msInDay);
+    }
+
+    const msDelta = desiredDate.getTime() - currentDate.getTime();
+
+    setTimeout(setupInterval, msDelta);
+
+    function setupInterval() {
+        actualJob();
+
+        setInterval(actualJob, msInDay);
+    }
+
+    function actualJob() {
+        console.log('test');
+    }
+}
+
+// Set new theme
+function themeSettings(obj) {
+    'use strict';
+
+    // Get the body element
+    let body = document.getElementsByTagName('body')[0];
+
+    // Get theme mode icon
+    let themeIcon = document.querySelector('.theme-mode-icon');
 
     // Check to see if the user is in automatic or toggle mode
     let themeMode = obj.value;
 
-    // Get saved theme mode 
-    let savedThemeMode = localStorage.getItem('theme');
-
-    // If the user has already saved theme settings
-    if (savedThemeMode != '') {
-        // Do something
-    }
-
     // If the user has toggled the theme
     if (themeMode == 'toggle-theme') {
+        // Dark mode when switch is turned on 
         let darkTheme = obj.checked;
+
+        // If dark mode is selected
         if (darkTheme) {
             body.classList.add('dark-mode');
+
+            // Set to Local Storage the theme mode
+            localStorage.setItem('theme', 'dark-mode');
+
+            themeIcon.classList.remove('bi-brightness-high');
+            themeIcon.classList.add('bi-moon-fill');
         } else {
             body.classList.remove('dark-mode');
+
+            // Set to Local Storage the theme mode
+            localStorage.setItem('theme', 'light-mode');
+
+            themeIcon.classList.add('bi-brightness-high');
+            themeIcon.classList.remove('bi-moon-fill');
         }
     } else {
-        // User is in automatic mode
-        console.log('Automatic mode');
+        // Automatically turn on dark mode at 18:00 every day
+        localStorage.setItem('theme', 'automatic');
     }
 }
 
@@ -127,9 +225,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     image.src = image.dataset.src;
                     image.classList.remove('lazy');
                     imageObserver.unobserve(image);
-
-                    animatedCounter();
-                    animateProgressBar();
                 }
             });
         });

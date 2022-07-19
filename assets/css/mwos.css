@@ -1088,10 +1088,6 @@ a:hover {
     overflow-y: hidden;
 }
 
-header.header .nav-scroller {
-    height: 2.75rem;
-}
-
 header.header .nav-scroller .nav {
     padding-bottom: 1rem;
     margin-top: -1px;
@@ -1114,10 +1110,6 @@ header.header .nav-scroller .nav {
 
 header.header .nav-scroller .nav>a {
     position: relative;
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-    font-size: .875rem;
-    border-bottom: 4px solid transparent;
 }
 
 header.header .nav-scroller .nav>a:hover,
@@ -1135,14 +1127,6 @@ header.header .nav-scroller .nav>a.active::after {
     background-color: var(--bs-warning);
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-}
-
-.nav-tabs .nav-link.active::after {
-    bottom: -.75rem;
-}
-
-header.header .nav-scroller .nav>a.active::after {
-    bottom: -.25rem;
 }
 
 .nav-scroller.cirlcled-items .nav>a:not(:last-child),
@@ -1882,6 +1866,21 @@ li {
         padding-top: .35rem !important;
         border-radius: 0;
     }
+    header.header .nav-scroller {
+        height: 36px;
+    }
+    header.header .nav-scroller .nav>a {
+        padding-top: .65rem;
+        padding-bottom: .65rem;
+        font-size: var(--small-xs);
+    }
+    header.header .nav-scroller .nav>a:not(:last-child) {
+        margin-right: .75rem;
+    }
+    header.header .nav-scroller .nav>a.active::after,
+    .nav-tabs .nav-link.active::after {
+        bottom: 0;
+    }
     .dropdown-menu[aria-labelledby='searchDropdownMenu'] {
         top: 3rem !important;
         display: none;
@@ -1955,13 +1954,24 @@ li {
         margin-left: .5rem;
         color: var(--bs-dark);
     }
+    header.header .nav-scroller {
+        height: 2.75rem;
+    }
     header.header .nav-scroller .nav>a {
         padding-bottom: 0.65rem;
-        font-size: .75rem;
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+        font-size: .875rem;
     }
     .top-nav.main-nav .position-absolute.badge {
         right: -3px;
         top: 0;
+    }
+    .nav-tabs .nav-link.active::after {
+        bottom: -.75rem;
+    }
+    header.header .nav-scroller .nav>a.active::after {
+        bottom: 1px;
     }
     .nav.nav-pills {
         border-radius: 2rem;

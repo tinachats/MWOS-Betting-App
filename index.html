@@ -46,7 +46,7 @@
     <!-- Top Navigation -->
     <header class="header border-bottom bg-white">
         <!-- Main Nav -->
-        <nav class="navbar navbar-expand-lg top-nav main-nav shadow-sm d-none d-md-flex py-0">
+        <nav class="navbar navbar-expand-lg top-nav main-nav shadow-sm py-0">
             <div class="container">
                 <a class="navbar-brand d-md-none" role="button" data-bs-toggle="offcanvas" href="#account-info" role="button" aria-controls="account-info">
                     <div class="avatar avatar-sm mt-1">
@@ -587,7 +587,7 @@
                             </span>
                         </button>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item d-none d-md-inline-flex">
                         <button type="button" class="nav-link btn btn-xs btn-outline-default position-relative" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Trending">
                             <i class="bi bi-stars bi-2x"></i>
                         </button>
@@ -668,7 +668,7 @@
         <!-- /.Main Nav -->
 
         <!-- Sub Nav -->
-        <div class="nav-scroller bg-white border-top d-none d-md-block">
+        <div class="nav-scroller bg-white border-top sticky-top" style="top:0">
             <div class="container">
                 <nav class="nav d-flex justify-content-between">
                     <a class="link-secondary active" href="#popular">Popular</a>
@@ -741,67 +741,78 @@
     <!-- Settings Side Menu -->
     <div class="offcanvas offcanvas-end bg-app-color mb-2" tabindex="-1" id="settings-sidebar" aria-labelledby="settings-sidebarLabel">
         <div class="offcanvas-header border-bottom">
-            <div class="d-flex align-items-center">
-                <i class="bi bi-gear text-dark me-2"></i>
-                <h4 id="settings-sidebarLabel" class="m-0">Settings</h4>
+            <div class="d-flex align-items-center justify-content-between w-100">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-gear text-dark me-2"></i>
+                    <h4 id="settings-sidebarLabel" class="m-0">Settings</h4>
+                </div>
+                <button type="button" class="btn btn-light back-btn rounded-circle text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <i class="bi bi-x-lg text-dark"></i>
+                </button>
             </div>
         </div>
         <div class="offcanvas-body">
             <ul class="list-group list-group-flush">
                 <h6 class="small">Appearance Settings</h6>
                 <li class="list-group-item">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="d-flex">
-                            <i class="bi-brightness-high bi-3x me-3"></i>
-                            <div class="d-block">
-                                <h6 class="small my-0">Theme mode</h6>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <small class="small-sm text-muted">
-                                        Set <span data-mode="theme-mode-type" class="text-muted theme-mode">Dark theme</span>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-check form-switch">
-                            <input class="form-check-input theme-mode" type="checkbox" role="switch" id="theme-mode-toggle" value="toggle-theme" onchange="themeSettings(this)">
-                            <label class="form-check-label" for="theme-mode-toggle"></label>
-                        </div>
+                    <div class="d-flex align-items-center form-check form-switch ps-0">
+                        <i class="bi-brightness-high theme-mode-icon bi-3x text-dark me-3"></i>
+                        <label class="form-check-label text-dark" for="theme-mode-toggle">
+                            <h6 class="small fw-bold my-0">Theme mode</h6>
+                            <small class="small text-muted my-0">
+                                Set <span data-mode="theme-mode-type" class="text-muted theme-mode">Dark theme</span>
+                            </small>
+                        </label>
+                        <input class="form-check-input theme-mode ms-auto" type="checkbox" role="switch" id="theme-mode-toggle" value="toggle-theme" onchange="themeSettings(this)">
                     </div>
                 </li>
                 <li class="list-group-item">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="d-flex">
-                            <i class="bi-moon bi-3x me-3"></i>
-                            <div class="d-block">
-                                <h6 class="small my-0">Automatic at sunset</h6>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <small class="small-sm text-muted">
-                                        Off until <span data-mode="theme-mode-type" class="text-muted theme-mode">18:00</span>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-check form-switch">
-                            <input class="form-check-input theme-mode" type="checkbox" role="switch" id="theme-mode-automatic" value="automatic-theme" onchange="themeSettings(this)">
-                            <label class="form-check-label" for="theme-mode-automatic"></label>
-                        </div>
+                    <div class="d-flex align-items-center form-check form-switch ps-0">
+                        <i class="bi-circle-half theme-mode-icon bi-3x text-dark me-3"></i>
+                        <label class="form-check-label text-dark" for="theme-mode-automatic">
+                            <h6 class="small fw-bold my-0">Automatic at sunset</h6>
+                            <small class="small text-muted my-0">
+                                Off until <span data-mode="theme-mode-type" class="text-muted theme-mode">18:00</span>
+                            </small>
+                        </label>
+                        <input class="form-check-input theme-mode ms-auto" type="checkbox" role="switch" id="theme-mode-automatic" value="toggle-theme" onchange="themeSettings(this)">
                     </div>
                 </li>
                 <h6 class="small mt-3">Odds Settings</h6>
                 <li class="list-group-item">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="betting-odds" id="american" value="american">
-                            <label class="form-check-label" for="american">American</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="betting-odds" id="decimal" value="decimal" checked>
-                            <label class="form-check-label" for="decimal">Decimal</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="betting-odds" id="percentage" value="percentage">
-                            <label class="form-check-label" for="percentage">Percentages</label>
-                        </div>
+                    <div class="d-flex align-items-center form-check form-switch ps-0">
+                        <i class="bi-coin bi-3x text-dark me-3"></i>
+                        <label class="form-check-label text-dark" for="american">
+                            <h6 class="small fw-bold my-0">American Odds</h6>
+                            <small class="small text-muted my-0">
+                                Represented by a (+) and a (-)
+                            </small>
+                        </label>
+                        <input class="form-check-input odd-type ms-auto" type="radio" name="betting-odds" role="switch" id="american">
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center form-check form-switch ps-0">
+                        <i class="bi-dice-1 bi-3x text-dark me-3"></i>
+                        <label class="form-check-label text-dark" for="decimal">
+                            <h6 class="small fw-bold my-0">Decimal Odds</h6>
+                            <small class="small text-muted my-0">
+                                Represented by decimals (.)
+                            </small>
+                        </label>
+                        <input class="form-check-input odd-type ms-auto" type="radio" name="betting-odds" role="switch" id="decimal" checked>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center form-check form-switch ps-0">
+                        <i class="bi-percent bi-3x text-dark me-3"></i>
+                        <label class="form-check-label text-dark" for="percentages">
+                            <h6 class="small fw-bold my-0">Percentage Odds</h6>
+                            <small class="small text-muted my-0">
+                                Represented by percentages (%)
+                            </small>
+                        </label>
+                        <input class="form-check-input odd-type ms-auto" type="radio" name="betting-odds" role="switch" id="percentages">
                     </div>
                 </li>
             </ul>
