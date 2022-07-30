@@ -334,12 +334,61 @@ body {
 
 /* Buttons */
 
-.btn-app {
-    background: #FFD954;
-    background: -webkit-linear-gradient(top left, #FFD954, #EF9432);
-    background: -moz-linear-gradient(top left, #FFD954, #EF9432);
-    background: linear-gradient(to bottom right, #FFD954, #EF9432);
+.btn-app,
+.btn-outline-app {
+    position: relative;
     font-weight: 600;
+}
+
+.btn-app span {
+    color: #060607 !important;
+}
+
+.btn-app {
+    border: 2px double transparent;
+    background-image: linear-gradient(#FFD954, #EF9432), radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.btn-outline-app {
+    position: relative;
+    border: none;
+    outline: none;
+    background: linear-gradient(#FFD954, #EF9432), radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+    z-index: 1;
+}
+
+.btn-outline-app span {
+    color: var(--bs-warning);
+}
+
+.btn-outline-app::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    background-color: var(--app-color);
+    border-radius: 50rem!important;
+    z-index: -1;
+}
+
+.btn-outline-app::after {
+    content: attr(data-text);
+    background: linear-gradient(#e9830f, #EF9432);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: 200ms;
+    z-index: 1000;
+}
+
+.btn-app:hover,
+.btn-app:active,
+.btn-outline-app:hover,
+.btn-outline-app:active {
+    opacity: .9;
 }
 
 .btn-soft-dark {
@@ -1135,7 +1184,6 @@ a:hover {
 }
 
 header.header .nav-scroller .nav {
-    padding-bottom: 1rem;
     margin-top: -1px;
 }
 
@@ -1817,6 +1865,14 @@ p {
 
 .bg-white {
     background-color: var(--bs-white) !important;
+}
+
+header.header {
+    z-index: 10000;
+}
+
+header .nav-scroller {
+    background-color: var(--app-body-color);
 }
 
 .sport-link {

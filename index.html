@@ -28,8 +28,22 @@
     <link rel="stylesheet" href="assets/css/mwos.css">
 
     <style>
-        .content {
-            margin-top: 0;
+        header.header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        
+        @media(max-width:576px) {
+            .content .tab-content {
+                margin-top: 2rem;
+            }
+        }
+        
+        @media(min-width:768px) {
+            .content .tab-content {
+                margin-top: 6rem;
+            }
         }
     </style>
 </head>
@@ -72,10 +86,10 @@
                                 <span class="dropdown-header">Recent searches</span>
 
                                 <div class="dropdown-item dropdown-item-borderless bg-transparent text-wrap">
-                                    <a class="btn btn-light btn-xs rounded-pill" href="search-results.html">
+                                    <a class="btn btn-outline-app btn-xs rounded-pill" href="search-results.html">
                                         <i class="bi-search me-1"></i> Real Madrid
                                     </a>
-                                    <a class="btn btn-light btn-xs rounded-pill" href="search-results.html">
+                                    <a class="btn btn-outline-app btn-xs rounded-pill" href="search-results.html">
                                         <i class="bi-search me-1"></i> Lionel Messi
                                     </a>
                                 </div>
@@ -660,7 +674,7 @@
         <!-- /.Main Nav -->
 
         <!-- Sub Nav -->
-        <div class="nav-scroller border-top sticky-top" style="top:0">
+        <div class="nav-scroller border-top sticky-top">
             <div class="container">
                 <nav class="nav d-flex justify-content-between">
                     <a class="sport-link active" href="#football" id="nav-football-tab" data-bs-toggle="tab" data-bs-target="#nav-football" type="button" role="tab" aria-controls="nav-football" aria-selected="true">
@@ -708,12 +722,13 @@
 
     <!-- Page Content -->
     <div class="content container mb-5 pb-5 px-1">
-        <div class="row gx-2">
-            <div class="col-12 col-xl-3"></div>
-            <!-- Main Content -->
-            <div class="col-12 col-xl-6">
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-football" role="tabpanel" aria-labelledby="nav-football-tab">
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-football" role="tabpanel" aria-labelledby="nav-football-tab">
+                <div class="row gx-2">
+                    <!-- League Standings -->
+                    <div class="col-12 col-md-4 col-xl-3 mb-2 position-sticky d-none d-md-block"></div>
+
+                    <div class="col-12 col-md-8 col-xl-5 mb-2">
                         <div class="d-block p-2">
                             <div class="d-flex align-items-center justify-content-between">
                                 <h6 class="my-0">Live Matches</h6>
@@ -860,7 +875,7 @@
                                 <!-- /. Section Heading -->
 
                                 <!-- League Table -->
-                                <ul class="list-group matches-group shadow-sm mt-3">
+                                <ul class="list-group matches-group mt-3">
                                     <!-- Match Header -->
                                     <li class="list-group-item">
                                         <a href="league.html" class="d-flex align-items-center">
@@ -1049,7 +1064,7 @@
                                 <!-- /. League Table -->
 
                                 <!-- League Table -->
-                                <ul class="list-group matches-group shadow-sm mt-3">
+                                <ul class="list-group matches-group mt-3">
                                     <!-- Match Header -->
                                     <li class="list-group-item">
                                         <a href="league.html" class="d-flex align-items-center">
@@ -1254,7 +1269,7 @@
                                 <!-- /. Section Heading -->
 
                                 <!-- League Table -->
-                                <ul class="list-group matches-group shadow-sm mt-3">
+                                <ul class="list-group matches-group mt-3">
                                     <!-- Match Header -->
                                     <li class="list-group-item">
                                         <a href="league.html" class="d-flex align-items-center">
@@ -1443,7 +1458,7 @@
                                 <!-- /. League Table -->
 
                                 <!-- League Table -->
-                                <ul class="list-group matches-group shadow-sm mt-3">
+                                <ul class="list-group matches-group mt-3">
                                     <!-- Match Header -->
                                     <li class="list-group-item">
                                         <a href="league.html" class="d-flex align-items-center">
@@ -1634,45 +1649,287 @@
                             <!-- /. All Matches -->
                         </div>
                     </div>
-                </div>
-                <div class="tab-pane fade" id="nav-basketball" role="tabpanel" aria-labelledby="nav-basketball-tab">
-                    <h1 class="display-4">Basketball</h1>
-                </div>
-                <div class="tab-pane fade" id="nav-tennis" role="tabpanel" aria-labelledby="nav-tennis-tab">
-                    <h1 class="display-4">tennis</h1>
-                </div>
-                <div class="tab-pane fade" id="nav-hockey" role="tabpanel" aria-labelledby="nav-hockey-tab">
-                    <h1 class="display-4">hockey</h1>
-                </div>
-                <div class="tab-pane fade" id="nav-rugby" role="tabpanel" aria-labelledby="nav-rugby-tab">
-                    <h1 class="display-4">rugby</h1>
-                </div>
-                <div class="tab-pane fade" id="nav-dog-racing" role="tabpanel" aria-labelledby="nav-dog-racing-tab">
-                    <h1 class="display-4">dog-racing</h1>
-                </div>
-                <div class="tab-pane fade" id="nav-baseball" role="tabpanel" aria-labelledby="nav-baseball-tab">
-                    <h1 class="display-4">baseball</h1>
-                </div>
-                <div class="tab-pane fade" id="nav-horse-racing" role="tabpanel" aria-labelledby="nav-horse-racing-tab">
-                    <h1 class="display-4">Horse Racing</h1>
-                </div>
-                <div class="tab-pane fade" id="nav-cricket" role="tabpanel" aria-labelledby="nav-cricket-tab">
-                    <h1 class="display-4">cricket</h1>
-                </div>
-                <div class="tab-pane fade" id="nav-handball" role="tabpanel" aria-labelledby="nav-handball-tab">
-                    <h1 class="display-4">handball</h1>
-                </div>
-                <div class="tab-pane fade" id="nav-volleyball" role="tabpanel" aria-labelledby="nav-volleyball-tab">
-                    <h1 class="display-4">volleyball</h1>
-                </div>
-                <div class="tab-pane fade" id="nav-formula-1" role="tabpanel" aria-labelledby="nav-formula-1-tab">
-                    <h1 class="display-4">formula-1</h1>
+
+                    <!-- Odds -->
+                    <div class="col-12 col-xl-4">
+                        <h6 class="text-capitalize my-0">club friendlies</h6>
+                        <!-- Prediction Carousel -->
+                        <div class="card border mt-3">
+                            <div id="carouselExampleIndicators" class="carousel slide px-2 pb-5" data-bs-interval="false">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 1"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <!-- Winning Team -->
+                                        <div class="d-block w-100">
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <h6 class="small text-capitalize text-center mt-3">
+                                                    who will win?
+                                                </h6>
+                                                <div class="d-flex align-items-center justify-content-around my-4">
+                                                    <button class="btn btn-outline-app rounded-pill small-xs text-capitalize px-3" type="button" data-text="tottenham"></button>
+                                                    <button class="btn btn-outline-app rounded-pill small-xs text-capitalize px-3" type="button" data-text="draw"></button>
+                                                    <button class="btn btn-outline-app rounded-pill small-xs text-capitalize px-3" type="button" data-text="man. united"></button>
+                                                </div>
+                                            </div>
+
+                                            <!-- Betting Options -->
+                                            <div class="d-flex justify-content-center justify-content-around mt-2">
+                                                <!-- Bet-->
+                                                <div class="badge bg-dark rounded-pill small-xs px-3 py-2">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                                        <span class="ms-1">1.48</span>
+                                                    </div>
+                                                </div>
+                                                <!-- /. Bet -->
+
+                                                <!-- Bet-->
+                                                <div class="badge bg-dark rounded-pill small-xs px-3 py-2">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-caret-up-fill text-success"></i>
+                                                        <span class="ms-1">1.73</span>
+                                                    </div>
+                                                </div>
+                                                <!-- /. Bet -->
+
+                                                <!-- Bet-->
+                                                <div class="badge bg-dark rounded-pill small-xs px-3 py-2">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                                        <span class="ms-1">2.84</span>
+                                                    </div>
+                                                </div>
+                                                <!-- /. Bet -->
+                                            </div>
+                                            <!-- /. Betting Options -->
+                                        </div>
+                                        <!-- /. Winning Team -->
+                                    </div>
+                                    <div class="carousel-item">
+                                        <!-- Total Goals -->
+                                        <div class="d-block w-100">
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <h6 class="small mt-3 text-capitalize text-center">
+                                                    total goals in match (2.5)
+                                                </h6>
+                                                <div class="d-flex align-items-center justify-content-around my-4">
+                                                    <button class="btn btn-outline-app rounded-pill small-xs text-capitalize px-3" type="button" data-text="under"></button>
+                                                    <button class="btn btn-outline-app rounded-pill small-xs text-capitalize px-3" type="button" data-text="over"></button>
+                                                </div>
+                                            </div>
+
+                                            <!-- Betting Options -->
+                                            <div class="d-flex justify-content-center justify-content-around mt-2">
+                                                <!-- Bet-->
+                                                <div class="badge bg-dark rounded-pill small-xs px-3 py-2">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                                        <span class="ms-1">2.00</span>
+                                                    </div>
+                                                </div>
+                                                <!-- /. Bet -->
+
+                                                <!-- Bet-->
+                                                <div class="badge bg-dark rounded-pill small-xs px-3 py-2">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-caret-up-fill text-success"></i>
+                                                        <span class="ms-1">1.80</span>
+                                                    </div>
+                                                </div>
+                                                <!-- /. Bet -->
+                                            </div>
+                                            <!-- /. Betting Options -->
+                                        </div>
+                                        <!-- /. Total Goals -->
+                                    </div>
+                                    <div class="carousel-item">
+                                        <!-- Double Chance -->
+                                        <div class="d-block w-100">
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <h6 class="small mt-3 text-capitalize text-center">
+                                                    double chance
+                                                </h6>
+                                                <div class="d-flex align-items-center justify-content-around my-4">
+                                                    <button class="btn btn-outline-app rounded-pill small-xs text-capitalize px-3" type="button" data-text="1x"></button>
+                                                    <button class="btn btn-outline-app rounded-pill small-xs text-capitalize px-3" type="button" data-text="no draw"></button>
+                                                    <button class="btn btn-outline-app rounded-pill small-xs text-capitalize px-3" type="button" data-text="2x"></button>
+                                                </div>
+                                            </div>
+
+                                            <!-- Betting Options -->
+                                            <div class="d-flex justify-content-center justify-content-around mt-2">
+                                                <!-- Bet-->
+                                                <div class="badge bg-dark rounded-pill small-xs px-3 py-2">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                                        <span class="ms-1">1.48</span>
+                                                    </div>
+                                                </div>
+                                                <!-- /. Bet -->
+
+                                                <!-- Bet-->
+                                                <div class="badge bg-dark rounded-pill small-xs px-3 py-2">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-caret-up-fill text-success"></i>
+                                                        <span class="ms-1">1.73</span>
+                                                    </div>
+                                                </div>
+                                                <!-- /. Bet -->
+
+                                                <!-- Bet-->
+                                                <div class="badge bg-dark rounded-pill small-xs px-3 py-2">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                                        <span class="ms-1">2.84</span>
+                                                    </div>
+                                                </div>
+                                                <!-- /. Bet -->
+                                            </div>
+                                            <!-- /. Betting Options -->
+                                        </div>
+                                        <!-- /. Double Chance -->
+                                    </div>
+                                    <div class="carousel-item">
+                                        <!-- BTS -->
+                                        <div class="d-block w-100">
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <h6 class="small mt-3 text-capitalize text-center">
+                                                    both teams to score (BTS)
+                                                </h6>
+                                                <div class="d-flex align-items-center justify-content-around my-4">
+                                                    <button class="btn btn-outline-app rounded-pill small-xs text-capitalize px-3" type="button" data-text="no"></button>
+                                                    <button class="btn btn-outline-app rounded-pill small-xs text-capitalize px-3" type="button" data-text="yes"></button>
+                                                </div>
+                                            </div>
+
+                                            <!-- Betting Options -->
+                                            <div class="d-flex justify-content-center justify-content-around mt-2">
+                                                <!-- Bet-->
+                                                <div class="badge bg-dark rounded-pill small-xs px-3 py-2">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                                        <span class="ms-1">2.00</span>
+                                                    </div>
+                                                </div>
+                                                <!-- /. Bet -->
+
+                                                <!-- Bet-->
+                                                <div class="badge bg-dark rounded-pill small-xs px-3 py-2">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-caret-up-fill text-success"></i>
+                                                        <span class="ms-1">1.80</span>
+                                                    </div>
+                                                </div>
+                                                <!-- /. Bet -->
+                                            </div>
+                                            <!-- /. Betting Options -->
+                                        </div>
+                                        <!-- /. BTS -->
+                                    </div>
+                                    <div class="carousel-item">
+                                        <!-- FTS -->
+                                        <div class="d-block w-100">
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <h6 class="small mt-3 text-capitalize text-center">
+                                                    First to score (FTS)
+                                                </h6>
+                                                <div class="d-flex align-items-center justify-content-around my-4">
+                                                    <button class="btn btn-outline-app rounded-pill small-xs text-capitalize px-3" type="button" data-text="tottenham"></button>
+                                                    <button class="btn btn-outline-app rounded-pill small-xs text-capitalize px-3" type="button" data-text="draw"></button>
+                                                    <button class="btn btn-outline-app rounded-pill small-xs text-capitalize px-3" type="button" data-text="man. united"></button>
+                                                </div>
+                                            </div>
+
+                                            <!-- Betting Options -->
+                                            <div class="d-flex justify-content-center justify-content-around mt-2">
+                                                <!-- Bet-->
+                                                <div class="badge bg-dark rounded-pill small-xs px-3 py-2">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                                        <span class="ms-1">1.48</span>
+                                                    </div>
+                                                </div>
+                                                <!-- /. Bet -->
+
+                                                <!-- Bet-->
+                                                <div class="badge bg-dark rounded-pill small-xs px-3 py-2">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-caret-up-fill text-success"></i>
+                                                        <span class="ms-1">1.73</span>
+                                                    </div>
+                                                </div>
+                                                <!-- /. Bet -->
+
+                                                <!-- Bet-->
+                                                <div class="badge bg-dark rounded-pill small-xs px-3 py-2">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-caret-down-fill text-danger"></i>
+                                                        <span class="ms-1">2.84</span>
+                                                    </div>
+                                                </div>
+                                                <!-- /. Bet -->
+                                            </div>
+                                            <!-- /. Betting Options -->
+                                        </div>
+                                        <!-- /. FTS -->
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                            </div>
+                        </div>
+                        <!-- /. Prediction Carousel -->
+                    </div>
+                    <!-- /. Odds -->
                 </div>
             </div>
-            <div class="col-12 col-xl-3"></div>
+            <div class="tab-pane fade" id="nav-basketball" role="tabpanel" aria-labelledby="nav-basketball-tab">
+                <h1 class="display-4">Basketball</h1>
+            </div>
+            <div class="tab-pane fade" id="nav-tennis" role="tabpanel" aria-labelledby="nav-tennis-tab">
+                <h1 class="display-4">tennis</h1>
+            </div>
+            <div class="tab-pane fade" id="nav-hockey" role="tabpanel" aria-labelledby="nav-hockey-tab">
+                <h1 class="display-4">hockey</h1>
+            </div>
+            <div class="tab-pane fade" id="nav-rugby" role="tabpanel" aria-labelledby="nav-rugby-tab">
+                <h1 class="display-4">rugby</h1>
+            </div>
+            <div class="tab-pane fade" id="nav-dog-racing" role="tabpanel" aria-labelledby="nav-dog-racing-tab">
+                <h1 class="display-4">dog-racing</h1>
+            </div>
+            <div class="tab-pane fade" id="nav-baseball" role="tabpanel" aria-labelledby="nav-baseball-tab">
+                <h1 class="display-4">baseball</h1>
+            </div>
+            <div class="tab-pane fade" id="nav-horse-racing" role="tabpanel" aria-labelledby="nav-horse-racing-tab">
+                <h1 class="display-4">Horse Racing</h1>
+            </div>
+            <div class="tab-pane fade" id="nav-cricket" role="tabpanel" aria-labelledby="nav-cricket-tab">
+                <h1 class="display-4">cricket</h1>
+            </div>
+            <div class="tab-pane fade" id="nav-handball" role="tabpanel" aria-labelledby="nav-handball-tab">
+                <h1 class="display-4">handball</h1>
+            </div>
+            <div class="tab-pane fade" id="nav-volleyball" role="tabpanel" aria-labelledby="nav-volleyball-tab">
+                <h1 class="display-4">volleyball</h1>
+            </div>
+            <div class="tab-pane fade" id="nav-formula-1" role="tabpanel" aria-labelledby="nav-formula-1-tab">
+                <h1 class="display-4">formula-1</h1>
+            </div>
         </div>
         <!-- /. Main Content -->
-        <div class="col-12 col-xl-3"></div>
     </div>
     <!-- /. Page Content -->
 
