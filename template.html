@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Developer -->
     <meta name="developer" content="Tinashe. M. Chaterera">
-    <title>BetApp</title>
+    <title>BetLago</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/app/logo.png" class="lazy" loader="lazy" type="image/x-icon">
     <!-- Bootstrap CSS -->
@@ -42,11 +42,11 @@
     </style>
 </head>
 
-<body class="dark-mode">
+<body>
     <!-- Top Navigation -->
     <header class="header border-bottom bg-white">
         <!-- Main Nav -->
-        <nav class="navbar navbar-expand-lg top-nav main-nav shadow-sm d-none d-md-flex py-0">
+        <nav class="navbar navbar-expand-lg top-nav main-nav shadow-sm py-0">
             <div class="container">
                 <a class="navbar-brand d-md-none" role="button" data-bs-toggle="offcanvas" href="#account-info" role="button" aria-controls="account-info">
                     <div class="avatar avatar-sm mt-1">
@@ -587,9 +587,14 @@
                             </span>
                         </button>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item d-none d-md-inline-flex">
                         <button type="button" class="nav-link btn btn-xs btn-outline-default position-relative" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Trending">
                             <i class="bi bi-stars bi-2x"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="nav-link btn btn-xs btn-outline-default position-relative" data-bs-toggle="offcanvas" data-bs-target="#settings-sidebar" aria-controls="settings-sidebar">
+                            <i class="bi bi-gear bi-2x"></i>
                         </button>
                     </li>
                     <li class="nav-item dropdown mt-0 d-none d-md-inline-flex">
@@ -622,7 +627,7 @@
                                     <span class="ms-2">Account</span>
                                 </div>
                             </a>
-                            <a class="dropdown-item" href="settings.html">
+                            <a class="dropdown-item" href="javascript:void(0)" data-bs-toggle="offcanvas" data-bs-target="#settings-sidebar" aria-controls="settings-sidebar">
                                 <div class="d-flex align-items-center text-capitalize">
                                     <i class="bi bi-gear bi-2x"></i>
                                     <span class="ms-2">settings &amp; privacy</span>
@@ -636,7 +641,7 @@
                                     <i class="bi bi-chevron-right ms-auto"></i>
                                 </div>
                             </a>
-                            <a class="dropdown-item" href="settings.html">
+                            <a class="dropdown-item" href="javascript:void(0)" data-bs-toggle="offcanvas" data-bs-target="#settings-sidebar" aria-controls="settings-sidebar">
                                 <div class="d-flex align-items-center text-capitalize">
                                     <i class="bi bi-brightness-high bi-2x"></i>
                                     <span class="ms-2">display &amp; accessibility</span>
@@ -663,21 +668,21 @@
         <!-- /.Main Nav -->
 
         <!-- Sub Nav -->
-        <div class="nav-scroller bg-white border-top d-none d-md-block">
+        <div class="nav-scroller bg-white border-top sticky-top" style="top:0">
             <div class="container">
                 <nav class="nav d-flex justify-content-between">
-                    <a class="link-secondary active" href="#popular">Popular</a>
-                    <a class="link-secondary" href="#football">Football</a>
-                    <a class="link-secondary" href="#basketball">Basketball</a>
-                    <a class="link-secondary" href="#tennis">Tennis</a>
-                    <a class="link-secondary" href="#hockey">Hockey</a>
-                    <a class="link-secondary" href="#rugby">Rugby</a>
-                    <a class="link-secondary" href="#a-football">A. Football</a>
-                    <a class="link-secondary" href="#basketball">Baseball</a>
-                    <a class="link-secondary" href="#">Cricket</a>
-                    <a class="link-secondary" href="#">Handball</a>
-                    <a class="link-secondary" href="#">Volleyball</a>
-                    <a class="link-secondary" href="#">Formula 1</a>
+                    <a class="link-secondary active" href="#popular" id="nav-popular-tab" data-bs-toggle="tab" data-bs-target="#nav-popular" type="button" role="tab" aria-controls="nav-popular" aria-selected="true">Popular</a>
+                    <a class="link-secondary" href="#football" id="nav-football-tab" data-bs-toggle="tab" data-bs-target="#nav-football" type="button" role="tab" aria-controls="nav-football" aria-selected="false">Football</a>
+                    <a class="link-secondary" href="#basketball" id="nav-basketball-tab" data-bs-toggle="tab" data-bs-target="#nav-basketball" type="button" role="tab" aria-controls="nav-basketball" aria-selected="false">Basketball</a>
+                    <a class="link-secondary" href="#tennis" id="nav-tennis-tab" data-bs-toggle="tab" data-bs-target="#nav-tennis" type="button" role="tab" aria-controls="nav-tennis" aria-selected="false">Tennis</a>
+                    <a class="link-secondary" href="#hockey" id="nav-hockey-tab" data-bs-toggle="tab" data-bs-target="#nav-hockey" type="button" role="tab" aria-controls="nav-hockey" aria-selected="false">Hockey</a>
+                    <a class="link-secondary" href="#rugby" id="nav-rugby-tab" data-bs-toggle="tab" data-bs-target="#nav-rugby" type="button" role="tab" aria-controls="nav-rugby" aria-selected="false">Rugby</a>
+                    <a class="link-secondary" href="#a-football" id="nav-a-america-tab" data-bs-toggle="tab" data-bs-target="#nav-a-america" type="button" role="tab" aria-controls="nav-a-america" aria-selected="false">A. Football</a>
+                    <a class="link-secondary" href="#basketball" id="nav-baseball-tab" data-bs-toggle="tab" data-bs-target="#nav-baseball" type="button" role="tab" aria-controls="nav-baseball" aria-selected="false">Baseball</a>
+                    <a class="link-secondary" href="#" id="nav-cricket-tab" data-bs-toggle="tab" data-bs-target="#nav-cricket" type="button" role="tab" aria-controls="nav-cricket" aria-selected="false">Cricket</a>
+                    <a class="link-secondary" href="#" id="nav-handball-tab" data-bs-toggle="tab" data-bs-target="#nav-handball" type="button" role="tab" aria-controls="nav-handball" aria-selected="false">Handball</a>
+                    <a class="link-secondary" href="#" id="nav-volleyball-tab" data-bs-toggle="tab" data-bs-target="#nav-volleyball" type="button" role="tab" aria-controls="nav-volleyball" aria-selected="false">Volleyball</a>
+                    <a class="link-secondary" href="#" id="nav-formula-1-tab" data-bs-toggle="tab" data-bs-target="#nav-formula-1" type="button" role="tab" aria-controls="nav-formula-1" aria-selected="false">Formula 1</a>
                 </nav>
             </div>
         </div>
@@ -685,36 +690,50 @@
     </header>
     <!-- /.Top Navigation -->
 
-    <!-- Page Header -->
-    <nav class="navbar bg-white sticky-navbar sticky-top border-bottom pt-1">
-        <div class="container">
-            <a href="index.html" role="button" class="btn btn-light back-btn me-1 me-md-2 rounded-circle">
-                <i class="bi bi-chevron-left"></i>
-            </a>
-            <a class="navbar-brand m-0 p-0" href="league.html">
-                <div class="d-flex align-items-center nav-title">
-                    <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/soccer/leagues/epl-default.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-middle rounded-circle lazy" loading="lazy">
-                    <div class="d-block ms-2 pt-md-3">
-                        <h1 class="my-0 text-capitalize">English Premier League</h1>
-                        <p class="d-none d-md-block small-xs text-muted text-capitalize">2022 - 2023 season</p>
-                    </div>
-                </div>
-            </a>
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a href="javascript:void(0)" class="nav-link btn btn-outline-warning btn-sm rounded-pill follow-btn px-md-4">
-                        <span>Follow</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- /. Page Header -->
-
     <!-- Page Content -->
     <div class="content container-md mb-5 pb-5 px-1">
         <div class="row gx-2">
-            <!-- Your content here -->
+            <div class="col-12 col-xl-4"></div>
+            <div class="col-12 col-xl-8">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-popular" role="tabpanel" aria-labelledby="nav-popular-tab">
+                        <h1 class="display-4">Popular</h1>
+                    </div>
+                    <div class="tab-pane fade" id="nav-football" role="tabpanel" aria-labelledby="nav-football-tab">
+                        <h1 class="display-4">Football</h1>
+                    </div>
+                    <div class="tab-pane fade" id="nav-basketball" role="tabpanel" aria-labelledby="nav-basketball-tab">
+                        <h1 class="display-4">Basketball</h1>
+                    </div>
+                    <div class="tab-pane fade" id="nav-tennis" role="tabpanel" aria-labelledby="nav-tennis-tab">
+                        <h1 class="display-4">tennis</h1>
+                    </div>
+                    <div class="tab-pane fade" id="nav-hockey" role="tabpanel" aria-labelledby="nav-hockey-tab">
+                        <h1 class="display-4">hockey</h1>
+                    </div>
+                    <div class="tab-pane fade" id="nav-rugby" role="tabpanel" aria-labelledby="nav-rugby-tab">
+                        <h1 class="display-4">rugby</h1>
+                    </div>
+                    <div class="tab-pane fade" id="nav-a-america" role="tabpanel" aria-labelledby="nav-a-america-tab">
+                        <h1 class="display-4">a-america</h1>
+                    </div>
+                    <div class="tab-pane fade" id="nav-baseball" role="tabpanel" aria-labelledby="nav-baseball-tab">
+                        <h1 class="display-4">baseball</h1>
+                    </div>
+                    <div class="tab-pane fade" id="nav-cricket" role="tabpanel" aria-labelledby="nav-cricket-tab">
+                        <h1 class="display-4">cricket</h1>
+                    </div>
+                    <div class="tab-pane fade" id="nav-handball" role="tabpanel" aria-labelledby="nav-handball-tab">
+                        <h1 class="display-4">handball</h1>
+                    </div>
+                    <div class="tab-pane fade" id="nav-volleyball" role="tabpanel" aria-labelledby="nav-volleyball-tab">
+                        <h1 class="display-4">volleyball</h1>
+                    </div>
+                    <div class="tab-pane fade" id="nav-formula-1" role="tabpanel" aria-labelledby="nav-formula-1-tab">
+                        <h1 class="display-4">formula-1</h1>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- /. Page Content -->
@@ -757,6 +776,88 @@
         </div>
     </nav>
     <!-- ./ Bottom Navigation -->
+
+    <!-- Settings Side Menu -->
+    <div class="offcanvas offcanvas-end bg-app-color mb-2" tabindex="-1" id="settings-sidebar" aria-labelledby="settings-sidebarLabel">
+        <div class="offcanvas-header border-bottom">
+            <div class="d-flex align-items-center justify-content-between w-100">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-gear text-dark me-2"></i>
+                    <h4 id="settings-sidebarLabel" class="m-0">Settings</h4>
+                </div>
+                <button type="button" class="btn btn-light back-btn rounded-circle text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <i class="bi bi-x-lg text-dark"></i>
+                </button>
+            </div>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-group list-group-flush">
+                <h6 class="small">Appearance Settings</h6>
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center form-check form-switch ps-0">
+                        <i class="bi-brightness-high theme-mode-icon bi-3x text-dark me-3"></i>
+                        <label class="form-check-label text-dark" for="theme-mode-toggle">
+                            <h6 class="small fw-bold my-0">Theme mode</h6>
+                            <small class="small text-muted my-0">
+                                Set <span data-mode="theme-mode-type" class="text-muted theme-mode">Dark theme</span>
+                            </small>
+                        </label>
+                        <input class="form-check-input theme-mode ms-auto" type="checkbox" role="switch" id="theme-mode-toggle" value="toggle-theme" onchange="themeSettings(this)">
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center form-check form-switch ps-0">
+                        <i class="bi-circle-half theme-mode-icon bi-3x text-dark me-3"></i>
+                        <label class="form-check-label text-dark" for="theme-mode-automatic">
+                            <h6 class="small fw-bold my-0">Automatic at sunset</h6>
+                            <small class="small text-muted my-0">
+                                Off until <span data-mode="theme-mode-type" class="text-muted theme-mode">18:00</span>
+                            </small>
+                        </label>
+                        <input class="form-check-input theme-mode ms-auto" type="checkbox" role="switch" id="theme-mode-automatic" value="toggle-theme" onchange="themeSettings(this)">
+                    </div>
+                </li>
+                <h6 class="small mt-3">Odds Settings</h6>
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center form-check form-switch ps-0">
+                        <i class="bi-coin bi-3x text-dark me-3"></i>
+                        <label class="form-check-label text-dark" for="american">
+                            <h6 class="small fw-bold my-0">American Odds</h6>
+                            <small class="small text-muted my-0">
+                                Represented by a (+) and a (-)
+                            </small>
+                        </label>
+                        <input class="form-check-input odd-type ms-auto" type="radio" name="betting-odds" role="switch" id="american">
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center form-check form-switch ps-0">
+                        <i class="bi-dice-1 bi-3x text-dark me-3"></i>
+                        <label class="form-check-label text-dark" for="decimal">
+                            <h6 class="small fw-bold my-0">Decimal Odds</h6>
+                            <small class="small text-muted my-0">
+                                Represented by decimals (.)
+                            </small>
+                        </label>
+                        <input class="form-check-input odd-type ms-auto" type="radio" name="betting-odds" role="switch" id="decimal" checked>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center form-check form-switch ps-0">
+                        <i class="bi-percent bi-3x text-dark me-3"></i>
+                        <label class="form-check-label text-dark" for="percentages">
+                            <h6 class="small fw-bold my-0">Percentage Odds</h6>
+                            <small class="small text-muted my-0">
+                                Represented by percentages (%)
+                            </small>
+                        </label>
+                        <input class="form-check-input odd-type ms-auto" type="radio" name="betting-odds" role="switch" id="percentages">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /. Settings Side Menu -->
 
 
     <!-- Side Menu -->
