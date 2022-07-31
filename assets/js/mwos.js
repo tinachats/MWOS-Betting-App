@@ -126,6 +126,18 @@ function themeSettings(obj) {
     }
 }
 
+// Range slider 
+function rangeSlider(obj) {
+    var value = (obj.value - obj.min) / (obj.max - obj.min) * 100;
+
+    if (value == 0) {
+        obj.style.background = '#eef0f7';
+    } else {
+        obj.style.background = 'linear-gradient(to right, #ff9d00 0%, #ff9d00 ' + value + '%, #eef0f7 ' + value + '%, #eef0f7 100%)';
+    }
+    document.getElementById('range-value').innerText = value.toFixed(2);
+}
+
 // Animate progress bars
 function animateProgressBar() {
     // Get all progress bars

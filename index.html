@@ -1952,14 +1952,16 @@
                             <!-- /. Match Header -->
 
                             <li class="list-group-item">
-                                <div class="d-block text-center w-100">
-                                    <label for="betting-range" class="form-label small text-dark fw-bold">$12.38</label>
-                                    <input type="range" class="form-range" min="0" max="5" step="0.5" id="betting-range">
+                                <div class="d-block text-center w-100 mb-3">
+                                    <label for="betting-range" class="form-label small text-dark fw-bold">
+                                        $<span id="range-value">0.00</span>
+                                    </label>
+                                    <input type="range" class="form-range" min="0" max="100" step="0.5" id="betting-range" value="0" oninput="rangeSlider(this)">
                                 </div>
                             </li>
                         </ul>
 
-                        <ul class="nav nav-pills mt-2" id="pills-tab" role="tablist">
+                        <ul class="nav nav-pills mt-2" id="pills-tab" role="tablist" style="border-radius:2rem;">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link text-capitalize active" id="pills-winner-tab" data-bs-toggle="pill" data-bs-target="#pills-winner" type="button" role="tab" aria-controls="pills-winner" aria-selected="true">winner</button>
                             </li>
