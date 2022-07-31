@@ -28,6 +28,11 @@
     <link rel="stylesheet" href="assets/css/mwos.css">
 
     <style>
+        html,
+        body {
+            overflow-x: hidden;
+        }
+        
         header.header {
             position: fixed;
             top: 0;
@@ -86,10 +91,10 @@
                                 <span class="dropdown-header">Recent searches</span>
 
                                 <div class="dropdown-item dropdown-item-borderless bg-transparent text-wrap">
-                                    <a class="btn btn-outline-app btn-xs rounded-pill" href="search-results.html">
+                                    <a class="btn btn-outline-light btn-xs rounded-pill" href="search-results.html">
                                         <i class="bi-search me-1"></i> Real Madrid
                                     </a>
-                                    <a class="btn btn-outline-app btn-xs rounded-pill" href="search-results.html">
+                                    <a class="btn btn-outline-light btn-xs rounded-pill" href="search-results.html">
                                         <i class="bi-search me-1"></i> Lionel Messi
                                     </a>
                                 </div>
@@ -726,7 +731,7 @@
             <div class="tab-pane fade show active" id="nav-football" role="tabpanel" aria-labelledby="nav-football-tab">
                 <div class="row gx-2">
                     <!-- League Standings -->
-                    <div class="col-12 col-md-4 col-xl-2 mb-2 position-sticky d-none d-md-block">
+                    <div class="col-12 col-md-6 col-lg-5 col-xl-2 mb-2 position-sticky d-none d-xl-block">
                         <div class="d-block mt-2">
                             <h6 class="text-capitalize">site links</h6>
                             <ul class="list-group">
@@ -874,7 +879,7 @@
                         </div>
                     </div>
 
-                    <div class="col-12 col-md-8 col-xl-6 mb-2">
+                    <div class="col-12 col-md-6 col-lg-7 col-xl-6 mb-2">
                         <div class="d-block p-2">
                             <div class="d-flex align-items-center justify-content-between">
                                 <h6 class="my-0">Live Matches</h6>
@@ -1809,7 +1814,7 @@
                     </div>
 
                     <!-- Odds -->
-                    <div class="col-12 col-xl-4">
+                    <div class="col-12 col-md-6 col-lg-5 col-xl-4 mb-2">
                         <div class="d-block match-details">
                             <h6 class="text-capitalize my-0">club friendlies</h6>
                             <!-- Prediction Carousel -->

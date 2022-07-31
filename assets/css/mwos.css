@@ -279,11 +279,19 @@ body {
 }
 
 .carousel-control-prev {
-    left: -8%;
+    left: -4%;
 }
 
 .carousel-control-next {
-    right: -8%;
+    right: -4%;
+}
+
+.carousel-control-prev-icon {
+    background-image: url('../images/app/circled-previous.svg');
+}
+
+.carousel-control-next-icon {
+    background-image: url('../images/app/circled-next.svg');
 }
 
 
@@ -2047,27 +2055,6 @@ li {
 /* Small devices (landscape phones, 576px and down) */
 
 @media (max-width: 576px) {
-    .top-nav,
-    .offcanvas-header,
-    .sticky-navbar,
-    .sticky-navpill {
-        height: 45px;
-    }
-    .top-nav .navbar-brand {
-        padding: 0 !important;
-    }
-    .sticky-navbar {
-        position: sticky;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        top: 0;
-        width: 100%;
-    }
-    .sticky-navbar .nav-title img {
-        height: 30px;
-        width: 30px;
-    }
     .sticky-navbar .nav-title h1 {
         font-size: .85rem;
     }
@@ -2187,8 +2174,25 @@ li {
 
 @media (min-width: 768px) {
     .top-nav,
-    .offcanvas-header {
+    .offcanvas-header,
+    .sticky-navbar,
+    .sticky-navpill {
         height: 45px;
+    }
+    .top-nav .navbar-brand {
+        padding: 0 !important;
+    }
+    .sticky-navbar {
+        position: sticky;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        top: 0;
+        width: 100%;
+    }
+    .sticky-navbar .nav-title img {
+        height: 30px;
+        width: 30px;
     }
     .content .g-col-4 {
         grid-template-columns: repeat(4, 1fr);
@@ -2213,6 +2217,11 @@ li {
     }
     .nav.nav-pills>.nav-item>button {
         font-size: .7em;
+    }
+    .top-nav .form-wrapper,
+    .top-nav .form-wrapper .form-control,
+    .top-nav .dropdown-menu[aria-labelledby='searchDropdownMenu'] {
+        width: 16rem;
     }
     .soccer-pitch .pitch-wrapper {
         height: 684px;
