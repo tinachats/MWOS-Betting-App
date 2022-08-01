@@ -1,4 +1,8 @@
+// Get current datetime 
 var now = new Date();
+
+// Get the current hour
+var hour = now.getHours();
 
 /*** Theme settings ***/
 // Get the body element
@@ -15,6 +19,10 @@ let themeIcon = document.querySelector('.theme-mode-icon');
 
 // Get theme mode type
 let themeModeType = document.getElementById('theme-mode-type');
+
+// Get theme state
+let themeAutoState = document.querySelector('#theme-auto-state');
+let daytimeState = document.querySelector('#daytime-state');
 
 // Get saved theme
 getTheme();
@@ -43,7 +51,6 @@ function darkTheme() {
     if (!body.classList.contains('dark-mode')) {
         body.classList.add('dark-mode');
     }
-    body.classList.remove('light-mode');
     themeIcon.classList.remove('bi-brightness-high');
     themeIcon.classList.add('bi-moon-fill');
     themeModeType.innerText = 'Set Light theme';
@@ -69,14 +76,9 @@ function defaultTheme() {
 
 // Automatic switching of the theme based on time
 function automaticMode() {
-    // Get the current hour
-    var hour = new Date().getHours();
+    // Set the automatic switch to on
     autoSwitch.checked = true;
     themeSwitch.checked = false;
-
-    // Get theme state
-    let themeAutoState = document.querySelector('#theme-auto-state');
-    let daytimeState = document.querySelector('#daytime-state');
 
     if (autoSwitch.checked == true) {
         // Set to Local Storage the theme mode
@@ -95,6 +97,7 @@ function automaticMode() {
             themeModeType.innerText = 'Set Light theme';
         }
     } else {
+        autoSwitch.checked = false;
         defaultTheme();
     }
 }
