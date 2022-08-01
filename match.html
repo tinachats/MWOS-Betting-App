@@ -46,7 +46,7 @@
     <!-- Top Navigation -->
     <header class="header d-none d-md-block">
         <!-- Main Nav -->
-        <nav class="navbar navbar-expand-lg top-nav main-nav shadow-sm py-0">
+        <nav class="navbar navbar-expand-md top-nav main-nav shadow-sm py-0">
             <div class="container">
                 <a class="navbar-brand d-md-none" role="button" data-bs-toggle="offcanvas" href="#account-info" role="button" aria-controls="account-info">
                     <div class="avatar avatar-sm mt-1">
@@ -56,7 +56,7 @@
                 <a class="navbar-brand" href="index.html">
                     <img src="assets/images/app/logo.png" class="rounded-3" alt="Logo" height="30" width="30">
                 </a>
-                <form class="form-wrapper position-relative d-none d-md-inline-flex">
+                <form class="form-wrapper position-relative d-none d-md-block">
                     <i class="bi bi-search form-icon position-absolute"></i>
                     <div class="dropdown">
                         <input class="form-control rounded-pill small me-2" type="search" placeholder="Search league or team" aria-label="Search" id="searchDropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
@@ -64,26 +64,13 @@
                         <div class="dropdown-menu dropdown-menu-form-search border animated slideInUp" aria-labelledby="searchDropdownMenu">
                             <!-- Body -->
                             <div class="card-body-height">
-                                <div class="d-lg-none">
-                                    <div class="input-group input-group-merge navbar-input-group mb-5">
-                                        <div class="input-group-prepend input-group-text">
-                                            <i class="bi-search"></i>
-                                        </div>
-
-                                        <input type="search" class="form-control" placeholder="Search in front" aria-label="Search in front">
-                                        <a class="input-group-append input-group-text" href="javascript:;">
-                                            <i class="bi-x-lg"></i>
-                                        </a>
-                                    </div>
-                                </div>
-
                                 <span class="dropdown-header">Recent searches</span>
 
                                 <div class="dropdown-item dropdown-item-borderless bg-transparent text-wrap">
-                                    <a class="btn btn-light btn-xs rounded-pill" href="search-results.html">
+                                    <a class="btn btn-outline-light btn-xs rounded-pill" href="search-results.html">
                                         <i class="bi-search me-1"></i> Real Madrid
                                     </a>
-                                    <a class="btn btn-light btn-xs rounded-pill" href="search-results.html">
+                                    <a class="btn btn-outline-light btn-xs rounded-pill" href="search-results.html">
                                         <i class="bi-search me-1"></i> Lionel Messi
                                     </a>
                                 </div>
@@ -175,7 +162,7 @@
                     </div>
                 </form>
                 <ul class="navbar-nav ms-md-auto">
-                    <li class="nav-item dropdown d-none d-md-inline-flex">
+                    <li class="nav-item dropdown d-none d-md-block">
                         <button type="button" class="nav-link btn btn-outline-default position-relative" id="navbarNotificationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-bell"></i>
                             <span class="position-absolute badge rounded-pill bg-warning">
@@ -190,7 +177,7 @@
 
                                 <!-- Unfold -->
                                 <div class="dropdown">
-                                    <button type="button" class="btn btn-icon btn-sm btn-app rounded-circle" id="navbarNotificationsDropdownSettings" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button type="button" class="btn btn-icon btn-sm btn-light rounded-circle" id="navbarNotificationsDropdownSettings" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="bi-three-dots-vertical"></i>
                                     </button>
 
@@ -578,7 +565,7 @@
                             <!-- End Card Footer -->
                         </div>
                     </li>
-                    <li class="nav-item d-none d-md-inline-flex">
+                    <li class="nav-item d-none d-md-block">
                         <button type="button" class="nav-link btn btn-outline-default position-relative">
                             <i class="bi bi-heart"></i>
                             <span class="position-absolute badge rounded-pill bg-warning">
@@ -587,7 +574,7 @@
                             </span>
                         </button>
                     </li>
-                    <li class="nav-item d-none d-md-inline-flex">
+                    <li class="nav-item d-none d-md-block">
                         <button type="button" class="nav-link btn btn-xs btn-outline-default position-relative" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Trending">
                             <i class="bi bi-stars bi-2x"></i>
                         </button>
@@ -597,7 +584,7 @@
                             <i class="bi bi-gear bi-2x"></i>
                         </button>
                     </li>
-                    <li class="nav-item dropdown mt-0 d-none d-md-inline-flex">
+                    <li class="nav-item dropdown mt-0 d-none d-md-block">
                         <a class="nav-link" role="button" data-bs-toggle="dropdown" href="#" id="accountNavbarDropdown" role="button" aria-expanded="false">
                             <div class="avatar mt-2">
                                 <div class="avatar-initials">tc</div>
@@ -611,7 +598,7 @@
                                         <img class="avatar-img lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="assets/images/users/user-1.jpg" alt="Tinashe Chaterera">
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h5 class="small text-capitalize mb-0">Mark Williams</h5>
+                                        <h5 class="small text-capitalize mb-0">tinashe chaterera</h5>
                                         <p class="d-flex align-items-center small text-capitalize text-muted my-0">
                                             <i class="bi bi-bootstrap me-2"></i> newbie
                                         </p>
@@ -627,10 +614,10 @@
                                     <span class="ms-2">Account</span>
                                 </div>
                             </a>
-                            <a class="dropdown-item" href="javascript:void(0)" data-bs-toggle="offcanvas" data-bs-target="#settings-sidebar" aria-controls="settings-sidebar">
+                            <a class="dropdown-item" href="my-scores.html">
                                 <div class="d-flex align-items-center text-capitalize">
-                                    <i class="bi bi-gear bi-2x"></i>
-                                    <span class="ms-2">settings &amp; privacy</span>
+                                    <i class="bi bi-alarm bi-2x"></i>
+                                    <span class="ms-2">my scores</span>
                                     <i class="bi bi-chevron-right ms-auto"></i>
                                 </div>
                             </a>
@@ -641,10 +628,10 @@
                                     <i class="bi bi-chevron-right ms-auto"></i>
                                 </div>
                             </a>
-                            <a class="dropdown-item" href="javascript:void(0)" data-bs-toggle="offcanvas" data-bs-target="#settings-sidebar" aria-controls="settings-sidebar">
+                            <a class="dropdown-item" href="javascript:void(0)">
                                 <div class="d-flex align-items-center text-capitalize">
-                                    <i class="bi bi-brightness-high bi-2x"></i>
-                                    <span class="ms-2">display &amp; accessibility</span>
+                                    <i class="bi bi-star bi-2x"></i>
+                                    <span class="ms-2">rate us</span>
                                     <i class="bi bi-chevron-right ms-auto"></i>
                                 </div>
                             </a>
@@ -2932,22 +2919,24 @@
                         <label class="form-check-label text-dark" for="theme-mode-toggle">
                             <h6 class="small fw-bold my-0">Theme mode</h6>
                             <small class="small text-muted my-0">
-                                Set <span data-mode="theme-mode-type" class="text-muted theme-mode">Dark theme</span>
+                               <span id="theme-mode-type" class="text-muted">Set Dark theme</span>
                             </small>
                         </label>
-                        <input class="form-check-input theme-mode ms-auto" type="checkbox" role="switch" id="theme-mode-toggle" value="toggle-theme" onchange="themeSettings(this)">
+                        <input class="form-check-input ms-auto" type="checkbox" role="switch" id="theme-mode-toggle" value="toggle-theme" onchange="themeSettings(this)">
                     </div>
                 </li>
                 <li class="list-group-item">
                     <div class="d-flex align-items-center form-check form-switch ps-0">
                         <i class="bi-circle-half theme-mode-icon bi-3x text-dark me-3"></i>
                         <label class="form-check-label text-dark" for="theme-mode-automatic">
-                            <h6 class="small fw-bold my-0">Automatic at sunset</h6>
+                            <h6 class="small fw-bold my-0">
+                                Automatic at <span id="daytime-state">sunset</span>
+                            </h6>
                             <small class="small text-muted my-0">
-                                Off until <span data-mode="theme-mode-type" class="text-muted theme-mode">18:00</span>
+                                <span id="theme-auto-state" class="text-muted">Off until 18:00</span>
                             </small>
                         </label>
-                        <input class="form-check-input theme-mode ms-auto" type="checkbox" role="switch" id="theme-mode-automatic" value="toggle-theme" onchange="themeSettings(this)">
+                        <input class="form-check-input ms-auto" type="checkbox" role="switch" id="theme-mode-automatic" value="toggle-theme" onchange="automaticMode()">
                     </div>
                 </li>
                 <h6 class="small mt-3">Odds Settings</h6>
@@ -3036,10 +3025,10 @@
         <div class="offcanvas-header border-bottom">
             <a class="d-flex align-items-center" href="account.html">
                 <div class="avatar">
-                    <img src="assets/images/users/user-2.jpg" alt="User" class="avatar-img">
+                    <img src="assets/images/users/user-1.jpg" alt="User" class="avatar-img">
                 </div>
                 <div class="d-block ms-2 mt-3">
-                    <h5 class="mb-0 fw-bold">Mark Williams</h5>
+                    <h5 class="text-capitalize mb-0 fw-bold">tinashe chaterera</h5>
                     <p class="text-muted small-xs fw-bold">Newbie</p>
                 </div>
             </a>

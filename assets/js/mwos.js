@@ -85,7 +85,7 @@ function automaticMode() {
         localStorage.setItem('theme', 'automatic');
 
         // Have the light mode from 6am to 6pm
-        if (hour >= 6 || hour < 18) {
+        if (hour >= 6 && hour < 18) {
             body.classList.remove('dark-mode');
             themeAutoState.innerText = 'On until 18:00';
             daytimeState.innerText = 'sunset';
@@ -127,12 +127,7 @@ function themeSettings(obj) {
 // Range slider 
 function rangeSlider(obj) {
     var value = (obj.value - obj.min) / (obj.max - obj.min) * 100;
-
-    if (value == 0) {
-        obj.style.background = '#eef0f7';
-    } else {
-        obj.style.background = 'linear-gradient(to right, #ff9d00 0%, #ff9d00 ' + value + '%, #eef0f7 ' + value + '%, #eef0f7 100%)';
-    }
+    obj.style.background = 'linear-gradient(to right, #FFD954 0%, #EF9432 ' + value + '%, #e7eaf3b3 ' + value + '%, #e7eaf3b3 100%)';
     document.getElementById('range-value').innerText = value.toFixed(2);
 }
 

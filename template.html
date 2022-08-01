@@ -28,25 +28,28 @@
     <link rel="stylesheet" href="assets/css/mwos.css">
 
     <style>
-        @media(max-width: 576px) {
-            .content {
-                margin-top: 3rem;
-            }
+        html,
+        body {
+            overflow-x: hidden;
         }
         
-        @media(min-width: 768px) {
-            .content {
-                margin-top: 0.25rem;
-            }
+        header.header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        
+        .content {
+            margin-top: 6rem;
         }
     </style>
 </head>
 
 <body>
     <!-- Top Navigation -->
-    <header class="header border-bottom bg-white">
+    <header class="header">
         <!-- Main Nav -->
-        <nav class="navbar navbar-expand-lg top-nav main-nav shadow-sm py-0">
+        <nav class="navbar navbar-expand-md top-nav main-nav shadow-sm py-0">
             <div class="container">
                 <a class="navbar-brand d-md-none" role="button" data-bs-toggle="offcanvas" href="#account-info" role="button" aria-controls="account-info">
                     <div class="avatar avatar-sm mt-1">
@@ -56,7 +59,7 @@
                 <a class="navbar-brand" href="index.html">
                     <img src="assets/images/app/logo.png" class="rounded-3" alt="Logo" height="30" width="30">
                 </a>
-                <form class="form-wrapper position-relative d-none d-md-inline-flex">
+                <form class="form-wrapper position-relative d-none d-md-block">
                     <i class="bi bi-search form-icon position-absolute"></i>
                     <div class="dropdown">
                         <input class="form-control rounded-pill small me-2" type="search" placeholder="Search league or team" aria-label="Search" id="searchDropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
@@ -64,26 +67,13 @@
                         <div class="dropdown-menu dropdown-menu-form-search border animated slideInUp" aria-labelledby="searchDropdownMenu">
                             <!-- Body -->
                             <div class="card-body-height">
-                                <div class="d-lg-none">
-                                    <div class="input-group input-group-merge navbar-input-group mb-5">
-                                        <div class="input-group-prepend input-group-text">
-                                            <i class="bi-search"></i>
-                                        </div>
-
-                                        <input type="search" class="form-control" placeholder="Search in front" aria-label="Search in front">
-                                        <a class="input-group-append input-group-text" href="javascript:;">
-                                            <i class="bi-x-lg"></i>
-                                        </a>
-                                    </div>
-                                </div>
-
                                 <span class="dropdown-header">Recent searches</span>
 
                                 <div class="dropdown-item dropdown-item-borderless bg-transparent text-wrap">
-                                    <a class="btn btn-light btn-xs rounded-pill" href="search-results.html">
+                                    <a class="btn btn-outline-light btn-xs rounded-pill" href="search-results.html">
                                         <i class="bi-search me-1"></i> Real Madrid
                                     </a>
-                                    <a class="btn btn-light btn-xs rounded-pill" href="search-results.html">
+                                    <a class="btn btn-outline-light btn-xs rounded-pill" href="search-results.html">
                                         <i class="bi-search me-1"></i> Lionel Messi
                                     </a>
                                 </div>
@@ -175,7 +165,7 @@
                     </div>
                 </form>
                 <ul class="navbar-nav ms-md-auto">
-                    <li class="nav-item dropdown d-none d-md-inline-flex">
+                    <li class="nav-item dropdown d-none d-md-block">
                         <button type="button" class="nav-link btn btn-outline-default position-relative" id="navbarNotificationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-bell"></i>
                             <span class="position-absolute badge rounded-pill bg-warning">
@@ -190,7 +180,7 @@
 
                                 <!-- Unfold -->
                                 <div class="dropdown">
-                                    <button type="button" class="btn btn-icon btn-sm btn-outline-light rounded-circle" id="navbarNotificationsDropdownSettings" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button type="button" class="btn btn-icon btn-sm btn-light rounded-circle" id="navbarNotificationsDropdownSettings" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="bi-three-dots-vertical"></i>
                                     </button>
 
@@ -578,7 +568,7 @@
                             <!-- End Card Footer -->
                         </div>
                     </li>
-                    <li class="nav-item d-none d-md-inline-flex">
+                    <li class="nav-item d-none d-md-block">
                         <button type="button" class="nav-link btn btn-outline-default position-relative">
                             <i class="bi bi-heart"></i>
                             <span class="position-absolute badge rounded-pill bg-warning">
@@ -587,7 +577,7 @@
                             </span>
                         </button>
                     </li>
-                    <li class="nav-item d-none d-md-inline-flex">
+                    <li class="nav-item d-none d-md-block">
                         <button type="button" class="nav-link btn btn-xs btn-outline-default position-relative" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Trending">
                             <i class="bi bi-stars bi-2x"></i>
                         </button>
@@ -597,7 +587,7 @@
                             <i class="bi bi-gear bi-2x"></i>
                         </button>
                     </li>
-                    <li class="nav-item dropdown mt-0 d-none d-md-inline-flex">
+                    <li class="nav-item dropdown mt-0 d-none d-md-block">
                         <a class="nav-link" role="button" data-bs-toggle="dropdown" href="#" id="accountNavbarDropdown" role="button" aria-expanded="false">
                             <div class="avatar mt-2">
                                 <div class="avatar-initials">tc</div>
@@ -611,7 +601,7 @@
                                         <img class="avatar-img lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="assets/images/users/user-1.jpg" alt="Tinashe Chaterera">
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h5 class="small text-capitalize mb-0">Mark Williams</h5>
+                                        <h5 class="small text-capitalize mb-0">tinashe chaterera</h5>
                                         <p class="d-flex align-items-center small text-capitalize text-muted my-0">
                                             <i class="bi bi-bootstrap me-2"></i> newbie
                                         </p>
@@ -627,10 +617,10 @@
                                     <span class="ms-2">Account</span>
                                 </div>
                             </a>
-                            <a class="dropdown-item" href="javascript:void(0)" data-bs-toggle="offcanvas" data-bs-target="#settings-sidebar" aria-controls="settings-sidebar">
+                            <a class="dropdown-item" href="my-scores.html">
                                 <div class="d-flex align-items-center text-capitalize">
-                                    <i class="bi bi-gear bi-2x"></i>
-                                    <span class="ms-2">settings &amp; privacy</span>
+                                    <i class="bi bi-alarm bi-2x"></i>
+                                    <span class="ms-2">my scores</span>
                                     <i class="bi bi-chevron-right ms-auto"></i>
                                 </div>
                             </a>
@@ -641,10 +631,10 @@
                                     <i class="bi bi-chevron-right ms-auto"></i>
                                 </div>
                             </a>
-                            <a class="dropdown-item" href="javascript:void(0)" data-bs-toggle="offcanvas" data-bs-target="#settings-sidebar" aria-controls="settings-sidebar">
+                            <a class="dropdown-item" href="javascript:void(0)">
                                 <div class="d-flex align-items-center text-capitalize">
-                                    <i class="bi bi-brightness-high bi-2x"></i>
-                                    <span class="ms-2">display &amp; accessibility</span>
+                                    <i class="bi bi-star bi-2x"></i>
+                                    <span class="ms-2">rate us</span>
                                     <i class="bi bi-chevron-right ms-auto"></i>
                                 </div>
                             </a>
@@ -668,21 +658,45 @@
         <!-- /.Main Nav -->
 
         <!-- Sub Nav -->
-        <div class="nav-scroller bg-white border-top sticky-top" style="top:0">
+        <div class="nav-scroller border-top sticky-top">
             <div class="container">
                 <nav class="nav d-flex justify-content-between">
-                    <a class="link-secondary active" href="#popular" id="nav-popular-tab" data-bs-toggle="tab" data-bs-target="#nav-popular" type="button" role="tab" aria-controls="nav-popular" aria-selected="true">Popular</a>
-                    <a class="link-secondary" href="#football" id="nav-football-tab" data-bs-toggle="tab" data-bs-target="#nav-football" type="button" role="tab" aria-controls="nav-football" aria-selected="false">Football</a>
-                    <a class="link-secondary" href="#basketball" id="nav-basketball-tab" data-bs-toggle="tab" data-bs-target="#nav-basketball" type="button" role="tab" aria-controls="nav-basketball" aria-selected="false">Basketball</a>
-                    <a class="link-secondary" href="#tennis" id="nav-tennis-tab" data-bs-toggle="tab" data-bs-target="#nav-tennis" type="button" role="tab" aria-controls="nav-tennis" aria-selected="false">Tennis</a>
-                    <a class="link-secondary" href="#hockey" id="nav-hockey-tab" data-bs-toggle="tab" data-bs-target="#nav-hockey" type="button" role="tab" aria-controls="nav-hockey" aria-selected="false">Hockey</a>
-                    <a class="link-secondary" href="#rugby" id="nav-rugby-tab" data-bs-toggle="tab" data-bs-target="#nav-rugby" type="button" role="tab" aria-controls="nav-rugby" aria-selected="false">Rugby</a>
-                    <a class="link-secondary" href="#a-football" id="nav-a-america-tab" data-bs-toggle="tab" data-bs-target="#nav-a-america" type="button" role="tab" aria-controls="nav-a-america" aria-selected="false">A. Football</a>
-                    <a class="link-secondary" href="#basketball" id="nav-baseball-tab" data-bs-toggle="tab" data-bs-target="#nav-baseball" type="button" role="tab" aria-controls="nav-baseball" aria-selected="false">Baseball</a>
-                    <a class="link-secondary" href="#" id="nav-cricket-tab" data-bs-toggle="tab" data-bs-target="#nav-cricket" type="button" role="tab" aria-controls="nav-cricket" aria-selected="false">Cricket</a>
-                    <a class="link-secondary" href="#" id="nav-handball-tab" data-bs-toggle="tab" data-bs-target="#nav-handball" type="button" role="tab" aria-controls="nav-handball" aria-selected="false">Handball</a>
-                    <a class="link-secondary" href="#" id="nav-volleyball-tab" data-bs-toggle="tab" data-bs-target="#nav-volleyball" type="button" role="tab" aria-controls="nav-volleyball" aria-selected="false">Volleyball</a>
-                    <a class="link-secondary" href="#" id="nav-formula-1-tab" data-bs-toggle="tab" data-bs-target="#nav-formula-1" type="button" role="tab" aria-controls="nav-formula-1" aria-selected="false">Formula 1</a>
+                    <a class="sport-link active" href="#football" id="nav-football-tab" data-bs-toggle="tab" data-bs-target="#nav-football" type="button" role="tab" aria-controls="nav-football" aria-selected="true">
+                        <img src="assets/images/sports/football.svg" alt="SportBall">Football
+                    </a>
+                    <a class="sport-link" href="#basketball" id="nav-basketball-tab" data-bs-toggle="tab" data-bs-target="#nav-basketball" type="button" role="tab" aria-controls="nav-basketball" aria-selected="false">
+                        <img src="assets/images/sports/basketball.svg" alt="SportBall">Basketball
+                    </a>
+                    <a class="sport-link" href="#tennis" id="nav-tennis-tab" data-bs-toggle="tab" data-bs-target="#nav-tennis" type="button" role="tab" aria-controls="nav-tennis" aria-selected="false">
+                        <img src="assets/images/sports/tennisball.svg" alt="SportBall">Tennis
+                    </a>
+                    <a class="sport-link" href="#hockey" id="nav-hockey-tab" data-bs-toggle="tab" data-bs-target="#nav-hockey" type="button" role="tab" aria-controls="nav-hockey" aria-selected="false">
+                        <img src="assets/images/sports/hockey.svg" alt="SportBall">Hockey
+                    </a>
+                    <a class="sport-link" href="#rugby" id="nav-rugby-tab" data-bs-toggle="tab" data-bs-target="#nav-rugby" type="button" role="tab" aria-controls="nav-rugby" aria-selected="false">
+                        <img src="assets/images/sports/rugbyball.svg" alt="SportBall">Rugby
+                    </a>
+                    <a class="sport-link" href="#dog-racing" id="nav-dog-racing-tab" data-bs-toggle="tab" data-bs-target="#nav-dog-racing" type="button" role="tab" aria-controls="nav-greyhounds" aria-selected="false">
+                        <img src="assets/images/sports/greyhounds.svg" alt="SportBall">Dog Racing
+                    </a>
+                    <a class="sport-link" href="#horse-racing" id="nav-horse-racing-tab" data-bs-toggle="tab" data-bs-target="#nav-horse-racing" type="button" role="tab" aria-controls="nav-horses" aria-selected="false">
+                        <img src="assets/images/sports/horse-racing.svg" alt="SportBall">Horse Racing
+                    </a>
+                    <a class="sport-link" href="#basketball" id="nav-baseball-tab" data-bs-toggle="tab" data-bs-target="#nav-baseball" type="button" role="tab" aria-controls="nav-baseball" aria-selected="false">
+                        <img src="assets/images/sports/baseball.svg" alt="SportBall">Baseball
+                    </a>
+                    <a class="sport-link" href="#" id="nav-cricket-tab" data-bs-toggle="tab" data-bs-target="#nav-cricket" type="button" role="tab" aria-controls="nav-cricket" aria-selected="false">
+                        <img src="assets/images/sports/cricketball.svg" alt="SportBall">Cricket
+                    </a>
+                    <a class="sport-link" href="#" id="nav-handball-tab" data-bs-toggle="tab" data-bs-target="#nav-handball" type="button" role="tab" aria-controls="nav-handball" aria-selected="false">
+                        <img src="assets/images/sports/handball.svg" alt="SportBall">Handball
+                    </a>
+                    <a class="sport-link" href="#" id="nav-volleyball-tab" data-bs-toggle="tab" data-bs-target="#nav-volleyball" type="button" role="tab" aria-controls="nav-volleyball" aria-selected="false">
+                        <img src="assets/images/sports/volleyball.svg" alt="SportBall">Volleyball
+                    </a>
+                    <a class="sport-link" href="#" id="nav-formula-1-tab" data-bs-toggle="tab" data-bs-target="#nav-formula-1" type="button" role="tab" aria-controls="nav-formula-1" aria-selected="false">
+                        <img src="assets/images/sports/motor-racing.svg" alt="SportBall">Formula 1
+                    </a>
                 </nav>
             </div>
         </div>
@@ -799,22 +813,24 @@
                         <label class="form-check-label text-dark" for="theme-mode-toggle">
                             <h6 class="small fw-bold my-0">Theme mode</h6>
                             <small class="small text-muted my-0">
-                                Set <span data-mode="theme-mode-type" class="text-muted theme-mode">Dark theme</span>
+                               <span id="theme-mode-type" class="text-muted">Set Dark theme</span>
                             </small>
                         </label>
-                        <input class="form-check-input theme-mode ms-auto" type="checkbox" role="switch" id="theme-mode-toggle" value="toggle-theme" onchange="themeSettings(this)">
+                        <input class="form-check-input ms-auto" type="checkbox" role="switch" id="theme-mode-toggle" value="toggle-theme" onchange="themeSettings(this)">
                     </div>
                 </li>
                 <li class="list-group-item">
                     <div class="d-flex align-items-center form-check form-switch ps-0">
                         <i class="bi-circle-half theme-mode-icon bi-3x text-dark me-3"></i>
                         <label class="form-check-label text-dark" for="theme-mode-automatic">
-                            <h6 class="small fw-bold my-0">Automatic at sunset</h6>
+                            <h6 class="small fw-bold my-0">
+                                Automatic at <span id="daytime-state">sunset</span>
+                            </h6>
                             <small class="small text-muted my-0">
-                                Off until <span data-mode="theme-mode-type" class="text-muted theme-mode">18:00</span>
+                                <span id="theme-auto-state" class="text-muted">Off until 18:00</span>
                             </small>
                         </label>
-                        <input class="form-check-input theme-mode ms-auto" type="checkbox" role="switch" id="theme-mode-automatic" value="toggle-theme" onchange="themeSettings(this)">
+                        <input class="form-check-input ms-auto" type="checkbox" role="switch" id="theme-mode-automatic" value="toggle-theme" onchange="automaticMode()">
                     </div>
                 </li>
                 <h6 class="small mt-3">Odds Settings</h6>
@@ -865,10 +881,10 @@
         <div class="offcanvas-header border-bottom">
             <a class="d-flex align-items-center" href="account.html">
                 <div class="avatar">
-                    <img src="assets/images/users/user-2.jpg" alt="User" class="avatar-img">
+                    <img src="assets/images/users/user-1.jpg" alt="User" class="avatar-img">
                 </div>
                 <div class="d-block ms-2 mt-3">
-                    <h5 class="mb-0 fw-bold">Mark Williams</h5>
+                    <h5 class="text-capitalize mb-0 fw-bold">tinashe chaterera</h5>
                     <p class="text-muted small-xs fw-bold">Newbie</p>
                 </div>
             </a>
