@@ -1970,7 +1970,7 @@ p {
 }
 
 header.header {
-    z-index: 10000;
+    z-index: 1000;
 }
 
 header.header {
@@ -2059,6 +2059,12 @@ li {
 /* Small devices (landscape phones, 576px and down) */
 
 @media (max-width: 576px) {
+    .top-nav,
+    .offcanvas-header,
+    .sticky-navbar,
+    .sticky-navpill {
+        height: 45px;
+    }
     .sticky-navbar .nav-title h1 {
         font-size: .85rem;
     }

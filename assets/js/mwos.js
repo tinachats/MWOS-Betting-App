@@ -85,12 +85,13 @@ function automaticMode() {
         localStorage.setItem('theme', 'automatic');
 
         // Have the light mode from 6am to 6pm
-        if (hour >= 6 && hour < 18) {
+        if (hour >= 6 || hour < 18) {
             body.classList.remove('dark-mode');
             themeAutoState.innerText = 'On until 18:00';
             daytimeState.innerText = 'sunset';
             themeModeType.innerText = 'Set Dark theme';
         } else {
+            // If it's night time, go dark mode
             body.classList.add('dark-mode');
             daytimeState.innerText = 'sunrise';
             themeAutoState.innerText = 'On until 06:00';
