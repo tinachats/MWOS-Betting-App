@@ -928,6 +928,10 @@ a:hover {
     border-radius: 0;
 }
 
+.shadowed-list>li {
+    box-shadow: var(--shadow-sm);
+}
+
 .dropdown-menu.navbar-dropdown-menu .list-group {
     margin: 0;
     padding: 0;
@@ -2194,8 +2198,16 @@ li {
         height: 30px;
         width: 30px;
     }
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+    }
     .content .g-col-4 {
         grid-template-columns: repeat(4, 1fr);
+    }
+    .top-nav.main-nav .navbar-brand>img,
+    .top-nav.main-nav .form-wrapper,
+    .top-nav.main-nav .navbar-nav {
+        margin-top: -.65rem;
     }
     .top-nav.main-nav .btn.btn-outline-default {
         margin-top: .9rem;
@@ -2221,7 +2233,7 @@ li {
     .top-nav .form-wrapper,
     .top-nav .form-wrapper .form-control,
     .top-nav .dropdown-menu[aria-labelledby='searchDropdownMenu'] {
-        width: 16rem;
+        width: 25rem;
     }
     .soccer-pitch .pitch-wrapper {
         height: 684px;
@@ -2269,6 +2281,14 @@ li {
     .top-nav .form-wrapper .form-control,
     .top-nav .dropdown-menu[aria-labelledby='searchDropdownMenu'] {
         width: 21rem;
+    }
+}
+
+@media(min-width:1024px) {
+    .top-nav.main-nav .navbar-brand>img,
+    .top-nav.main-nav .form-wrapper,
+    .top-nav.main-nav .navbar-nav {
+        margin-top: 0;
     }
 }
 

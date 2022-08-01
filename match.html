@@ -2908,7 +2908,6 @@
         </div>
         <!-- /. Main Content -->
     </div>
-    </div>
     <!-- /. Page Content -->
 
     <!-- Settings Side Menu -->
@@ -3196,6 +3195,16 @@
         document.addEventListener('DOMContentLoaded', () => {
             animatedCounter();
             animateProgressBar();
+
+            // Make an element sticky top
+            window.onscroll = () => {
+                const stickyNavPill = document.querySelector('.sticky-navpill');
+                if (window.pageYOffset >= stickyNavPill.offsetTop) {
+                    stickyNavPill.classList.add('fix-top');
+                } else {
+                    stickyNavPill.classList.remove('fix-top');
+                }
+            };
         });
     </script>
 </body>
