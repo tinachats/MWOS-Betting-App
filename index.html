@@ -578,8 +578,12 @@
                         </button>
                     </li>
                     <li class="nav-item d-none d-md-block">
-                        <button type="button" class="nav-link btn btn-xs btn-outline-default position-relative" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Trending">
-                            <i class="bi bi-stars bi-2x"></i>
+                        <button type="button" class="nav-link btn btn-outline-default position-relative" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Calendar Events">
+                            <i class="bi bi-calendar4-week bi-2x"></i>
+                            <span class="position-absolute badge rounded-pill bg-warning">
+                                145
+                                <span class="visually-hidden">calendar events</span>
+                            </span>
                         </button>
                     </li>
                     <li class="nav-item">
@@ -872,10 +876,9 @@
                                         <div class="card score-card shadow-sm bg-purple py-3">
                                             <div class="container-fluid px-2">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="badge text-capitalize live-badge">
-                                                        live
+                                                    <span class="badge text-uppercase live-badge">
+                                                        <i class="bi-play-btn-fill me-1"></i>live
                                                     </span>
-                                                    <span class="avatar-status bg-warning me-2"></span>
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center my-3">
                                                     <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/r/38/real-madrid-club-de-futbol.svg">
@@ -902,10 +905,9 @@
                                         <div class="card score-card shadow-sm bg-white py-3">
                                             <div class="container-fluid px-2">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="badge text-capitalize live-badge">
-                                                        live
+                                                    <span class="badge text-uppercase live-badge">
+                                                        <i class="bi-play-btn-fill me-1"></i>live
                                                     </span>
-                                                    <span class="avatar-status bg-warning me-2"></span>
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center my-3">
                                                     <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/t/34/tottenham-hotspur.svg">
@@ -932,10 +934,9 @@
                                         <div class="card score-card shadow-sm bg-danger py-3">
                                             <div class="container-fluid px-2">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="badge text-capitalize live-badge">
-                                                        live
+                                                    <span class="badge text-uppercase live-badge">
+                                                        <i class="bi-play-btn-fill me-1"></i>live
                                                     </span>
-                                                    <span class="avatar-status bg-warning me-2"></span>
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center my-3">
                                                     <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/l/92/liverpool-fc.svg">
@@ -962,10 +963,9 @@
                                         <div class="card score-card shadow-sm bg-dark py-3">
                                             <div class="container-fluid px-2">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="badge text-capitalize live-badge">
-                                                        live
+                                                    <span class="badge text-uppercase live-badge">
+                                                        <i class="bi-play-btn-fill me-1"></i>live
                                                     </span>
-                                                    <span class="avatar-status bg-warning me-2"></span>
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center my-3">
                                                     <img class="lazy" loading="lazy" src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/b/9/bayern-munchen.svg">
@@ -1020,6 +1020,14 @@
 
                                     <!-- Match -->
                                     <li class="list-group-item">
+                                        <!-- Add to Favorites -->
+                                        <div class="bookmark-match d-grid">
+                                            <div class="m-auto">
+                                                <i class="bi bi-heart bi-3x text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Bookmark this match"></i>
+                                            </div>
+                                        </div>
+                                        <!-- /.Add to Favorites -->
+
                                         <!-- Match Details -->
                                         <div class="row align-items-center mb-2">
                                             <div class="col-10 border-end">
@@ -1029,9 +1037,11 @@
                                                         <p class="small-xs text-muted m-0 p-0">
                                                             08:40
                                                         </p>
-                                                        <div class="d-flex align-items-center justify-content-center text-danger fw-bold">
-                                                            <i class="bi bi-dot"></i>
-                                                            <small class="small-xs text-capitalize">live</small>
+                                                        <div class="d-flex justify-content-center">
+                                                            <div class="d-flex align-items-center justify-content-center live-btn">
+                                                                <i class="bi bi-play-btn-fill"></i>
+                                                                <span class="text-uppercase ms-1">live</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <!-- /. Timestamp -->
@@ -1108,6 +1118,14 @@
 
                                     <!-- Match -->
                                     <li class="list-group-item">
+                                        <!-- Add to Favorites -->
+                                        <div class="bookmark-match bookmarked d-grid">
+                                            <div class="m-auto">
+                                                <i class="bi bi-heart bi-3x text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Bookmark this match"></i>
+                                            </div>
+                                        </div>
+                                        <!-- /.Add to Favorites -->
+
                                         <!-- Match Details -->
                                         <div class="row align-items-center mb-2">
                                             <div class="col-10 border-end">
@@ -1117,9 +1135,11 @@
                                                         <p class="small-xs text-muted m-0 p-0">
                                                             11:30
                                                         </p>
-                                                        <div class="d-flex align-items-center justify-content-center text-danger fw-bold">
-                                                            <i class="bi bi-dot"></i>
-                                                            <small class="small-xs text-capitalize">live</small>
+                                                        <div class="d-flex justify-content-center">
+                                                            <div class="d-flex align-items-center justify-content-center live-btn">
+                                                                <i class="bi bi-play-btn-fill"></i>
+                                                                <span class="text-uppercase ms-1">live</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <!-- /. Timestamp -->
@@ -1212,6 +1232,14 @@
 
                                     <!-- Match -->
                                     <li class="list-group-item">
+                                        <!-- Add to Favorites -->
+                                        <div class="bookmark-match d-grid">
+                                            <div class="m-auto">
+                                                <i class="bi bi-heart bi-3x text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Bookmark this match"></i>
+                                            </div>
+                                        </div>
+                                        <!-- /.Add to Favorites -->
+
                                         <!-- Match Details -->
                                         <div class="row align-items-center mb-2">
                                             <div class="col-10 border-end">
@@ -1221,9 +1249,11 @@
                                                         <p class="small-xs text-muted m-0 p-0">
                                                             10:00
                                                         </p>
-                                                        <div class="d-flex align-items-center justify-content-center text-danger fw-bold">
-                                                            <i class="bi bi-dot"></i>
-                                                            <small class="small-xs text-capitalize">live</small>
+                                                        <div class="d-flex justify-content-center">
+                                                            <div class="d-flex align-items-center justify-content-center live-btn">
+                                                                <i class="bi bi-play-btn-fill"></i>
+                                                                <span class="text-uppercase ms-1">live</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <!-- /. Timestamp -->
@@ -1300,6 +1330,14 @@
 
                                     <!-- Match -->
                                     <li class="list-group-item">
+                                        <!-- Add to Favorites -->
+                                        <div class="bookmark-match d-grid">
+                                            <div class="m-auto">
+                                                <i class="bi bi-heart bi-3x text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Bookmark this match"></i>
+                                            </div>
+                                        </div>
+                                        <!-- /.Add to Favorites -->
+
                                         <!-- Match Details -->
                                         <div class="row align-items-center mb-2">
                                             <div class="col-10 border-end">
@@ -1309,9 +1347,11 @@
                                                         <p class="small-xs text-muted m-0 p-0">
                                                             13:30
                                                         </p>
-                                                        <div class="d-flex align-items-center justify-content-center text-danger fw-bold">
-                                                            <i class="bi bi-dot"></i>
-                                                            <small class="small-xs text-capitalize">live</small>
+                                                        <div class="d-flex justify-content-center">
+                                                            <div class="d-flex align-items-center justify-content-center live-btn">
+                                                                <i class="bi bi-play-btn-fill"></i>
+                                                                <span class="text-uppercase ms-1">live</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <!-- /. Timestamp -->
@@ -1410,7 +1450,7 @@
                                     <li class="list-group-item">
                                         <div class="d-flex align-items-center justify-content-between">
                                             <a href="league.html" class="d-flex align-items-center">
-                                                <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/soccer/leagues/epl.png" alt="League Logo" class="lazy" loading="lazy" height="25" width="25">
+                                                <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/soccer/leagues/epl-default.png" alt="League Logo" class="lazy" loading="lazy" height="25" width="25">
                                                 <h6 class="small ms-2 my-0 text-capitalize">premier league</h6>
                                             </a>
                                             <a href="league.html" class="btn btn-xs btn-outline-light rounded-pill">See all</a>
@@ -1420,6 +1460,14 @@
 
                                     <!-- Match -->
                                     <li class="list-group-item">
+                                        <!-- Add to Favorites -->
+                                        <div class="bookmark-match d-grid">
+                                            <div class="m-auto">
+                                                <i class="bi bi-heart bi-3x text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Bookmark this match"></i>
+                                            </div>
+                                        </div>
+                                        <!-- /.Add to Favorites -->
+
                                         <!-- Match Details -->
                                         <div class="row align-items-center mb-2">
                                             <div class="col-10 border-end">
@@ -1429,9 +1477,11 @@
                                                         <p class="small-xs text-muted m-0 p-0">
                                                             08:40
                                                         </p>
-                                                        <div class="d-flex align-items-center justify-content-center text-danger fw-bold">
-                                                            <i class="bi bi-dot"></i>
-                                                            <small class="small-xs text-capitalize">live</small>
+                                                        <div class="d-flex justify-content-center">
+                                                            <div class="d-flex align-items-center justify-content-center live-btn">
+                                                                <i class="bi bi-play-btn-fill"></i>
+                                                                <span class="text-uppercase ms-1">live</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <!-- /. Timestamp -->
@@ -1508,6 +1558,14 @@
 
                                     <!-- Match -->
                                     <li class="list-group-item">
+                                        <!-- Add to Favorites -->
+                                        <div class="bookmark-match d-grid">
+                                            <div class="m-auto">
+                                                <i class="bi bi-heart bi-3x text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Bookmark this match"></i>
+                                            </div>
+                                        </div>
+                                        <!-- /.Add to Favorites -->
+
                                         <!-- Match Details -->
                                         <div class="row align-items-center mb-2">
                                             <div class="col-10 border-end">
@@ -1517,9 +1575,11 @@
                                                         <p class="small-xs text-muted m-0 p-0">
                                                             11:30
                                                         </p>
-                                                        <div class="d-flex align-items-center justify-content-center text-danger fw-bold">
-                                                            <i class="bi bi-dot"></i>
-                                                            <small class="small-xs text-capitalize">live</small>
+                                                        <div class="d-flex justify-content-center">
+                                                            <div class="d-flex align-items-center justify-content-center live-btn">
+                                                                <i class="bi bi-play-btn-fill"></i>
+                                                                <span class="text-uppercase ms-1">live</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <!-- /. Timestamp -->
@@ -1612,6 +1672,14 @@
 
                                     <!-- Match -->
                                     <li class="list-group-item">
+                                        <!-- Add to Favorites -->
+                                        <div class="bookmark-match d-grid">
+                                            <div class="m-auto">
+                                                <i class="bi bi-heart bi-3x text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Bookmark this match"></i>
+                                            </div>
+                                        </div>
+                                        <!-- /.Add to Favorites -->
+
                                         <!-- Match Details -->
                                         <div class="row align-items-center mb-2">
                                             <div class="col-10 border-end">
@@ -1621,9 +1689,11 @@
                                                         <p class="small-xs text-muted m-0 p-0">
                                                             10:00
                                                         </p>
-                                                        <div class="d-flex align-items-center justify-content-center text-danger fw-bold">
-                                                            <i class="bi bi-dot"></i>
-                                                            <small class="small-xs text-capitalize">live</small>
+                                                        <div class="d-flex justify-content-center">
+                                                            <div class="d-flex align-items-center justify-content-center live-btn">
+                                                                <i class="bi bi-play-btn-fill"></i>
+                                                                <span class="text-uppercase ms-1">live</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <!-- /. Timestamp -->
@@ -1700,6 +1770,14 @@
 
                                     <!-- Match -->
                                     <li class="list-group-item">
+                                        <!-- Add to Favorites -->
+                                        <div class="bookmark-match d-grid">
+                                            <div class="m-auto">
+                                                <i class="bi bi-heart bi-3x text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Bookmark this match"></i>
+                                            </div>
+                                        </div>
+                                        <!-- /.Add to Favorites -->
+
                                         <!-- Match Details -->
                                         <div class="row align-items-center mb-2">
                                             <div class="col-10 border-end">
@@ -1709,9 +1787,11 @@
                                                         <p class="small-xs text-muted m-0 p-0">
                                                             13:30
                                                         </p>
-                                                        <div class="d-flex align-items-center justify-content-center text-danger fw-bold">
-                                                            <i class="bi bi-dot"></i>
-                                                            <small class="small-xs text-capitalize">live</small>
+                                                        <div class="d-flex justify-content-center">
+                                                            <div class="d-flex align-items-center justify-content-center live-btn">
+                                                                <i class="bi bi-play-btn-fill"></i>
+                                                                <span class="text-uppercase ms-1">live</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <!-- /. Timestamp -->
