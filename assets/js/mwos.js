@@ -194,73 +194,58 @@ function animatedCounter() {
 
 /*** Countdown Timer ***/
 
-// Set the date we're counting down to
-var countDownDate = new Date('Aug 14, 2022 15:37:25').getTime();
+// Get all elements with the match-timer class
+const matchTimers = document.querySelectorAll('.match-timer');
 
-// Update the count down every 1 second
-// var x = setInterval(countDownTimer, 1000);
+// Get the match status of each and every match
+const matchStatuses = document.querySelectorAll('.match-status');
 
-// Count down timer
-function countDownTimer(el, countDownDate) {
-    // Get today's date and time
-    var currTime = now.getTime();
+// set a timeout to update the timer
+var t = setInterval(() => {
+    kickOffTime(matchTimers, matchStatuses);
+}, 1000);
 
-    // Find the distance between now and the count down date
-    var distance = countDownDate - currTime;
+function kickOffTime(matchTimers, matchStatuses) {
+    for (var i = 0; i < matchTimers.length; i++) {
+        // Get all kickoff times
+        var matchDates = matchTimers[i].getAttribute('data-kickoff');
 
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // Set the kickoff time as the deadline
+        var deadline = new Date(matchDates);
 
-    // Display the result in the element
-    document.querySelector(el).innerHTML = `${days}:${hours}:${minutes}:${minutes}:${seconds}`;
+        // Get the difference in time between kickoff and now
+        var diff = Math.floor(deadline.getTime() - now.getTime());
 
-    // If the count down is finished, write some text
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById(el).innerHTML = 'ENDED';
+        // Get days
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+        // Get hours
+        var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+        // Get minutes
+        var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+        // Get secons
+        var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        // add a leading zero if it's single digit
+        d = checkTime(days);
+        h = checkTime(hours);
+        m = checkTime(minutes);
+        s = checkTime(seconds);
+
+        // If there's nolonger in difference in time stop the timer
+        if (diff < 0) {
+            matchTimers[i].innerHTML = '90:00';
+            matchStatuses[i].innerHTML = 'LIVE';
+        } else {
+            matchTimers[i].innerHTML = `${d}:${h}:${m}:${s}`;
+            matchStatuses[i].innerHTML = 'SOON';
+        }
     }
 }
 
 /*** /. Countdown Timer ***/
-
-/*** Count up timer ***/
-
-//Get the starting time (right now) in seconds
-var startTime = Math.floor(Date.now() / 1000);
-
-// Store it if I want to restart the timer on the next page
-localStorage.setItem('startTime', startTime);
-
-function startTimeCounter() {
-    // get the time now
-    var now = Math.floor(Date.now() / 1000);
-
-    // diff in seconds between now and start
-    var diff = now - startTime;
-
-    // get minutes value (quotient of diff)
-    var m = Math.floor(diff / 60);
-
-    // get seconds value (remainder of diff)
-    var s = Math.floor(diff % 60);
-
-    // add a leading zero if it's single digit
-    m = checkTime(m);
-    s = checkTime(s);
-
-    // update the element where the timer will 
-    const matchTimers = document.querySelectorAll('.match-timer');
-
-    matchTimers.forEach((matchTimer) => {
-        matchTimer.innerHTML = m + ":" + s;
-    });
-
-    // set a timeout to update the timer
-    var t = setTimeout(startTimeCounter, 500);
-}
 
 function checkTime(i) {
     // add zero in front of numbers < 10
@@ -270,9 +255,7 @@ function checkTime(i) {
     return i;
 }
 
-startTimeCounter();
-
-/*** /. Count up timer ***/
+/*** /. Football Match Timer ***/
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize AOS
     AOS.init();

@@ -1087,7 +1087,6 @@ a:hover {
     width: 0;
     opacity: 0;
     background-color: var(--app-color);
-    border-bottom: var(--border-width) solid var(--border-color);
     border-right: var(--border-width) solid var(--border-color);
     transition: width .5s ease-in-out;
     z-index: 100;
