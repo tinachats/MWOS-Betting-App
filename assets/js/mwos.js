@@ -192,23 +192,18 @@ function animatedCounter() {
     });
 }
 
-/*** Countdown Timer ***/
-
+/*** App Timers ***/
 // Get all elements with the match-timer class
-const matchTimers = document.querySelectorAll('.match-timer');
+const dates = document.querySelectorAll('[id^="kickoff-"]');
 
-// Get the match status of each and every match
-const matchStatuses = document.querySelectorAll('.match-status');
+// Countdown Timer
+function kickOffTime(dates) {
+    // Get the match status of each and every match
+    const matchStatuses = document.querySelectorAll('.match-status');
 
-// set a timeout to update the timer
-var t = setInterval(() => {
-    kickOffTime(matchTimers, matchStatuses);
-}, 1000);
-
-function kickOffTime(matchTimers, matchStatuses) {
-    for (var i = 0; i < matchTimers.length; i++) {
+    for (var i = 0; i < dates.length; i++) {
         // Get all kickoff times
-        var matchDates = matchTimers[i].getAttribute('data-kickoff');
+        var matchDates = dates[i].getAttribute('id').split('-')[1];
 
         // Set the kickoff time as the deadline
         var deadline = new Date(matchDates);
@@ -216,46 +211,91 @@ function kickOffTime(matchTimers, matchStatuses) {
         // Get the difference in time between kickoff and now
         var diff = Math.floor(deadline.getTime() - now.getTime());
 
+        // Time units
+        var sec = 1000;
+        var min = sec * 60;
+        var hr = min * 60;
+        var day = hr * 24;
+
         // Get days
-        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        var days = Math.floor(diff / (day));
 
         // Get hours
-        var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var hours = Math.floor((diff % (day)) / (hr));
 
         // Get minutes
-        var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        var minutes = Math.floor((diff % (hr)) / (min));
 
         // Get secons
-        var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        var seconds = Math.floor((diff % (min)) / sec);
 
         // add a leading zero if it's single digit
-        d = checkTime(days);
-        h = checkTime(hours);
-        m = checkTime(minutes);
-        s = checkTime(seconds);
+        var d = checkTime(days);
+        var h = checkTime(hours);
+        var m = checkTime(minutes);
+        var s = checkTime(seconds);
 
-        // If there's nolonger in difference in time stop the timer
-        if (diff < 0) {
-            matchTimers[i].innerHTML = '90:00';
+        // If there's nolonger any difference in time stop the timer
+        if (diff <= 0) {
+            // Stop the countdown timer
+            clearInterval(timer);
+
+            // Start the match timer
+            // matchTimer();
+
+            document.getElementById('kickoff-' + matchDates).innerHTML = '90:00';
             matchStatuses[i].innerHTML = 'LIVE';
         } else {
-            matchTimers[i].innerHTML = `${d}:${h}:${m}:${s}`;
+            document.getElementById('kickoff-' + matchDates).innerHTML = `${d}:${h}:${m}:${s}`;
             matchStatuses[i].innerHTML = 'SOON';
         }
     }
 }
 
-/*** /. Countdown Timer ***/
+//  update the timer
+var timer = setInterval(() => {
+    kickOffTime(dates);
+}, 1000);
 
+// add zero in front of numbers < 10
 function checkTime(i) {
-    // add zero in front of numbers < 10
     if (i < 10) {
         i = '0' + i;
     }
     return i;
 }
+/*** /. Countdown Timer ***/
 
-/*** /. Football Match Timer ***/
+// Make sure only numerics are entered
+function numericsOnly(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
+}
+
+// Increment value of the textbox
+var counter = 0;
+
+function increment() {
+    counter++;
+    document.getElementById('odds-multipliers').value = counter;
+}
+
+
+// Decrement the value on click
+function decrement() {
+    var val = document.getElementById('odds-multipliers').value;
+
+    if (val > 0) {
+        counter--;
+    }
+
+    document.getElementById('odds-multipliers').value = counter;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize AOS
     AOS.init();
