@@ -2182,6 +2182,10 @@ p {
     color: var(--bs-dark) !important;
 }
 
+.text-warning {
+    color: var(--bs-warning) !important;
+}
+
 
 /* /.Typography */
 

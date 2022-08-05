@@ -279,21 +279,23 @@ function numericsOnly(evt) {
 // Increment value of the textbox
 var counter = 0;
 
-function increment() {
+function increment(obj) {
     counter++;
-    document.getElementById('odds-multipliers').value = counter;
+    var el_id = obj.getAttribute('data-id');
+    document.getElementById('odds-multipliers-' + el_id).value = counter;
 }
 
 
 // Decrement the value on click
-function decrement() {
-    var val = document.getElementById('odds-multipliers').value;
+function decrement(obj) {
+    var el_id = obj.getAttribute('data-id');
+    var el = document.getElementById('odds-multipliers-' + el_id);
 
-    if (val > 0) {
+    if (el.value > 0) {
         counter--;
     }
 
-    document.getElementById('odds-multipliers').value = counter;
+    el.value = counter;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
