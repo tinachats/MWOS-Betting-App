@@ -280,8 +280,9 @@ function numericsOnly(evt) {
 var counter = 0;
 
 function increment(obj) {
-    counter++;
     var el_id = obj.getAttribute('data-id');
+    counter = document.getElementById('odds-multipliers-' + el_id).value;
+    counter++;
     document.getElementById('odds-multipliers-' + el_id).value = counter;
 }
 
@@ -293,10 +294,26 @@ function decrement(obj) {
 
     if (el.value > 0) {
         counter--;
+    } else {
+        counter = 0;
     }
 
     el.value = counter;
 }
+
+// Toggling the active class
+const magicLinks = document.querySelectorAll('.magic-item');
+
+function activeLink() {
+    magicLinks.forEach((link) => {
+        link.classList.remove('active');
+        this.classList.add('active');
+    });
+}
+
+magicLinks.forEach((link) => {
+    link.addEventListener('click', activeLink);
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize AOS

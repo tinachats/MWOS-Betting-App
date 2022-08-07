@@ -227,7 +227,7 @@ body {
 .update-alert {
     height: 8px;
     width: 8px;
-    right: -.15rem;
+    right: -.3rem;
     top: 0;
     color: var(--bs-white);
     background-color: var(--bs-dark);
@@ -795,7 +795,7 @@ input[role="switch"]:checked {
 }
 
 input[role="switch"]:checked::before {
-    left: 22px;
+    left: 19px;
     background-color: #ef9432;
 }
 
@@ -1049,6 +1049,12 @@ a:hover {
     padding-left: 0;
     margin-bottom: 0;
     border-radius: 0.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.offcanvas .list-group,
+.offcanvas .list-group .list-group-item {
+    box-shadow: none;
 }
 
 .list-group-flush {
@@ -1081,6 +1087,7 @@ a:hover {
 .list-group>.list-group-item {
     color: var(--soft-grey);
     border-color: var(--border-color);
+    box-shadow: var(--shadow-sm);
 }
 
 .list-group>.list-group-item:first-child {
@@ -1374,34 +1381,6 @@ input[type=number] {
     color: var(--bs-dark);
 }
 
-.nav-list>.nav-item#main-nav-item {
-    position: relative;
-    background-color: var(--app-body-color);
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    margin-top: -1.5rem;
-}
-
-.nav-list>.nav-item#main-nav-item>.nav-link {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: grid;
-    height: 55px;
-    width: 55px;
-    border-radius: 50%;
-    border: var(--border-width) solid var(--border-color);
-    background-color: var(--app-color);
-    color: var(--bs-warning);
-}
-
-.nav-list>.nav-item#main-nav-item>.nav-link>i {
-    margin: auto;
-    font-size: 2rem;
-}
-
 .top-nav .nav-link {
     color: var(--bs-dark);
 }
@@ -1436,6 +1415,119 @@ input[type=number] {
 .top-nav.main-nav .btn.btn-outline-default.active,
 .top-nav.main-nav .btn.btn-outline-default:hover {
     background-color: var(--soft-grey);
+}
+
+.magic-nav {
+    height: 50px;
+    box-shadow: var(--shadow-sm);
+}
+
+.magic-nav .magic-list {
+    position: relative;
+}
+
+.magic-nav .nav-item.active>.magic-link .avatar-status {
+    background-color: var(--bs-warning);
+}
+
+.magic-nav .nav-item.active>.magic-link .icon-wrapper i,
+.magic-nav .nav-item.active>.magic-link small.icon-text {
+    color: var(--bs-warning);
+}
+
+.magic-nav .nav-item>.magic-link {
+    position: relative;
+    width: 48px;
+    height: 60px;
+}
+
+.magic-nav .nav-item>.nav-indicator {
+    display: none;
+}
+
+.magic-nav .nav-item.active>.nav-indicator {
+    display: block;
+}
+
+.magic-nav .nav-item>.magic-link .icon-wrapper {
+    position: relative;
+    display: block;
+    transition: .5s;
+}
+
+.magic-nav .nav-item.active>.magic-link .icon-wrapper {
+    transform: translateY(-37.5px);
+    font-size: 1.8rem;
+    z-index: 10;
+}
+
+.magic-nav .nav-item.active>.magic-link .icon-wrapper i {
+    margin-left: 0px;
+}
+
+.magic-nav .nav-item.active>.magic-link .badge {
+    display: none;
+}
+
+.magic-nav .nav-item>.magic-link .icon-wrapper i,
+.magic-nav .nav-item>.magic-link small.icon-text {
+    color: var(--hover-bg)
+}
+
+.magic-nav .nav-item>.magic-link .badge {
+    top: 5px;
+    right: -1.25rem;
+    height: 18px;
+    width: 18px;
+    font-size: .55em !important;
+}
+
+.magic-nav .nav-item>.magic-link .icon-text {
+    position: absolute;
+    bottom: -.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 500;
+    transition: .5s;
+    opacity: 0;
+}
+
+.magic-nav .nav-item.active>.magic-link .icon-text {
+    opacity: 1;
+    bottom: 1.2rem;
+    transition: .5s;
+}
+
+.main-nav.magic-nav .nav-indicator {
+    position: absolute;
+    top: -51%;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: var(--app-color);
+    border: 6px solid var(--app-body-color);
+    transition: .5s;
+}
+
+.main-nav.magic-nav .nav-indicator::before,
+.main-nav.magic-nav .nav-indicator::after {
+    content: '';
+    position: absolute;
+    top: 60%;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    box-shadow: 0px -10px 0px 0px var(--app-body-color);
+}
+
+.main-nav.magic-nav .nav-indicator::before {
+    left: -20px;
+    border-top-right-radius: 20px;
+}
+
+.main-nav.magic-nav .nav-indicator::after {
+    right: -20px;
+    border-top-left-radius: 20px;
 }
 
 
