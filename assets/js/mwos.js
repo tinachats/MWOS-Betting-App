@@ -140,7 +140,7 @@ function animateProgressBar() {
     const section = document.querySelector('.performance-stats');
 
     // Get the top value of the section
-    const scrollDistance = Math.floor(section.getBoundingClientRect().top);
+    const scrolldiff = Math.floor(section.getBoundingClientRect().top);
 
     var id = setInterval(frame, 10);
 
@@ -194,68 +194,10 @@ function animatedCounter() {
 
 /*** App Timers ***/
 // Get all elements with the match-timer class
-const dates = document.querySelectorAll('[id^="kickoff-"]');
+const dates = document.querySelectorAll('.match-timer');
 
-// Countdown Timer
-function kickOffTime(dates) {
-    // Get the match status of each and every match
-    const matchStatuses = document.querySelectorAll('.match-status');
-
-    for (var i = 0; i < dates.length; i++) {
-        // Get all kickoff times
-        var matchDates = dates[i].getAttribute('id').split('-')[1];
-
-        // Set the kickoff time as the deadline
-        var deadline = new Date(matchDates);
-
-        // Get the difference in time between kickoff and now
-        var diff = Math.floor(deadline.getTime() - now.getTime());
-
-        // Time units
-        var sec = 1000;
-        var min = sec * 60;
-        var hr = min * 60;
-        var day = hr * 24;
-
-        // Get days
-        var days = Math.floor(diff / (day));
-
-        // Get hours
-        var hours = Math.floor((diff % (day)) / (hr));
-
-        // Get minutes
-        var minutes = Math.floor((diff % (hr)) / (min));
-
-        // Get secons
-        var seconds = Math.floor((diff % (min)) / sec);
-
-        // add a leading zero if it's single digit
-        var d = checkTime(days);
-        var h = checkTime(hours);
-        var m = checkTime(minutes);
-        var s = checkTime(seconds);
-
-        // If there's nolonger any difference in time stop the timer
-        if (diff <= 0) {
-            // Stop the countdown timer
-            clearInterval(timer);
-
-            // Start the match timer
-            // matchTimer();
-
-            document.getElementById('kickoff-' + matchDates).innerHTML = '90:00';
-            matchStatuses[i].innerHTML = 'LIVE';
-        } else {
-            document.getElementById('kickoff-' + matchDates).innerHTML = `${d}:${h}:${m}:${s}`;
-            matchStatuses[i].innerHTML = 'SOON';
-        }
-    }
-}
-
-//  update the timer
-var timer = setInterval(() => {
-    kickOffTime(dates);
-}, 1000);
+// Get the match status of each and every match
+const matchStatuses = document.querySelectorAll('.match-status');
 
 // add zero in front of numbers < 10
 function checkTime(i) {
@@ -264,6 +206,68 @@ function checkTime(i) {
     }
     return i;
 }
+
+document.addEventListener('readystatechange', event => {
+    if (event.target.readyState === 'complete') {
+        // Set the countdown date as an array
+        var countDownDate = [];
+
+        for (var i = 0; i < dates.length; i++) {
+            // Initialize count down date as an empty array
+            countDownDate[i] = [];
+            countDownDate[i]['el'] = dates[i];
+            countDownDate[i]['time'] = new Date(dates[i].getAttribute('data-kickoff')).getTime();
+            countDownDate[i]['days'] = 0;
+            countDownDate[i]['hours'] = 0;
+            countDownDate[i]['seconds'] = 0;
+            countDownDate[i]['minutes'] = 0;
+        }
+
+        var timer = setInterval(function() {
+            for (var i = 0; i < countDownDate.length; i++) {
+                // Get the difference in time between kickoff and now
+                var diff = countDownDate[i]['time'] - new Date().getTime();
+
+                // Time units
+                var sec = 1000; // 1000ms
+                var min = sec * 60;
+                var hr = min * 60;
+                var day = hr * 24;
+
+                // Get days
+                countDownDate[i]['days'] = Math.floor(diff / day);
+
+                // Get hours
+                countDownDate[i]['hours'] = Math.floor((diff % day) / hr);
+
+                // Get minutes
+                countDownDate[i]['minutes'] = Math.floor((diff % hr) / min);
+
+                // Get secons
+                countDownDate[i]['seconds'] = Math.floor((diff % min) / sec);
+
+                // add a leading zero if it's single digit
+                var d = checkTime(countDownDate[i]['days']);
+                var h = checkTime(countDownDate[i]['hours']);
+                var m = checkTime(countDownDate[i]['minutes']);
+                var s = checkTime(countDownDate[i]['seconds']);
+
+                // If there's nolonger any difference in time stop the timer
+                if (diff <= 0) {
+                    // Start the match timer for the elapsed timer
+                    // matchTimer();
+                    countDownDate[i]['el'].innerHTML = '90:00';
+                    matchStatuses[i].innerHTML = 'LIVE';
+                } else {
+                    countDownDate[i]['el'].innerHTML = `${d}:${h}:${m}:${s}`;
+                    matchStatuses[i].innerHTML = 'SOON';
+                }
+
+            }
+        }, 1000);
+    }
+});
+
 /*** /. Countdown Timer ***/
 
 // Make sure only numerics are entered

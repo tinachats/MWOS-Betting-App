@@ -2372,6 +2372,12 @@ li {
     border-top-right-radius: 1rem;
 }
 
+.match-timer,
+.match-timer>span {
+    color: var(--bs-muted);
+    font-size: var(--small-sm);
+}
+
 .scored-time {
     margin-right: 3px;
 }
