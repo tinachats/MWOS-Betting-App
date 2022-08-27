@@ -2112,6 +2112,10 @@ header.header .nav-scroller .nav>a.active {
     color: #fff;
 }
 
+.table tr>td .last-5-matches>img {
+    margin-right: 4px;
+}
+
 
 /* /.Tables */
 

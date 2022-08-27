@@ -177,44 +177,156 @@
     </nav>
     <!-- /.Top Navigation -->
 
-    <!-- Bottom Navigation -->
-    <nav class="main-nav fixed-bottom border-top shadow-sm">
-        <div class="container-fluid">
-            <ul class="nav-list d-flex justify-content-around m-0 px-0 py-1 w-100">
-                <li class="nav-item pt-2">
-                    <a class="nav-link text-center position-relative" href="#">
-                        <i class="bi bi-house"></i>
-                        <span class="avatar-status avatar-sm-status update-alert blink"></span>
+    <!-- Bottom Magic Navigation -->
+    <nav class="main-nav magic-nav fixed-bottom shadow-sm border-top d-md-none">
+        <div class="container">
+            <ul class="magic-list d-flex justify-content-evenly m-0 px-0 py-1 w-100">
+                <li class="nav-item magic-item active">
+                    <a href="index.html" class="nav-link magic-link text-center">
+                        <div class="icon-wrapper position-relative">
+                            <i class="bi bi-house"></i>
+                            <span class="avatar-status avatar-sm-status update-alert blink"></span>
+                        </div>
+                        <small class="small-xs text-capitalize icon-text">home</small>
                     </a>
+                    <div class="nav-indicator"></div>
                 </li>
-                <li class="nav-item pt-2">
-                    <a class="nav-link text-center" href="#">
-                        <i class="bi bi-search"></i>
+                <li class="nav-item magic-item">
+                    <a href="search.html" class="nav-link magic-link text-center">
+                        <div class="icon-wrapper position-relative">
+                            <i class="bi bi-search"></i>
+                        </div>
+                        <small class="small-xs text-capitalize icon-text">search</small>
                     </a>
+                    <div class="nav-indicator"></div>
                 </li>
-                <li class="nav-item" id="main-nav-item">
-                    <a class="nav-link text-center active" href="#">
-                        <i class="bi bi-coin"></i>
+                <li class="nav-item magic-item">
+                    <a href="my-bets.html" class="nav-link magic-link text-center">
+                        <div class="icon-wrapper position-relative">
+                            <i class="bi bi-coin"></i>
+                            <span class="position-absolute translate-middle badge rounded-circle bg-dark-white" style="right:-22px">
+                                3
+                                <span class="visually-hidden">my bets</span>
+                            </span>
+                        </div>
+                        <small class="small-xs text-capitalize icon-text">bets</small>
                     </a>
+                    <div class="nav-indicator"></div>
                 </li>
-                <li class="nav-item pt-2">
-                    <a class="nav-link text-center" href="#">
-                        <i class="bi bi-calendar-week"></i>
+                <li class="nav-item magic-item">
+                    <a href="events.html" class="nav-link magic-link text-center">
+                        <div class="icon-wrapper position-relative">
+                            <i class="bi bi-calendar4-week"></i>
+                            <span class="position-absolute translate-middle badge rounded-circle bg-dark-white" style="right:-22px">
+                                9+
+                                <span class="visually-hidden">calendar events</span>
+                            </span>
+                        </div>
+                        <small class="small-xs text-capitalize icon-text">events</small>
                     </a>
+                    <div class="nav-indicator"></div>
                 </li>
-                <li class="nav-item pt-2">
-                    <a class="nav-link text-center position-relative" href="#">
-                        <i class="bi bi-bell"></i>
-                        <span class="position-absolute top-15 start-75 translate-middle badge rounded-pill bg-warning">
-                            9
-                            <span class="visually-hidden">unread notifications</span>
-                        </span>
+                <li class="nav-item magic-item">
+                    <a href="notifications.html" class="nav-link magic-link text-center">
+                        <div class="icon-wrapper position-relative">
+                            <i class="bi bi-bell"></i>
+                            <span class="position-absolute translate-middle badge rounded-circle bg-dark-white">
+                                9
+                                <span class="visually-hidden">unread notifications</span>
+                            </span>
+                        </div>
+                        <small class="small-xs text-capitalize icon-text">notifications</small>
                     </a>
+                    <div class="nav-indicator"></div>
                 </li>
             </ul>
         </div>
     </nav>
-    <!-- ./ Bottom Navigation -->
+    <!-- ./ Bottom Magic Navigation -->
+
+    <!-- Settings Side Menu -->
+    <div class="offcanvas offcanvas-end bg-app-color mb-2" tabindex="-1" id="settings-sidebar" aria-labelledby="settings-sidebarLabel">
+        <div class="offcanvas-header border-bottom">
+            <div class="d-flex align-items-center justify-content-between w-100">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-gear text-dark me-2"></i>
+                    <h4 id="settings-sidebarLabel" class="m-0">Settings</h4>
+                </div>
+                <button type="button" class="btn btn-light back-btn rounded-circle text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <i class="bi bi-x-lg text-dark"></i>
+                </button>
+            </div>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-group list-group-flush">
+                <h6 class="small">Appearance Settings</h6>
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center form-check form-switch ps-0">
+                        <i class="bi-brightness-high theme-mode-icon bi-3x text-dark me-3"></i>
+                        <label class="form-check-label text-dark" for="theme-mode-toggle">
+                            <h6 class="small fw-bold my-0">Theme mode</h6>
+                            <small class="small text-muted my-0">
+                               <span id="theme-mode-type" class="text-muted">Set Dark theme</span>
+                            </small>
+                        </label>
+                        <input class="form-check-input ms-auto" type="checkbox" role="switch" id="theme-mode-toggle" value="toggle-theme" onchange="themeSettings(this)">
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center form-check form-switch ps-0">
+                        <i class="bi-circle-half theme-mode-icon bi-3x text-dark me-3"></i>
+                        <label class="form-check-label text-dark" for="theme-mode-automatic">
+                            <h6 class="small fw-bold my-0">
+                                Automatic at <span id="daytime-state">sunset</span>
+                            </h6>
+                            <small class="small text-muted my-0">
+                                <span id="theme-auto-state" class="text-muted">Off until 18:00</span>
+                            </small>
+                        </label>
+                        <input class="form-check-input ms-auto" type="checkbox" role="switch" id="theme-mode-automatic" value="toggle-theme" onchange="automaticMode()">
+                    </div>
+                </li>
+                <h6 class="small mt-3">Odds Settings</h6>
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center form-check form-switch ps-0">
+                        <i class="bi-coin bi-3x text-dark me-3"></i>
+                        <label class="form-check-label text-dark" for="american">
+                            <h6 class="small fw-bold my-0">American Odds</h6>
+                            <small class="small text-muted my-0">
+                                Represented by (+) or (-)
+                            </small>
+                        </label>
+                        <input class="form-check-input odd-type ms-auto" type="radio" name="betting-odds" role="switch" id="american">
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center form-check form-switch ps-0">
+                        <i class="bi-dice-1 bi-3x text-dark me-3"></i>
+                        <label class="form-check-label text-dark" for="decimal">
+                            <h6 class="small fw-bold my-0">Decimal Odds</h6>
+                            <small class="small text-muted my-0">
+                                Represented by decimals (.)
+                            </small>
+                        </label>
+                        <input class="form-check-input odd-type ms-auto" type="radio" name="betting-odds" role="switch" id="decimal" checked>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center form-check form-switch ps-0">
+                        <i class="bi-percent bi-3x text-dark me-3"></i>
+                        <label class="form-check-label text-dark" for="percentages">
+                            <h6 class="small fw-bold my-0">Percentage Odds</h6>
+                            <small class="small text-muted my-0">
+                                Represented by percentages (%)
+                            </small>
+                        </label>
+                        <input class="form-check-input odd-type ms-auto" type="radio" name="betting-odds" role="switch" id="percentages">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /. Settings Side Menu -->
 
     <!-- Side Menu -->
     <div class="offcanvas offcanvas-start bg-app-color mb-5" tabindex="-1" id="account-info" aria-labelledby="account-infoLabel">

@@ -2990,44 +2990,72 @@
     </div>
     <!-- /. Settings Side Menu -->
 
-    <!-- Bottom Navigation -->
-    <nav class="main-nav fixed-bottom border-top shadow-sm d-md-none">
-        <div class="container-fluid">
-            <ul class="nav-list d-flex justify-content-around m-0 px-0 py-1 w-100">
-                <li class="nav-item pt-2">
-                    <a class="nav-link text-center position-relative" href="index.html">
-                        <i class="bi bi-house"></i>
-                        <span class="avatar-status avatar-sm-status update-alert blink"></span>
+    <!-- Bottom Magic Navigation -->
+    <nav class="main-nav magic-nav fixed-bottom shadow-sm border-top d-md-none">
+        <div class="container">
+            <ul class="magic-list d-flex justify-content-evenly m-0 px-0 py-1 w-100">
+                <li class="nav-item magic-item active">
+                    <a href="index.html" class="nav-link magic-link text-center">
+                        <div class="icon-wrapper position-relative">
+                            <i class="bi bi-house"></i>
+                            <span class="avatar-status avatar-sm-status update-alert blink"></span>
+                        </div>
+                        <small class="small-xs text-capitalize icon-text">home</small>
                     </a>
+                    <div class="nav-indicator"></div>
                 </li>
-                <li class="nav-item pt-2">
-                    <a class="nav-link text-center" href="search.html">
-                        <i class="bi bi-search"></i>
+                <li class="nav-item magic-item">
+                    <a href="search.html" class="nav-link magic-link text-center">
+                        <div class="icon-wrapper position-relative">
+                            <i class="bi bi-search"></i>
+                        </div>
+                        <small class="small-xs text-capitalize icon-text">search</small>
                     </a>
+                    <div class="nav-indicator"></div>
                 </li>
-                <li class="nav-item" id="main-nav-item">
-                    <a class="nav-link text-center active" href="#">
-                        <i class="bi bi-coin"></i>
+                <li class="nav-item magic-item">
+                    <a href="my-bets.html" class="nav-link magic-link text-center">
+                        <div class="icon-wrapper position-relative">
+                            <i class="bi bi-coin"></i>
+                            <span class="position-absolute translate-middle badge rounded-circle bg-dark-white" style="right:-22px">
+                                3
+                                <span class="visually-hidden">my bets</span>
+                            </span>
+                        </div>
+                        <small class="small-xs text-capitalize icon-text">bets</small>
                     </a>
+                    <div class="nav-indicator"></div>
                 </li>
-                <li class="nav-item pt-2">
-                    <a class="nav-link text-center" href="events.html">
-                        <i class="bi bi-calendar-week"></i>
+                <li class="nav-item magic-item">
+                    <a href="events.html" class="nav-link magic-link text-center">
+                        <div class="icon-wrapper position-relative">
+                            <i class="bi bi-calendar4-week"></i>
+                            <span class="position-absolute translate-middle badge rounded-circle bg-dark-white" style="right:-22px">
+                                9+
+                                <span class="visually-hidden">calendar events</span>
+                            </span>
+                        </div>
+                        <small class="small-xs text-capitalize icon-text">events</small>
                     </a>
+                    <div class="nav-indicator"></div>
                 </li>
-                <li class="nav-item pt-2">
-                    <a class="nav-link text-center position-relative" href="notifications.html">
-                        <i class="bi bi-bell"></i>
-                        <span class="position-absolute top-15 start-75 translate-middle badge rounded-pill bg-warning">
-                            9
-                            <span class="visually-hidden">unread notifications</span>
-                        </span>
+                <li class="nav-item magic-item">
+                    <a href="notifications.html" class="nav-link magic-link text-center">
+                        <div class="icon-wrapper position-relative">
+                            <i class="bi bi-bell"></i>
+                            <span class="position-absolute translate-middle badge rounded-circle bg-dark-white">
+                                9
+                                <span class="visually-hidden">unread notifications</span>
+                            </span>
+                        </div>
+                        <small class="small-xs text-capitalize icon-text">notifications</small>
                     </a>
+                    <div class="nav-indicator"></div>
                 </li>
             </ul>
         </div>
     </nav>
-    <!-- ./ Bottom Navigation -->
+    <!-- ./ Bottom Magic Navigation -->
 
     <!-- Side Menu -->
     <div class="offcanvas offcanvas-start side-menu bg-app-color mb-2" data-bs-scroll="false" tabindex="-1" id="account-info" aria-labelledby="account-infoLabel">
