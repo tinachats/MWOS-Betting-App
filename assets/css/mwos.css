@@ -1677,6 +1677,7 @@ header.header .nav-scroller .nav {
     justify-content: start;
 }
 
+.nav-tabs.nav-scroller::-webkit-scrollbar,
 .nav-scroller .nav::-webkit-scrollbar {
     width: 0;
     height: 0;
