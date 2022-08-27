@@ -363,7 +363,7 @@ body {
     z-index: 10;
 }
 
-.prev-results {
+.rounded-top-4 .prev-results {
     position: relative;
     margin: 0 1rem;
 }
@@ -1114,6 +1114,10 @@ a:hover {
     border-width: 0 0 var(--border-width);
 }
 
+.match-list li {
+    margin-bottom: .5rem;
+}
+
 .matches-group li {
     position: relative;
 }
@@ -1658,6 +1662,7 @@ header.header .nav-scroller .nav {
     margin-top: -1px;
 }
 
+.nav-tabs.nav-scroller,
 .nav-scroller .nav {
     display: flex;
     flex-wrap: nowrap;
@@ -1666,6 +1671,10 @@ header.header .nav-scroller .nav {
     text-align: center;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
+}
+
+.nav-tabs.nav-scroller {
+    justify-content: start;
 }
 
 .nav-scroller .nav::-webkit-scrollbar {
@@ -2372,6 +2381,11 @@ li {
     border-top-right-radius: 1rem;
 }
 
+.rounded-bottom-4 {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
 .match-timer,
 .match-timer>span {
     color: var(--bs-muted);
@@ -2380,6 +2394,12 @@ li {
 
 .scored-time {
     margin-right: 3px;
+}
+
+.fixed-ontop {
+    background-color: var(--app-color);
+    border-bottom: var(--border-width) solid var(--border-color);
+    box-shadow: var(--shadow-sm);
 }
 
 .h-invert {
@@ -2488,6 +2508,9 @@ li {
     header.header .nav-scroller .nav>a.active::after {
         bottom: .3rem;
     }
+    .nav-tabs.nav-scroller {
+        justify-content: space-between;
+    }
     .nav-tabs:not(.default-tabs) .nav-link.active::after {
         bottom: -.75rem;
     }
@@ -2553,6 +2576,9 @@ li {
     .score-card img {
         width: 25px;
         height: 25px;
+    }
+    .border-xs-bottom {
+        border-bottom: 1px solid var(--border-color) !important;
     }
 }
 
