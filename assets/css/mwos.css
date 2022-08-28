@@ -1663,6 +1663,7 @@ header.header .nav-scroller .nav {
 }
 
 .nav-tabs.nav-scroller,
+.nav-scroller.scroll-list,
 .nav-scroller .nav {
     display: flex;
     flex-wrap: nowrap;
@@ -1670,13 +1671,13 @@ header.header .nav-scroller .nav {
     scrollbar-width: none;
     text-align: center;
     white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
 }
 
 .nav-tabs.nav-scroller {
     justify-content: start;
 }
 
+.nav-scroller.scroll-list::-webkit-scrollbar,
 .nav-tabs.nav-scroller::-webkit-scrollbar,
 .nav-scroller .nav::-webkit-scrollbar {
     width: 0;
@@ -1704,6 +1705,10 @@ header.header .nav-scroller .nav>a:hover,
 header.header .nav-scroller .nav>a.active {
     background-color: var(--app-color);
     color: var(--bs-warning);
+}
+
+.nav-scroller.scroll-list .nav-scroller-item:not(:last-child) {
+    margin-right: 1rem;
 }
 
 .nav-scroller.cirlcled-items .nav>a:not(:last-child),
@@ -2411,6 +2416,38 @@ li {
     transform: scaleX(-1) !important;
 }
 
+.goals-scored {
+    position: relative;
+    margin: -1rem;
+}
+
+.goals-scored img {
+    height: 2rem;
+    width: 2rem;
+}
+
+.goals-scored .goal-aggregates {
+    position: absolute;
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 50%;
+    background-color: var(--hover-bg);
+    font-size: .7rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    padding: 2px;
+    top: 1rem;
+    left: 50%;
+}
+
+.goals-scored .goal-aggregates>span {
+    color: var(--app-color);
+    margin: auto;
+}
+
 
 /* /. Utility Classes */
 
@@ -2598,6 +2635,11 @@ li {
     .nav-scroller nav a {
         padding: .25rem;
     }
+    .nav-tabs.nav-scroller,
+    .nav-scroller.scroll-list,
+    .nav-scroller .nav {
+        -webkit-overflow-scrolling: touch;
+    }
 }
 
 
@@ -2744,6 +2786,11 @@ li {
     }
     .soccer-pitch .pitch-wrapper {
         height: 680px;
+    }
+    .nav-tabs.nav-scroller,
+    .nav-scroller.scroll-list,
+    .nav-scroller .nav {
+        -webkit-overflow-scrolling: scroll;
     }
 }
 

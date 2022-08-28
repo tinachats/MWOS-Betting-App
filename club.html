@@ -44,7 +44,7 @@
         
         @media(max-width: 576px) {
             .content {
-                margin-top: 4rem;
+                margin-top: 3rem;
             }
             .sticky-navbar .rounded-top-4 {
                 border-top-right-radius: 0 !important;
@@ -728,7 +728,7 @@
     <!-- /.Top Navigation -->
 
     <!-- Page Header -->
-    <nav class="navbar sticky-navbar sticky-top border-xs-bottom py-md-0">
+    <nav class="navbar sticky-navbar sticky-top border-xs-bottom py-0">
         <div class="container-md justify-content-start bg-white rounded-top-4">
             <div class="d-flex align-items-center w-100">
                 <a href="javascript:history.go(-1)" role="button" class="btn btn-light back-btn me-1 rounded-circle">
@@ -759,7 +759,7 @@
             </div>
         </div>
         <div class="container-md justify-content-start bg-white rounded-bottom-4">
-            <div class="nav nav-tabs nav-scroller" id="nav-tab" role="tablist" style="border-bottom:none">
+            <div class="nav nav-tabs nav-scroller" id="nav-tab" role="tablist">
                 <a href="#" class="nav-link active" id="nav-scores-tab" data-bs-toggle="tab" data-bs-target="#nav-scores" role="button" role="tab" aria-controls="nav-scores" aria-selected="true">Scores</a>
                 <a href="#" class="nav-link" id="nav-fixtures-tab" data-bs-toggle="tab" data-bs-target="#nav-fixtures" role="button" role="tab" aria-controls="nav-fixtures" aria-selected="false">Fixtures</a>
                 <a href="#" class="nav-link" id="nav-standings-tab" data-bs-toggle="tab" data-bs-target="#nav-standings" role="button" role="tab" aria-controls="nav-standings" aria-selected="false">Standings</a>
@@ -782,7 +782,7 @@
                             <div class="card-header py-3">
                                 <div class="d-flex align-item-center">
                                     <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/soccer/leagues/epl-default.png" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
-                                    <h6 class="smallfw-bold text-capitalize my-0 ms-2">
+                                    <h6 class="small fw-bold text-capitalize my-0 ms-2">
                                         League Standings
                                     </h6>
                                 </div>
@@ -1612,7 +1612,7 @@
                                     <div class="card-header py-3">
                                         <div class="d-flex align-item-center">
                                             <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/soccer/leagues/epl-default.png" alt="League Logo" class="lazy" loading="lazy" height="20" width="20">
-                                            <h6 class="smallfw-bold text-capitalize my-0 ms-2">
+                                            <h6 class="small fw-bold text-capitalize my-0 ms-2">
                                                 League Standings
                                             </h6>
                                         </div>
@@ -1951,11 +1951,190 @@
                                                 </tbody>
                                             </table>
                                         </div>
+                                        <!-- /.Table -->
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="nav-stats" role="tabpanel" aria-labelledby="nav-stats-tab">
-                                <h1>Stats</h1>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <!-- League -->
+                                        <div class="card-header">
+                                            <div class="d-flex align-item-center">
+                                                <img src="assets/images/soccer/leagues/epl-default.png" data-src="assets/images/soccer/leagues/epl-default.png" alt="League Logo" class="" loading="lazy" height="20" width="20">
+                                                <h6 class="small fw-bold text-capitalize my-0 ms-2">
+                                                    english premier league
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <!-- /.League -->
+
+                                        <!-- Club Stats -->
+                                        <div class="card-body">
+                                            <h6 class="text-uppercase text-center text-muted small">Top Scorers</h6>
+                                            <!-- Top Scorers -->
+                                            <ul class="nav-scroller scroll-list m-0 p-0">
+                                                <!-- Player -->
+                                                <li class="nav-scroller-item">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="d-block text-center">
+                                                            <img src="assets/images/app/logo-placeholder.png" data-src="https://img.a.transfermarkt.technology/portrait/header/258923-1565603308.png?lm=1" alt="Player" class="lazy rounded-circle" height="80" width="80">
+                                                            <div class="d-block text-center goals-scored position-relative">
+                                                                <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/soccer-ball.svg" alt="Goal" class="lazy">
+                                                                <div class="goal-aggregates">
+                                                                    <span>12</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-block mt-4">
+                                                                <h5 class="text-capitalize small my-0">marcus rashford</h5>
+                                                                <h6 class="small-xs text-muted text-capitalize fw-normal my-0">
+                                                                    left winger
+                                                                </h6>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://flagcdn.com/16x12/gb.png" alt="england" height="16" width="16" class="lazy" loading="lazy">
+                                                                    <span class="text-capitalize text-muted small-xs ms-1">england</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <!-- /.Player -->
+
+                                                <!-- Player -->
+                                                <li class="nav-scroller-item">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="d-block text-center">
+                                                            <img src="assets/images/app/logo-placeholder.png" data-src="https://img.a.transfermarkt.technology/portrait/header/8198-1631656078.jpg?lm=1" alt="Player" class="lazy rounded-circle" height="80" width="80">
+                                                            <div class="d-block text-center goals-scored position-relative">
+                                                                <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/soccer-ball.svg" alt="Goal" class="lazy">
+                                                                <div class="goal-aggregates">
+                                                                    <span>28</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-block mt-4">
+                                                                <h5 class="text-capitalize small my-0">cristiano ronaldo</h5>
+                                                                <h6 class="small-xs text-muted text-capitalize fw-normal my-0">
+                                                                    center forward
+                                                                </h6>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://flagcdn.com/16x12/pt.png" alt="Portugal" height="16" width="16" class="lazy" loading="lazy">
+                                                                    <span class="text-capitalize text-muted small-xs ms-1">portugal</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <!-- /.Player -->
+
+                                                <!-- Player -->
+                                                <li class="nav-scroller-item">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="d-block text-center">
+                                                            <img src="assets/images/app/logo-placeholder.png" data-src="https://img.a.transfermarkt.technology/portrait/header/401173-1632686361.jpg?lm=1" alt="Player" class="lazy rounded-circle" height="80" width="80">
+                                                            <div class="d-block text-center goals-scored position-relative">
+                                                                <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/soccer-ball.svg" alt="Goal" class="lazy">
+                                                                <div class="goal-aggregates">
+                                                                    <span>7</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-block mt-4">
+                                                                <h5 class="text-capitalize small my-0">jadon sancho</h5>
+                                                                <h6 class="small-xs text-muted text-capitalize fw-normal my-0">
+                                                                    left winger
+                                                                </h6>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://flagcdn.com/16x12/gb.png" alt="england" height="16" width="16" class="lazy" loading="lazy">
+                                                                    <span class="text-capitalize text-muted small-xs ms-1">england</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <!-- /.Player -->
+
+                                                <!-- Player -->
+                                                <li class="nav-scroller-item">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="d-block text-center">
+                                                            <img src="assets/images/app/logo-placeholder.png" data-src="https://img.a.transfermarkt.technology/portrait/header/182877-1595947846.jpg?lm=1" alt="Player" class="lazy rounded-circle" height="80" width="80">
+                                                            <div class="d-block text-center goals-scored position-relative">
+                                                                <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/soccer-ball.svg" alt="Goal" class="lazy">
+                                                                <div class="goal-aggregates">
+                                                                    <span>4</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-block mt-4">
+                                                                <h5 class="text-capitalize small my-0">anthony martial</h5>
+                                                                <h6 class="small-xs text-muted text-capitalize fw-normal my-0">
+                                                                    center forward
+                                                                </h6>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://flagcdn.com/16x12/fr.png" alt="france" height="16" width="16" class="lazy" loading="lazy">
+                                                                    <span class="text-capitalize text-muted small-xs ms-1">france</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <!-- /.Player -->
+
+                                                <!-- Player -->
+                                                <li class="nav-scroller-item">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="d-block text-center">
+                                                            <img src="assets/images/app/logo-placeholder.png" data-src="https://img.a.transfermarkt.technology/portrait/header/357147-1602074624.jpg?lm=1" alt="Player" class="lazy rounded-circle" height="80" width="80">
+                                                            <div class="d-block text-center goals-scored position-relative">
+                                                                <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/soccer-ball.svg" alt="Goal" class="lazy">
+                                                                <div class="goal-aggregates">
+                                                                    <span>2</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-block mt-4">
+                                                                <h5 class="text-capitalize small my-0">diogo dalot</h5>
+                                                                <h6 class="small-xs text-muted text-capitalize fw-normal my-0">
+                                                                    right back
+                                                                </h6>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://flagcdn.com/16x12/pt.png" alt="Portugal" height="16" width="16" class="lazy" loading="lazy">
+                                                                    <span class="text-capitalize text-muted small-xs ms-1">portugal</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <!-- /.Player -->
+
+                                                <!-- Player -->
+                                                <li class="nav-scroller-item">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="d-block text-center">
+                                                            <img src="assets/images/app/logo-placeholder.png" data-src="https://img.a.transfermarkt.technology/portrait/header/583189-1620800347.jpg?lm=1" alt="Player" class="lazy rounded-circle" height="80" width="80">
+                                                            <div class="d-block text-center goals-scored position-relative">
+                                                                <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/soccer-ball.svg" alt="Goal" class="lazy">
+                                                                <div class="goal-aggregates">
+                                                                    <span>1</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-block mt-4">
+                                                                <h5 class="text-capitalize small my-0">anthony elanga</h5>
+                                                                <h6 class="small-xs text-muted text-capitalize fw-normal my-0">
+                                                                    left forward
+                                                                </h6>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    <img src="assets/images/app/logo-placeholder.png" data-src="https://flagcdn.com/16x12/se.png" alt="sweden" height="16" width="16" class="lazy" loading="lazy">
+                                                                    <span class="text-capitalize text-muted small-xs ms-1">sweden</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <!-- /.Player -->
+                                            </ul>
+                                            <!-- /.Top Scorers -->
+                                        </div>
+                                        <!-- /.Club Stats -->
+                                    </div>
+                                </div>
                             </div>
                             <div class="tab-pane fade" id="nav-players" role="tabpanel" aria-labelledby="nav-players-tab">
                                 <h1>Players</h1>
