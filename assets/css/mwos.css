@@ -1671,6 +1671,9 @@ header.header .nav-scroller .nav {
     scrollbar-width: none;
     text-align: center;
     white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 .nav-tabs.nav-scroller {
@@ -2426,6 +2429,11 @@ li {
     width: 2rem;
 }
 
+.goals-scored img.injury-img {
+    width: 20px !important;
+    height: 20px !important;
+}
+
 .goals-scored .goal-aggregates {
     position: absolute;
     height: 1.25rem;
@@ -2787,10 +2795,9 @@ li {
     .soccer-pitch .pitch-wrapper {
         height: 680px;
     }
-    .nav-tabs.nav-scroller,
-    .nav-scroller.scroll-list,
-    .nav-scroller .nav {
-        -webkit-overflow-scrolling: scroll;
+    .nav-scroller.scroll-list::-webkit-scrollbar {
+        width: 2rem;
+        height: 5px;
     }
 }
 
