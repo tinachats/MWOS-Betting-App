@@ -481,6 +481,18 @@ body {
     color: var(--bs-dark);
 }
 
+.btn-darkapp {
+    background-color: var(--hover-bg);
+}
+
+.btn-darkapp:hover {
+    opacity: .9;
+}
+
+.btn-darkapp * {
+    color: var(--app-color) !important;
+}
+
 .top-nav.main-nav .btn.btn-outline-default,
 .back-btn {
     height: 35px;
@@ -803,6 +815,44 @@ input[role="switch"]:checked::before {
 /* /.Checkboxes and Radio Buttons */
 
 
+/* Cover Images */
+
+figure.cover-img-wrapper {
+    position: relative;
+    height: 120px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+figure.cover-img-wrapper>img.cover-photo {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+figure.cover-img-wrapper>img#display-img {
+    position: absolute;
+    object-fit: cover;
+    left: 3%;
+    border: 4px solid var(--app-color);
+    background-color: var(--app-body-color);
+}
+
+figure.cover-img-wrapper>.cover-action-btns {
+    position: absolute;
+    width: 100%;
+    top: 10px;
+}
+
+.club-title {
+    position: absolute;
+}
+
+
+/* /.Cover Images */
+
+
 /* CSS Grid */
 
 .d-grid,
@@ -875,7 +925,7 @@ input[role="switch"]:checked::before {
     border: none;
     border-radius: 0.75rem;
     box-shadow: var(--shadow-lg);
-    z-index: 1000000;
+    z-index: 10000;
 }
 
 .dark-mode .dropdown-menu {
@@ -1335,6 +1385,10 @@ input[type="range"]::-moz-range-thumb:hover {
 
 .navbar .nav-item:not(:last-child) {
     margin-right: 0.5rem;
+}
+
+.navbar.sticky-navbar {
+    z-index: 9999;
 }
 
 
@@ -2583,6 +2637,7 @@ li {
     .sticky-navbar,
     .sticky-navpill {
         height: 45px;
+        background-color: var(--app-color);
     }
     .top-nav.main-nav .navbar-brand>img,
     .top-nav.main-nav .form-wrapper,
@@ -2698,6 +2753,16 @@ li {
     }
     .border-xs-bottom {
         border-bottom: 1px solid var(--border-color) !important;
+    }
+    figure.cover-img-wrapper>img#display-img {
+        bottom: -30px;
+        height: 60px;
+        width: 60px;
+    }
+    .club-title {
+        left: 5%;
+        margin-top: 3rem;
+        font-size: var(--small-sm);
     }
 }
 
@@ -2815,6 +2880,14 @@ li {
     .soccer-pitch .team-formation .d-grid.grid-col-1 .team-player .status.goal-scorer {
         left: 1rem;
     }
+    figure.cover-img-wrapper>img#display-img {
+        bottom: -65px;
+        height: 130px;
+        width: 130px;
+    }
+    .club-title {
+        left: 25%;
+    }
 }
 
 
@@ -2867,6 +2940,9 @@ li {
     .nav-scroller.scroll-list::-webkit-scrollbar {
         width: 2rem;
         height: 5px;
+    }
+    .club-title {
+        left: 21%;
     }
 }
 

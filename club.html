@@ -679,85 +679,52 @@
             </div>
         </nav>
         <!-- /.Main Nav -->
-
-        <!-- Sub Nav -->
-        <div class="nav-scroller border-top sticky-top">
-            <div class="container">
-                <nav class="nav d-flex justify-content-between">
-                    <a class="sport-link active" href="#football" id="nav-football-tab" data-bs-toggle="tab" data-bs-target="#nav-football" type="button" role="tab" aria-controls="nav-football" aria-selected="true">
-                        <img src="assets/images/sports/football.svg" alt="SportBall">Football
-                    </a>
-                    <a class="sport-link" href="#basketball" id="nav-basketball-tab" data-bs-toggle="tab" data-bs-target="#nav-basketball" type="button" role="tab" aria-controls="nav-basketball" aria-selected="false">
-                        <img src="assets/images/sports/basketball.svg" alt="SportBall">Basketball
-                    </a>
-                    <a class="sport-link" href="#tennis" id="nav-tennis-tab" data-bs-toggle="tab" data-bs-target="#nav-tennis" type="button" role="tab" aria-controls="nav-tennis" aria-selected="false">
-                        <img src="assets/images/sports/tennisball.svg" alt="SportBall">Tennis
-                    </a>
-                    <a class="sport-link" href="#hockey" id="nav-hockey-tab" data-bs-toggle="tab" data-bs-target="#nav-hockey" type="button" role="tab" aria-controls="nav-hockey" aria-selected="false">
-                        <img src="assets/images/sports/hockey.svg" alt="SportBall">Hockey
-                    </a>
-                    <a class="sport-link" href="#rugby" id="nav-rugby-tab" data-bs-toggle="tab" data-bs-target="#nav-rugby" type="button" role="tab" aria-controls="nav-rugby" aria-selected="false">
-                        <img src="assets/images/sports/rugbyball.svg" alt="SportBall">Rugby
-                    </a>
-                    <a class="sport-link" href="#dog-racing" id="nav-dog-racing-tab" data-bs-toggle="tab" data-bs-target="#nav-dog-racing" type="button" role="tab" aria-controls="nav-greyhounds" aria-selected="false">
-                        <img src="assets/images/sports/greyhounds.svg" alt="SportBall">Dog Racing
-                    </a>
-                    <a class="sport-link" href="#horse-racing" id="nav-horse-racing-tab" data-bs-toggle="tab" data-bs-target="#nav-horse-racing" type="button" role="tab" aria-controls="nav-horses" aria-selected="false">
-                        <img src="assets/images/sports/horse-racing.svg" alt="SportBall">Horse Racing
-                    </a>
-                    <a class="sport-link" href="#basketball" id="nav-baseball-tab" data-bs-toggle="tab" data-bs-target="#nav-baseball" type="button" role="tab" aria-controls="nav-baseball" aria-selected="false">
-                        <img src="assets/images/sports/baseball.svg" alt="SportBall">Baseball
-                    </a>
-                    <a class="sport-link" href="#" id="nav-cricket-tab" data-bs-toggle="tab" data-bs-target="#nav-cricket" type="button" role="tab" aria-controls="nav-cricket" aria-selected="false">
-                        <img src="assets/images/sports/cricketball.svg" alt="SportBall">Cricket
-                    </a>
-                    <a class="sport-link" href="#" id="nav-handball-tab" data-bs-toggle="tab" data-bs-target="#nav-handball" type="button" role="tab" aria-controls="nav-handball" aria-selected="false">
-                        <img src="assets/images/sports/handball.svg" alt="SportBall">Handball
-                    </a>
-                    <a class="sport-link" href="#" id="nav-volleyball-tab" data-bs-toggle="tab" data-bs-target="#nav-volleyball" type="button" role="tab" aria-controls="nav-volleyball" aria-selected="false">
-                        <img src="assets/images/sports/volleyball.svg" alt="SportBall">Volleyball
-                    </a>
-                    <a class="sport-link" href="#" id="nav-formula-1-tab" data-bs-toggle="tab" data-bs-target="#nav-formula-1" type="button" role="tab" aria-controls="nav-formula-1" aria-selected="false">
-                        <img src="assets/images/sports/motor-racing.svg" alt="SportBall">Formula 1
-                    </a>
-                </nav>
-            </div>
-        </div>
-        <!-- /. Sub Nav -->
     </header>
     <!-- /.Top Navigation -->
 
     <!-- Page Header -->
     <nav class="navbar sticky-navbar sticky-top border-xs-bottom py-0">
-        <div class="container-md justify-content-start bg-white rounded-top-4">
-            <div class="d-flex align-items-center w-100">
-                <a href="javascript:history.go(-1)" role="button" class="btn btn-light back-btn me-1 rounded-circle">
-                    <i class="bi bi-chevron-left"></i>
-                </a>
-                <a class="navbar-brand m-0 p-0" href="league.html">
-                    <div class="d-flex align-items-center nav-title">
-                        <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" alt="Logo" width="120" height="120" class="d-inline-block align-text-middle rounded-circle lazy" loading="lazy">
-                        <div class="d-block ms-1">
-                            <h1 class="my-0 text-capitalize small-xs">Manchester United</h1>
-                        </div>
-                    </div>
-                </a>
-                <ul class="ms-auto pt-md-3">
-                    <li class="list-inline-item d-none d-md-inline-flex">
-                        <div class="d-flex align-items-center">
-                            <i class="bi-people"></i>
-                            <span class="ms-1 text-uppercase small-xs">9.32m</span>
-                        </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="javascript:void(0)" class="nav-link btn btn-outline-darkapp btn-sm rounded-pill follow-btn small-xs mt-2 mt-md-0 px-md-4">
-                            <i class="bi-plus-lg"></i>
-                            <span class="ms-1">Follow</span>
-                        </a>
-                    </li>
-                </ul>
+        <!-- Cover Image -->
+        <figure class="container cover-img-wrapper w-100">
+            <img src="assets/images/fields/old-trafford.jpg" class="cover-photo" alt="Old Trafford">
+            <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" alt="Logo" height="130" width="130" loading="lazy" id="display-img" class="lazy rounded-circle">
+
+            <!-- Action Buttons -->
+            <div class="container cover-action-btns">
+                <div class="d-flex align-items-center w-100">
+                    <a href="javascript:history.go(-1)" role="button" class="btn btn-light back-btn rounded-circle">
+                        <i class="bi-chevron-left"></i>
+                    </a>
+                    <a href="javascript:void(0)" role="button" class="btn btn-light back-btn rounded-circle ms-auto">
+                        <i class="bi-search"></i>
+                    </a>
+                    <a href="javascript:void(0)" role="button" class="btn btn-light back-btn me-1 rounded-circle ms-3">
+                        <i class="bi-bell"></i>
+                    </a>
+                </div>
             </div>
+            <!-- /.Action Buttons -->
+        </figure>
+        <!-- /.Cover Image -->
+
+        <div class="container bg-white">
+            <h1 class="club-title text-capitalize">Manchester United</h1>
+            <ul class="d-flex align-items-center justify-content-end mt-md-2 w-100">
+                <li class="list-inline-item">
+                    <div class="d-flex align-items-center">
+                        <i class="bi-people bi-2x text-dark"></i>
+                        <span class="ms-1 text-uppercase small-xs">9.32m</span>
+                    </div>
+                </li>
+                <li class="list-inline-item">
+                    <button type="button" class="nav-link btn btn-darkapp btn-sm rounded-pill follow-btn small-xs mt-2 mt-md-0 px-md-4">
+                        <i class="bi-plus-lg"></i>
+                        <span class="ms-1">Follow</span>
+                    </button>
+                </li>
+            </ul>
         </div>
+
         <div class="container-md justify-content-start bg-white rounded-bottom-4">
             <div class="nav nav-tabs nav-scroller" id="nav-tab" role="tablist">
                 <a href="#" class="nav-link active" id="nav-scores-tab" data-bs-toggle="tab" data-bs-target="#nav-scores" role="button" role="tab" aria-controls="nav-scores" aria-selected="true">Scores</a>
@@ -2146,7 +2113,7 @@
                                                 <div class="d-block text-center">
                                                     <img src="assets/images/app/logo-placeholder.png" data-src="https://img.a.transfermarkt.technology/portrait/header/258923-1565603308.png?lm=1" alt="Player" class="lazy rounded-circle" height="80" width="80">
                                                     <div class="d-block text-center goals-scored position-relative">
-                                                        <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/soccer-ball.svg" alt="Goal" class="lazy">
+                                                        <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/assists.svg" alt="Goal" class="lazy">
                                                         <div class="goal-aggregates">
                                                             <span>12</span>
                                                         </div>
@@ -2172,7 +2139,7 @@
                                                 <div class="d-block text-center">
                                                     <img src="assets/images/app/logo-placeholder.png" data-src="https://img.a.transfermarkt.technology/portrait/header/8198-1631656078.jpg?lm=1" alt="Player" class="lazy rounded-circle" height="80" width="80">
                                                     <div class="d-block text-center goals-scored position-relative">
-                                                        <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/soccer-ball.svg" alt="Goal" class="lazy">
+                                                        <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/assists.svg" alt="Goal" class="lazy">
                                                         <div class="goal-aggregates">
                                                             <span>28</span>
                                                         </div>
@@ -2198,7 +2165,7 @@
                                                 <div class="d-block text-center">
                                                     <img src="assets/images/app/logo-placeholder.png" data-src="https://img.a.transfermarkt.technology/portrait/header/401173-1632686361.jpg?lm=1" alt="Player" class="lazy rounded-circle" height="80" width="80">
                                                     <div class="d-block text-center goals-scored position-relative">
-                                                        <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/soccer-ball.svg" alt="Goal" class="lazy">
+                                                        <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/assists.svg" alt="Goal" class="lazy">
                                                         <div class="goal-aggregates">
                                                             <span>7</span>
                                                         </div>
@@ -2224,7 +2191,7 @@
                                                 <div class="d-block text-center">
                                                     <img src="assets/images/app/logo-placeholder.png" data-src="https://img.a.transfermarkt.technology/portrait/header/182877-1595947846.jpg?lm=1" alt="Player" class="lazy rounded-circle" height="80" width="80">
                                                     <div class="d-block text-center goals-scored position-relative">
-                                                        <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/soccer-ball.svg" alt="Goal" class="lazy">
+                                                        <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/assists.svg" alt="Goal" class="lazy">
                                                         <div class="goal-aggregates">
                                                             <span>4</span>
                                                         </div>
@@ -2250,7 +2217,7 @@
                                                 <div class="d-block text-center">
                                                     <img src="assets/images/app/logo-placeholder.png" data-src="https://img.a.transfermarkt.technology/portrait/header/357147-1602074624.jpg?lm=1" alt="Player" class="lazy rounded-circle" height="80" width="80">
                                                     <div class="d-block text-center goals-scored position-relative">
-                                                        <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/soccer-ball.svg" alt="Goal" class="lazy">
+                                                        <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/assists.svg" alt="Goal" class="lazy">
                                                         <div class="goal-aggregates">
                                                             <span>2</span>
                                                         </div>
@@ -2276,7 +2243,7 @@
                                                 <div class="d-block text-center">
                                                     <img src="assets/images/app/logo-placeholder.png" data-src="https://img.a.transfermarkt.technology/portrait/header/583189-1620800347.jpg?lm=1" alt="Player" class="lazy rounded-circle" height="80" width="80">
                                                     <div class="d-block text-center goals-scored position-relative">
-                                                        <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/soccer-ball.svg" alt="Goal" class="lazy">
+                                                        <img src="assets/images/app/logo-placeholder.png" data-src="assets/images/app/assists.svg" alt="Goal" class="lazy">
                                                         <div class="goal-aggregates">
                                                             <span>1</span>
                                                         </div>
