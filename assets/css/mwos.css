@@ -845,6 +845,11 @@ figure.cover-img-wrapper>.cover-action-btns {
     top: 10px;
 }
 
+figure.cover-img-wrapper.fixed {
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+}
+
 .club-title {
     position: absolute;
 }
@@ -1588,12 +1593,6 @@ input[type=number] {
     border-top-left-radius: 20px;
 }
 
-
-/* /. Navbars */
-
-
-/* Navbars */
-
 .nav.nav-pills {
     background-color: var(--app-color);
     padding: 3px;
@@ -1698,6 +1697,38 @@ input[type=number] {
 .navbar-light .navbar-nav .show>.nav-link,
 .nav-tabs .nav-link.active * {
     color: var(--bs-warning);
+}
+
+.sticky-section.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--app-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transform: width .5s ease-in-out;
+    width: 100%;
+    z-index: 10000;
+}
+
+.sticky-section.fixed>.container:first-child {
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    transition: all .5s ease-in-out;
+}
+
+.sticky-section.fixed>.container:first-child .follow-details {
+    padding-top: .3rem;
+    transition: all .5s ease-in-out;
+}
+
+.sticky-section.fixed>.container:last-child {
+    padding-top: .5rem !important;
+}
+
+.sticky-section.fixed .club-title {
+    transition: all .5s ease-in-out;
 }
 
 
@@ -1991,11 +2022,11 @@ header.header .nav-scroller .nav>a.active {
     width: 100%;
     height: 100%;
     border-radius: 1rem;
+    transition: all .5s ease-in-out;
 }
 
 .app-player-card:hover .player-img>img {
     transform: scale(.9);
-    transition: all .5s ease-in-out;
 }
 
 
@@ -2665,6 +2696,19 @@ li {
         padding-top: .35rem !important;
         border-radius: 0;
     }
+    .sticky-section.fixed>.container:first-child .follow-details>li:first-child {
+        display: none;
+    }
+    .sticky-section.fixed>.container:first-child .follow-details>li:first-child {
+        display: none;
+    }
+    .sticky-section.fixed>.container:first-child .follow-details>li:last-child>button {
+        padding: .25rem .5rem;
+    }
+    .sticky-section.fixed .club-title {
+        left: 25%;
+        margin-top: 0;
+    }
     header.header .nav-scroller {
         height: auto;
     }
@@ -2759,9 +2803,12 @@ li {
         height: 60px;
         width: 60px;
     }
+    figure.cover-img-wrapper.fixed {
+        margin-top: -2rem;
+    }
     .club-title {
         left: 5%;
-        margin-top: 3rem;
+        margin-top: 2.5rem;
         font-size: var(--small-sm);
     }
 }
@@ -2885,6 +2932,9 @@ li {
         height: 130px;
         width: 130px;
     }
+    figure.cover-img-wrapper.fixed {
+        margin-top: -3.7rem;
+    }
     .club-title {
         left: 25%;
     }
@@ -2940,6 +2990,12 @@ li {
     .nav-scroller.scroll-list::-webkit-scrollbar {
         width: 2rem;
         height: 5px;
+    }
+    figure.cover-img-wrapper.fixed {
+        margin-top: -3.6rem;
+    }
+    .sticky-section.fixed .club-title {
+        left: 15%;
     }
     .club-title {
         left: 21%;

@@ -44,7 +44,7 @@
         
         @media(max-width: 576px) {
             .content {
-                margin-top: 3rem;
+                margin-top: .5rem;
             }
             .sticky-navbar .rounded-top-4 {
                 border-top-right-radius: 0 !important;
@@ -683,7 +683,7 @@
     <!-- /.Top Navigation -->
 
     <!-- Page Header -->
-    <nav class="navbar sticky-navbar sticky-top border-xs-bottom py-0">
+    <nav class="navbar border-xs-bottom py-0">
         <!-- Cover Image -->
         <figure class="container cover-img-wrapper w-100">
             <img src="assets/images/fields/old-trafford.jpg" class="cover-photo" alt="Old Trafford">
@@ -707,33 +707,43 @@
         </figure>
         <!-- /.Cover Image -->
 
-        <div class="container bg-white">
-            <h1 class="club-title text-capitalize">Manchester United</h1>
-            <ul class="d-flex align-items-center justify-content-end mt-md-2 w-100">
-                <li class="list-inline-item">
-                    <div class="d-flex align-items-center">
-                        <i class="bi-people bi-2x text-dark"></i>
-                        <span class="ms-1 text-uppercase small-xs">9.32m</span>
-                    </div>
-                </li>
-                <li class="list-inline-item">
-                    <button type="button" class="nav-link btn btn-darkapp btn-sm rounded-pill follow-btn small-xs mt-2 mt-md-0 px-md-4">
-                        <i class="bi-plus-lg"></i>
-                        <span class="ms-1">Follow</span>
-                    </button>
-                </li>
-            </ul>
-        </div>
+        <!-- Sticky Section -->
+        <div class="sticky-section w-100">
+            <div class="container bg-white pt-3" style="margin-top:-.4rem">
+                <div class="d-flex align-items-center navigation d-none">
+                    <a href="javascript:history.go(-1)" role="button" class="btn btn-light back-btn rounded-circle me-1">
+                        <i class="bi-chevron-left"></i>
+                    </a>
+                    <img src="assets/images/app/logo-placeholder.png" data-src="https://cdn.cdnlogo.com/logos/m/48/manchester-united.svg" alt="Logo" height="40" width="40" loading="lazy" class="lazy rounded-circle toggled-logo">
+                </div>
+                <h1 class="club-title text-capitalize">Manchester United</h1>
+                <ul class="d-flex align-items-center justify-content-end follow-details w-100">
+                    <li class="list-inline-item">
+                        <div class="d-flex align-items-center pt-2">
+                            <i class="bi-people bi-2x text-dark"></i>
+                            <span class="ms-1 text-uppercase small-xs">9.32m</span>
+                        </div>
+                    </li>
+                    <li class="list-inline-item">
+                        <button type="button" class="nav-link btn btn-darkapp btn-sm rounded-pill follow-btn small-xs px-md-4">
+                            <i class="bi-plus-lg"></i>
+                            <span class="ms-1">Follow</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
 
-        <div class="container-md justify-content-start bg-white rounded-bottom-4">
-            <div class="nav nav-tabs nav-scroller" id="nav-tab" role="tablist">
-                <a href="#" class="nav-link active" id="nav-scores-tab" data-bs-toggle="tab" data-bs-target="#nav-scores" role="button" role="tab" aria-controls="nav-scores" aria-selected="true">Scores</a>
-                <a href="#" class="nav-link" id="nav-fixtures-tab" data-bs-toggle="tab" data-bs-target="#nav-fixtures" role="button" role="tab" aria-controls="nav-fixtures" aria-selected="false">Fixtures</a>
-                <a href="#" class="nav-link" id="nav-standings-tab" data-bs-toggle="tab" data-bs-target="#nav-standings" role="button" role="tab" aria-controls="nav-standings" aria-selected="false">Standings</a>
-                <a href="#" class="nav-link" id="nav-stats-tab" data-bs-toggle="tab" data-bs-target="#nav-stats" role="button" role="tab" aria-controls="nav-stats" aria-selected="false">Stats</a>
-                <a href="#" class="nav-link" id="nav-players-tab" data-bs-toggle="tab" data-bs-target="#nav-players" role="button" role="tab" aria-controls="nav-players" aria-selected="false">Players</a>
+            <div class="container justify-content-start rounded-bottom-4 bg-white pt-4" style="margin-top:-1rem">
+                <div class="nav nav-tabs nav-scroller" id="nav-tab" role="tablist">
+                    <a href="#" class="nav-link active" id="nav-scores-tab" data-bs-toggle="tab" data-bs-target="#nav-scores" role="button" role="tab" aria-controls="nav-scores" aria-selected="true">Scores</a>
+                    <a href="#" class="nav-link" id="nav-fixtures-tab" data-bs-toggle="tab" data-bs-target="#nav-fixtures" role="button" role="tab" aria-controls="nav-fixtures" aria-selected="false">Fixtures</a>
+                    <a href="#" class="nav-link" id="nav-standings-tab" data-bs-toggle="tab" data-bs-target="#nav-standings" role="button" role="tab" aria-controls="nav-standings" aria-selected="false">Standings</a>
+                    <a href="#" class="nav-link" id="nav-stats-tab" data-bs-toggle="tab" data-bs-target="#nav-stats" role="button" role="tab" aria-controls="nav-stats" aria-selected="false">Stats</a>
+                    <a href="#" class="nav-link" id="nav-players-tab" data-bs-toggle="tab" data-bs-target="#nav-players" role="button" role="tab" aria-controls="nav-players" aria-selected="false">Players</a>
+                </div>
             </div>
         </div>
+        <!-- /.Sticky -->
     </nav>
     <!-- /. Page Header -->
 
@@ -4110,11 +4120,20 @@
 
             // Make an element sticky top
             window.onscroll = () => {
-                const stickyNavbar = document.querySelector('.sticky-navbar');
-                if (window.pageYOffset >= stickyNavbar.offsetTop) {
-                    stickyNavbar.classList.add('fixed-ontop');
+                const pageContent = document.querySelector('.content');
+                const stickyNavbar = document.querySelector('.sticky-section');
+                const coverSection = document.querySelector('.cover-img-wrapper');
+                const navItems = document.querySelector('.navigation');
+                if (window.pageYOffset >= pageContent.offsetTop - 90) {
+                    stickyNavbar.classList.add('fixed');
+                    coverSection.classList.add('fixed');
+                    navItems.classList.remove('d-none');
+                    console.log('At the top');
                 } else {
-                    stickyNavbar.classList.remove('fixed-ontop');
+                    stickyNavbar.classList.remove('fixed');
+                    coverSection.classList.remove('fixed');
+                    navItems.classList.add('d-none');
+                    console.log('Not at the top');
                 }
             };
         });
