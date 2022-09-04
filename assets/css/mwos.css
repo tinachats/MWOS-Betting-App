@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&family=Train+One&display=swap');
 :root {
     --app-color: #fff;
     --app-body-color: #f5f8fa;
@@ -1704,7 +1705,6 @@ input[type=number] {
     top: 0;
     left: 0;
     background-color: var(--app-color);
-    border-bottom: 1px solid var(--border-color);
     box-shadow: var(--shadow-sm);
     transform: width .5s ease-in-out;
     width: 100%;
@@ -2027,6 +2027,83 @@ header.header .nav-scroller .nav>a.active {
 
 .app-player-card:hover .player-img>img {
     transform: scale(.9);
+}
+
+.player-hero {
+    position: relative;
+    background-attachment: fixed;
+    box-shadow: var(--shadow-sm);
+    background-color: rgb(8 8 8);
+    background: url('../images/fields/old-trafford.jpg') center center/cover no-repeat;
+}
+
+.player-hero::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1;
+}
+
+.player-hero::before {
+    position: absolute;
+    content: attr(data-player);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Notable', sans-serif;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    width: 100%;
+    z-index: 2;
+}
+
+.player-hero::before,
+.player-hero>.player-shirt {
+    color: #ffffff;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    opacity: .05;
+}
+
+.player-hero>.player-shirt {
+    position: absolute;
+    font-family: 'Train One', cursive;
+    right: 3%;
+    top: 0;
+    z-index: 3;
+    font-size: 10rem;
+}
+
+.player-hero>img.player-avatar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 3;
+}
+
+.player-hero>.player-hero-stats {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 3;
+}
+
+.player-hero>.player-hero-stats * {
+    color: #fff;
 }
 
 
@@ -2811,6 +2888,12 @@ li {
         margin-top: 2.5rem;
         font-size: var(--small-sm);
     }
+    .player-hero {
+        height: 60vh;
+    }
+    .player-hero::before {
+        font-size: 3rem;
+    }
 }
 
 
@@ -2938,6 +3021,15 @@ li {
     .club-title {
         left: 25%;
     }
+    .player-hero {
+        height: 70vh;
+    }
+    .player-hero::before {
+        font-size: 7rem;
+    }
+    .player-hero .player-hero-stats .statistic {
+        font-size: 2rem;
+    }
 }
 
 
@@ -2996,6 +3088,7 @@ li {
     }
     .sticky-section.fixed .club-title {
         left: 15%;
+        margin-top: .35rem;
     }
     .club-title {
         left: 21%;
